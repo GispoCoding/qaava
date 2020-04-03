@@ -31,6 +31,10 @@ Tavoitteena on tuottaa QGISin ja PostGISin avulla kaavoittajalle työkaluja, joi
 - [Kaavan tietomalli](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli)
 - [Kaavan käsitemallin luonnos](https://tietomallit.suomi.fi/model/tuma/)
 
+## QGIS työkalut editointiin
+- QGISissä valmiina olevat editointityökalut, mm: Laajennetun digitoinnin työkalut, Digitoinnin lisätyökalupakki
+- [QAD](https://github.com/gam17/QAD)
+
 ## Yhteistyössä
 
 Toteutus tehdään avoimesti yhteistyössä eri toimijoiden kanssa. 
