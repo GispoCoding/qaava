@@ -7,6 +7,7 @@ Kaavoittajan työkalut QGIS-lisäosana.
 
 Tavoitteena on tuottaa QGISin ja PostGISin avulla kaavoittajalle työkaluja, joilla voi tuottaa kansallisen kaavan tietomallin mukaista kaavaa. 
 - [Suunnitteludokumentti](https://docs.google.com/document/d/1J_FsiR9pY3MsO3VqV3DKb76bFLolV5VrMO6Lxa2_tlk/edit?usp=sharing) (voi kommentoida avoimesti)
+- [QAAVA esitelmä (2020-04-03)](https://docs.google.com/presentation/d/1NgBFhvlTGxtXW1giWtwG0q-2zFSZHfSUCE-ZmgkKmOo/edit?usp=sharing)
 
 ## Alustavia tarpeita
 
