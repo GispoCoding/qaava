@@ -36,6 +36,12 @@ Tavoitteena on tuottaa QGISin ja PostGISin avulla kaavoittajalle työkaluja, joi
 - QGISissä valmiina olevat editointityökalut, mm: Laajennetun digitoinnin työkalut, Digitoinnin lisätyökalupakki
 - [QAD](https://github.com/gam17/QAD)
 
+## Materiaalipankki
+- [QGIS "kaavoittajan profiili"](blob/master/qgis-user-profile/qgis_qaava_profiili.md), tuotettu esimerkin vuoksi soveltuvat työkalut kaavoittajalle QGIS työtilaan.
+- Asemakaavan ja yleiskaavan SLD-toteutus (Paimion kaupunki, Virpi Lindvall) - TULOSSA
+- [Maakuntakaavan SLD-toteutus](https://www.lounaistieto.fi/wp-content/uploads/2019/12/hame_sld_17_12_2019.zip) (Lounaistieto, HAME-hanke)
+
 ## Yhteistyössä
 
-Toteutus tehdään avoimesti yhteistyössä eri toimijoiden kanssa. 
+- Toteutus tehdään avoimesti yhteistyössä eri toimijoiden kanssa. 
+- 21.4.2020 yhteistyöpalaveri [asialista/muistio](https://docs.google.com/document/d/1YvypIpuVYa5igNHz8cdueZe8U6aY09Ge2Vd6SHvd7q0/edit?usp=sharing)
