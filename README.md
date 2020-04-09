@@ -38,7 +38,7 @@ Tavoitteena on tuottaa QGISin ja PostGISin avulla kaavoittajalle työkaluja, joi
 
 ## Materiaalipankki
 - [QGIS "kaavoittajan profiili"](blob/master/qgis-user-profile/qgis_qaava_profiili.md), tuotettu esimerkin vuoksi soveltuvat työkalut kaavoittajalle QGIS työtilaan.
-- Asemakaavan ja yleiskaavan SLD-toteutus (Paimion kaupunki, Virpi Lindvall) - TULOSSA
+- Asemakaavan ja yleiskaavan SLD-toteutus (Paimion kaupunki, Virpi Lindvall)
 - [Maakuntakaavan SLD-toteutus](https://www.lounaistieto.fi/wp-content/uploads/2019/12/hame_sld_17_12_2019.zip) (Lounaistieto, HAME-hanke)
 
 ## Yhteistyössä
