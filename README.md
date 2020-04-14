@@ -37,7 +37,7 @@ Tavoitteena on tuottaa QGISin ja PostGISin avulla kaavoittajalle työkaluja, joi
 - [QAD](https://github.com/gam17/QAD)
 
 ## Materiaalipankki
-- [QGIS "kaavoittajan profiili"](blob/master/qgis-user-profile/qgis_qaava_profiili.md), tuotettu esimerkin vuoksi soveltuvat työkalut kaavoittajalle QGIS työtilaan.
+- [QGIS "kaavoittajan profiili"](qgis-user-profile/qgis_qaava_profiili.md), tuotettu esimerkin vuoksi soveltuvat työkalut kaavoittajalle QGIS työtilaan.
 - [Asemakaavan ja yleiskaavan SLD-toteutus](https://github.com/GispoCoding/qaava/tree/master/paimion-asemakaavan-sld) (Paimion kaupunki, Virpi Lindvall)
 - [Maakuntakaavan SLD-toteutus](https://www.lounaistieto.fi/wp-content/uploads/2019/12/hame_sld_17_12_2019.zip) (Lounaistieto, HAME-hanke)
 
