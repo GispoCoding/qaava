@@ -22,5 +22,5 @@ Valmiiksi luotu työtila, jossa valmiina nykyiset (03/2020) työkalut, jotka sov
 
 - Tämän tehtyäsi QGISin valikosta  _"Asetukset/Käyttäjäprofiilit"_ löytyy profiili nimeltä _qaava_profiili_, joka valitsemalla aukeaa uusi QGIS-käyttöliittymäikkuna tämän profiilin asetuksilla. Kunkin QGIS-käyttöliittymän aktiivisen profiilin nimi näkyy yläpalkissa projektinimen jälkeen hakasuluissa. 
 
--Huom. tehtyäsi ja käytettyäsi profiilia, QGIS luo profiilikansioon automaattisesti uusia tiedostoja ja kansioita liittyen esimerkiksi projektien asetuksiin.  
+- Huom. Tehtyäsi ja käytettyäsi profiilia, QGIS luo profiilikansioon automaattisesti uusia tiedostoja ja kansioita liittyen esimerkiksi projektien asetuksiin.  
 
