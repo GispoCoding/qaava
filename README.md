@@ -43,5 +43,7 @@ Tavoitteena on tuottaa QGISin ja PostGISin avulla kaavoittajalle työkaluja, joi
 
 ## Yhteistyössä
 
-- Toteutus tehdään avoimesti yhteistyössä eri toimijoiden kanssa. 
+Toteutus tehdään avoimesti yhteistyössä eri toimijoiden kanssa. Mukana nyt:
+-Paimion kaupunki
+
 - 21.4.2020 yhteistyöpalaveri [asialista/muistio](https://docs.google.com/document/d/1YvypIpuVYa5igNHz8cdueZe8U6aY09Ge2Vd6SHvd7q0/edit?usp=sharing)
