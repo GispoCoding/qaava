@@ -3,6 +3,13 @@ QGIS toolbox for land use planners in Finland.
 
 Kaavoittajan työkalut QGIS-lisäosana.
 
+## Yhteistyössä
+
+Toteutus tehdään avoimesti yhteistyössä eri toimijoiden kanssa. Mukana nyt:
+- [Paimion kaupunki](https://paim.io/)
+- [Kuntaliitto](https://www.kuntaliitto.fi/)
+- [Gispo Oy](https://www.gispo.fi/)
+
 ## Suunnitelma
 
 Tavoitteena on tuottaa QGISin ja PostGISin avulla kaavoittajalle työkaluja, joilla voi tuottaa kansallisen kaavan tietomallin mukaista kaavaa. 
@@ -41,9 +48,5 @@ Tavoitteena on tuottaa QGISin ja PostGISin avulla kaavoittajalle työkaluja, joi
 - [Asemakaavan ja yleiskaavan SLD-toteutus](https://github.com/GispoCoding/qaava/tree/master/paimion-asemakaavan-sld) (Paimion kaupunki, Virpi Lindvall)
 - [Maakuntakaavan SLD-toteutus](https://www.lounaistieto.fi/wp-content/uploads/2019/12/hame_sld_17_12_2019.zip) (Lounaistieto, HAME-hanke)
 
-## Yhteistyössä
-
-Toteutus tehdään avoimesti yhteistyössä eri toimijoiden kanssa. Mukana nyt:
--Paimion kaupunki
-
-- 21.4.2020 yhteistyöpalaveri [asialista/muistio](https://docs.google.com/document/d/1YvypIpuVYa5igNHz8cdueZe8U6aY09Ge2Vd6SHvd7q0/edit?usp=sharing)
+## Kokoukset
+- 21.4.2020 yhteistyöpalaveri [muistio](https://docs.google.com/document/d/1YvypIpuVYa5igNHz8cdueZe8U6aY09Ge2Vd6SHvd7q0/edit?usp=sharing)
