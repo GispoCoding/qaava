@@ -1,3 +1,3 @@
 Paimion asemakaavan SLD
 
-lisenssi CC BY 4.0, tekijä Paimion kaupunki (Virpi Lindvall)
+Lisenssi CC BY 4.0, tekijä Paimion kaupunki (Virpi Lindvall)
