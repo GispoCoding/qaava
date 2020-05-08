@@ -1,4 +1,4 @@
-# qaava
+# QAAVA
 QGIS toolbox for land use planners in Finland. 
 
 Kaavoittajan työkalut QGIS-lisäosana.
@@ -32,7 +32,7 @@ Tavoitteena on tuottaa QGISin ja PostGISin avulla kaavoittajalle työkaluja, joi
 
 1. Määrittely
 2. Tietomallityö
-3. QGIS työkalukehitys
+3. QGIS-työkalukehitys
 4. Ohjeistus ja koulutus
 
 ## Aiheeseen liittyviä linkkejä
