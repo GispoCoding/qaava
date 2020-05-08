@@ -2,7 +2,7 @@
 
 Valmiiksi luotu työtila, jossa on valmiina nykyiset (03/2020) työkalut, jotka soveltuvat kaavoittajan käyttöön QGISissä.
 
-# Ohjeet QGIS profiilin käyttöönottoon
+## Ohjeet QGIS-profiilin käyttöönottoon
 
 QGISiin voi luoda erilaisia räätälöityjä käyttäjäprofiileja eri käyttötarkoituksia varten. QGIS-asennukseesi tehdyt käyttäjäprofiilit voit tarkistaa avaamalla QGISin ja menemällä valikkoon _"Asetukset/Käyttäjäprofiilit"_ (englanninkielisessä käyttöliittymässä _"Settings/User Profiles"_). Oletusasennuksessa luodaan ainakin _default_-niminen käyttäjäprofiili.
 
