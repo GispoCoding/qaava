@@ -1,4 +1,4 @@
-# Asemakaavan tietomalli
+# Asemakaavan kuvaustekniikka
 
 Asemakaavan kuvaustekniikka tuotetaan yhteistyössä QAAVA-kehitysprojektiin osallistuneiden toimijoiden kanssa. 
 Sen on rahoittanut Kuntaliitto. Kuvaustekniikka tuotetaan QML ja SLD-muodossa. Näin kuvaustekniikkaa voidaan käyttää QGISissä sekä esimerkiksi GeoServerillä. Toteutus valmistuu toukokuussa 2020.
