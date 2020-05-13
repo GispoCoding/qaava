@@ -1,6 +1,12 @@
 # QGIS-profiili kaavoittajalle
 
-Valmiiksi luotu työtila, jossa on valmiina nykyiset (03/2020) työkalut, jotka soveltuvat kaavoittajan käyttöön QGISissä.
+Valmiiksi luotu työtila, jossa on valmiina nykyiset (03/2020) työkalut, jotka soveltuvat kaavoittajan käyttöön QGISissä. Tämä profiili täydentyy mahdollisesti QAAVA-projektin aikana. Ei siis sisällä vielä seuraavia toivottuja asioita: valmiit tulostepohjat, visualisointikirjastot, selitteet, kaavoittajan työkalut. 
+
+Sisältää nyt (03/2020):
+ - Kansallisia lähtötietorajapintoja esimerkkinä
+ - Digitoinnin työkaluja
+ - Poistettu näkyvistä muutamia työkaluja
+ - Suurennettu työkalujen kokoa
 
 ## Ohjeet QGIS-profiilin käyttöönottoon
 
