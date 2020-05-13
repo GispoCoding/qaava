@@ -8,3 +8,5 @@ Asemakaavan tietomalli on tuotettu yhteistyössä QAAVA-kehitysprojektiin osalli
 - [Ympäristöministeriön tulevaisuuden maankäyttöpäätökset -hankkeen tulokset](http://julkaisut.valtioneuvosto.fi/handle/10024/162107)
 - [Harmonisoidut maakuntakaavat e-palveluiksi -hankkeen tulokset](https://www.lounaistieto.fi/maakuntakaavat/)
 - [Helsingin kaupungin KIRA-digi-hankkeen tulokset](https://www.avoindata.fi/data/fi/dataset/kiradigi_helsingin-asemakaavat-yhteisena-tietovarantona/resource/0e35451b-862e-4a1a-b3f9-15f03db7466b?inner_span=True)
+
+Lisäksi siinä huomioidaan ympäristöministeriön pian käynnistyvä käsitteistö, sanasto ja tietomallien kehitystyö. 
