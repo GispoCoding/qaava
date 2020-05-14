@@ -37,13 +37,13 @@ Tavoitteena on tuottaa QGISin ja PostGISin avulla kaavoittajan työkaluja, joill
 
 ## Aikataulu ja työvaiheet (päivitetään tarvittaessa)
 
-1. 1-5/2020: Määrittelytyö
-2. 5-6/2020: Asemakaavan tietomallityö
-3. 6-7/2020: Yleiskaavan tietomallityö
-4. 6-7/2020: QGIS-työkalu PostGIS-tietokannan alustamiseen
-5. 8-10/2020: Kaavoittajan työkalut QGISiin
-6. 11-12/2020: QAAVA-projektin valmistuminen
-7. 11-12/2020: Ohjeistus ja koulutus mukana oleville toimijoille
+- 1-5/2020: Määrittelytyö
+- 5-6/2020: Asemakaavan tietomallityö
+- 6-7/2020: Yleiskaavan tietomallityö
+- 6-7/2020: QGIS-työkalu PostGIS-tietokannan alustamiseen
+- 8-10/2020: Kaavoittajan työkalut QGISiin
+- 11-12/2020: QAAVA-projektin valmistuminen
+- 11-12/2020: Ohjeistus ja koulutus mukana oleville toimijoille
 
 ## Aiheeseen liittyviä linkkejä
 - [Kaavan tietomalli, YM - Kuntapilotti 06/2019](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli)
