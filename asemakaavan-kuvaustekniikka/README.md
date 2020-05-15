@@ -7,6 +7,8 @@ Sen on rahoittanut [Kuntaliitto](https://www.kuntaliitto.fi/ajankohtaista/2020/a
 - SLD-visualisointikirjasto (tulossa)
 - [Testiaineisto GeoPackage-muodossa](Testiasemakaava.gpkg), siinä on valmiina QGIS projekti ja tyylikirjasto sisällä
 
+<img src="testiaineisto_asemakaavan_tyylit.png" width="500"/>
+
 ## Ohjeet käyttöönottoon
 
 1. Lataa XML-muotoinen tyylikirjasto koneellesi ja avaa QGIS. Kohdasta **Asetukset > Tyylien hallinta** avautuvassa paneelissa voit importoida (tuoda) XML-tyylin QGISiin. Valitse kaikki ja Tuo tiedot. 
