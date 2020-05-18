@@ -8,7 +8,7 @@ Sen on rahoittanut [Kuntaliitto](https://www.kuntaliitto.fi/ajankohtaista/2020/a
 - [Testiaineisto GeoPackage-muodossa](Testiasemakaava.gpkg)
     - Testiaineistossa on mukana QGIS-projekti ja tyylikirjasto
 
-<img src="testiaineisto_asemakaavan_tyylit.png" width="500/>
+<img src="testiaineisto_asemakaavan_tyylit.png" width="500"/>
 
 ## Ohjeet kuvaustekniikan käyttöönottoon QGISillä
 
