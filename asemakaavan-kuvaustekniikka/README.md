@@ -3,7 +3,7 @@
 Asemakaavan kuvaustekniikka tuotetaan yhteistyössä QAAVA-kehitysprojektiin osallistuneiden toimijoiden kanssa. 
 Sen on rahoittanut [Kuntaliitto](https://www.kuntaliitto.fi/ajankohtaista/2020/avoin-tyylikirjasto-helpottaa-asemakaavojen-digitalisointia?fbclid=IwAR3d_moQRJR0IxAxzJXxjlo4YtGfzT4ju87H8DTurRdNXtqo7FvnMIFkCUA). Kuvaustekniikka pohjautuu MRL:n asemakaavan visualisointioppaaseen (Ympäristönministeriö, 2003). Kuvaustekniikka tuotetaan nyt QML ja SLD-muodossa. Näin kuvaustekniikkaa voidaan käyttää QGISissä sekä esimerkiksi GeoServerillä. Toteutus valmistuu toukokuussa 2020.
 
-- [QGISin QML tiedosto](asemakaavamerkinnat_150520.xml) (15.5.2020 versio 1.0)
+- [QGISin QML tiedosto](asemakaavamerkinnat.xml) (15.5.2020 versio 1.0)
 - SLD-visualisointikirjasto (tulossa)
 - [Testiaineisto GeoPackage-muodossa](Testiasemakaava.gpkg), siinä on valmiina QGIS projekti ja tyylikirjasto sisällä
 
