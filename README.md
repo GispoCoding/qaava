@@ -9,6 +9,8 @@ Kaavoittajan työkalut QGIS-lisäosana.
 Toteutus tehdään avoimesti yhteistyössä eri toimijoiden kanssa. Mukana ovat nyt:
 - [Paimion kaupunki](https://paim.io/) (asemakaavan tietomallityö)
 - [Kuntaliitto](https://www.kuntaliitto.fi/) (asemakaavan visualisointikirjasto, [lue tiedote](https://www.kuntaliitto.fi/ajankohtaista/2020/avoin-tyylikirjasto-helpottaa-asemakaavojen-digitalisointia))
+- [Seinäjoki](https://www.seinajoki.fi/) (yleiskaavan tietomallityö ja työkalu QGISiin kaavan alustusta varten PostGIS-kantaan)
+- [Joensuu](https://www.joensuu.fi/) (yleiskaavan tietomallityö ja työkalu QGISiin kaavan alustusta varten PostGIS-kantaan)
 - [Gispo Oy](https://www.gispo.fi/) (tekninen toteutus)
 
 Kaikki halukkaat voivat tulla mukaan QAAVA-yhteiskehitykseen! Voit osallistua työhön esimerkiksi rahoittamalla työtä, osallistumalla määrittelyyn tai auttamalla työkalujen toteutuksessa.
@@ -21,12 +23,12 @@ Tavoitteena on tuottaa QGISin ja PostGISin avulla kaavoittajan työkaluja, joill
 
 ## Työkalutarpeet
 
-### Toteutetetaan hankkeessa
+### Toteutetaan hankkeessa
 
 - Kansallisesta kaavan tietomallista avoin referenssitoteutus asema- ja yleiskaavoille (fyysinen tietomalli PostGIS-ympäristössä), huomioidaan mm. että kaavakohteilla globaalisti uniikki id ja versionhallinta ja kohteiden elinkaari (muutostietojen tallennus)
 - QGIS-työkalu PostGIS-tietokannan alustukseen kaavoituksen käyttöön
 - QGIS-työkalut kaavoituksen käyttöön (kaavan perustietojen syöttö, kaavakohteen lisäys, kaavakohteen muuttaminen, kaavamääräyksen linkitys, kaavatietojen tuominen muista lähteistä, tietojen suodatus, kuten kaavamääräysluettelo suoraan taulukkomuotoon halutuilla hakukriteereillä)
-- Yleinen asemakaavan kuvaustyyli (SLD/QML) avoimesti jaossa
+- [Yleinen asemakaavan kuvaustyyli (SLD/QML) avoimesti jaossa](/asemakaavan-kuvaustekniikka)
 - Ohjeistukset
 
 ### Toteutetaan hankkeessa, jos rahoitus löytyy (jos haluat rahoittaa näitä osioita tai kontribuoida näiden toteutukseen, ota yhteyttä sanna@gispo.fi!)
@@ -42,14 +44,14 @@ Tavoitteena on tuottaa QGISin ja PostGISin avulla kaavoittajan työkaluja, joill
 - 6-7/2020: Yleiskaavan tietomallityö
 - 6-7/2020: QGIS-työkalu PostGIS-tietokannan alustamiseen
 - 8-10/2020: Kaavoittajan työkalut QGISiin
-- 11-12/2020: QAAVA-projektin valmistuminen
-- 11-12/2020: Ohjeistus ja koulutus mukana oleville toimijoille
+- 11-12/2020: QGIS profiili ja digitointityökalujen kehitys
+- 11-12/2020:  QAAVA-projektin valmistuminen sekä ohjeistus ja koulutus mukana oleville toimijoille
 
 ## Aiheeseen liittyviä linkkejä
 - [Kaavan tietomalli, YM - Kuntapilotti 06/2019](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli)
 - [Kaavan käsitemallin luonnos, YM - TUMA 12/20219](https://tietomallit.suomi.fi/model/tuma/)
 
-## QGIS-työkalut editointiin
+## Olemassa olevat QGIS-työkalut editointiin
 - QGISissä valmiina olevat editointityökalut
     - Laajennetun digitoinnin työkalut, Digitoinnin lisätyökalupakki
 - [QAD](https://github.com/gam17/QAD)
