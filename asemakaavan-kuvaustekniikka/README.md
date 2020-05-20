@@ -3,7 +3,8 @@
 Asemakaavan kuvaustekniikka tuotetaan yhteistyössä QAAVA-kehitysprojektiin osallistuneiden toimijoiden kanssa. 
 Sen on rahoittanut [Kuntaliitto](https://www.kuntaliitto.fi/ajankohtaista/2020/avoin-tyylikirjasto-helpottaa-asemakaavojen-digitalisointia?fbclid=IwAR3d_moQRJR0IxAxzJXxjlo4YtGfzT4ju87H8DTurRdNXtqo7FvnMIFkCUA). Kuvaustekniikka pohjautuu MRL:n asemakaavan visualisointioppaaseen (Ympäristönministeriö, 2003). Kuvaustekniikka tuotetaan QML- ja SLD-muodossa, jotta sitä voidaan käyttää sekä QGISissä että esimerkiksi GeoServerissä. Asemakaavan kuvaustekniikka valmistuu toukokuussa 2020.
 
-- [QML-kuvaustekniikka](asemakaavan_kuvaustekniikka.xml) (15.5.2020 versio 1.0)
+- [XML-muodossa QGISin kuvaustyyli](asemakaavan_kuvaustekniikka.xml) (15.5.2020 versio 1.0)
+- QML-muoto (tulossa)
 - SLD-kuvaustekniikka (tulossa)
 - [Testiaineisto GeoPackage-muodossa](asemakaava_testiaineisto.gpkg)
     - Testiaineistossa on mukana QGIS-projekti ja tyylikirjasto
@@ -11,6 +12,8 @@ Sen on rahoittanut [Kuntaliitto](https://www.kuntaliitto.fi/ajankohtaista/2020/a
 <img src="asemakaavan_kuvaustekniikka_screenshot.png" width="500"/>
 
 ## Ohjeet kuvaustekniikan käyttöönottoon QGISillä
+
+HUOM! Kuvaustekniikka on tehty uusimmalla QGIS-versiolla (3.10 tai uudempi). Vanhoilla versioilla tyyli ei toimi, sillä aiempiin versioihin nähden tyylien määrittelyyn tullut huomattavasti muutoksia QGISissä.
 
 1. Lataa asemakaavan kuvaustekniikan sisältävä XML-tiedosto tietokoneellesi ja avaa QGIS. Mene **Asetukset > Tyylien hallinta** niin saat auki **Tyylien hallinta -ikkunan**. Klikkaa ikkunan vasemmasta alakulmasta **Tuo/Vie > Import Item(s)** ja valitse tuotavaksi tiedostoksi lataamasi XML-tiedosto. Klikkaa **Valitse kaikki** ja sitten **Tuo** niin saat kuvaustekniikan QGISiin.
 
