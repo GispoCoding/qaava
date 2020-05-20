@@ -1,6 +1,14 @@
 # Asemakaavan tietomalli
 
-Asemakaavan tietomalli on tuotettu yhteistyössä QAAVA-kehitysprojektiin osallistuneiden toimijoiden kanssa. Tietomallin pohjana on käytetty seuraavia tausta-aineistoja ja selvityksiä:
+Asemakaavan tietomalli on tuotettu yhteistyössä QAAVA-kehitysprojektiin osallistuneiden toimijoiden kanssa. 
+
+Ensimmäistä versiota on käyty läpi Paimion kaupungin kanssa.
+- [Asemakaavan tietomalli - versio 0.1, dbm](tietomalli_luonnos.dbm)
+- [Asemakaavan tietomalli - versio 0.1, sql](tietomalli_luonnos.sql)
+
+<img src="tietomalli_luonnos.png" width="500"/>
+
+Tietomallin pohjana on käytetty seuraavia tausta-aineistoja ja selvityksiä:
 
 - [INSPIRE: Planned Land Use](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/index.htm?goto=2:3:10:1:4:8445)
 - [Tampereen yleiskaava 2019-04](https://github.com/GispoCoding/Tampere-KDYK/blob/master/database_model/2019-04-19-avoin_yleiskaava.png)
