@@ -261,7 +261,7 @@
             <prop v="0" k="angle"/>
             <prop v="ajo" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -291,7 +291,7 @@
         <prop v="0" k="angle"/>
         <prop v="123" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="MS Shell Dlg 2" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="0,0" k="offset"/>
@@ -350,7 +350,7 @@
             <prop v="0" k="angle"/>
             <prop v="/k" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -411,7 +411,7 @@
             <prop v="0" k="angle"/>
             <prop v="/v" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -472,7 +472,7 @@
             <prop v="0" k="angle"/>
             <prop v="/s" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -538,7 +538,7 @@
             <prop v="0" k="angle"/>
             <prop v="pj" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -750,7 +750,7 @@
             <prop v="0" k="angle"/>
             <prop v="sm" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,-4.5" k="offset"/>
@@ -875,7 +875,7 @@
             <prop v="0" k="angle"/>
             <prop v="sl" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -941,7 +941,7 @@
             <prop v="0" k="angle"/>
             <prop v="h" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -1007,7 +1007,7 @@
             <prop v="0" k="angle"/>
             <prop v="jk" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -1096,7 +1096,7 @@
         <prop v="0" k="angle"/>
         <prop v="ab/12" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="Dingbats" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="-0.20000000000000001,-3.20000000000000062" k="offset"/>
@@ -1119,7 +1119,7 @@
         </data_defined_properties>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Ampumarata-alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Ampumarata-alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,EA">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="230,173,207,255" k="color"/>
@@ -1208,7 +1208,7 @@
             <prop v="0" k="angle"/>
             <prop v="EA" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -1287,7 +1287,7 @@
             <prop v="0" k="angle"/>
             <prop v="ge" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,-4.5" k="offset"/>
@@ -1458,7 +1458,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Asuin-, liike- ja toimistorakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Asuin-, liike- ja toimistorakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,AL">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="185,132,68,255" k="color"/>
@@ -1494,7 +1494,7 @@
             <prop v="0" k="angle"/>
             <prop v="AL" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -1519,7 +1519,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Asuinkerrostalojen korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Asuinkerrostalojen korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,AK">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="185,132,68,255" k="color"/>
@@ -1555,7 +1555,7 @@
             <prop v="0" k="angle"/>
             <prop v="AK" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -1580,7 +1580,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Asuinpientalojen korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Asuinpientalojen korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,AP">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="226,192,150,255" k="color"/>
@@ -1616,7 +1616,7 @@
             <prop v="0" k="angle"/>
             <prop v="AP" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -1641,7 +1641,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Asuinrakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Asuinrakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,A">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="226,192,150,255" k="color"/>
@@ -1677,7 +1677,7 @@
             <prop v="0" k="angle"/>
             <prop v="A" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -1702,7 +1702,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Asumista palveleva yhteiskäyttöinen korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Asumista palveleva yhteiskäyttöinen korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,AH">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="226,192,150,255" k="color"/>
@@ -1738,7 +1738,7 @@
             <prop v="0" k="angle"/>
             <prop v="AH" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -1763,7 +1763,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Asuntovaunualue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Asuntovaunualue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,RV">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="255,207,69,255" k="color"/>
@@ -1799,7 +1799,7 @@
             <prop v="0" k="angle"/>
             <prop v="RV" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -1865,7 +1865,7 @@
             <prop v="0" k="angle"/>
             <prop v="a" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -1890,7 +1890,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Autopaikkojen korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Autopaikkojen korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,LPA">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="249,198,209,255" k="color"/>
@@ -1926,7 +1926,7 @@
             <prop v="0" k="angle"/>
             <prop v="LPA" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -1951,7 +1951,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Energiahuollon alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Energiahuollon alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,EN">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="230,173,207,255" k="color"/>
@@ -2040,7 +2040,7 @@
             <prop v="0" k="angle"/>
             <prop v="EN" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -2065,7 +2065,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Erillispientalojen korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Erillispientalojen korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,AO">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="226,192,150,255" k="color"/>
@@ -2101,7 +2101,7 @@
             <prop v="0" k="angle"/>
             <prop v="AO" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -2294,7 +2294,7 @@
             <prop v="0" k="angle"/>
             <prop v="e" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -2319,7 +2319,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Erityisalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Erityisalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,E">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="230,173,207,255" k="color"/>
@@ -2408,7 +2408,7 @@
             <prop v="0" k="angle"/>
             <prop v="E" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -2433,7 +2433,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Hallinto- ja virastorakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Hallinto- ja virastorakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,YH">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="221,212,233,255" k="color"/>
@@ -2469,7 +2469,7 @@
             <prop v="0" k="angle"/>
             <prop v="YH" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -2494,7 +2494,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Hautausmaa-alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Hautausmaa-alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,EH">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="116,204,211,255" k="color"/>
@@ -2583,7 +2583,7 @@
             <prop v="0" k="angle"/>
             <prop v="EH" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -2608,7 +2608,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Henkilöliikenneterminaalin korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Henkilöliikenneterminaalin korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,LHA">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="249,198,209,255" k="color"/>
@@ -2644,7 +2644,7 @@
             <prop v="0" k="angle"/>
             <prop v="LHA" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -2710,7 +2710,7 @@
             <prop v="0" k="angle"/>
             <prop v="hk" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -2735,7 +2735,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Huoltoaseman korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Huoltoaseman korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,LH">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="249,198,209,255" k="color"/>
@@ -2771,7 +2771,7 @@
             <prop v="0" k="angle"/>
             <prop v="LH" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -2796,7 +2796,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Huvi- ja viihdepalvelujen korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Huvi- ja viihdepalvelujen korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,PV">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="250,171,83,255" k="color"/>
@@ -2832,7 +2832,7 @@
             <prop v="0" k="angle"/>
             <prop v="PV" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -3038,7 +3038,7 @@
             <prop v="0" k="angle"/>
             <prop v="pp" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -3231,7 +3231,7 @@
             <prop v="0" k="angle"/>
             <prop v="pp/h" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -3424,7 +3424,7 @@
             <prop v="0" k="angle"/>
             <prop v="pp/t" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -3800,7 +3800,7 @@
             <prop v="0" k="angle"/>
             <prop v="jl" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -3825,7 +3825,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Julkisten lähipalvelurakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Julkisten lähipalvelurakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,YL">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="221,212,233,255" k="color"/>
@@ -3861,7 +3861,7 @@
             <prop v="0" k="angle"/>
             <prop v="YL" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -3886,7 +3886,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Jätteenkäsittelyalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Jätteenkäsittelyalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,EJ">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="230,173,207,255" k="color"/>
@@ -3975,7 +3975,7 @@
             <prop v="0" k="angle"/>
             <prop v="EJ" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -4168,7 +4168,7 @@
             <prop v="0" k="angle"/>
             <prop v="a" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -4361,7 +4361,7 @@
             <prop v="0" k="angle"/>
             <prop v="y" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -4391,7 +4391,7 @@
         <prop v="0" k="angle"/>
         <prop v="KATU" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="MS Shell Dlg 2" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="0,0" k="offset"/>
@@ -4414,7 +4414,7 @@
         </data_defined_properties>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Kaivosalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Kaivosalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,EK">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="230,173,207,255" k="color"/>
@@ -4503,7 +4503,7 @@
             <prop v="0" k="angle"/>
             <prop v="EK" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -4528,7 +4528,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Kanava-alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Kanava-alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,LK">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="221,212,233,0" k="color"/>
@@ -4695,7 +4695,7 @@
             <prop v="0" k="angle"/>
             <prop v="LK" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -4827,7 +4827,7 @@
             <prop v="0" k="angle"/>
             <prop v="kp" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,-4.5" k="offset"/>
@@ -4916,7 +4916,7 @@
         <prop v="0" k="angle"/>
         <prop v="α = 00°" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="MS Shell Dlg 2" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="0,0" k="offset"/>
@@ -5283,7 +5283,7 @@
         <prop v="0" k="angle"/>
         <prop v="KAUP" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="MS Shell Dlg 2" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="0,0" k="offset"/>
@@ -5311,7 +5311,7 @@
         <prop v="0" k="angle"/>
         <prop v="12" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="MS Shell Dlg 2" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="0,0" k="offset"/>
@@ -5468,7 +5468,7 @@
             <prop v="0" k="angle"/>
             <prop v="sk" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,-4.5" k="offset"/>
@@ -5606,7 +5606,7 @@
             <prop v="0" k="angle"/>
             <prop v="ke" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,-4.5" k="offset"/>
@@ -5690,7 +5690,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Keskustatoimintojen korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Keskustatoimintojen korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,C">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="214,54,72,255" k="color"/>
@@ -5726,7 +5726,7 @@
             <prop v="0" k="angle"/>
             <prop v="C" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -5751,7 +5751,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Kirkkojen ja muiden seurakunnallisten rakennusten&#xa;korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Kirkkojen ja muiden seurakunnallisten rakennusten&#xa;korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,YK">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="221,212,233,255" k="color"/>
@@ -5787,7 +5787,7 @@
             <prop v="0" k="angle"/>
             <prop v="YK" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -5817,7 +5817,7 @@
         <prop v="0" k="angle"/>
         <prop v="123" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="MS Shell Dlg 2" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="0,0" k="offset"/>
@@ -5867,7 +5867,7 @@
         </data_defined_properties>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Kotieläintalouden suuryksikön alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Kotieläintalouden suuryksikön alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,ME">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="195,188,3,255" k="color"/>
@@ -5903,7 +5903,7 @@
             <prop v="0" k="angle"/>
             <prop v="ME" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -5928,7 +5928,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Kulttuuritoimintaa palvelevien rakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Kulttuuritoimintaa palvelevien rakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,YY">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="221,212,233,255" k="color"/>
@@ -5964,7 +5964,7 @@
             <prop v="0" k="angle"/>
             <prop v="YY" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -6030,7 +6030,7 @@
             <prop v="0" k="angle"/>
             <prop v="le" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -6055,7 +6055,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Leikkipuisto" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Leikkipuisto" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,VK">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="88,173,65,255" k="color"/>
@@ -6091,7 +6091,7 @@
             <prop v="0" k="angle"/>
             <prop v="VK" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -6168,7 +6168,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Leirintäalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Leirintäalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,RL">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="255,207,69,255" k="color"/>
@@ -6204,7 +6204,7 @@
             <prop v="0" k="angle"/>
             <prop v="RL" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -6229,7 +6229,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Lentokenttäalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Lentokenttäalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,LL">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="221,212,233,0" k="color"/>
@@ -6396,7 +6396,7 @@
             <prop v="0" k="angle"/>
             <prop v="LL" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -6421,7 +6421,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Liike- ja toimistorakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Liike- ja toimistorakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,K">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="250,171,83,255" k="color"/>
@@ -6457,7 +6457,7 @@
             <prop v="0" k="angle"/>
             <prop v="K" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -6482,7 +6482,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Liikennealue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Liikennealue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,L">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="221,212,233,0" k="color"/>
@@ -6649,7 +6649,7 @@
             <prop v="0" k="angle"/>
             <prop v="L" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -6821,7 +6821,7 @@
             <prop v="0" k="angle"/>
             <prop v="ma-LT" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -6846,7 +6846,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Liikerakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Liikerakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,KL">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="250,171,83,255" k="color"/>
@@ -6882,7 +6882,7 @@
             <prop v="0" k="angle"/>
             <prop v="KL" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -6907,7 +6907,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Liikerakennusten korttelialue, jolle saa&#xa;sijoittaa vähittäiskaupan suuryksikön" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Liikerakennusten korttelialue, jolle saa&#xa;sijoittaa vähittäiskaupan suuryksikön" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,KM">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="250,171,83,255" k="color"/>
@@ -6943,7 +6943,7 @@
             <prop v="0" k="angle"/>
             <prop v="KM" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -6968,7 +6968,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Loma- ja matkailualue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Loma- ja matkailualue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,R">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="255,207,69,255" k="color"/>
@@ -7004,7 +7004,7 @@
             <prop v="0" k="angle"/>
             <prop v="R" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -7029,7 +7029,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Loma-asuntojen korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Loma-asuntojen korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,RA">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="255,207,69,255" k="color"/>
@@ -7065,7 +7065,7 @@
             <prop v="0" k="angle"/>
             <prop v="RA" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -7095,7 +7095,7 @@
         <prop v="0" k="angle"/>
         <prop v="+ yht 200 I" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="MS Shell Dlg 2" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="0,0" k="offset"/>
@@ -7123,7 +7123,7 @@
         <prop v="0" k="angle"/>
         <prop v="00 % " k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="MS Shell Dlg 2" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="0,0" k="offset"/>
@@ -7151,7 +7151,7 @@
         <prop v="0" k="angle"/>
         <prop v="pk 50 % I" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="MS Shell Dlg 2" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="0,0" k="offset"/>
@@ -7228,7 +7228,7 @@
             <prop v="0" k="angle"/>
             <prop v="luo" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,-4.5" k="offset"/>
@@ -7312,7 +7312,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Luonnonsuojelualue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Luonnonsuojelualue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,SL">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="182,226,227,255" k="color"/>
@@ -7348,7 +7348,7 @@
             <prop v="0" k="angle"/>
             <prop v="SL" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -7373,7 +7373,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Lähipalvelurakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Lähipalvelurakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,PL">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="250,171,83,255" k="color"/>
@@ -7409,7 +7409,7 @@
             <prop v="0" k="angle"/>
             <prop v="PL" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -7434,7 +7434,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Lähivirkistysalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Lähivirkistysalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,VL">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="88,173,65,255" k="color"/>
@@ -7470,7 +7470,7 @@
             <prop v="0" k="angle"/>
             <prop v="VL" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -7547,7 +7547,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Maa- ja metsätalousalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Maa- ja metsätalousalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,M">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="219,219,85,255" k="color"/>
@@ -7583,7 +7583,7 @@
             <prop v="0" k="angle"/>
             <prop v="M" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -7608,7 +7608,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Maa- ja metsätalousalue, jolla on erityisiä&#xa;ympäristöarvoja" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Maa- ja metsätalousalue, jolla on erityisiä&#xa;ympäristöarvoja" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,MY">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="188,222,178,255" k="color"/>
@@ -7644,7 +7644,7 @@
             <prop v="0" k="angle"/>
             <prop v="MY" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -7669,7 +7669,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Maa- ja metsätalousalue, jolla on erityistä&#xa;ulkoilun ohjaamistarvetta" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Maa- ja metsätalousalue, jolla on erityistä&#xa;ulkoilun ohjaamistarvetta" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,MU">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="188,222,178,255" k="color"/>
@@ -7705,7 +7705,7 @@
             <prop v="0" k="angle"/>
             <prop v="MU" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -7730,7 +7730,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Maa-ainesten ottoalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Maa-ainesten ottoalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,EO">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="230,173,207,255" k="color"/>
@@ -7819,7 +7819,7 @@
             <prop v="0" k="angle"/>
             <prop v="EO" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -7885,7 +7885,7 @@
             <prop v="0" k="angle"/>
             <prop v="ma" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="0" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -7989,7 +7989,7 @@
             <prop v="0" k="angle"/>
             <prop v="mav" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="0" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -8093,7 +8093,7 @@
             <prop v="0" k="angle"/>
             <prop v="ma-LPY" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="0" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -8238,7 +8238,7 @@
         <prop v="0" k="angle"/>
         <prop v="+ 12.3" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="MS Shell Dlg 2" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="0,0" k="offset"/>
@@ -8261,7 +8261,7 @@
         </data_defined_properties>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Maatalousalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Maatalousalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,MT">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="236,237,152,255" k="color"/>
@@ -8297,7 +8297,7 @@
             <prop v="0" k="angle"/>
             <prop v="MT" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -8322,7 +8322,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Maatilojen talouskeskusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Maatilojen talouskeskusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,AM">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="226,192,150,255" k="color"/>
@@ -8358,7 +8358,7 @@
             <prop v="0" k="angle"/>
             <prop v="AM" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -8437,7 +8437,7 @@
             <prop v="0" k="angle"/>
             <prop v="ma" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,-4.5" k="offset"/>
@@ -8554,7 +8554,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Maisemallisesti arvokas peltoalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Maisemallisesti arvokas peltoalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,MA">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="255,243,83,255" k="color"/>
@@ -8590,7 +8590,7 @@
             <prop v="0" k="angle"/>
             <prop v="MA" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -8669,7 +8669,7 @@
             <prop v="0" k="angle"/>
             <prop v="mp" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,-4.5" k="offset"/>
@@ -8753,7 +8753,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Mastoalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Mastoalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,EMT">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="230,173,207,255" k="color"/>
@@ -8842,7 +8842,7 @@
             <prop v="0" k="angle"/>
             <prop v="EMT" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -8867,7 +8867,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Matkailua palvelevien rakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Matkailua palvelevien rakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,RM">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="255,207,69,255" k="color"/>
@@ -8903,7 +8903,7 @@
             <prop v="0" k="angle"/>
             <prop v="RM" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -9168,7 +9168,7 @@
             <prop v="0" k="angle"/>
             <prop v="00 dBA" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,-4.59999999999999964" k="offset"/>
@@ -9503,7 +9503,7 @@
             <prop v="0" k="angle"/>
             <prop v="max 00 dBA" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -9832,7 +9832,7 @@
             <prop v="0" k="angle"/>
             <prop v="max 00 dBA" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -9862,7 +9862,7 @@
         <prop v="0" k="angle"/>
         <prop v="1 ap/as" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="MS Shell Dlg 2" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="0,0" k="offset"/>
@@ -9890,7 +9890,7 @@
         <prop v="0" k="angle"/>
         <prop v="1 ap/00 m²" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="MS Shell Dlg 2" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="0,0" k="offset"/>
@@ -9918,7 +9918,7 @@
         <prop v="0" k="angle"/>
         <prop v="as 00 % " k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="MS Shell Dlg 2" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="0,0" k="offset"/>
@@ -9946,7 +9946,7 @@
         <prop v="0" k="angle"/>
         <prop v="m 00 % " k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="MS Shell Dlg 2" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="0,0" k="offset"/>
@@ -10129,7 +10129,7 @@
             <prop v="0" k="angle"/>
             <prop v="ik" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,-4.59999999999999964" k="offset"/>
@@ -10160,7 +10160,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Muinaismuistoalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Muinaismuistoalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,SM">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="182,226,227,255" k="color"/>
@@ -10196,7 +10196,7 @@
             <prop v="0" k="angle"/>
             <prop v="SM" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -10226,7 +10226,7 @@
         <prop v="0" k="angle"/>
         <prop v="1/2 k IV" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="MS Shell Dlg 2" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="0" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="0,0" k="offset"/>
@@ -10254,7 +10254,7 @@
         <prop v="0" k="angle"/>
         <prop v="IV u 1/2" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="MS Shell Dlg 2" k="font"/>
+        <prop v="Arial" k="font"/>
         <prop v="0" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="0,0" k="offset"/>
@@ -10277,7 +10277,7 @@
         </data_defined_properties>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Museorakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Museorakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,YM">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="221,212,233,255" k="color"/>
@@ -10313,7 +10313,7 @@
             <prop v="0" k="angle"/>
             <prop v="YM" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -10445,7 +10445,7 @@
             <prop v="0" k="angle"/>
             <prop v="nat" k="chr"/>
             <prop v="196,196,196,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,-4.5" k="offset"/>
@@ -10763,7 +10763,7 @@
         <prop v="0" k="angle"/>
         <prop v="123" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="MS Shell Dlg 2" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="0,0" k="offset"/>
@@ -10786,7 +10786,7 @@
         </data_defined_properties>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Opetustoimintaa palvelevien rakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Opetustoimintaa palvelevien rakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,YO">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="221,212,233,255" k="color"/>
@@ -10822,7 +10822,7 @@
             <prop v="0" k="angle"/>
             <prop v="YO" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -10874,7 +10874,7 @@
         </data_defined_properties>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Palvelurakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Palvelurakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,P">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="250,171,83,255" k="color"/>
@@ -10910,7 +10910,7 @@
             <prop v="0" k="angle"/>
             <prop v="P" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -11208,7 +11208,7 @@
             <prop v="0" k="angle"/>
             <prop v="saa" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,-4.5" k="offset"/>
@@ -11292,7 +11292,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Puisto" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Puisto" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,VP">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="88,173,65,255" k="color"/>
@@ -11328,7 +11328,7 @@
             <prop v="0" k="angle"/>
             <prop v="VP" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -11405,7 +11405,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Puolustusvoimien alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Puolustusvoimien alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,EP">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="230,173,207,255" k="color"/>
@@ -11494,7 +11494,7 @@
             <prop v="0" k="angle"/>
             <prop v="EP" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -11519,7 +11519,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Puutarha- ja kasvihuonealue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Puutarha- ja kasvihuonealue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,MP">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="195,188,3,255" k="color"/>
@@ -11555,7 +11555,7 @@
             <prop v="0" k="angle"/>
             <prop v="MP" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -11621,7 +11621,7 @@
             <prop v="0" k="angle"/>
             <prop v="p" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -11839,7 +11839,7 @@
         <prop v="0" k="angle"/>
         <prop v="+12.3" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="Dingbats" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="-0.20000000000000001,-3.20000000000000062" k="offset"/>
@@ -11925,7 +11925,7 @@
         <prop v="0" k="angle"/>
         <prop v="+12.3" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="Dingbats" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="-0.20000000000000001,-3.20000000000000062" k="offset"/>
@@ -11985,7 +11985,7 @@
         <prop v="0" k="angle"/>
         <prop v="+12.3" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="Dingbats" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="-0.20000000000000001,-0.20000000000000001" k="offset"/>
@@ -12077,7 +12077,7 @@
         <prop v="0" k="angle"/>
         <prop v="+12.3" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="Dingbats" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="-0.20000000000000001,-0.20000000000000001" k="offset"/>
@@ -12168,7 +12168,7 @@
             <prop v="0" k="angle"/>
             <prop v="pk" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -12234,7 +12234,7 @@
             <prop v="0" k="angle"/>
             <prop v="am" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -12300,7 +12300,7 @@
             <prop v="0" k="angle"/>
             <prop v="m" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -12366,7 +12366,7 @@
             <prop v="0" k="angle"/>
             <prop v="t" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -12396,7 +12396,7 @@
         <prop v="0" k="angle"/>
         <prop v="1234" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="MS Shell Dlg 2" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="0,0" k="offset"/>
@@ -12419,7 +12419,7 @@
         </data_defined_properties>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Rakennussuojelualue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Rakennussuojelualue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,SR">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="182,226,227,255" k="color"/>
@@ -12455,7 +12455,7 @@
             <prop v="0" k="angle"/>
             <prop v="SR" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -12521,7 +12521,7 @@
             <prop v="0" k="angle"/>
             <prop v="srs" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -12546,7 +12546,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Rautatiealue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Rautatiealue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,LR">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="221,212,233,0" k="color"/>
@@ -12713,7 +12713,7 @@
             <prop v="0" k="angle"/>
             <prop v="LR" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -12738,7 +12738,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Retkeily- ja ulkoilualue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Retkeily- ja ulkoilualue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,VR">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="88,173,65,255" k="color"/>
@@ -12774,7 +12774,7 @@
             <prop v="0" k="angle"/>
             <prop v="VR" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -12931,7 +12931,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Rivitalojen ja muiden kytkettyjen asuinrakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Rivitalojen ja muiden kytkettyjen asuinrakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,AR">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="226,192,150,255" k="color"/>
@@ -12967,7 +12967,7 @@
             <prop v="0" k="angle"/>
             <prop v="AR" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -12997,7 +12997,7 @@
         <prop v="0" k="angle"/>
         <prop v="IV" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="MS Shell Dlg 2" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="0,0" k="offset"/>
@@ -13020,7 +13020,7 @@
         </data_defined_properties>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Satama-alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Satama-alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,LS">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="221,212,233,0" k="color"/>
@@ -13187,7 +13187,7 @@
             <prop v="0" k="angle"/>
             <prop v="LS" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -13212,7 +13212,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Siirtolapuutarha-/palstaviljelyalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Siirtolapuutarha-/palstaviljelyalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,RP">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="255,207,69,255" k="color"/>
@@ -13248,7 +13248,7 @@
             <prop v="0" k="angle"/>
             <prop v="RP" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -13407,7 +13407,7 @@
                 <prop v="-90" k="angle"/>
                 <prop v="3" k="chr"/>
                 <prop v="1,11,2,255" k="color"/>
-                <prop v="Dingbats" k="font"/>
+                <prop v="Arial Narrow" k="font"/>
                 <prop v="1" k="horizontal_anchor_point"/>
                 <prop v="bevel" k="joinstyle"/>
                 <prop v="-0.00000000000000006,1.19999999999999996" k="offset"/>
@@ -13434,7 +13434,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Sosiaalitointa ja terveydenhuoltoa palvelevien rakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Sosiaalitointa ja terveydenhuoltoa palvelevien rakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,YS">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="221,212,233,255" k="color"/>
@@ -13470,7 +13470,7 @@
             <prop v="0" k="angle"/>
             <prop v="YS" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -13500,7 +13500,7 @@
         <prop v="0" k="angle"/>
         <prop v="(1, 2, 3)" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="MS Shell Dlg 2" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="0,0" k="offset"/>
@@ -13523,7 +13523,7 @@
         </data_defined_properties>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Suojaviheralue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Suojaviheralue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,EV">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="116,204,211,255" k="color"/>
@@ -13612,7 +13612,7 @@
             <prop v="0" k="angle"/>
             <prop v="EV" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -13691,7 +13691,7 @@
             <prop v="0" k="angle"/>
             <prop v="sv" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,-4.5" k="offset"/>
@@ -13816,7 +13816,7 @@
             <prop v="0" k="angle"/>
             <prop v="s" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -13938,7 +13938,7 @@
             <prop v="0" k="angle"/>
             <prop v="sr" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -13963,7 +13963,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Suojelualue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Suojelualue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,S">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="182,226,227,255" k="color"/>
@@ -13999,7 +13999,7 @@
             <prop v="0" k="angle"/>
             <prop v="S" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -14079,7 +14079,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Tavaraliikenneterminaalin korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Tavaraliikenneterminaalin korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,LTA">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="249,198,209,255" k="color"/>
@@ -14115,7 +14115,7 @@
             <prop v="0" k="angle"/>
             <prop v="LTA" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -14145,7 +14145,7 @@
         <prop v="0" k="angle"/>
         <prop v="e = 0.12" k="chr"/>
         <prop v="0,0,0,255" k="color"/>
-        <prop v="MS Shell Dlg 2" k="font"/>
+        <prop v="Arial Narrow" k="font"/>
         <prop v="1" k="horizontal_anchor_point"/>
         <prop v="bevel" k="joinstyle"/>
         <prop v="0,0" k="offset"/>
@@ -14168,7 +14168,7 @@
         </data_defined_properties>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Teollisuus- ja varastorakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Teollisuus- ja varastorakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,T">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="193,195,197,255" k="color"/>
@@ -14204,7 +14204,7 @@
             <prop v="0" k="angle"/>
             <prop v="T" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -14229,7 +14229,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Teollisuus- ja varastorakennusten korttelialue, jolla&#xa;on/jolle saa sijoittaa merkittävän, vaarallisia&#xa;kemikaaleja valmistavan tai varastoivan laitoksen" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Teollisuus- ja varastorakennusten korttelialue, jolla&#xa;on/jolle saa sijoittaa merkittävän, vaarallisia&#xa;kemikaaleja valmistavan tai varastoivan laitoksen" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,T/kem">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="193,195,197,255" k="color"/>
@@ -14265,7 +14265,7 @@
             <prop v="0" k="angle"/>
             <prop v="T/kem" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -14290,7 +14290,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Teollisuusrakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Teollisuusrakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,TT">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="193,195,197,255" k="color"/>
@@ -14326,7 +14326,7 @@
             <prop v="0" k="angle"/>
             <prop v="TT" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -14351,7 +14351,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Teollisuusrakennusten korttelialue, jolla ympäristö&#xa;asettaa toiminnan laadulle erityisiä vaatimuksia" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Teollisuusrakennusten korttelialue, jolla ympäristö&#xa;asettaa toiminnan laadulle erityisiä vaatimuksia" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,TY">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="193,195,197,255" k="color"/>
@@ -14387,7 +14387,7 @@
             <prop v="0" k="angle"/>
             <prop v="TY" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -14412,7 +14412,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Toimistorakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Toimistorakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,KT">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="250,171,83,255" k="color"/>
@@ -14448,7 +14448,7 @@
             <prop v="0" k="angle"/>
             <prop v="KT" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -14473,7 +14473,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Toimitilarakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Toimitilarakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,KTY">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="250,171,83,255" k="color"/>
@@ -14509,7 +14509,7 @@
             <prop v="0" k="angle"/>
             <prop v="KTY" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -14588,7 +14588,7 @@
             <prop v="0" k="angle"/>
             <prop v="tv" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,-4.5" k="offset"/>
@@ -14726,7 +14726,7 @@
             <prop v="0" k="angle"/>
             <prop v="pv" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,-4.5" k="offset"/>
@@ -14955,7 +14955,7 @@
             <prop v="0" k="angle"/>
             <prop v="un" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,-4.5" k="offset"/>
@@ -15039,7 +15039,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Uimaranta-alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Uimaranta-alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,VV">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="88,173,65,255" k="color"/>
@@ -15075,7 +15075,7 @@
             <prop v="0" k="angle"/>
             <prop v="VV" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -15248,7 +15248,7 @@
             <prop v="0" k="angle"/>
             <prop v="u" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -15273,7 +15273,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Urheilu- ja virkistyspalvelujen alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Urheilu- ja virkistyspalvelujen alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,VU">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="88,173,65,255" k="color"/>
@@ -15309,7 +15309,7 @@
             <prop v="0" k="angle"/>
             <prop v="VU" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -15386,7 +15386,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Urheilutoimintaa palvelevien rakennusten&#xa;korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Urheilutoimintaa palvelevien rakennusten&#xa;korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,YU">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="221,212,233,255" k="color"/>
@@ -15422,7 +15422,7 @@
             <prop v="0" k="angle"/>
             <prop v="YU" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -15501,7 +15501,7 @@
             <prop v="0" k="angle"/>
             <prop v="va" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,-4.5" k="offset"/>
@@ -15626,7 +15626,7 @@
             <prop v="0" k="angle"/>
             <prop v="v" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -15651,7 +15651,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Varastorakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Varastorakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,TV">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="193,195,197,255" k="color"/>
@@ -15687,7 +15687,7 @@
             <prop v="0" k="angle"/>
             <prop v="TV" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -15712,7 +15712,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Venesatama/venevalkama" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Venesatama/venevalkama" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,LV">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="221,212,233,0" k="color"/>
@@ -15879,7 +15879,7 @@
             <prop v="0" k="angle"/>
             <prop v="LV" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -15904,7 +15904,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Vesialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Vesialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,W">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="179,215,241,255" k="color"/>
@@ -15940,7 +15940,7 @@
             <prop v="0" k="angle"/>
             <prop v="W" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -15965,7 +15965,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Virkistysalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Virkistysalue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,V">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="88,173,65,255" k="color"/>
@@ -16001,7 +16001,7 @@
             <prop v="0" k="angle"/>
             <prop v="V" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -16078,7 +16078,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Yhdyskuntateknistä huoltoa palvelevien&#xa;rakennusten ja laitosten alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Yhdyskuntateknistä huoltoa palvelevien&#xa;rakennusten ja laitosten alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,ET">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="230,173,207,255" k="color"/>
@@ -16167,7 +16167,7 @@
             <prop v="0" k="angle"/>
             <prop v="ET" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -16228,7 +16228,7 @@
             <prop v="0" k="angle"/>
             <prop v="/yk" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -16253,7 +16253,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Yleinen pysäköintialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Yleinen pysäköintialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,LP">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="221,212,233,0" k="color"/>
@@ -16420,7 +16420,7 @@
             <prop v="0" k="angle"/>
             <prop v="LP" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -16541,7 +16541,7 @@
             <prop v="0" k="angle"/>
             <prop v="LT-pp" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -16720,7 +16720,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Yleisen tien alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Yleisen tien alue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,LT">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="221,212,233,0" k="color"/>
@@ -16887,7 +16887,7 @@
             <prop v="0" k="angle"/>
             <prop v="LT" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -17123,7 +17123,7 @@
             <prop v="0" k="angle"/>
             <prop v="nä" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -17359,7 +17359,7 @@
             <prop v="0" k="angle"/>
             <prop v="su" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -17384,7 +17384,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Yleisten pysäköintilaitosten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Yleisten pysäköintilaitosten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,LPY">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="249,198,209,255" k="color"/>
@@ -17420,7 +17420,7 @@
             <prop v="0" k="angle"/>
             <prop v="LPY" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
@@ -17445,7 +17445,7 @@
         </symbol>
       </layer>
     </symbol>
-    <symbol type="fill" clip_to_extent="1" name="Yleisten rakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka">
+    <symbol type="fill" clip_to_extent="1" name="Yleisten rakennusten korttelialue" alpha="1" force_rhr="0" tags="asemakaavamerkinnat,asemakaava,asemakaavan_kuvaustekniikka,Y">
       <layer class="SimpleFill" enabled="1" pass="0" locked="0">
         <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
         <prop v="221,212,233,255" k="color"/>
@@ -17481,7 +17481,7 @@
             <prop v="0" k="angle"/>
             <prop v="Y" k="chr"/>
             <prop v="0,0,0,255" k="color"/>
-            <prop v="Dingbats" k="font"/>
+            <prop v="Arial Narrow" k="font"/>
             <prop v="1" k="horizontal_anchor_point"/>
             <prop v="bevel" k="joinstyle"/>
             <prop v="0,0" k="offset"/>
