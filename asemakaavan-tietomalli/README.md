@@ -8,31 +8,18 @@ Kehitysversiota on käyty läpi Paimion kaupungin kanssa.
 
 <img src="tietomalli_luonnos.png" width="500"/>
 
-## Huomioita tietomallista
+## Tietomallin sisältö
 
-- Toteutus on pyritty pitämään minimissä. Esimerkiksi kaavan lisätiedot (selosteet, dokumentit, päätökset, lähtötiedot) on kuvattu yhdessä taulussa
-- Tietomalli sisältää 3 skeemaa: geometriaa sisältävät kohteet, kaavan lisätiedot sekä koodilistat
-- Mahdollista on, että tietomallia käyttävässä kunnassa halutaan laajentaa mallia omiin tarpeisiin ja se on okei.
-- Huomioitava on, että tietomalli tulee varmasti muuttumaan ajassa ja tämä pitää ottaa huomioon, kun tietomallia alkaa käyttämään (ohjeistus päivitykseen tulossa)
+- Toteutus on pyritty pitämään minimissä
+    - Esimerkiksi kaavan lisätiedot (selosteet, dokumentit, päätökset, lähtötiedot) on kuvattu yhdessä taulussa
+- Tietomalli sisältää **3 skeemaa**: koodilistat, asemakaavat (sisältää kohteiden geometriat) sekä kaavan lisätiedot
+- Mahdollista on, että tietomallia käyttävässä kunnassa halutaan laajentaa mallia omiin tarpeisiin ja se on okei
+- Huomioitavaa on, että tietomalli tulee varmasti muuttumaan ajan kuluessa
+    - Tämä pitää huomioida kun tietomallia alkaa käyttämään (ohjeistus päivitykseen tulossa)
 
-### Geometria-skeeman taulut
+<img src="asemakaavan_tietomalli_graafinen.png" width="500">
 
-Sisältävät asemakaavan paikkatietokohteet, eli geometriaa sisältävät taulut sekä numeeristen tietojen täyttöön aputaulun
-
-- *asemakaava:* kaavan ulkoraja, joka sisältää perustiedot kaavasta (nimi, prosessin vaihe, muokkauspäivämäräät jne).
-- *maankayttoalue:* kaavan ulkorajan sisälle jäävät maankäyttökohteet (kaavayksiköt) (esim. AP, V, LP jne), jotka ovat aina polygoneja (alueita). Nämä polygonit täyttävät koko kaava-alueen. 
-- *Osa-alue:* voivat olla vain polygoneja ja ne ovat usein maankäyttöalueiden päällä "leijuvia" kohteita (esim. Rakennusala, jolle saa sijoittaa talousrakennuksen, Pysäköimispaikka)
-- *Kaavaelementti:* voivat olla pisteitä, viivoja ja alueita (esim. Suojeltava puu, Harjasuunta, Ajoneuvoliittymän likimääräinen sijainti).
-- *Numeerinen_merkintä*: aputaulu, jolla voi kirjata numeerista tietoa (esim. rakennusala, tehokkuusluku). Jokaiselle numeeriselle tietotyypille voi antaa jonkin arvon. 
-
-### Kaavan lisätiedot-skeeman taulut
-
-Sisältää kaksi taulua, joissa kaavaan liittyviä tietoja. 
-
-- *dokumentti:* erilaiset liitetiedostot, päätökset, lähtötiedot
-- *taustakartta:* virallinen kaavan taustakartta (linkki aineistoon tai lähteeseen)
-
-### Koodilista-skeeman taulut
+### Koodistot-skeeman taulut
 
 Sisältää koodilistoja, jotka voidaan liittää geometriaa sisältäviin kohteisiin tai kaavan lisätietotauluihin (osa listoista haettu suoraan YM:n tietomallista, jatkossa Suomi.fi-palvelun sanastosta). HILUCS ja HSRCL tulevat INSPIRE:n maankäyttöpäätösten koodilistalta, kansallisesti tehtävä määrittely mikä on mikäkin vastaavuus. HILUCSin osalta lista olemassa, HSRCL:n osalta ilmeisesti ei.
 
@@ -48,6 +35,23 @@ Sisältää koodilistoja, jotka voidaan liittää geometriaa sisältäviin kohte
 - *osa_alue_tyyppi*
 - *kaava_elementtityyppi*
 - *HSRCL*
+
+### Asemakaavat-skeeman taulut
+
+Sisältävät asemakaavan paikkatietokohteet, eli geometriaa sisältävät taulut sekä numeeristen tietojen täyttöön aputaulun.
+
+- *asemakaava:* kaavan ulkoraja, joka sisältää perustiedot kaavasta (nimi, prosessin vaihe, muokkauspäivämäärät...).
+- *maankayttoalue:* kaavan ulkorajan sisälle jäävät maankäyttökohteet (kaavayksiköt) (esim. AP, V, LP jne), jotka ovat aina polygoneja (alueita). Nämä polygonit täyttävät koko kaava-alueen.
+- *osa-alue:* voivat olla vain polygoneja ja ne ovat usein maankäyttöalueiden päällä "leijuvia" kohteita (esim. Rakennusala, jolle saa sijoittaa talousrakennuksen tai Pysäköimispaikka).
+- *kaavaelementti:* voivat olla pisteitä, viivoja ja alueita (esim. Suojeltava puu, Harjasuunta, Ajoneuvoliittymän likimääräinen sijainti).
+- *numeerinen_merkintä*: aputaulu, jolla voi kirjata numeerista tietoa (esim. rakennusala, tehokkuusluku). Jokaiselle numeeriselle tietotyypille voi antaa jonkin arvon. 
+
+### Kaavan lisätiedot -skeeman taulut
+
+Sisältää kaksi taulua, joissa kaavaan liittyviä tietoja. 
+
+- *dokumentti:* erilaiset liitetiedostot, päätökset, lähtötiedot.
+- *taustakartta:* virallinen kaavan taustakartta (linkki aineistoon tai lähteeseen).
 
 ## Tietomallin pohjana on käytetty seuraavia tausta-aineistoja ja selvityksiä:
 
