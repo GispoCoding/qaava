@@ -17,7 +17,7 @@ Kehitysversiota on käyty läpi Paimion kaupungin kanssa.
 - Huomioitavaa on, että tietomalli tulee varmasti muuttumaan ajan kuluessa
     - Tämä pitää huomioida kun tietomallia alkaa käyttämään (ohjeistus päivitykseen tulossa)
 
-<img src="asemakaavan_tietomalli_graafinen.png" width="800">
+<center><img src="asemakaavan_tietomalli_graafinen.png" width="800"></center>
 
 ### Koodistot-skeeman taulut
 
