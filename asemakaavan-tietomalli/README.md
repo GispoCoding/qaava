@@ -22,8 +22,8 @@ Sisältävät asemakaavan paikkatietokohteet, eli geometriaa sisältävät taulu
 - *asemakaava:* kaavan ulkoraja, joka sisältää perustiedot kaavasta (nimi, prosessin vaihe, muokkauspäivämäräät jne).
 - *maankayttoalue:* kaavan ulkorajan sisälle jäävät maankäyttökohteet (kaavayksiköt) (esim. AP, V, LP jne), jotka ovat aina polygoneja (alueita). Nämä polygonit täyttävät koko kaava-alueen. 
 - *Osa-alue:* voivat olla vain polygoneja ja ne ovat usein maankäyttöalueiden päällä "leijuvia" kohteita (esim. Rakennusala, jolle saa sijoittaa talousrakennuksen, Pysäköimispaikka)
-- *Kaavaelementti:* voivat olla pisteitä, viivoja ja alueita (esim. Suojeltava puu, Harjasuunta).
-- *Numeerinen_merkintä*: esim. rakennusala, tehokkuusluku ja jokaiselle numeeriselle tietotyypille arvo
+- *Kaavaelementti:* voivat olla pisteitä, viivoja ja alueita (esim. Suojeltava puu, Harjasuunta, Ajoneuvoliittymän likimääräinen sijainti).
+- *Numeerinen_merkintä*: aputaulu, jolla voi kirjata numeerista tietoa (esim. rakennusala, tehokkuusluku). Jokaiselle numeeriselle tietotyypille voi antaa jonkin arvon. 
 
 ### Kaavan lisätiedot-skeeman taulut
 
