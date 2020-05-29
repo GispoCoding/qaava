@@ -12,7 +12,7 @@ Kehitysversiota on käyty läpi Paimion kaupungin kanssa.
 
 - Toteutus on pyritty pitämään minimissä
     - Esimerkiksi kaavan lisätiedot (selosteet, dokumentit, päätökset, lähtötiedot) on kuvattu yhdessä taulussa
-- Tietomalli sisältää **3 skeemaa**: koodilistat, asemakaavat (sisältää kohteiden geometriat) sekä kaavan lisätiedot
+- Tietomalli sisältää **3 skeemaa**: koodistot, asemakaavat (sisältää kohteiden geometriat) sekä kaavan lisätiedot
 - Mahdollista on, että tietomallia käyttävässä kunnassa halutaan laajentaa mallia omiin tarpeisiin ja se on okei
 - Huomioitavaa on, että tietomalli tulee varmasti muuttumaan ajan kuluessa
     - Tämä pitää huomioida kun tietomallia alkaa käyttämään (ohjeistus päivitykseen tulossa)
