@@ -53,21 +53,22 @@ WITH SCHEMA public;
 -- DROP TABLE IF EXISTS asemakaavat.asemakaava CASCADE;
 CREATE TABLE asemakaavat.asemakaava (
 	gid serial,
+	uuid uuid NOT NULL DEFAULT uuid_generate_v4(),
 	geom geometry(MULTIPOLYGONZ, 3877),
-	ak_uuid uuid NOT NULL DEFAULT uuid_generate_v4(),
 	nimi varchar,
-	gid_kaavatyyppi integer,
 	gid_kieli integer,
+	gid_kaavatyyppi integer,
 	pinta_ala real,
+	gid_vaihetieto integer,
+	gid_prosessin_vaihe integer,
 	luomispvm timestamp DEFAULT now(),
 	poistamispvm timestamp,
 	voimaantulopvm date,
 	kumoamispvm date,
-	gid_prosessin_vaihe integer,
-	gid_vaihetieto integer,
 	gid_kuvaustyyli integer,
 	gid_taustakartta integer,
-	CONSTRAINT ak_uuid_pk PRIMARY KEY (ak_uuid)
+	gid_dokumentti integer,
+	CONSTRAINT ak_uuid_pk PRIMARY KEY (uuid)
 
 );
 -- ddl-end --
@@ -81,16 +82,13 @@ ALTER TABLE asemakaavat.asemakaava OWNER TO postgres;
 CREATE TABLE asemakaavat.kaavaelementti (
 	gid serial,
 	uuid uuid NOT NULL DEFAULT uuid_generate_v4(),
-	gid_kaavaelementti_tyyppi integer,
 	geom_polygon geometry(MULTIPOLYGONZ, 3877),
 	geom_line geometry(MULTILINESTRINGZ, 3877),
 	geom_point geometry(MULTIPOINTZ, 3877),
 	luontipvm timestamp DEFAULT now(),
 	periytynytkohde boolean,
-	numeroarvo real,
-	ak_uuid_asemakaava uuid,
-	uuid_osa_alue uuid,
-	uuid_maankayttoalue uuid,
+	uuid_asemakaava uuid,
+	gid_kaavaelementti_tyyppi integer,
 	CONSTRAINT kaavaelementti_pk PRIMARY KEY (uuid)
 
 );
@@ -105,14 +103,13 @@ ALTER TABLE asemakaavat.kaavaelementti OWNER TO postgres;
 CREATE TABLE asemakaavat.maankayttoalue (
 	gid serial,
 	uuid uuid NOT NULL DEFAULT uuid_generate_v4(),
-	gid_maankayttoluokat integer,
 	geom geometry(MULTIPOLYGONZ, 3877),
+	nimi varchar,
 	pinta_ala real,
-	rakennusoikeus smallint,
 	luontipvm timestamp DEFAULT now(),
 	periytynytkohde boolean,
-	ak_uuid_asemakaava uuid,
-	tehokkuusluku real,
+	gid_maankayttoluokka integer,
+	uuid_asemakaava uuid,
 	CONSTRAINT kayttotarkoitusalue_pk PRIMARY KEY (uuid)
 
 );
@@ -128,16 +125,13 @@ ALTER TABLE asemakaavat.maankayttoalue OWNER TO postgres;
 -- DROP TABLE IF EXISTS asemakaavat.osa_alue CASCADE;
 CREATE TABLE asemakaavat.osa_alue (
 	gid serial,
-	geom geometry(MULTIPOLYGONZ, 3877),
 	uuid uuid NOT NULL DEFAULT uuid_generate_v4(),
-	gid_osa_alue_tyyppi integer,
+	geom geometry(MULTIPOLYGONZ, 3877),
 	luontipvm timestamp DEFAULT now(),
 	pinta_ala real,
-	rakennusoikeus real,
-	tehokkuusluku real,
 	periytynytkohde boolean,
-	uuid_maankayttoalue uuid,
-	ak_uuid_asemakaava uuid,
+	uuid_asemakaava uuid,
+	gid_osa_alue_tyyppi integer,
 	CONSTRAINT kaavayksikko_pk PRIMARY KEY (uuid)
 
 );
@@ -147,12 +141,13 @@ COMMENT ON TABLE asemakaavat.osa_alue IS 'Asemakaavan pienin tiettyyn käyttöta
 ALTER TABLE asemakaavat.osa_alue OWNER TO postgres;
 -- ddl-end --
 
--- object: asemakaavat.kaavamaarays | type: TABLE --
--- DROP TABLE IF EXISTS asemakaavat.kaavamaarays CASCADE;
-CREATE TABLE asemakaavat.kaavamaarays (
+-- object: koodistot.kaavamaarays | type: TABLE --
+-- DROP TABLE IF EXISTS koodistot.kaavamaarays CASCADE;
+CREATE TABLE koodistot.kaavamaarays (
 	uuid uuid NOT NULL,
 	luontipvm timestamp DEFAULT now(),
-	ak_uuid_asemakaava uuid,
+	maaraysteksti varchar,
+	uuid_asemakaava uuid,
 	uuid_kaavaelementti uuid,
 	uuid_osa_alue uuid,
 	uuid_maankayttoalue uuid,
@@ -160,15 +155,16 @@ CREATE TABLE asemakaavat.kaavamaarays (
 
 );
 -- ddl-end --
-COMMENT ON TABLE asemakaavat.kaavamaarays IS 'kaavaan sisältyvä sanallinen määräys, joka on juridisesti sitova kaavan toimeenpanossa
-huomautus
+COMMENT ON TABLE koodistot.kaavamaarays IS 'kaavaan sisältyvä sanallinen määräys, joka on juridisesti sitova kaavan toimeenpanossa
+huomautus.
+
 Kaavamääräyksellä ja kaavamerkinnöillä yksilöidään maa-alueiden rakentaminen ja käyttö eri
 tarkoituksiin.
-Kaavamääräyksiä ovat asema-, yleis- ja maakuntakaavamääräykset.
+
 Asemakaavamääräyksiä voidaan antaa asemakaavaa laadittaessa. Asemakaavamääräykset
 voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoittamista.';
 -- ddl-end --
-ALTER TABLE asemakaavat.kaavamaarays OWNER TO postgres;
+ALTER TABLE koodistot.kaavamaarays OWNER TO postgres;
 -- ddl-end --
 
 -- object: koodistot.kuvaustyyli | type: TABLE --
@@ -192,6 +188,7 @@ CREATE TABLE kaavan_lisatiedot.taustakartta (
 	gid serial NOT NULL,
 	nimi varchar,
 	viittauspvm date,
+	uri varchar,
 	CONSTRAINT taustakartta_pk PRIMARY KEY (gid)
 
 );
@@ -201,73 +198,42 @@ ALTER TABLE kaavan_lisatiedot.taustakartta OWNER TO postgres;
 
 -- object: asemakaava_fk | type: CONSTRAINT --
 -- ALTER TABLE asemakaavat.maankayttoalue DROP CONSTRAINT IF EXISTS asemakaava_fk CASCADE;
-ALTER TABLE asemakaavat.maankayttoalue ADD CONSTRAINT asemakaava_fk FOREIGN KEY (ak_uuid_asemakaava)
-REFERENCES asemakaavat.asemakaava (ak_uuid) MATCH FULL
-ON DELETE SET NULL ON UPDATE CASCADE;
--- ddl-end --
-
--- object: maankayttoalue_fk | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.osa_alue DROP CONSTRAINT IF EXISTS maankayttoalue_fk CASCADE;
-ALTER TABLE asemakaavat.osa_alue ADD CONSTRAINT maankayttoalue_fk FOREIGN KEY (uuid_maankayttoalue)
-REFERENCES asemakaavat.maankayttoalue (uuid) MATCH FULL
+ALTER TABLE asemakaavat.maankayttoalue ADD CONSTRAINT asemakaava_fk FOREIGN KEY (uuid_asemakaava)
+REFERENCES asemakaavat.asemakaava (uuid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
 
 -- object: asemakaava_fk | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.kaavamaarays DROP CONSTRAINT IF EXISTS asemakaava_fk CASCADE;
-ALTER TABLE asemakaavat.kaavamaarays ADD CONSTRAINT asemakaava_fk FOREIGN KEY (ak_uuid_asemakaava)
-REFERENCES asemakaavat.asemakaava (ak_uuid) MATCH FULL
+-- ALTER TABLE koodistot.kaavamaarays DROP CONSTRAINT IF EXISTS asemakaava_fk CASCADE;
+ALTER TABLE koodistot.kaavamaarays ADD CONSTRAINT asemakaava_fk FOREIGN KEY (uuid_asemakaava)
+REFERENCES asemakaavat.asemakaava (uuid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
 
 -- object: maankayttoalue_fk | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.kaavamaarays DROP CONSTRAINT IF EXISTS maankayttoalue_fk CASCADE;
-ALTER TABLE asemakaavat.kaavamaarays ADD CONSTRAINT maankayttoalue_fk FOREIGN KEY (uuid_maankayttoalue)
+-- ALTER TABLE koodistot.kaavamaarays DROP CONSTRAINT IF EXISTS maankayttoalue_fk CASCADE;
+ALTER TABLE koodistot.kaavamaarays ADD CONSTRAINT maankayttoalue_fk FOREIGN KEY (uuid_maankayttoalue)
 REFERENCES asemakaavat.maankayttoalue (uuid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
 
 -- object: kaavaelementti_fk | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.kaavamaarays DROP CONSTRAINT IF EXISTS kaavaelementti_fk CASCADE;
-ALTER TABLE asemakaavat.kaavamaarays ADD CONSTRAINT kaavaelementti_fk FOREIGN KEY (uuid_kaavaelementti)
+-- ALTER TABLE koodistot.kaavamaarays DROP CONSTRAINT IF EXISTS kaavaelementti_fk CASCADE;
+ALTER TABLE koodistot.kaavamaarays ADD CONSTRAINT kaavaelementti_fk FOREIGN KEY (uuid_kaavaelementti)
 REFERENCES asemakaavat.kaavaelementti (uuid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
 
 -- object: osa_alue_fk | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.kaavamaarays DROP CONSTRAINT IF EXISTS osa_alue_fk CASCADE;
-ALTER TABLE asemakaavat.kaavamaarays ADD CONSTRAINT osa_alue_fk FOREIGN KEY (uuid_osa_alue)
+-- ALTER TABLE koodistot.kaavamaarays DROP CONSTRAINT IF EXISTS osa_alue_fk CASCADE;
+ALTER TABLE koodistot.kaavamaarays ADD CONSTRAINT osa_alue_fk FOREIGN KEY (uuid_osa_alue)
 REFERENCES asemakaavat.osa_alue (uuid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
 
--- object: asemakaavat.many_osa_alue_has_many_osa_alue | type: TABLE --
--- DROP TABLE IF EXISTS asemakaavat.many_osa_alue_has_many_osa_alue CASCADE;
-CREATE TABLE asemakaavat.many_osa_alue_has_many_osa_alue (
-	uuid_osa_alue uuid NOT NULL,
-	uuid_osa_alue1 uuid NOT NULL,
-	CONSTRAINT many_osa_alue_has_many_osa_alue_pk PRIMARY KEY (uuid_osa_alue,uuid_osa_alue1)
-
-);
--- ddl-end --
-
--- object: osa_alue_fk | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.many_osa_alue_has_many_osa_alue DROP CONSTRAINT IF EXISTS osa_alue_fk CASCADE;
-ALTER TABLE asemakaavat.many_osa_alue_has_many_osa_alue ADD CONSTRAINT osa_alue_fk FOREIGN KEY (uuid_osa_alue)
-REFERENCES asemakaavat.osa_alue (uuid) MATCH FULL
-ON DELETE RESTRICT ON UPDATE CASCADE;
--- ddl-end --
-
--- object: osa_alue_fk1 | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.many_osa_alue_has_many_osa_alue DROP CONSTRAINT IF EXISTS osa_alue_fk1 CASCADE;
-ALTER TABLE asemakaavat.many_osa_alue_has_many_osa_alue ADD CONSTRAINT osa_alue_fk1 FOREIGN KEY (uuid_osa_alue1)
-REFERENCES asemakaavat.osa_alue (uuid) MATCH FULL
-ON DELETE RESTRICT ON UPDATE CASCADE;
--- ddl-end --
-
--- object: koodistot.maankayttoluokat | type: TABLE --
--- DROP TABLE IF EXISTS koodistot.maankayttoluokat CASCADE;
-CREATE TABLE koodistot.maankayttoluokat (
+-- object: koodistot.maankayttoluokka | type: TABLE --
+-- DROP TABLE IF EXISTS koodistot.maankayttoluokka CASCADE;
+CREATE TABLE koodistot.maankayttoluokka (
 	gid serial NOT NULL,
 	paaluokka varchar,
 	koodi varchar,
@@ -278,190 +244,165 @@ CREATE TABLE koodistot.maankayttoluokat (
 
 );
 -- ddl-end --
-ALTER TABLE koodistot.maankayttoluokat OWNER TO postgres;
+ALTER TABLE koodistot.maankayttoluokka OWNER TO postgres;
 -- ddl-end --
 
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Asuinalue', E'A', E'Asuinalue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Asuinalue', E'A', E'Asuinalue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Asuinalue', E'AK', E'Kerrostaloalue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Asuinalue', E'AK', E'Kerrostaloalue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Asuinalue', E'AP', E'Pientaloalue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Asuinalue', E'AP', E'Pientaloalue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Asuinalue', E'AR', E'Rivitaloalue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Asuinalue', E'AR', E'Rivitaloalue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Asuinalue', E'AO', E'Erillispientaloalue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Asuinalue', E'AO', E'Erillispientaloalue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Asuinalue', E'AL', E'Asuin-, liike- ja toimistorakennusten alue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Asuinalue', E'AL', E'Asuin-, liike- ja toimistorakennusten alue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Asuinalue', E'AM', E'Maatilojen talouskeskusalue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Asuinalue', E'AM', E'Maatilojen talouskeskusalue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Palvelutoiminnot', E'P', E'Palvelutoiminnot');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Palvelutoiminnot', E'P', E'Palvelutoiminnot');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Palvelutoiminnot', E'PL', E'Lähipalvelut');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Palvelutoiminnot', E'PL', E'Lähipalvelut');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Palvelutoiminnot', E'PV', E'Kulttuuri- ja viihdepalvelut');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Palvelutoiminnot', E'PV', E'Kulttuuri- ja viihdepalvelut');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Palvelutoiminnot', E'Y', E'Yleiset rakennukset');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Palvelutoiminnot', E'Y', E'Yleiset rakennukset');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Palvelutoiminnot', E'YL', E'Julkiset lähipalvelut');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Palvelutoiminnot', E'YL', E'Julkiset lähipalvelut');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Palvelutoiminnot', E'YH', E'Hallinto- ja virastopalvelut');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Palvelutoiminnot', E'YH', E'Hallinto- ja virastopalvelut');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Palvelutoiminnot', E'YO', E'Opetustoiminta');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Palvelutoiminnot', E'YO', E'Opetustoiminta');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Palvelutoiminnot', E'YS', E'Sosiaalitoimi ja terveydenhuolto');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Palvelutoiminnot', E'YS', E'Sosiaalitoimi ja terveydenhuolto');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Palvelutoiminnot', E'YK', E'Kirkot ja seurakuntatoiminta');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Palvelutoiminnot', E'YK', E'Kirkot ja seurakuntatoiminta');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Palvelutoiminnot', E'YU', E'Urheilutoimintaa palvelevien rakennusten alue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Palvelutoiminnot', E'YU', E'Urheilutoimintaa palvelevien rakennusten alue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Keskustatoiminnot', E'C', E'Keskustatoiminnot');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Keskustatoiminnot', E'C', E'Keskustatoiminnot');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Liike- ja toimistorakennusten alue', E'K', E'Liike- ja toimistorakennusten alue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Liike- ja toimistorakennusten alue', E'K', E'Liike- ja toimistorakennusten alue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Liike- ja toimistorakennusten alue', E'KL', E'Liikerakennusten alue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Liike- ja toimistorakennusten alue', E'KL', E'Liikerakennusten alue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Liike- ja toimistorakennusten alue', E'KM', E'Vähittäiskaupan suuryksikkö');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Liike- ja toimistorakennusten alue', E'KM', E'Vähittäiskaupan suuryksikkö');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Liike- ja toimistorakennusten alue', E'KT', E'Toimistorakennusten alue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Liike- ja toimistorakennusten alue', E'KT', E'Toimistorakennusten alue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Teollisuusalue', E'T', E'Teollisuusalue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Teollisuusalue', E'T', E'Teollisuusalue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Teollisuusalue', E'TY', E'Teollisuusalue, jolla ympäristö asettaa toiminnan laadulle erityisiä vaatimuksia.');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Teollisuusalue', E'TY', E'Teollisuusalue, jolla ympäristö asettaa toiminnan laadulle erityisiä vaatimuksia.');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Virkistysalue', E'V', E'Virkistysalue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Virkistysalue', E'V', E'Virkistysalue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Virkistysalue', E'VP', E'Puisto');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Virkistysalue', E'VP', E'Puisto');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Virkistysalue', E'VL', E'Lähivirkistysalue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Virkistysalue', E'VL', E'Lähivirkistysalue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Virkistysalue', E'VK', E'Leikkipuisto');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Virkistysalue', E'VK', E'Leikkipuisto');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Virkistysalue', E'VU', E'Urheilu- ja virkistyspalvelualue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Virkistysalue', E'VU', E'Urheilu- ja virkistyspalvelualue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Virkistysalue', E'VR', E'Retkeily- ja ulkoilualue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Virkistysalue', E'VR', E'Retkeily- ja ulkoilualue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Virkistysalue', E'VV', E'Uimaranta');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Virkistysalue', E'VV', E'Uimaranta');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Loma- ja matkailualue', E'R', E'Loma- ja matkailualue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Loma- ja matkailualue', E'R', E'Loma- ja matkailualue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Loma- ja matkailualue', E'RA', E'Lomarakennusten alue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Loma- ja matkailualue', E'RA', E'Lomarakennusten alue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Loma- ja matkailualue', E'RM', E'Matkailua palvelevien rakennusten alue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Loma- ja matkailualue', E'RM', E'Matkailua palvelevien rakennusten alue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Loma- ja matkailualue', E'RL', E'Leirintäalue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Loma- ja matkailualue', E'RL', E'Leirintäalue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Loma- ja matkailualue', E'RP', E'Siirtolapuutarha- ja palstaviljelyalue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Loma- ja matkailualue', E'RP', E'Siirtolapuutarha- ja palstaviljelyalue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'L', E'Liikennealue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'L', E'Liikennealue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'KATU', E'Katu');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'KATU', E'Katu');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LT', E'Yleisen tien alue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LT', E'Yleisen tien alue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LR', E'Rautatie');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LR', E'Rautatie');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LL', E'Lentokenttä');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LL', E'Lentokenttä');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LS', E'Satama');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LS', E'Satama');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LK', E'Kanava');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LK', E'Kanava');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LV', E'Venesatama ja -valkama');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LV', E'Venesatama ja -valkama');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LP', E'Yleinen pysäköintialue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LP', E'Yleinen pysäköintialue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LPA', E'Autopaikka-alue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LPA', E'Autopaikka-alue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LH', E'Huoltoasema');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LH', E'Huoltoasema');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LHA', E'Henkilöliikenneterminaali');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LHA', E'Henkilöliikenneterminaali');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LTA', E'Tavaraliikenneterminaali');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'LTA', E'Tavaraliikenneterminaali');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'TORI', E'Katuaukio/tori');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'TORI', E'Katuaukio/tori');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'KATU', E'Jalankululle tai pyöräilylle varattu katu');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Liikenteen alue', E'KATU', E'Jalankululle tai pyöräilylle varattu katu');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'E', E'Erityisalue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'E', E'Erityisalue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'ET', E'Yhdyskuntatekninen huolto');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'ET', E'Yhdyskuntatekninen huolto');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'EN', E'Energiahuolto');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'EN', E'Energiahuolto');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'EJ', E'Jätteenkäsittely');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'EJ', E'Jätteenkäsittely');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'EO', E'Maa-aineiston otto');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'EO', E'Maa-aineiston otto');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'EV', E'Suojaviheralue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'EV', E'Suojaviheralue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'EK', E'Kaivosalue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'EK', E'Kaivosalue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'EMT', E'Mastoalue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'EMT', E'Mastoalue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'EA', E'Ampumarata');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'EA', E'Ampumarata');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'EP', E'Puolustusvoimienalue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'EP', E'Puolustusvoimienalue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'EH', E'Hautausmaa');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Erityisalue', E'EH', E'Hautausmaa');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Suojelualue', E'S', E'Suojelualue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Suojelualue', E'S', E'Suojelualue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Suojelualue', E'SL', E'Luonnonsuojelualue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Suojelualue', E'SL', E'Luonnonsuojelualue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Suojelualue', E'SM', E'Muinaismuistoalue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Suojelualue', E'SM', E'Muinaismuistoalue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Suojelualue', E'SR', E'Rakennussuojelualue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Suojelualue', E'SR', E'Rakennussuojelualue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Maa- ja metsätalousalue', E'M', E'Maa- ja metsätalousalue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Maa- ja metsätalousalue', E'M', E'Maa- ja metsätalousalue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Maa- ja metsätalousalue', E'MT', E'Maatalousalue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Maa- ja metsätalousalue', E'MT', E'Maatalousalue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Maa- ja metsätalousalue', E'ME', E'Kotieläintalouden suuryksikkö');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Maa- ja metsätalousalue', E'ME', E'Kotieläintalouden suuryksikkö');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Maa- ja metsätalousalue', E'MP', E'Puutarha- ja kasvihuone');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Maa- ja metsätalousalue', E'MP', E'Puutarha- ja kasvihuone');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Maa- ja metsätalousalue', E'MA', E'Maisemallisesti arvokas peltoalue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Maa- ja metsätalousalue', E'MA', E'Maisemallisesti arvokas peltoalue');
 -- ddl-end --
-INSERT INTO koodistot.maankayttoluokat (paaluokka, koodi, nimike) VALUES (E'Vesialue', E'W', E'Vesialue');
+INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Vesialue', E'W', E'Vesialue');
 -- ddl-end --
 
 -- object: kaavan_lisatiedot.dokumentti | type: TABLE --
 -- DROP TABLE IF EXISTS kaavan_lisatiedot.dokumentti CASCADE;
 CREATE TABLE kaavan_lisatiedot.dokumentti (
 	gid serial NOT NULL,
-	gid_dokumenttityyppi integer,
 	gid_kieli integer,
-	ak_uuid_asemakaava uuid,
+	gid_dokumenttityyppi integer,
 	CONSTRAINT dokumentti_pk PRIMARY KEY (gid)
 
 );
 -- ddl-end --
 ALTER TABLE kaavan_lisatiedot.dokumentti OWNER TO postgres;
--- ddl-end --
-
--- object: asemakaavat.many_kaavalementti_has_many_maankayttoalue | type: TABLE --
--- DROP TABLE IF EXISTS asemakaavat.many_kaavalementti_has_many_maankayttoalue CASCADE;
-CREATE TABLE asemakaavat.many_kaavalementti_has_many_maankayttoalue (
-	uuid_kaavaelementti uuid NOT NULL,
-	uuid_maankayttoalue uuid NOT NULL,
-	CONSTRAINT many_kaavalementti_has_many_maankayttoalue_pk PRIMARY KEY (uuid_kaavaelementti,uuid_maankayttoalue)
-
-);
--- ddl-end --
-
--- object: kaavaelementti_fk | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.many_kaavalementti_has_many_maankayttoalue DROP CONSTRAINT IF EXISTS kaavaelementti_fk CASCADE;
-ALTER TABLE asemakaavat.many_kaavalementti_has_many_maankayttoalue ADD CONSTRAINT kaavaelementti_fk FOREIGN KEY (uuid_kaavaelementti)
-REFERENCES asemakaavat.kaavaelementti (uuid) MATCH FULL
-ON DELETE RESTRICT ON UPDATE CASCADE;
--- ddl-end --
-
--- object: maankayttoalue_fk | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.many_kaavalementti_has_many_maankayttoalue DROP CONSTRAINT IF EXISTS maankayttoalue_fk CASCADE;
-ALTER TABLE asemakaavat.many_kaavalementti_has_many_maankayttoalue ADD CONSTRAINT maankayttoalue_fk FOREIGN KEY (uuid_maankayttoalue)
-REFERENCES asemakaavat.maankayttoalue (uuid) MATCH FULL
-ON DELETE RESTRICT ON UPDATE CASCADE;
 -- ddl-end --
 
 -- object: taustakartta_fk | type: CONSTRAINT --
@@ -529,8 +470,8 @@ INSERT INTO koodistot.prosessin_vaihe (gid, nimi, kuvaus) VALUES (E'8', E'keskey
 CREATE TABLE koodistot.kaavaelementti_tyyppi (
 	gid serial NOT NULL,
 	nimi varchar,
-	gid_hsrcl integer,
 	gid_kuvaustyyli integer,
+	gid_hsrcl integer,
 	CONSTRAINT kaavaelementti_tyyppi_pk PRIMARY KEY (gid)
 
 );
@@ -559,30 +500,6 @@ INSERT INTO koodistot.kaavaelementti_tyyppi (gid, nimi) VALUES (E'9', E'Suojelta
 INSERT INTO koodistot.kaavaelementti_tyyppi (gid, nimi) VALUES (E'10', E'Maanpinnan likimääräinen korkeusasema');
 -- ddl-end --
 
--- object: kaavaelementti_tyyppi_fk | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.kaavaelementti DROP CONSTRAINT IF EXISTS kaavaelementti_tyyppi_fk CASCADE;
-ALTER TABLE asemakaavat.kaavaelementti ADD CONSTRAINT kaavaelementti_tyyppi_fk FOREIGN KEY (gid_kaavaelementti_tyyppi)
-REFERENCES koodistot.kaavaelementti_tyyppi (gid) MATCH FULL
-ON DELETE SET NULL ON UPDATE CASCADE;
--- ddl-end --
-
--- object: kaavaelementti_uq | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.kaavaelementti DROP CONSTRAINT IF EXISTS kaavaelementti_uq CASCADE;
-ALTER TABLE asemakaavat.kaavaelementti ADD CONSTRAINT kaavaelementti_uq UNIQUE (gid_kaavaelementti_tyyppi);
--- ddl-end --
-
--- object: prosessin_vaihe_fk | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.asemakaava DROP CONSTRAINT IF EXISTS prosessin_vaihe_fk CASCADE;
-ALTER TABLE asemakaavat.asemakaava ADD CONSTRAINT prosessin_vaihe_fk FOREIGN KEY (gid_prosessin_vaihe)
-REFERENCES koodistot.prosessin_vaihe (gid) MATCH FULL
-ON DELETE SET NULL ON UPDATE CASCADE;
--- ddl-end --
-
--- object: asemakaava_uq | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.asemakaava DROP CONSTRAINT IF EXISTS asemakaava_uq CASCADE;
-ALTER TABLE asemakaavat.asemakaava ADD CONSTRAINT asemakaava_uq UNIQUE (gid_prosessin_vaihe);
--- ddl-end --
-
 -- object: koodistot.kieli | type: TABLE --
 -- DROP TABLE IF EXISTS koodistot.kieli CASCADE;
 CREATE TABLE koodistot.kieli (
@@ -600,18 +517,6 @@ INSERT INTO koodistot.kieli (gid, kieli) VALUES (E'1', E'Suomi');
 INSERT INTO koodistot.kieli (gid, kieli) VALUES (E'2', E'Ruotsi');
 -- ddl-end --
 INSERT INTO koodistot.kieli (gid, kieli) VALUES (E'3', E'Suomi ja ruotsi');
--- ddl-end --
-
--- object: kieli_fk | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.asemakaava DROP CONSTRAINT IF EXISTS kieli_fk CASCADE;
-ALTER TABLE asemakaavat.asemakaava ADD CONSTRAINT kieli_fk FOREIGN KEY (gid_kieli)
-REFERENCES koodistot.kieli (gid) MATCH FULL
-ON DELETE SET NULL ON UPDATE CASCADE;
--- ddl-end --
-
--- object: asemakaava_uq1 | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.asemakaava DROP CONSTRAINT IF EXISTS asemakaava_uq1 CASCADE;
-ALTER TABLE asemakaavat.asemakaava ADD CONSTRAINT asemakaava_uq1 UNIQUE (gid_kieli);
 -- ddl-end --
 
 -- object: koodistot.hilucs | type: TABLE --
@@ -727,30 +632,6 @@ ALTER TABLE koodistot.hilucs OWNER TO postgres;
 
 
 
--- object: maankayttoluokat_fk | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.maankayttoalue DROP CONSTRAINT IF EXISTS maankayttoluokat_fk CASCADE;
-ALTER TABLE asemakaavat.maankayttoalue ADD CONSTRAINT maankayttoluokat_fk FOREIGN KEY (gid_maankayttoluokat)
-REFERENCES koodistot.maankayttoluokat (gid) MATCH FULL
-ON DELETE SET NULL ON UPDATE CASCADE;
--- ddl-end --
-
--- object: maankayttoalue_uq | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.maankayttoalue DROP CONSTRAINT IF EXISTS maankayttoalue_uq CASCADE;
-ALTER TABLE asemakaavat.maankayttoalue ADD CONSTRAINT maankayttoalue_uq UNIQUE (gid_maankayttoluokat);
--- ddl-end --
-
--- object: kaavatyyppi_fk | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.asemakaava DROP CONSTRAINT IF EXISTS kaavatyyppi_fk CASCADE;
-ALTER TABLE asemakaavat.asemakaava ADD CONSTRAINT kaavatyyppi_fk FOREIGN KEY (gid_kaavatyyppi)
-REFERENCES koodistot.kaavatyyppi (gid) MATCH FULL
-ON DELETE SET NULL ON UPDATE CASCADE;
--- ddl-end --
-
--- object: asemakaava_uq2 | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.asemakaava DROP CONSTRAINT IF EXISTS asemakaava_uq2 CASCADE;
-ALTER TABLE asemakaavat.asemakaava ADD CONSTRAINT asemakaava_uq2 UNIQUE (gid_kaavatyyppi);
--- ddl-end --
-
 -- object: koodistot.osa_alue_tyyppi | type: TABLE --
 -- DROP TABLE IF EXISTS koodistot.osa_alue_tyyppi CASCADE;
 CREATE TABLE koodistot.osa_alue_tyyppi (
@@ -766,21 +647,77 @@ CREATE TABLE koodistot.osa_alue_tyyppi (
 ALTER TABLE koodistot.osa_alue_tyyppi OWNER TO postgres;
 -- ddl-end --
 
-INSERT INTO koodistot.osa_alue_tyyppi (gid, koodi, nimi, gid_kuvaustyyli, gid_hsrcl) VALUES (E'1', E'1', E'rakennusala', DEFAULT, DEFAULT);
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'1', E'Tekstimääräys.');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, koodi, nimi, gid_kuvaustyyli, gid_hsrcl) VALUES (E'2', E'2', E'osa-alue', DEFAULT, DEFAULT);
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'2', E'Auton säilytyspaikan rakennusala.');
 -- ddl-end --
-
--- object: osa_alue_tyyppi_fk | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.osa_alue DROP CONSTRAINT IF EXISTS osa_alue_tyyppi_fk CASCADE;
-ALTER TABLE asemakaavat.osa_alue ADD CONSTRAINT osa_alue_tyyppi_fk FOREIGN KEY (gid_osa_alue_tyyppi)
-REFERENCES koodistot.osa_alue_tyyppi (gid) MATCH FULL
-ON DELETE SET NULL ON UPDATE CASCADE;
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'3', E'Pysäköimispaikka.');
 -- ddl-end --
-
--- object: osa_alue_uq | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.osa_alue DROP CONSTRAINT IF EXISTS osa_alue_uq CASCADE;
-ALTER TABLE asemakaavat.osa_alue ADD CONSTRAINT osa_alue_uq UNIQUE (gid_osa_alue_tyyppi);
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'4', E'Istutettava alueen osa.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'5', E'Rakennukseen jätettävä kulkuaukko.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'6', E'Maanalaisiin tiloihin johtava ajoluiska.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'7', E'Maanalainen tila.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'8', E'Maanalainen väestönsuojaksi tarkoitettu tila.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'9', E'Maanalainen yleinen pysäköintilaitos.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'10', E'Liikennetunneli.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'11', E'Rakennusala, jolle saa sijoittaa lasten päiväkodin.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'12', E'Rakennusala, jolle saa sijoittaa myymälän.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'13', E'Rakennusala, jolle saa sijoittaa maatilan talouskeskuksen.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'14', E'Rakennusala, jolle saa sijoittaa talousrakennuksen.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'15', E'Alue, jolle saa sijoittaa polttoaineen jakeluaseman.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'16', E'Uloke.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'17', E'Valokatteinen tila.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'18', E'Leikki- ja oleskelualueeksi varattu alueen osa.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'19', E'Jalankululle ja polkupyöräilylle varattu alueen osa.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'20', E'Jalankululle ja polkupyöräilylle varattu alueen osa, jolla huoltoajo on sallittu.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'21', E'Jalankululle ja polkupyöräilylle varattu alueen osa, jolla tontille/rakennuspaikalle ajo on sallittu.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'22', E'Yleiseen tiehen kuuluva jalankulku- ja polkupyörätie.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'23', E'Joukkoliikenteelle varattu katu/tie.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'24', E'Ajoyhteys.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'25', E'Alueen sisäiselle huoltoliikenteelle varattu alueen osa.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'26', E'Yleisen tien suoja-alueeksi varattu alueen osa.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'27', E'Yleisen tien näkemäalueeksi varattu alueen osa.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'28', E'Maanalaista johtoa varten varattu alueen osa.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'29', E'Alue on varattu kunnan tarpeisiin.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'30', E'Alue on varattu valtion tarpeisiin.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'31', E'Yhteiskäyttöalue.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'32', E'Suojeltava alueen osa.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'33', E'Alueen osa, jolla sijaitsee luonnonsuojelulain mukainen luonnonsuojelualue tai -kohde.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'34', E'Suojeltava rakennus.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'35', E'Rakennussuojelulain nojalla suojeltu rakennus.');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'36', E'Maan päällistä johtoa varten varattu alueen osa.');
 -- ddl-end --
 
 -- object: koodistot.hsrcl | type: TABLE --
@@ -803,27 +740,15 @@ ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
 
 -- object: kuvaustyyli_fk | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.asemakaava DROP CONSTRAINT IF EXISTS kuvaustyyli_fk CASCADE;
-ALTER TABLE asemakaavat.asemakaava ADD CONSTRAINT kuvaustyyli_fk FOREIGN KEY (gid_kuvaustyyli)
+-- ALTER TABLE koodistot.maankayttoluokka DROP CONSTRAINT IF EXISTS kuvaustyyli_fk CASCADE;
+ALTER TABLE koodistot.maankayttoluokka ADD CONSTRAINT kuvaustyyli_fk FOREIGN KEY (gid_kuvaustyyli)
 REFERENCES koodistot.kuvaustyyli (gid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
 
--- object: asemakaava_uq3 | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.asemakaava DROP CONSTRAINT IF EXISTS asemakaava_uq3 CASCADE;
-ALTER TABLE asemakaavat.asemakaava ADD CONSTRAINT asemakaava_uq3 UNIQUE (gid_kuvaustyyli);
--- ddl-end --
-
--- object: kuvaustyyli_fk | type: CONSTRAINT --
--- ALTER TABLE koodistot.maankayttoluokat DROP CONSTRAINT IF EXISTS kuvaustyyli_fk CASCADE;
-ALTER TABLE koodistot.maankayttoluokat ADD CONSTRAINT kuvaustyyli_fk FOREIGN KEY (gid_kuvaustyyli)
-REFERENCES koodistot.kuvaustyyli (gid) MATCH FULL
-ON DELETE SET NULL ON UPDATE CASCADE;
--- ddl-end --
-
--- object: maankayttoluokat_uq | type: CONSTRAINT --
--- ALTER TABLE koodistot.maankayttoluokat DROP CONSTRAINT IF EXISTS maankayttoluokat_uq CASCADE;
-ALTER TABLE koodistot.maankayttoluokat ADD CONSTRAINT maankayttoluokat_uq UNIQUE (gid_kuvaustyyli);
+-- object: maankayttoluokka_uq | type: CONSTRAINT --
+-- ALTER TABLE koodistot.maankayttoluokka DROP CONSTRAINT IF EXISTS maankayttoluokka_uq CASCADE;
+ALTER TABLE koodistot.maankayttoluokka ADD CONSTRAINT maankayttoluokka_uq UNIQUE (gid_kuvaustyyli);
 -- ddl-end --
 
 -- object: kuvaustyyli_fk | type: CONSTRAINT --
@@ -872,42 +797,11 @@ INSERT INTO koodistot.dokumenttityyppi (gid, nimi, kuvaus) VALUES (E'3', E'Lisä
 INSERT INTO koodistot.dokumenttityyppi (gid, nimi, kuvaus) VALUES (E'4', E'Päätös', E'Kaavan päätösasiakirjat.');
 -- ddl-end --
 
--- object: dokumenttityyppi_fk | type: CONSTRAINT --
--- ALTER TABLE kaavan_lisatiedot.dokumentti DROP CONSTRAINT IF EXISTS dokumenttityyppi_fk CASCADE;
-ALTER TABLE kaavan_lisatiedot.dokumentti ADD CONSTRAINT dokumenttityyppi_fk FOREIGN KEY (gid_dokumenttityyppi)
-REFERENCES koodistot.dokumenttityyppi (gid) MATCH FULL
-ON DELETE SET NULL ON UPDATE CASCADE;
--- ddl-end --
-
--- object: dokumentti_uq | type: CONSTRAINT --
--- ALTER TABLE kaavan_lisatiedot.dokumentti DROP CONSTRAINT IF EXISTS dokumentti_uq CASCADE;
-ALTER TABLE kaavan_lisatiedot.dokumentti ADD CONSTRAINT dokumentti_uq UNIQUE (gid_dokumenttityyppi);
--- ddl-end --
-
--- object: hilucs_fk | type: CONSTRAINT --
--- ALTER TABLE koodistot.maankayttoluokat DROP CONSTRAINT IF EXISTS hilucs_fk CASCADE;
-ALTER TABLE koodistot.maankayttoluokat ADD CONSTRAINT hilucs_fk FOREIGN KEY (gid_hilucs)
-REFERENCES koodistot.hilucs (gid) MATCH FULL
-ON DELETE SET NULL ON UPDATE CASCADE;
--- ddl-end --
-
 -- object: hsrcl_fk | type: CONSTRAINT --
 -- ALTER TABLE koodistot.osa_alue_tyyppi DROP CONSTRAINT IF EXISTS hsrcl_fk CASCADE;
 ALTER TABLE koodistot.osa_alue_tyyppi ADD CONSTRAINT hsrcl_fk FOREIGN KEY (gid_hsrcl)
 REFERENCES koodistot.hsrcl (gid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
--- ddl-end --
-
--- object: kieli_fk | type: CONSTRAINT --
--- ALTER TABLE kaavan_lisatiedot.dokumentti DROP CONSTRAINT IF EXISTS kieli_fk CASCADE;
-ALTER TABLE kaavan_lisatiedot.dokumentti ADD CONSTRAINT kieli_fk FOREIGN KEY (gid_kieli)
-REFERENCES koodistot.kieli (gid) MATCH FULL
-ON DELETE SET NULL ON UPDATE CASCADE;
--- ddl-end --
-
--- object: dokumentti_uq1 | type: CONSTRAINT --
--- ALTER TABLE kaavan_lisatiedot.dokumentti DROP CONSTRAINT IF EXISTS dokumentti_uq1 CASCADE;
-ALTER TABLE kaavan_lisatiedot.dokumentti ADD CONSTRAINT dokumentti_uq1 UNIQUE (gid_kieli);
 -- ddl-end --
 
 -- object: koodistot.vaihetieto | type: TABLE --
@@ -940,6 +834,95 @@ INSERT INTO koodistot.vaihetieto (gid, nimi, kuvaus) VALUES (E'6', E'kumoaminen'
 INSERT INTO koodistot.vaihetieto (gid, nimi, kuvaus) VALUES (E'7', E'raukeaminen', E'Kaava rauennut tai keskeytetty.');
 -- ddl-end --
 
+-- object: asemakaava_fk | type: CONSTRAINT --
+-- ALTER TABLE asemakaavat.osa_alue DROP CONSTRAINT IF EXISTS asemakaava_fk CASCADE;
+ALTER TABLE asemakaavat.osa_alue ADD CONSTRAINT asemakaava_fk FOREIGN KEY (uuid_asemakaava)
+REFERENCES asemakaavat.asemakaava (uuid) MATCH FULL
+ON DELETE SET NULL ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: asemakaava_fk | type: CONSTRAINT --
+-- ALTER TABLE asemakaavat.kaavaelementti DROP CONSTRAINT IF EXISTS asemakaava_fk CASCADE;
+ALTER TABLE asemakaavat.kaavaelementti ADD CONSTRAINT asemakaava_fk FOREIGN KEY (uuid_asemakaava)
+REFERENCES asemakaavat.asemakaava (uuid) MATCH FULL
+ON DELETE SET NULL ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: koodistot.numeerinen_merkinta | type: TABLE --
+-- DROP TABLE IF EXISTS koodistot.numeerinen_merkinta CASCADE;
+CREATE TABLE koodistot.numeerinen_merkinta (
+	gid serial NOT NULL,
+	tyyppi varchar,
+	arvo varchar,
+	CONSTRAINT numeerinen_merkinta_pk PRIMARY KEY (gid)
+
+);
+-- ddl-end --
+ALTER TABLE koodistot.numeerinen_merkinta OWNER TO postgres;
+-- ddl-end --
+
+INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'1');
+-- ddl-end --
+INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'2');
+-- ddl-end --
+INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'3');
+-- ddl-end --
+INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'4');
+-- ddl-end --
+INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'5');
+-- ddl-end --
+INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'6');
+-- ddl-end --
+INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'7');
+-- ddl-end --
+INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'8');
+-- ddl-end --
+INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'9');
+-- ddl-end --
+INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'10');
+-- ddl-end --
+INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'11');
+-- ddl-end --
+INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'12');
+-- ddl-end --
+INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'13');
+-- ddl-end --
+INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'14');
+-- ddl-end --
+INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'15');
+-- ddl-end --
+INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'16');
+-- ddl-end --
+INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'17');
+-- ddl-end --
+INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'18');
+-- ddl-end --
+INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'19');
+-- ddl-end --
+INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'20');
+-- ddl-end --
+
+-- object: kieli_fk | type: CONSTRAINT --
+-- ALTER TABLE asemakaavat.asemakaava DROP CONSTRAINT IF EXISTS kieli_fk CASCADE;
+ALTER TABLE asemakaavat.asemakaava ADD CONSTRAINT kieli_fk FOREIGN KEY (gid_kieli)
+REFERENCES koodistot.kieli (gid) MATCH FULL
+ON DELETE SET NULL ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: prosessin_vaihe_fk | type: CONSTRAINT --
+-- ALTER TABLE asemakaavat.asemakaava DROP CONSTRAINT IF EXISTS prosessin_vaihe_fk CASCADE;
+ALTER TABLE asemakaavat.asemakaava ADD CONSTRAINT prosessin_vaihe_fk FOREIGN KEY (gid_prosessin_vaihe)
+REFERENCES koodistot.prosessin_vaihe (gid) MATCH FULL
+ON DELETE SET NULL ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: kuvaustyyli_fk | type: CONSTRAINT --
+-- ALTER TABLE asemakaavat.asemakaava DROP CONSTRAINT IF EXISTS kuvaustyyli_fk CASCADE;
+ALTER TABLE asemakaavat.asemakaava ADD CONSTRAINT kuvaustyyli_fk FOREIGN KEY (gid_kuvaustyyli)
+REFERENCES koodistot.kuvaustyyli (gid) MATCH FULL
+ON DELETE SET NULL ON UPDATE CASCADE;
+-- ddl-end --
+
 -- object: vaihetieto_fk | type: CONSTRAINT --
 -- ALTER TABLE asemakaavat.asemakaava DROP CONSTRAINT IF EXISTS vaihetieto_fk CASCADE;
 ALTER TABLE asemakaavat.asemakaava ADD CONSTRAINT vaihetieto_fk FOREIGN KEY (gid_vaihetieto)
@@ -947,44 +930,156 @@ REFERENCES koodistot.vaihetieto (gid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
 
--- object: asemakaava_uq4 | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.asemakaava DROP CONSTRAINT IF EXISTS asemakaava_uq4 CASCADE;
-ALTER TABLE asemakaavat.asemakaava ADD CONSTRAINT asemakaava_uq4 UNIQUE (gid_vaihetieto);
--- ddl-end --
-
--- object: asemakaava_fk | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.osa_alue DROP CONSTRAINT IF EXISTS asemakaava_fk CASCADE;
-ALTER TABLE asemakaavat.osa_alue ADD CONSTRAINT asemakaava_fk FOREIGN KEY (ak_uuid_asemakaava)
-REFERENCES asemakaavat.asemakaava (ak_uuid) MATCH FULL
+-- object: kaavatyyppi_fk | type: CONSTRAINT --
+-- ALTER TABLE asemakaavat.asemakaava DROP CONSTRAINT IF EXISTS kaavatyyppi_fk CASCADE;
+ALTER TABLE asemakaavat.asemakaava ADD CONSTRAINT kaavatyyppi_fk FOREIGN KEY (gid_kaavatyyppi)
+REFERENCES koodistot.kaavatyyppi (gid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
 
--- object: asemakaava_fk | type: CONSTRAINT --
--- ALTER TABLE kaavan_lisatiedot.dokumentti DROP CONSTRAINT IF EXISTS asemakaava_fk CASCADE;
-ALTER TABLE kaavan_lisatiedot.dokumentti ADD CONSTRAINT asemakaava_fk FOREIGN KEY (ak_uuid_asemakaava)
-REFERENCES asemakaavat.asemakaava (ak_uuid) MATCH FULL
+-- object: koodistot.many_numeerinen_merkinta_has_many_kaavaelementti | type: TABLE --
+-- DROP TABLE IF EXISTS koodistot.many_numeerinen_merkinta_has_many_kaavaelementti CASCADE;
+CREATE TABLE koodistot.many_numeerinen_merkinta_has_many_kaavaelementti (
+	gid_numeerinen_merkinta integer NOT NULL,
+	uuid_kaavaelementti uuid NOT NULL,
+	CONSTRAINT many_numeerinen_merkinta_has_many_kaavaelementti_pk PRIMARY KEY (gid_numeerinen_merkinta,uuid_kaavaelementti)
+
+);
+-- ddl-end --
+
+-- object: numeerinen_merkinta_fk | type: CONSTRAINT --
+-- ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_kaavaelementti DROP CONSTRAINT IF EXISTS numeerinen_merkinta_fk CASCADE;
+ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_kaavaelementti ADD CONSTRAINT numeerinen_merkinta_fk FOREIGN KEY (gid_numeerinen_merkinta)
+REFERENCES koodistot.numeerinen_merkinta (gid) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: kaavaelementti_fk | type: CONSTRAINT --
+-- ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_kaavaelementti DROP CONSTRAINT IF EXISTS kaavaelementti_fk CASCADE;
+ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_kaavaelementti ADD CONSTRAINT kaavaelementti_fk FOREIGN KEY (uuid_kaavaelementti)
+REFERENCES asemakaavat.kaavaelementti (uuid) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: kaavaelementti_tyyppi_fk | type: CONSTRAINT --
+-- ALTER TABLE asemakaavat.kaavaelementti DROP CONSTRAINT IF EXISTS kaavaelementti_tyyppi_fk CASCADE;
+ALTER TABLE asemakaavat.kaavaelementti ADD CONSTRAINT kaavaelementti_tyyppi_fk FOREIGN KEY (gid_kaavaelementti_tyyppi)
+REFERENCES koodistot.kaavaelementti_tyyppi (gid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
 
--- object: asemakaava_fk | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.kaavaelementti DROP CONSTRAINT IF EXISTS asemakaava_fk CASCADE;
-ALTER TABLE asemakaavat.kaavaelementti ADD CONSTRAINT asemakaava_fk FOREIGN KEY (ak_uuid_asemakaava)
-REFERENCES asemakaavat.asemakaava (ak_uuid) MATCH FULL
-ON DELETE SET NULL ON UPDATE CASCADE;
+-- object: koodistot.many_numeerinen_merkinta_has_many_osa_alue | type: TABLE --
+-- DROP TABLE IF EXISTS koodistot.many_numeerinen_merkinta_has_many_osa_alue CASCADE;
+CREATE TABLE koodistot.many_numeerinen_merkinta_has_many_osa_alue (
+	gid_numeerinen_merkinta integer NOT NULL,
+	uuid_osa_alue uuid NOT NULL,
+	CONSTRAINT many_numeerinen_merkinta_has_many_osa_alue_pk PRIMARY KEY (gid_numeerinen_merkinta,uuid_osa_alue)
+
+);
+-- ddl-end --
+
+-- object: numeerinen_merkinta_fk | type: CONSTRAINT --
+-- ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_osa_alue DROP CONSTRAINT IF EXISTS numeerinen_merkinta_fk CASCADE;
+ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_osa_alue ADD CONSTRAINT numeerinen_merkinta_fk FOREIGN KEY (gid_numeerinen_merkinta)
+REFERENCES koodistot.numeerinen_merkinta (gid) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE;
 -- ddl-end --
 
 -- object: osa_alue_fk | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.kaavaelementti DROP CONSTRAINT IF EXISTS osa_alue_fk CASCADE;
-ALTER TABLE asemakaavat.kaavaelementti ADD CONSTRAINT osa_alue_fk FOREIGN KEY (uuid_osa_alue)
+-- ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_osa_alue DROP CONSTRAINT IF EXISTS osa_alue_fk CASCADE;
+ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_osa_alue ADD CONSTRAINT osa_alue_fk FOREIGN KEY (uuid_osa_alue)
 REFERENCES asemakaavat.osa_alue (uuid) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: osa_alue_tyyppi_fk | type: CONSTRAINT --
+-- ALTER TABLE asemakaavat.osa_alue DROP CONSTRAINT IF EXISTS osa_alue_tyyppi_fk CASCADE;
+ALTER TABLE asemakaavat.osa_alue ADD CONSTRAINT osa_alue_tyyppi_fk FOREIGN KEY (gid_osa_alue_tyyppi)
+REFERENCES koodistot.osa_alue_tyyppi (gid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
 
--- object: maankayttoalue_fk | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.kaavaelementti DROP CONSTRAINT IF EXISTS maankayttoalue_fk CASCADE;
-ALTER TABLE asemakaavat.kaavaelementti ADD CONSTRAINT maankayttoalue_fk FOREIGN KEY (uuid_maankayttoalue)
-REFERENCES asemakaavat.maankayttoalue (uuid) MATCH FULL
+-- object: maankayttoluokka_fk | type: CONSTRAINT --
+-- ALTER TABLE asemakaavat.maankayttoalue DROP CONSTRAINT IF EXISTS maankayttoluokka_fk CASCADE;
+ALTER TABLE asemakaavat.maankayttoalue ADD CONSTRAINT maankayttoluokka_fk FOREIGN KEY (gid_maankayttoluokka)
+REFERENCES koodistot.maankayttoluokka (gid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: kieli_fk | type: CONSTRAINT --
+-- ALTER TABLE kaavan_lisatiedot.dokumentti DROP CONSTRAINT IF EXISTS kieli_fk CASCADE;
+ALTER TABLE kaavan_lisatiedot.dokumentti ADD CONSTRAINT kieli_fk FOREIGN KEY (gid_kieli)
+REFERENCES koodistot.kieli (gid) MATCH FULL
+ON DELETE SET NULL ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: dokumenttityyppi_fk | type: CONSTRAINT --
+-- ALTER TABLE kaavan_lisatiedot.dokumentti DROP CONSTRAINT IF EXISTS dokumenttityyppi_fk CASCADE;
+ALTER TABLE kaavan_lisatiedot.dokumentti ADD CONSTRAINT dokumenttityyppi_fk FOREIGN KEY (gid_dokumenttityyppi)
+REFERENCES koodistot.dokumenttityyppi (gid) MATCH FULL
+ON DELETE SET NULL ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: hilucs_fk | type: CONSTRAINT --
+-- ALTER TABLE koodistot.maankayttoluokka DROP CONSTRAINT IF EXISTS hilucs_fk CASCADE;
+ALTER TABLE koodistot.maankayttoluokka ADD CONSTRAINT hilucs_fk FOREIGN KEY (gid_hilucs)
+REFERENCES koodistot.hilucs (gid) MATCH FULL
+ON DELETE SET NULL ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: kaavan_lisatiedot.many_dokumentti_has_many_asemakaava | type: TABLE --
+-- DROP TABLE IF EXISTS kaavan_lisatiedot.many_dokumentti_has_many_asemakaava CASCADE;
+CREATE TABLE kaavan_lisatiedot.many_dokumentti_has_many_asemakaava (
+	gid_dokumentti integer NOT NULL,
+	uuid_asemakaava uuid NOT NULL,
+	CONSTRAINT many_dokumentti_has_many_asemakaava_pk PRIMARY KEY (gid_dokumentti,uuid_asemakaava)
+
+);
+-- ddl-end --
+
+-- object: dokumentti_fk | type: CONSTRAINT --
+-- ALTER TABLE kaavan_lisatiedot.many_dokumentti_has_many_asemakaava DROP CONSTRAINT IF EXISTS dokumentti_fk CASCADE;
+ALTER TABLE kaavan_lisatiedot.many_dokumentti_has_many_asemakaava ADD CONSTRAINT dokumentti_fk FOREIGN KEY (gid_dokumentti)
+REFERENCES kaavan_lisatiedot.dokumentti (gid) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: asemakaava_fk | type: CONSTRAINT --
+-- ALTER TABLE kaavan_lisatiedot.many_dokumentti_has_many_asemakaava DROP CONSTRAINT IF EXISTS asemakaava_fk CASCADE;
+ALTER TABLE kaavan_lisatiedot.many_dokumentti_has_many_asemakaava ADD CONSTRAINT asemakaava_fk FOREIGN KEY (uuid_asemakaava)
+REFERENCES asemakaavat.asemakaava (uuid) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: dokumentti_fk | type: CONSTRAINT --
+-- ALTER TABLE asemakaavat.asemakaava DROP CONSTRAINT IF EXISTS dokumentti_fk CASCADE;
+ALTER TABLE asemakaavat.asemakaava ADD CONSTRAINT dokumentti_fk FOREIGN KEY (gid_dokumentti)
+REFERENCES kaavan_lisatiedot.dokumentti (gid) MATCH FULL
+ON DELETE SET NULL ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: koodistot.many_numeerinen_merkinta_has_many_maankayttoalue | type: TABLE --
+-- DROP TABLE IF EXISTS koodistot.many_numeerinen_merkinta_has_many_maankayttoalue CASCADE;
+CREATE TABLE koodistot.many_numeerinen_merkinta_has_many_maankayttoalue (
+	gid_numeerinen_merkinta integer NOT NULL,
+	uuid_maankayttoalue uuid NOT NULL,
+	CONSTRAINT many_numeerinen_merkinta_has_many_maankayttoalue_pk PRIMARY KEY (gid_numeerinen_merkinta,uuid_maankayttoalue)
+
+);
+-- ddl-end --
+
+-- object: numeerinen_merkinta_fk | type: CONSTRAINT --
+-- ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_maankayttoalue DROP CONSTRAINT IF EXISTS numeerinen_merkinta_fk CASCADE;
+ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_maankayttoalue ADD CONSTRAINT numeerinen_merkinta_fk FOREIGN KEY (gid_numeerinen_merkinta)
+REFERENCES koodistot.numeerinen_merkinta (gid) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: maankayttoalue_fk | type: CONSTRAINT --
+-- ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_maankayttoalue DROP CONSTRAINT IF EXISTS maankayttoalue_fk CASCADE;
+ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_maankayttoalue ADD CONSTRAINT maankayttoalue_fk FOREIGN KEY (uuid_maankayttoalue)
+REFERENCES asemakaavat.maankayttoalue (uuid) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE;
 -- ddl-end --
 
 

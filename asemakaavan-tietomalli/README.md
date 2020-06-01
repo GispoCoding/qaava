@@ -2,13 +2,58 @@
 
 Asemakaavan tietomalli on tuotettu yhteistyössä QAAVA-kehitysprojektiin osallistuneiden toimijoiden kanssa. 
 
-Ensimmäistä versiota on käyty läpi Paimion kaupungin kanssa.
-- [Asemakaavan tietomalli - versio 0.1, dbm](tietomalli_luonnos.dbm)
-- [Asemakaavan tietomalli - versio 0.1, sql](tietomalli_luonnos.sql)
+Kehitysversiota on käyty läpi Paimion kaupungin kanssa.
+- [Asemakaavan tietomalli - versio 1.0, dbm](tietomalli_luonnos.dbm) 29.5.2020
+- [Asemakaavan tietomalli - versio 1.0, sql](tietomalli_luonnos.sql) 29.5.2020
 
 <img src="tietomalli_luonnos.png" width="500"/>
 
-Tietomallin pohjana on käytetty seuraavia tausta-aineistoja ja selvityksiä:
+## Tietomallin sisältö
+
+- Toteutus on pyritty pitämään minimissä
+    - Esimerkiksi kaavan lisätiedot (selosteet, dokumentit, päätökset, lähtötiedot) on kuvattu yhdessä taulussa
+- Tietomalli sisältää **3 skeemaa**: koodistot, asemakaavat (sisältää kohteiden geometriat) sekä kaavan lisätiedot
+- Mahdollista on, että tietomallia käyttävässä kunnassa halutaan laajentaa mallia omiin tarpeisiin ja se on okei
+- Huomioitavaa on, että tietomalli tulee varmasti muuttumaan ajan kuluessa
+    - Tämä pitää huomioida kun tietomallia alkaa käyttämään (ohjeistus päivitykseen tulossa)
+
+<img src="asemakaavan_tietomalli_graafinen.png" width="800">
+
+### Koodistot-skeeman taulut
+
+Sisältää koodilistoja, jotka voidaan liittää geometriaa sisältäviin kohteisiin tai kaavan lisätietotauluihin (osa listoista haettu suoraan YM:n tietomallista, jatkossa Suomi.fi-palvelun sanastosta). HILUCS ja HSRCL tulevat INSPIRE:n maankäyttöpäätösten koodilistalta, kansallisesti tehtävä määrittely mikä on mikäkin vastaavuus. HILUCSin osalta lista olemassa, HSRCL:n osalta ilmeisesti ei.
+
+- *kaavamääräys*
+- *kieli*
+- *dokumenttityyppi*
+- *prosessin_vaihe*
+- *vaihetieto*
+- *laavatyyppi*
+- *kuvaustyyli*
+- *maankäyttöluokat*
+- *HILUCS*
+- *osa_alue_tyyppi*
+- *kaava_elementtityyppi*
+- *HSRCL*
+
+### Asemakaavat-skeeman taulut
+
+Sisältävät asemakaavan paikkatietokohteet, eli geometriaa sisältävät taulut sekä numeeristen tietojen täyttöön aputaulun.
+
+- *asemakaava:* kaavan ulkoraja, joka sisältää perustiedot kaavasta (nimi, prosessin vaihe, muokkauspäivämäärät...).
+- *maankayttoalue:* kaavan ulkorajan sisälle jäävät maankäyttökohteet (kaavayksiköt) (esim. AP, V, LP jne), jotka ovat aina polygoneja (alueita). Nämä polygonit täyttävät koko kaava-alueen.
+- *osa-alue:* voivat olla vain polygoneja ja ne ovat usein maankäyttöalueiden päällä "leijuvia" kohteita (esim. Rakennusala, jolle saa sijoittaa talousrakennuksen tai Pysäköimispaikka).
+- *kaavaelementti:* voivat olla pisteitä, viivoja ja alueita (esim. Suojeltava puu, Harjasuunta, Ajoneuvoliittymän likimääräinen sijainti).
+- *numeerinen_merkintä*: aputaulu, jolla voi kirjata numeerista tietoa (esim. rakennusala, tehokkuusluku). Jokaiselle numeeriselle tietotyypille voi antaa jonkin arvon. 
+
+### Kaavan lisätiedot -skeeman taulut
+
+Sisältää kaksi taulua, joissa kaavaan liittyviä tietoja. 
+
+- *dokumentti:* erilaiset liitetiedostot, päätökset, lähtötiedot.
+- *taustakartta:* virallinen kaavan taustakartta (linkki aineistoon tai lähteeseen).
+
+## Tietomallin pohjana on käytetty seuraavia tausta-aineistoja ja selvityksiä:
 
 - [INSPIRE: Planned Land Use](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/index.htm?goto=2:3:10:1:4:8445)
 - [Tampereen yleiskaava 2019-04](https://github.com/GispoCoding/Tampere-KDYK/blob/master/database_model/2019-04-19-avoin_yleiskaava.png)

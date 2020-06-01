@@ -3,7 +3,7 @@
 CAUTION: Do not modify this file unless you know what you are doing.
          Unexpected results may occur if the code is changed deliberately.
 -->
-<dbmodel pgmodeler-ver="0.9.3-alpha" last-position="0,0" last-zoom="0.75" max-obj-count="36"
+<dbmodel pgmodeler-ver="0.9.3-alpha" last-position="0,0" last-zoom="0.75" max-obj-count="34"
 	 default-schema="public" default-owner="postgres">
 <database name="qaavakanta" is-template="false" allow-conns="true">
 </database>
@@ -31,19 +31,19 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<role name="postgres"/>
 </schema>
 
-<table name="asemakaava" layer="0" collapse-mode="2" max-obj-count="18" z-value="0">
+<table name="asemakaava" layer="0" collapse-mode="2" max-obj-count="19" z-value="0">
 	<schema name="asemakaavat"/>
 	<role name="postgres"/>
 	<comment><![CDATA[kaavoituksen lopputuloksena syntyvä maankäyttösuunnitelma]]></comment>
-	<position x="1242.21" y="291.586"/>
+	<position x="2069.65" y="159.223"/>
 	<column name="gid">
 		<type name="serial" length="0"/>
 	</column>
-	<column name="geom">
-		<type name="geometry" length="0" spatial-type="MULTIPOLYGON" variation="1" srid="3877"/>
-	</column>
 	<column name="uuid" not-null="true" default-value="uuid_generate_v4()">
 		<type name="uuid" length="0"/>
+	</column>
+	<column name="geom">
+		<type name="geometry" length="0" spatial-type="MULTIPOLYGON" variation="1" srid="3877"/>
 	</column>
 	<column name="nimi">
 		<type name="varchar" length="0"/>
@@ -68,34 +68,31 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 
 	<customidxs object-type="column">
-		<object name="gid_kaavatyyppi" index="4"/>
-		<object name="gid_kieli" index="5"/>
+		<object name="gid_dokumentti" index="15"/>
+		<object name="gid_kaavatyyppi" index="5"/>
+		<object name="gid_kieli" index="4"/>
 		<object name="gid_kuvaustyyli" index="13"/>
-		<object name="gid_prosessin_vaihe" index="11"/>
+		<object name="gid_prosessin_vaihe" index="8"/>
 		<object name="gid_taustakartta" index="14"/>
-		<object name="gid_vaihetieto" index="12"/>
+		<object name="gid_vaihetieto" index="7"/>
 	</customidxs>
 
 	<customidxs object-type="constraint">
-		<object name="asemakaava_uq" index="3"/>
-		<object name="asemakaava_uq1" index="5"/>
-		<object name="asemakaava_uq2" index="7"/>
-		<object name="asemakaava_uq3" index="9"/>
-		<object name="asemakaava_uq4" index="10"/>
-		<object name="kaavatyyppi_fk" index="8"/>
-		<object name="kieli_fk" index="6"/>
+		<object name="dokumentti_fk" index="7"/>
+		<object name="kaavatyyppi_fk" index="6"/>
+		<object name="kieli_fk" index="3"/>
 		<object name="kuvaustyyli_fk" index="2"/>
 		<object name="prosessin_vaihe_fk" index="4"/>
 		<object name="taustakartta_fk" index="1"/>
-		<object name="vaihetieto_fk" index="11"/>
+		<object name="vaihetieto_fk" index="5"/>
 	</customidxs>
 </table>
 
-<table name="kaavaelementti" layer="0" collapse-mode="2" max-obj-count="14" z-value="0">
+<table name="kaavaelementti" layer="0" collapse-mode="2" max-obj-count="10" z-value="0">
 	<schema name="asemakaavat"/>
 	<role name="postgres"/>
 	<comment><![CDATA[yhden tai useamman käyttötarkoitusalueen osa. Kaavaelementti tarkentaa käyttötarkoitusalueen maankäyttöä. Esim. melurajoitteet yms. ]]></comment>
-	<position x="1122.91" y="1658.94"/>
+	<position x="1830.3" y="2395.69"/>
 	<column name="gid">
 		<type name="serial" length="0"/>
 	</column>
@@ -117,34 +114,28 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="periytynytkohde">
 		<type name="boolean" length="0"/>
 	</column>
-	<column name="numeroarvo">
-		<type name="real" length="0"/>
-	</column>
 	<constraint name="kaavaelementti_pk" type="pk-constr" table="asemakaavat.kaavaelementti">
 		<columns names="uuid" ref-type="src-columns"/>
 	</constraint>
 
 	<customidxs object-type="column">
-		<object name="gid_kaavaelementti_tyyppi" index="2"/>
-		<object name="uuid_asemakaava" index="9"/>
-		<object name="uuid_maankayttoalue" index="11"/>
-		<object name="uuid_osa_alue" index="10"/>
+		<object name="gid_kaavaelementti_tyyppi" index="8"/>
+		<object name="uuid_asemakaava" index="7"/>
 	</customidxs>
 
 	<customidxs object-type="constraint">
-		<object name="asemakaava_fk" index="3"/>
-		<object name="kaavaelementti_tyyppi_fk" index="1"/>
-		<object name="kaavaelementti_uq" index="2"/>
+		<object name="asemakaava_fk" index="1"/>
+		<object name="kaavaelementti_tyyppi_fk" index="2"/>
 	</customidxs>
 </table>
 
-<table name="maankayttoalue" layer="0" collapse-mode="2" max-obj-count="12" z-value="0">
+<table name="maankayttoalue" layer="0" collapse-mode="2" max-obj-count="10" z-value="0">
 	<schema name="asemakaavat"/>
 	<role name="postgres"/>
 	<comment><![CDATA[asemakaavan mukainen tiettyyn käyttöön varattu alue
 
 Käyttötarkoitusalueiden pinta-ala täyttää asemakaava-alueen täysin. Käyttötarkoitusalue voi jakaantua yhteen tai useampaan kaavayksikköön. Käyttötarkoitusalueet voivat olla kortteleita, yleisiä alueita tai niiden osia tai muita yhtenäisiä alueita]]></comment>
-	<position x="977.22" y="909.561"/>
+	<position x="1735.33" y="1320.76"/>
 	<column name="gid">
 		<type name="serial" length="0"/>
 	</column>
@@ -154,11 +145,11 @@ Käyttötarkoitusalueiden pinta-ala täyttää asemakaava-alueen täysin. Käytt
 	<column name="geom">
 		<type name="geometry" length="0" spatial-type="MULTIPOLYGON" variation="1" srid="3877"/>
 	</column>
+	<column name="nimi">
+		<type name="varchar" length="0"/>
+	</column>
 	<column name="pinta_ala">
 		<type name="real" length="0"/>
-	</column>
-	<column name="rakennusoikeus">
-		<type name="smallint" length="0"/>
 	</column>
 	<column name="luontipvm" default-value="now()">
 		<type name="timestamp" length="0"/>
@@ -166,49 +157,39 @@ Käyttötarkoitusalueiden pinta-ala täyttää asemakaava-alueen täysin. Käytt
 	<column name="periytynytkohde">
 		<type name="boolean" length="0"/>
 	</column>
-	<column name="tehokkuusluku">
-		<type name="real" length="0"/>
-	</column>
 	<constraint name="kayttotarkoitusalue_pk" type="pk-constr" table="asemakaavat.maankayttoalue">
 		<columns names="uuid" ref-type="src-columns"/>
 	</constraint>
 
 	<customidxs object-type="column">
-		<object name="gid_maankayttoluokat" index="2"/>
-		<object name="uuid_asemakaava" index="9"/>
+		<object name="gid_maankayttoluokka" index="7"/>
+		<object name="uuid_asemakaava" index="8"/>
 	</customidxs>
 
 	<customidxs object-type="constraint">
 		<object name="asemakaava_fk" index="1"/>
-		<object name="maankayttoalue_uq" index="3"/>
-		<object name="maankayttoluokat_fk" index="2"/>
+		<object name="maankayttoluokka_fk" index="2"/>
 	</customidxs>
 </table>
 
-<table name="osa_alue" layer="0" collapse-mode="2" max-obj-count="13" z-value="0">
+<table name="osa_alue" layer="0" collapse-mode="2" max-obj-count="9" z-value="0">
 	<schema name="asemakaavat"/>
 	<role name="postgres"/>
 	<comment><![CDATA[Asemakaavan pienin tiettyyn käyttötarkoitukseen varattu yksikkö ]]></comment>
-	<position x="1093.36" y="1260.41"/>
+	<position x="2533.02" y="1831.67"/>
 	<column name="gid">
 		<type name="serial" length="0"/>
 	</column>
-	<column name="geom">
-		<type name="geometry" length="0" spatial-type="MULTIPOLYGON" variation="1" srid="3877"/>
-	</column>
 	<column name="uuid" not-null="true" default-value="uuid_generate_v4()">
 		<type name="uuid" length="0"/>
+	</column>
+	<column name="geom">
+		<type name="geometry" length="0" spatial-type="MULTIPOLYGON" variation="1" srid="3877"/>
 	</column>
 	<column name="luontipvm" default-value="now()">
 		<type name="timestamp" length="0"/>
 	</column>
 	<column name="pinta_ala">
-		<type name="real" length="0"/>
-	</column>
-	<column name="rakennusoikeus">
-		<type name="real" length="0"/>
-	</column>
-	<column name="tehokkuusluku">
 		<type name="real" length="0"/>
 	</column>
 	<column name="periytynytkohde">
@@ -219,45 +200,46 @@ Käyttötarkoitusalueiden pinta-ala täyttää asemakaava-alueen täysin. Käytt
 	</constraint>
 
 	<customidxs object-type="column">
-		<object name="gid_osa_alue_tyyppi" index="3"/>
-		<object name="uuid_asemakaava" index="10"/>
-		<object name="uuid_maankayttoalue" index="9"/>
+		<object name="gid_osa_alue_tyyppi" index="7"/>
+		<object name="uuid_asemakaava" index="6"/>
 	</customidxs>
 
 	<customidxs object-type="constraint">
-		<object name="asemakaava_fk" index="4"/>
-		<object name="maankayttoalue_fk" index="1"/>
+		<object name="asemakaava_fk" index="1"/>
 		<object name="osa_alue_tyyppi_fk" index="2"/>
-		<object name="osa_alue_uq" index="3"/>
 	</customidxs>
 </table>
 
-<table name="kaavamaarays" layer="0" collapse-mode="2" max-obj-count="7" z-value="0">
-	<schema name="asemakaavat"/>
+<table name="kaavamaarays" layer="0" collapse-mode="2" max-obj-count="8" z-value="0">
+	<schema name="koodistot"/>
 	<role name="postgres"/>
 	<comment><![CDATA[kaavaan sisältyvä sanallinen määräys, joka on juridisesti sitova kaavan toimeenpanossa
-huomautus
+huomautus.
+
 Kaavamääräyksellä ja kaavamerkinnöillä yksilöidään maa-alueiden rakentaminen ja käyttö eri
 tarkoituksiin.
-Kaavamääräyksiä ovat asema-, yleis- ja maakuntakaavamääräykset.
+
 Asemakaavamääräyksiä voidaan antaa asemakaavaa laadittaessa. Asemakaavamääräykset
 voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoittamista.]]></comment>
-	<position x="1701.92" y="1028.13"/>
+	<position x="841.983" y="1359.24"/>
 	<column name="uuid" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
 	<column name="luontipvm" default-value="now()">
 		<type name="timestamp" length="0"/>
 	</column>
-	<constraint name="kaavakohtainen_maarays_pk" type="pk-constr" table="asemakaavat.kaavamaarays">
+	<column name="maaraysteksti">
+		<type name="varchar" length="0"/>
+	</column>
+	<constraint name="kaavakohtainen_maarays_pk" type="pk-constr" table="koodistot.kaavamaarays">
 		<columns names="uuid" ref-type="src-columns"/>
 	</constraint>
 
 	<customidxs object-type="column">
-		<object name="uuid_asemakaava" index="2"/>
-		<object name="uuid_kaavaelementti" index="3"/>
-		<object name="uuid_maankayttoalue" index="5"/>
-		<object name="uuid_osa_alue" index="4"/>
+		<object name="uuid_asemakaava" index="3"/>
+		<object name="uuid_kaavaelementti" index="4"/>
+		<object name="uuid_maankayttoalue" index="6"/>
+		<object name="uuid_osa_alue" index="5"/>
 	</customidxs>
 
 	<customidxs object-type="constraint">
@@ -272,7 +254,7 @@ voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoitta
 	<schema name="koodistot"/>
 	<role name="postgres"/>
 	<comment><![CDATA[kaavaan sisältyvä graafinen merkki, merkintä tai merkkien yhdistelmä, joka on oikeudellisesti sitova kaavan toimeenpanossa]]></comment>
-	<position x="453.876" y="687.507"/>
+	<position x="231.911" y="978.524"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -287,10 +269,10 @@ voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoitta
 	</constraint>
 </table>
 
-<table name="taustakartta" layer="0" collapse-mode="2" max-obj-count="3" z-value="0">
+<table name="taustakartta" layer="0" collapse-mode="2" max-obj-count="4" z-value="0">
 	<schema name="kaavan_lisatiedot"/>
 	<role name="postgres"/>
-	<position x="2101.83" y="465.355"/>
+	<position x="3213.23" y="577.745"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -299,6 +281,9 @@ voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoitta
 	</column>
 	<column name="viittauspvm">
 		<type name="date" length="0"/>
+	</column>
+	<column name="uri">
+		<type name="varchar" length="0"/>
 	</column>
 	<constraint name="taustakartta_pk" type="pk-constr" table="kaavan_lisatiedot.taustakartta">
 		<columns names="gid" ref-type="src-columns"/>
@@ -313,28 +298,8 @@ voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoitta
 	 src-table="asemakaavat.asemakaava"
 	 dst-table="asemakaavat.maankayttoalue"
 	 src-required="false" dst-required="false">
-	<line>
-		<position x="932.72" y="342.786"/>
-	</line>
 	<label ref-type="name-label">
 		<position x="114.241" y="8.40857"/>
-	</label>
-</relationship>
-
-<relationship name="maankayttoalue_has_many_osa_alue" type="rel1n" layer="0"
-	 src-col-pattern="{sc}_{st}"
-	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
-	 src-fk-pattern="{st}_fk"
-	 custom-color="#e208f5"
-	 src-table="asemakaavat.maankayttoalue"
-	 dst-table="asemakaavat.osa_alue"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="940.292" y="972.494"/>
-	<position x="940.292" y="1426.94"/>
-	</line>
-	<label ref-type="name-label">
-		<position x="0" y="0"/>
 	</label>
 </relationship>
 
@@ -344,12 +309,8 @@ voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoitta
 	 src-fk-pattern="{st}_fk"
 	 custom-color="#85dc20"
 	 src-table="asemakaavat.asemakaava"
-	 dst-table="asemakaavat.kaavamaarays"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="1682.42" y="342.786"/>
-	</line>
-</relationship>
+	 dst-table="koodistot.kaavamaarays"
+	 src-required="false" dst-required="false"/>
 
 <relationship name="maankayttoalue_has_many_kaavamaarays" type="rel1n" layer="0"
 	 src-col-pattern="{sc}_{st}"
@@ -357,12 +318,8 @@ voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoitta
 	 src-fk-pattern="{st}_fk"
 	 custom-color="#62efaf"
 	 src-table="asemakaavat.maankayttoalue"
-	 dst-table="asemakaavat.kaavamaarays"
+	 dst-table="koodistot.kaavamaarays"
 	 src-required="false" dst-required="false">
-	<line>
-		<position x="1511.82" y="972.494"/>
-	<position x="1511.82" y="1155.13"/>
-	</line>
 	<label ref-type="name-label">
 		<position x="147.066" y="11.3778"/>
 	</label>
@@ -374,13 +331,8 @@ voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoitta
 	 src-fk-pattern="{st}_fk"
 	 custom-color="#33cda8"
 	 src-table="asemakaavat.kaavaelementti"
-	 dst-table="asemakaavat.kaavamaarays"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="1528.08" y="1631.36"/>
-	<position x="1528.08" y="1117.92"/>
-	</line>
-</relationship>
+	 dst-table="koodistot.kaavamaarays"
+	 src-required="false" dst-required="false"/>
 
 <relationship name="osa_alue_has_many_kaavamaarays" type="rel1n" layer="0"
 	 src-col-pattern="{sc}_{st}"
@@ -388,39 +340,13 @@ voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoitta
 	 src-fk-pattern="{st}_fk"
 	 custom-color="#c9e0a7"
 	 src-table="asemakaavat.osa_alue"
-	 dst-table="asemakaavat.kaavamaarays"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="1682.42" y="1333.94"/>
-	</line>
-</relationship>
+	 dst-table="koodistot.kaavamaarays"
+	 src-required="false" dst-required="false"/>
 
-<relationship name="many_osa_alue_has_many_osa_alue" type="relnn" layer="0"
-	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
-	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
-	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
-	 pk-col-pattern="id"
-	 custom-color="#627678"
-	 src-table="asemakaavat.osa_alue"
-	 dst-table="asemakaavat.osa_alue"
-	 src-required="false" dst-required="false"
-	 table-name="many_osa_alue_has_many_osa_alue">
-	<line>
-		<position x="1460.59" y="1375.69"/>
-	<position x="1460.59" y="1249.41"/>
-	<position x="1330.85" y="1249.41"/>
-	</line>
-</relationship>
-
-<textbox name="Kaavaelementti" layer="0" z-value="0" font-size="9">
-	<position x="988.148" y="2088.69"/>
-	<comment><![CDATA[Kaavaelementti tai kaavan tarkennemerkintä voi olla esimerkiksi melurajoitus, yhteysmerkintä tai pistemäinen suojelukohde]]></comment>
-</textbox>
-
-<table name="maankayttoluokat" layer="0" collapse-mode="2" max-obj-count="7" z-value="0">
+<table name="maankayttoluokka" layer="0" collapse-mode="2" max-obj-count="7" z-value="0">
 	<schema name="koodistot"/>
 	<role name="postgres"/>
-	<position x="468.132" y="845.284"/>
+	<position x="927.556" y="1008.09"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -433,90 +359,101 @@ voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoitta
 	<column name="nimike">
 		<type name="varchar" length="0"/>
 	</column>
-	<constraint name="maankayttoluokat_pk" type="pk-constr" table="koodistot.maankayttoluokat">
+	<constraint name="maankayttoluokat_pk" type="pk-constr" table="koodistot.maankayttoluokka">
 		<columns names="gid" ref-type="src-columns"/>
 	</constraint>
+
+	<customidxs object-type="column">
+		<object name="gid_hilucs" index="5"/>
+		<object name="gid_kuvaustyyli" index="4"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="hilucs_fk" index="3"/>
+		<object name="kuvaustyyli_fk" index="1"/>
+		<object name="maankayttoluokka_uq" index="2"/>
+	</customidxs>
 	<initial-data>
-<![CDATA[paaluokka•koodi•nimike•Tunniste⸣
-Asuinalue•A•Asuinalue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/A0⸣
-Asuinalue•AK•Kerrostaloalue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/A1⸣
-Asuinalue•AP•Pientaloalue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/A2⸣
-Asuinalue•AR•Rivitaloalue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/A3⸣
-Asuinalue•AO•Erillispientaloalue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/A4⸣
-Asuinalue•AL•Asuin-, liike- ja toimistorakennusten alue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/A5⸣
-Asuinalue•AM•Maatilojen talouskeskusalue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/A6⸣
-Palvelutoiminnot•P•Palvelutoiminnot•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/P0⸣
-Palvelutoiminnot•PL•Lähipalvelut•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/P1⸣
-Palvelutoiminnot•PV•Kulttuuri- ja viihdepalvelut•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/P2⸣
-Palvelutoiminnot•Y•Yleiset rakennukset•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/P3⸣
-Palvelutoiminnot•YL•Julkiset lähipalvelut•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/P4⸣
-Palvelutoiminnot•YH•Hallinto- ja virastopalvelut•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/P5⸣
-Palvelutoiminnot•YO•Opetustoiminta•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/P6⸣
-Palvelutoiminnot•YS•Sosiaalitoimi ja terveydenhuolto•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/P7⸣
-Palvelutoiminnot•YK•Kirkot ja seurakuntatoiminta•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/P8⸣
-Palvelutoiminnot•YU•Urheilutoimintaa palvelevien rakennusten alue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/P9⸣
-Keskustatoiminnot•C•Keskustatoiminnot•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/C0⸣
-Liike- ja toimistorakennusten alue•K•Liike- ja toimistorakennusten alue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/K0⸣
-Liike- ja toimistorakennusten alue•KL•Liikerakennusten alue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/K1⸣
-Liike- ja toimistorakennusten alue•KM•Vähittäiskaupan suuryksikkö•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/K2⸣
-Liike- ja toimistorakennusten alue•KT•Toimistorakennusten alue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/K3⸣
-Teollisuusalue•T•Teollisuusalue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/T0⸣
-Teollisuusalue•TY•Teollisuusalue, jolla ympäristö asettaa toiminnan laadulle erityisiä vaatimuksia.•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/T1⸣
-Virkistysalue•V•Virkistysalue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/V0⸣
-Virkistysalue•VP•Puisto•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/V1⸣
-Virkistysalue•VL•Lähivirkistysalue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/V2⸣
-Virkistysalue•VK•Leikkipuisto•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/V3⸣
-Virkistysalue•VU•Urheilu- ja virkistyspalvelualue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/V4⸣
-Virkistysalue•VR•Retkeily- ja ulkoilualue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/V5⸣
-Virkistysalue•VV•Uimaranta•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/V6⸣
-Loma- ja matkailualue•R•Loma- ja matkailualue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/R0⸣
-Loma- ja matkailualue•RA•Lomarakennusten alue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/R1⸣
-Loma- ja matkailualue•RM•Matkailua palvelevien rakennusten alue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/R2⸣
-Loma- ja matkailualue•RL•Leirintäalue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/R3⸣
-Loma- ja matkailualue•RP•Siirtolapuutarha- ja palstaviljelyalue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/R4⸣
-Liikenteen alue•L•Liikennealue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/L0⸣
-Liikenteen alue•KATU•Katu•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/L1⸣
-Liikenteen alue•LT•Yleisen tien alue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/L2⸣
-Liikenteen alue•LR•Rautatie•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/L3⸣
-Liikenteen alue•LL•Lentokenttä•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/L4⸣
-Liikenteen alue•LS•Satama•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/L5⸣
-Liikenteen alue•LK•Kanava•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/L6⸣
-Liikenteen alue•LV•Venesatama ja -valkama•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/L7⸣
-Liikenteen alue•LP•Yleinen pysäköintialue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/L8⸣
-Liikenteen alue•LPA•Autopaikka-alue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/L9⸣
-Liikenteen alue•LH•Huoltoasema•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/L10⸣
-Liikenteen alue•LHA•Henkilöliikenneterminaali•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/L11⸣
-Liikenteen alue•LTA•Tavaraliikenneterminaali•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/L12⸣
-Liikenteen alue•TORI•Katuaukio/tori•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/L13⸣
-Liikenteen alue•KATU•Jalankululle tai pyöräilylle varattu katu•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/L14⸣
-Erityisalue•E•Erityisalue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/E0⸣
-Erityisalue•ET•Yhdyskuntatekninen huolto•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/E1⸣
-Erityisalue•EN•Energiahuolto•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/E2⸣
-Erityisalue•EJ•Jätteenkäsittely•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/E3⸣
-Erityisalue•EO•Maa-aineiston otto•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/E4⸣
-Erityisalue•EV•Suojaviheralue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/E5⸣
-Erityisalue•EK•Kaivosalue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/E6⸣
-Erityisalue•EMT•Mastoalue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/E7⸣
-Erityisalue•EA•Ampumarata•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/E8⸣
-Erityisalue•EP•Puolustusvoimienalue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/E9⸣
-Erityisalue•EH•Hautausmaa•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/E10⸣
-Suojelualue•S•Suojelualue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/S0⸣
-Suojelualue•SL•Luonnonsuojelualue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/S1⸣
-Suojelualue•SM•Muinaismuistoalue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/S2⸣
-Suojelualue•SR•Rakennussuojelualue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/S3⸣
-Maa- ja metsätalousalue•M•Maa- ja metsätalousalue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/M0⸣
-Maa- ja metsätalousalue•MT•Maatalousalue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/M1⸣
-Maa- ja metsätalousalue•ME•Kotieläintalouden suuryksikkö•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/M2⸣
-Maa- ja metsätalousalue•MP•Puutarha- ja kasvihuone•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/M3⸣
-Maa- ja metsätalousalue•MA•Maisemallisesti arvokas peltoalue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/M4⸣
-Vesialue•W•Vesialue•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLandUseKindCodeListValue/W0]]>
+<![CDATA[paaluokka•koodi•nimike⸣
+Asuinalue•A•Asuinalue⸣
+Asuinalue•AK•Kerrostaloalue⸣
+Asuinalue•AP•Pientaloalue⸣
+Asuinalue•AR•Rivitaloalue⸣
+Asuinalue•AO•Erillispientaloalue⸣
+Asuinalue•AL•Asuin-, liike- ja toimistorakennusten alue⸣
+Asuinalue•AM•Maatilojen talouskeskusalue⸣
+Palvelutoiminnot•P•Palvelutoiminnot⸣
+Palvelutoiminnot•PL•Lähipalvelut⸣
+Palvelutoiminnot•PV•Kulttuuri- ja viihdepalvelut⸣
+Palvelutoiminnot•Y•Yleiset rakennukset⸣
+Palvelutoiminnot•YL•Julkiset lähipalvelut⸣
+Palvelutoiminnot•YH•Hallinto- ja virastopalvelut⸣
+Palvelutoiminnot•YO•Opetustoiminta⸣
+Palvelutoiminnot•YS•Sosiaalitoimi ja terveydenhuolto⸣
+Palvelutoiminnot•YK•Kirkot ja seurakuntatoiminta⸣
+Palvelutoiminnot•YU•Urheilutoimintaa palvelevien rakennusten alue⸣
+Keskustatoiminnot•C•Keskustatoiminnot⸣
+Liike- ja toimistorakennusten alue•K•Liike- ja toimistorakennusten alue⸣
+Liike- ja toimistorakennusten alue•KL•Liikerakennusten alue⸣
+Liike- ja toimistorakennusten alue•KM•Vähittäiskaupan suuryksikkö⸣
+Liike- ja toimistorakennusten alue•KT•Toimistorakennusten alue⸣
+Teollisuusalue•T•Teollisuusalue⸣
+Teollisuusalue•TY•Teollisuusalue, jolla ympäristö asettaa toiminnan laadulle erityisiä vaatimuksia.⸣
+Virkistysalue•V•Virkistysalue⸣
+Virkistysalue•VP•Puisto⸣
+Virkistysalue•VL•Lähivirkistysalue⸣
+Virkistysalue•VK•Leikkipuisto⸣
+Virkistysalue•VU•Urheilu- ja virkistyspalvelualue⸣
+Virkistysalue•VR•Retkeily- ja ulkoilualue⸣
+Virkistysalue•VV•Uimaranta⸣
+Loma- ja matkailualue•R•Loma- ja matkailualue⸣
+Loma- ja matkailualue•RA•Lomarakennusten alue⸣
+Loma- ja matkailualue•RM•Matkailua palvelevien rakennusten alue⸣
+Loma- ja matkailualue•RL•Leirintäalue⸣
+Loma- ja matkailualue•RP•Siirtolapuutarha- ja palstaviljelyalue⸣
+Liikenteen alue•L•Liikennealue⸣
+Liikenteen alue•KATU•Katu⸣
+Liikenteen alue•LT•Yleisen tien alue⸣
+Liikenteen alue•LR•Rautatie⸣
+Liikenteen alue•LL•Lentokenttä⸣
+Liikenteen alue•LS•Satama⸣
+Liikenteen alue•LK•Kanava⸣
+Liikenteen alue•LV•Venesatama ja -valkama⸣
+Liikenteen alue•LP•Yleinen pysäköintialue⸣
+Liikenteen alue•LPA•Autopaikka-alue⸣
+Liikenteen alue•LH•Huoltoasema⸣
+Liikenteen alue•LHA•Henkilöliikenneterminaali⸣
+Liikenteen alue•LTA•Tavaraliikenneterminaali⸣
+Liikenteen alue•TORI•Katuaukio/tori⸣
+Liikenteen alue•KATU•Jalankululle tai pyöräilylle varattu katu⸣
+Erityisalue•E•Erityisalue⸣
+Erityisalue•ET•Yhdyskuntatekninen huolto⸣
+Erityisalue•EN•Energiahuolto⸣
+Erityisalue•EJ•Jätteenkäsittely⸣
+Erityisalue•EO•Maa-aineiston otto⸣
+Erityisalue•EV•Suojaviheralue⸣
+Erityisalue•EK•Kaivosalue⸣
+Erityisalue•EMT•Mastoalue⸣
+Erityisalue•EA•Ampumarata⸣
+Erityisalue•EP•Puolustusvoimienalue⸣
+Erityisalue•EH•Hautausmaa⸣
+Suojelualue•S•Suojelualue⸣
+Suojelualue•SL•Luonnonsuojelualue⸣
+Suojelualue•SM•Muinaismuistoalue⸣
+Suojelualue•SR•Rakennussuojelualue⸣
+Maa- ja metsätalousalue•M•Maa- ja metsätalousalue⸣
+Maa- ja metsätalousalue•MT•Maatalousalue⸣
+Maa- ja metsätalousalue•ME•Kotieläintalouden suuryksikkö⸣
+Maa- ja metsätalousalue•MP•Puutarha- ja kasvihuone⸣
+Maa- ja metsätalousalue•MA•Maisemallisesti arvokas peltoalue⸣
+Vesialue•W•Vesialue]]>
 	</initial-data>
 </table>
 
-<table name="dokumentti" layer="0" collapse-mode="2" max-obj-count="7" z-value="0">
+<table name="dokumentti" layer="0" collapse-mode="2" max-obj-count="3" z-value="0">
 	<schema name="kaavan_lisatiedot"/>
 	<role name="postgres"/>
-	<position x="2086.5" y="40.4532"/>
+	<position x="3213.43" y="149.528"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -525,21 +462,6 @@ Vesialue•W•Vesialue•http://paikkatiedot.fi/registry/codelist/fin_lu/Finnis
 	</constraint>
 </table>
 
-<relationship name="many_kaavalementti_has_many_maankayttoalue" type="relnn" layer="0"
-	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
-	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
-	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
-	 pk-col-pattern="id"
-	 custom-color="#e4a7e7"
-	 src-table="asemakaavat.kaavaelementti"
-	 dst-table="asemakaavat.maankayttoalue"
-	 src-required="false" dst-required="false"
-	 table-name="many_kaavalementti_has_many_maankayttoalue">
-	<label ref-type="src-label">
-		<position x="0" y="0"/>
-	</label>
-</relationship>
-
 <relationship name="taustakartta_has_many_asemakaava" type="rel1n" layer="0"
 	 src-col-pattern="{sc}_{st}"
 	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
@@ -547,17 +469,12 @@ Vesialue•W•Vesialue•http://paikkatiedot.fi/registry/codelist/fin_lu/Finnis
 	 custom-color="#a44363"
 	 src-table="kaavan_lisatiedot.taustakartta"
 	 dst-table="asemakaavat.asemakaava"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="1687.73" y="589.355"/>
-	<position x="1687.73" y="472.986"/>
-	</line>
-</relationship>
+	 src-required="false" dst-required="false"/>
 
 <table name="kaavatyyppi" layer="0" collapse-mode="2" max-obj-count="2" z-value="0">
 	<schema name="koodistot"/>
 	<role name="postgres"/>
-	<position x="126.158" y="572.81"/>
+	<position x="457.301" y="786.381"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -568,19 +485,19 @@ Vesialue•W•Vesialue•http://paikkatiedot.fi/registry/codelist/fin_lu/Finnis
 		<columns names="gid" ref-type="src-columns"/>
 	</constraint>
 	<initial-data>
-<![CDATA[gid•nimi•Tunniste⸣
-1•Asemakaava•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishSpatialPlanTypeCodeListValue/1⸣
-2•Ranta-asemakaava•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishSpatialPlanTypeCodeListValue/2⸣
-3•Vaiheasemakaava•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishSpatialPlanTypeCodeListValue/3⸣
-4•Maanalainen asemakaava•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishSpatialPlanTypeCodeListValue/4⸣
-5•Vaiheranta-asemakaava•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishSpatialPlanTypeCodeListValue/5]]>
+<![CDATA[gid•nimi⸣
+1•Asemakaava⸣
+2•Ranta-asemakaava⸣
+3•Vaiheasemakaava⸣
+4•Maanalainen asemakaava⸣
+5•Vaiheranta-asemakaava]]>
 	</initial-data>
 </table>
 
 <table name="prosessin_vaihe" layer="0" collapse-mode="2" max-obj-count="3" z-value="0">
 	<schema name="koodistot"/>
 	<role name="postgres"/>
-	<position x="452.007" y="265.794"/>
+	<position x="1003.62" y="400.989"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -594,22 +511,22 @@ Vesialue•W•Vesialue•http://paikkatiedot.fi/registry/codelist/fin_lu/Finnis
 		<columns names="gid" ref-type="src-columns"/>
 	</constraint>
 	<initial-data>
-<![CDATA[gid•nimi•kuvaus•Tunniste⸣
-1•ohjelmoitu kaavamuutos•Kaavatarve tiedossa, voi olla hyvin suurpiirteinen aluerajaus (kaava).•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishSpatialPlanStatusCodeListValue/1⸣
-2•muutoksen alla•Uusi kaava vireillä, vanha (rakennuskiellossa oleva) alue merkitään uuden hankealueen osalta.•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishSpatialPlanStatusCodeListValue/2⸣
-3•vireillä•Uusi kaava tai muutos vireille.•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishSpatialPlanStatusCodeListValue/3⸣
-4•kaavaehdotus•Nähtäville asetettu kaavaehdotus.•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishSpatialPlanStatusCodeListValue/4⸣
-5•valtuuston hyväksymä•Valtuuston hyväksymä kaava.•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishSpatialPlanStatusCodeListValue/5⸣
-6•lainvoimaisen kaavan alue•Lainvoiman saanut kaava-alue (muutoksenhaun jälkeen).•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishSpatialPlanStatusCodeListValue/6⸣
-7•väistynyt kaava•Väistynyt hankealue historiatietona.•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishSpatialPlanStatusCodeListValue/7⸣
-8•keskeytetty kaava•Keskeytetyn kaavan hankealue.•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishSpatialPlanStatusCodeListValue/8]]>
+<![CDATA[gid•nimi•kuvaus⸣
+1•ohjelmoitu kaavamuutos•Kaavatarve tiedossa, voi olla hyvin suurpiirteinen aluerajaus (kaava).⸣
+2•muutoksen alla•Uusi kaava vireillä, vanha (rakennuskiellossa oleva) alue merkitään uuden hankealueen osalta.⸣
+3•vireillä•Uusi kaava tai muutos vireille.⸣
+4•kaavaehdotus•Nähtäville asetettu kaavaehdotus.⸣
+5•valtuuston hyväksymä•Valtuuston hyväksymä kaava.⸣
+6•lainvoimaisen kaavan alue•Lainvoiman saanut kaava-alue (muutoksenhaun jälkeen).⸣
+7•väistynyt kaava•Väistynyt hankealue historiatietona.⸣
+8•keskeytetty kaava•Keskeytetyn kaavan hankealue.]]>
 	</initial-data>
 </table>
 
 <table name="kaavaelementti_tyyppi" layer="0" collapse-mode="2" max-obj-count="4" z-value="0">
 	<schema name="koodistot"/>
 	<role name="postgres"/>
-	<position x="456.134" y="1534.5"/>
+	<position x="905.079" y="2450.1"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -621,8 +538,8 @@ Vesialue•W•Vesialue•http://paikkatiedot.fi/registry/codelist/fin_lu/Finnis
 	</constraint>
 
 	<customidxs object-type="column">
-		<object name="gid_hsrcl" index="2"/>
-		<object name="gid_kuvaustyyli" index="3"/>
+		<object name="gid_hsrcl" index="3"/>
+		<object name="gid_kuvaustyyli" index="2"/>
 	</customidxs>
 
 	<customidxs object-type="constraint">
@@ -631,55 +548,24 @@ Vesialue•W•Vesialue•http://paikkatiedot.fi/registry/codelist/fin_lu/Finnis
 		<object name="kuvaustyyli_fk" index="2"/>
 	</customidxs>
 	<initial-data>
-<![CDATA[gid•nimi•Tunniste⸣
-1•Melusuojaustarve•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishPlanningDetailTypeCodeListValue/1⸣
-2•Liittymäkielto•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishPlanningDetailTypeCodeListValue/2⸣
-3•Ajoneuvoliittymän likimääräinen sijainti•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishPlanningDetailTypeCodeListValue/3⸣
-4•Rakennuksen sivu, johon rakennus on rakennettava kiinni•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishPlanningDetailTypeCodeListValue/4⸣
-5•Harjasuunta•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishPlanningDetailTypeCodeListValue/5⸣
-6•Ulkoilureitti•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishPlanningDetailTypeCodeListValue/6⸣
-7•Puurivi•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishPlanningDetailTypeCodeListValue/7⸣
-8•Rakennusalan sivu, johon kohdistuu lisätieto•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishPlanningDetailTypeCodeListValue/8⸣
-9•Suojeltava puu•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishPlanningDetailTypeCodeListValue/9⸣
-10•Maanpinnan likimääräinen korkeusasema•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishPlanningDetailTypeCodeListValue/10]]>
+<![CDATA[gid•nimi⸣
+1•Melusuojaustarve⸣
+2•Liittymäkielto⸣
+3•Ajoneuvoliittymän likimääräinen sijainti⸣
+4•Rakennuksen sivu, johon rakennus on rakennettava kiinni⸣
+5•Harjasuunta⸣
+6•Ulkoilureitti⸣
+7•Puurivi⸣
+8•Rakennusalan sivu, johon kohdistuu lisätieto⸣
+9•Suojeltava puu⸣
+10•Maanpinnan likimääräinen korkeusasema]]>
 	</initial-data>
 </table>
-
-<relationship name="kaavaelementti_has_one_kaavaelementti_tyyppi" type="rel11" layer="0"
-	 src-col-pattern="{sc}_{st}"
-	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
-	 src-fk-pattern="{st}_fk"
-	 custom-color="#b8eae3"
-	 src-table="koodistot.kaavaelementti_tyyppi"
-	 dst-table="asemakaavat.kaavaelementti"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="824.367" y="1680.33"/>
-	<position x="824.367" y="1810.89"/>
-	</line>
-</relationship>
-
-<relationship name="asemakaava_has_one_prosessin_vaihe" type="rel11" layer="0"
-	 src-col-pattern="{sc}_{st}"
-	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
-	 src-fk-pattern="{st}_fk"
-	 custom-color="#8f9f80"
-	 src-table="koodistot.prosessin_vaihe"
-	 dst-table="asemakaavat.asemakaava"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="815.04" y="389.627"/>
-	<position x="815.04" y="559.519"/>
-	</line>
-	<label ref-type="name-label">
-		<position x="0" y="0"/>
-	</label>
-</relationship>
 
 <table name="kieli" layer="0" collapse-mode="2" max-obj-count="2" z-value="0">
 	<schema name="koodistot"/>
 	<role name="postgres"/>
-	<position x="523.205" y="55"/>
+	<position x="1111.91" y="167.102"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -690,31 +576,17 @@ Vesialue•W•Vesialue•http://paikkatiedot.fi/registry/codelist/fin_lu/Finnis
 		<columns names="gid" ref-type="src-columns"/>
 	</constraint>
 	<initial-data>
-<![CDATA[gid•kieli•Tunniste⸣
-1•Suomi•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLanguageCodeListValue/1⸣
-2•Ruotsi•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLanguageCodeListValue/2⸣
-3•Suomi ja ruotsi•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishLanguageCodeListValue/3]]>
+<![CDATA[gid•kieli⸣
+1•Suomi⸣
+2•Ruotsi⸣
+3•Suomi ja ruotsi]]>
 	</initial-data>
 </table>
-
-<relationship name="asemakaava_has_one_kieli" type="rel11" layer="0"
-	 src-col-pattern="{sc}_{st}"
-	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
-	 src-fk-pattern="{st}_fk"
-	 custom-color="#108bab"
-	 src-table="koodistot.kieli"
-	 dst-table="asemakaavat.asemakaava"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="803.295" y="200.833"/>
-	<position x="803.295" y="578.119"/>
-	</line>
-</relationship>
 
 <table name="hilucs" layer="0" collapse-mode="2" max-obj-count="4" z-value="0">
 	<schema name="koodistot"/>
 	<role name="postgres"/>
-	<position x="106.967" y="810.954"/>
+	<position x="283.772" y="1485.01"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -833,38 +705,10 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 	</initial-data>
 </table>
 
-<relationship name="maankayttoalue_has_one_maankayttoluokat" type="rel11" layer="0"
-	 src-col-pattern="{sc}_{st}"
-	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
-	 src-fk-pattern="{st}_fk"
-	 custom-color="#37f928"
-	 src-table="koodistot.maankayttoluokat"
-	 dst-table="asemakaavat.maankayttoalue"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="821.281" y="991.117"/>
-	<position x="821.281" y="1133.43"/>
-	</line>
-</relationship>
-
-<relationship name="asemakaava_has_one_kaavatyyppi" type="rel11" layer="0"
-	 src-col-pattern="{sc}_{st}"
-	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
-	 src-fk-pattern="{st}_fk"
-	 custom-color="#013058"
-	 src-table="koodistot.kaavatyyppi"
-	 dst-table="asemakaavat.asemakaava"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="636.883" y="706.976"/>
-	<position x="636.883" y="596.719"/>
-	</line>
-</relationship>
-
 <table name="osa_alue_tyyppi" layer="0" collapse-mode="2" max-obj-count="6" z-value="0">
 	<schema name="koodistot"/>
 	<role name="postgres"/>
-	<position x="472.626" y="1168.76"/>
+	<position x="862.582" y="1709.72"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -889,30 +733,50 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 		<object name="osa_alue_tyyppi_uq" index="2"/>
 	</customidxs>
 	<initial-data>
-<![CDATA[gid•koodi•nimi•gid_kuvaustyyli•gid_hsrcl⸣
-1•1•rakennusala••⸣
-2•2•osa-alue••]]>
+<![CDATA[gid•nimi⸣
+1•Tekstimääräys.⸣
+2•Auton säilytyspaikan rakennusala.⸣
+3•Pysäköimispaikka.⸣
+4•Istutettava alueen osa.⸣
+5•Rakennukseen jätettävä kulkuaukko.⸣
+6•Maanalaisiin tiloihin johtava ajoluiska.⸣
+7•Maanalainen tila.⸣
+8•Maanalainen väestönsuojaksi tarkoitettu tila.⸣
+9•Maanalainen yleinen pysäköintilaitos.⸣
+10•Liikennetunneli.⸣
+11•Rakennusala, jolle saa sijoittaa lasten päiväkodin.⸣
+12•Rakennusala, jolle saa sijoittaa myymälän.⸣
+13•Rakennusala, jolle saa sijoittaa maatilan talouskeskuksen.⸣
+14•Rakennusala, jolle saa sijoittaa talousrakennuksen.⸣
+15•Alue, jolle saa sijoittaa polttoaineen jakeluaseman.⸣
+16•Uloke.⸣
+17•Valokatteinen tila.⸣
+18•Leikki- ja oleskelualueeksi varattu alueen osa.⸣
+19•Jalankululle ja polkupyöräilylle varattu alueen osa.⸣
+20•Jalankululle ja polkupyöräilylle varattu alueen osa, jolla huoltoajo on sallittu.⸣
+21•Jalankululle ja polkupyöräilylle varattu alueen osa, jolla tontille/rakennuspaikalle ajo on sallittu.⸣
+22•Yleiseen tiehen kuuluva jalankulku- ja polkupyörätie.⸣
+23•Joukkoliikenteelle varattu katu/tie.⸣
+24•Ajoyhteys.⸣
+25•Alueen sisäiselle huoltoliikenteelle varattu alueen osa.⸣
+26•Yleisen tien suoja-alueeksi varattu alueen osa.⸣
+27•Yleisen tien näkemäalueeksi varattu alueen osa.⸣
+28•Maanalaista johtoa varten varattu alueen osa.⸣
+29•Alue on varattu kunnan tarpeisiin.⸣
+30•Alue on varattu valtion tarpeisiin.⸣
+31•Yhteiskäyttöalue.⸣
+32•Suojeltava alueen osa.⸣
+33•Alueen osa, jolla sijaitsee luonnonsuojelulain mukainen luonnonsuojelualue tai -kohde.⸣
+34•Suojeltava rakennus.⸣
+35•Rakennussuojelulain nojalla suojeltu rakennus.⸣
+36•Maan päällistä johtoa varten varattu alueen osa.]]>
 	</initial-data>
 </table>
-
-<relationship name="osa_alue_has_one_osa_alue_tyyppi" type="rel11" layer="0"
-	 src-col-pattern="{sc}_{st}"
-	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
-	 src-fk-pattern="{st}_fk"
-	 custom-color="#894a1c"
-	 src-table="koodistot.osa_alue_tyyppi"
-	 dst-table="asemakaavat.osa_alue"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="823.334" y="1314.59"/>
-	<position x="823.334" y="1462.87"/>
-	</line>
-</relationship>
 
 <table name="hsrcl" layer="0" collapse-mode="2" max-obj-count="2" z-value="0">
 	<schema name="koodistot"/>
 	<role name="postgres"/>
-	<position x="106.134" y="1338.5"/>
+	<position x="313.329" y="2188.89"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -931,26 +795,7 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 	 custom-color="#ae23cf"
 	 src-table="koodistot.hsrcl"
 	 dst-table="koodistot.kaavaelementti_tyyppi"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="367.192" y="1394.33"/>
-	<position x="367.192" y="1627.53"/>
-	</line>
-</relationship>
-
-<relationship name="asemakaava_has_one_kuvaustyyli" type="rel11" layer="0"
-	 src-col-pattern="{sc}_{st}"
-	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
-	 src-fk-pattern="{st}_fk"
-	 custom-color="#43af4b"
-	 src-table="koodistot.kuvaustyyli"
-	 dst-table="asemakaavat.asemakaava"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="674.32" y="667.13"/>
-	<position x="911.707" y="667.13"/>
-	</line>
-</relationship>
+	 src-required="false" dst-required="false"/>
 
 <relationship name="maankayttoluokat_has_one_kuvaustyyli" type="rel11" layer="0"
 	 src-col-pattern="{sc}_{st}"
@@ -958,13 +803,8 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 	 src-fk-pattern="{st}_fk"
 	 custom-color="#e3f45f"
 	 src-table="koodistot.kuvaustyyli"
-	 dst-table="koodistot.maankayttoluokat"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="432.504" y="703.34"/>
-	<position x="432.504" y="975.517"/>
-	</line>
-</relationship>
+	 dst-table="koodistot.maankayttoluokka"
+	 src-required="false" dst-required="false"/>
 
 <relationship name="osa_alue_tyyppi_has_one_kuvaustyyli" type="rel11" layer="0"
 	 src-col-pattern="{sc}_{st}"
@@ -973,12 +813,7 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 	 custom-color="#7f315a"
 	 src-table="koodistot.kuvaustyyli"
 	 dst-table="koodistot.osa_alue_tyyppi"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="435.251" y="703.34"/>
-	<position x="435.251" y="1280.39"/>
-	</line>
-</relationship>
+	 src-required="false" dst-required="false"/>
 
 <relationship name="kaavaelementti_tyyppi_has_one_kuvaustyyli" type="rel11" layer="0"
 	 src-col-pattern="{sc}_{st}"
@@ -987,26 +822,12 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 	 custom-color="#33edb9"
 	 src-table="koodistot.kuvaustyyli"
 	 dst-table="koodistot.kaavaelementti_tyyppi"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="426.505" y="703.34"/>
-	<position x="426.505" y="1646.13"/>
-	</line>
-</relationship>
-
-<textbox name="dokumentit" layer="0" z-value="0" font-size="9">
-	<position x="2091.75" y="302.5"/>
-	<comment><![CDATA[Dokumentteja voivat olla
-- kaavaselostus
-- liiteaineisto
-- lisätieto
-- päätös]]></comment>
-</textbox>
+	 src-required="false" dst-required="false"/>
 
 <table name="dokumenttityyppi" layer="0" collapse-mode="2" max-obj-count="3" z-value="0">
 	<schema name="koodistot"/>
 	<role name="postgres"/>
-	<position x="105.723" y="161.329"/>
+	<position x="658.243" y="274.342"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -1020,41 +841,13 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 		<columns names="gid" ref-type="src-columns"/>
 	</constraint>
 	<initial-data>
-<![CDATA[gid•nimi•kuvaus•Tunniste⸣
-1•Liiteaineisto•Kaikki kaavaa tarkentavat tai selventävät dokumentit. Kaavan laatimisen aikana syntyvä aineisto pl. kaavaselostus.•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishDocumentRoleCodeListValue/1⸣
-2•Kaavaselostus•Määrämuotoinen kaavan selostus.•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishDocumentRoleCodeListValue/2⸣
-3•Lisätieto•Kaavaan liittyvät lisätietodokumentit.•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishDocumentRoleCodeListValue/3⸣
-4•Päätös•Kaavan päätösasiakirjat.•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishDocumentRoleCodeListValue/4]]>
+<![CDATA[gid•nimi•kuvaus⸣
+1•Liiteaineisto•Kaikki kaavaa tarkentavat tai selventävät dokumentit. Kaavan laatimisen aikana syntyvä aineisto pl. kaavaselostus.⸣
+2•Kaavaselostus•Määrämuotoinen kaavan selostus.⸣
+3•Lisätieto•Kaavaan liittyvät lisätietodokumentit.⸣
+4•Päätös•Kaavan päätösasiakirjat.]]>
 	</initial-data>
 </table>
-
-<relationship name="dokumentti_has_one_dokumenttityyppi" type="rel11" layer="0"
-	 src-col-pattern="{sc}_{st}"
-	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
-	 src-fk-pattern="{st}_fk"
-	 custom-color="#c81abc"
-	 src-table="koodistot.dokumenttityyppi"
-	 dst-table="kaavan_lisatiedot.dokumentti"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="1260.84" y="212.162"/>
-	<position x="1260.84" y="142.387"/>
-	</line>
-</relationship>
-
-<relationship name="hilucs_has_many_maankayttoluokat" type="rel1n" layer="0"
-	 src-col-pattern="{sc}_{st}"
-	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
-	 src-fk-pattern="{st}_fk"
-	 custom-color="#931ef3"
-	 src-table="koodistot.hilucs"
-	 dst-table="koodistot.maankayttoluokat"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="376.365" y="866.787"/>
-	<position x="376.365" y="994.117"/>
-	</line>
-</relationship>
 
 <relationship name="hsrcl_has_many_osa_alue_tyyppi" type="rel1n" layer="0"
 	 src-col-pattern="{sc}_{st}"
@@ -1063,32 +856,13 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 	 custom-color="#d13915"
 	 src-table="koodistot.hsrcl"
 	 dst-table="koodistot.osa_alue_tyyppi"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="301.75" y="1346.66"/>
-	<position x="450.126" y="1346.66"/>
-	</line>
-</relationship>
-
-<relationship name="dokumentti_has_one_kieli" type="rel11" layer="0"
-	 src-col-pattern="{sc}_{st}"
-	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
-	 src-fk-pattern="{st}_fk"
-	 custom-color="#894bbb"
-	 src-table="koodistot.kieli"
-	 dst-table="kaavan_lisatiedot.dokumentti"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="1386.94" y="110.833"/>
-	<position x="1386.94" y="160.987"/>
-	</line>
-</relationship>
+	 src-required="false" dst-required="false"/>
 
 <table name="vaihetieto" layer="0" collapse-mode="2" max-obj-count="3" z-value="0">
 	<schema name="koodistot"/>
 	<role name="postgres"/>
 	<comment><![CDATA[Kaavoituksen vaihetieto, jota käytetään kaavoituksen etenemisen yhteydessä.]]></comment>
-	<position x="132.25" y="379.5"/>
+	<position x="696.952" y="573.793"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -1102,30 +876,16 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 		<columns names="gid" ref-type="src-columns"/>
 	</constraint>
 	<initial-data>
-<![CDATA[gid•nimi•kuvaus•Tunniste⸣
-1•aloitusvaihe•Kaavoitustarve tunnistettu.•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishOrdinanceProcessStepCodeListValue/1⸣
-2•valmisteluvaihe•Kaava vireillä.•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishOrdinanceProcessStepCodeListValue/2⸣
-3•ehdotusvaihe•Kaavaan kerätään mielipiteitä, kaava nähtävillä.•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishOrdinanceProcessStepCodeListValue/3⸣
-4•hyväksymisvaihe•Kaavan valtuustokäsittely.•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishOrdinanceProcessStepCodeListValue/4⸣
-5•voimaantulo•Kaavan valitusaika umpeutunut tai valitukset käsitelty.•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishOrdinanceProcessStepCodeListValue/5⸣
-6•kumoaminen•Kaava päätetty kumota.•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishOrdinanceProcessStepCodeListValue/6⸣
-7•raukeaminen•Kaava rauennut tai keskeytetty.•http://paikkatiedot.fi/registry/codelist/fin_lu/FinnishOrdinanceProcessStepCodeListValue/7]]>
+<![CDATA[gid•nimi•kuvaus⸣
+1•aloitusvaihe•Kaavoitustarve tunnistettu.⸣
+2•valmisteluvaihe•Kaava vireillä.⸣
+3•ehdotusvaihe•Kaavaan kerätään mielipiteitä, kaava nähtävillä.⸣
+4•hyväksymisvaihe•Kaavan valtuustokäsittely.⸣
+5•voimaantulo•Kaavan valitusaika umpeutunut tai valitukset käsitelty.⸣
+6•kumoaminen•Kaava päätetty kumota.⸣
+7•raukeaminen•Kaava rauennut tai keskeytetty.]]>
 	</initial-data>
 </table>
-
-<relationship name="asemakaava_has_one_vaihetieto" type="rel11" layer="0"
-	 src-col-pattern="{sc}_{st}"
-	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
-	 src-fk-pattern="{st}_fk"
-	 custom-color="#01aa0f"
-	 src-table="koodistot.vaihetieto"
-	 dst-table="asemakaavat.asemakaava"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="383.272" y="578.626"/>
-	<position x="911.707" y="578.626"/>
-	</line>
-</relationship>
 
 <relationship name="asemakaava_has_many_osa_alue" type="rel1n" layer="0"
 	 src-col-pattern="{sc}_{st}"
@@ -1136,15 +896,6 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 	 dst-table="asemakaavat.osa_alue"
 	 src-required="false" dst-required="false"/>
 
-<relationship name="asemakaava_has_many_dokumentti" type="rel1n" layer="0"
-	 src-col-pattern="{sc}_{st}"
-	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
-	 src-fk-pattern="{st}_fk"
-	 custom-color="#3e6970"
-	 src-table="asemakaavat.asemakaava"
-	 dst-table="kaavan_lisatiedot.dokumentti"
-	 src-required="false" dst-required="false"/>
-
 <relationship name="asemakaava_has_many_kaavaelementti" type="rel1n" layer="0"
 	 src-col-pattern="{sc}_{st}"
 	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
@@ -1152,24 +903,203 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 	 custom-color="#2c652d"
 	 src-table="asemakaavat.asemakaava"
 	 dst-table="asemakaavat.kaavaelementti"
-	 src-required="false" dst-required="false"/>
+	 src-required="false" dst-required="false">
+	<label ref-type="dst-label">
+		<position x="0" y="0"/>
+	</label>
+</relationship>
 
-<relationship name="osa_alue_has_many_kaavaelementti" type="rel1n" layer="0"
+<table name="numeerinen_merkinta" layer="0" collapse-mode="2" max-obj-count="3" z-value="0">
+	<schema name="koodistot"/>
+	<role name="postgres"/>
+	<position x="852.412" y="2035.58"/>
+	<column name="gid" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="tyyppi">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="arvo">
+		<type name="varchar" length="0"/>
+	</column>
+	<constraint name="numeerinen_merkinta_pk" type="pk-constr" table="koodistot.numeerinen_merkinta">
+		<columns names="gid" ref-type="src-columns"/>
+	</constraint>
+	<initial-data>
+<![CDATA[gid•nimi⸣
+1•Rakennusoikeus kerrosalaneliömetreinä.⸣
+2•Rakennusoikeus murtolukuna.⸣
+3•Tehokkuusluku.⸣
+4•Kerrosluku.⸣
+5•Kattokaltevuus.⸣
+6•Sallittu asuinhuoneistojen osuus rakennusalasta.⸣
+7•Sallittu myymälätilojen osuus rakennusalasta.⸣
+8•Osuus, jonka rakennuksen suurimman kerroksen alasta saa kellarikerroksessa käyttää kerrosalaan luettavaksi tilaksi.⸣
+9•Osuus, jonka rakennuksen suurimman kerroksen alasta saa käyttää ullakon tasolla kerrosalaan luettavaksi tilaksi.⸣
+10•Luku osoittaa neliömetreinä, kuinka suuren osan rakennuksen alimmasta kerroksesta (I) saa kerrosalaneliömetreinä ilmoitetun kerrosalan lisäksi käyttää asukkaiden yhteistiloihin.⸣
+11•Velvoitettu päiväkotitilojen osuus alimman kerroksen rakennusalasta.⸣
+12•Maanpinnan likimääräinen korkeusasema.⸣
+13•Rakennuksen vesikaton ylimmän kohdan korkeusasema.⸣
+14•Rakennuksen julkisivupinnan ja vesikaton leikkauskohdan ylin korkeusasema.⸣
+15•Rakennuksen julkisivun enimmäiskorkeus metreinä.⸣
+16•Rakennuksen, rakenteiden ja laitteiden ylin korkeusasema.⸣
+17•Kerrosalaneliömetrimäärä, jota kohti on rakennettava yksi autopaikka.⸣
+18•Autopaikkojen lukumäärä asuntoa kohti.⸣
+19•Desibeliraja.⸣
+20•Muu lisärakennusoikeus kerrosalaneliömetreinä.]]>
+	</initial-data>
+</table>
+
+<relationship name="kieli_has_many_asemakaava" type="rel1n" layer="0"
 	 src-col-pattern="{sc}_{st}"
 	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
 	 src-fk-pattern="{st}_fk"
-	 custom-color="#307646"
-	 src-table="asemakaavat.osa_alue"
-	 dst-table="asemakaavat.kaavaelementti"
+	 custom-color="#48a0f4"
+	 src-table="koodistot.kieli"
+	 dst-table="asemakaavat.asemakaava"
 	 src-required="false" dst-required="false"/>
 
-<relationship name="maankayttoalue_has_many_kaavaelementti" type="rel1n" layer="0"
+<relationship name="prosessin_vaihe_has_many_asemakaava" type="rel1n" layer="0"
 	 src-col-pattern="{sc}_{st}"
 	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
 	 src-fk-pattern="{st}_fk"
-	 custom-color="#e79d9d"
-	 src-table="asemakaavat.maankayttoalue"
+	 custom-color="#704d6b"
+	 src-table="koodistot.prosessin_vaihe"
+	 dst-table="asemakaavat.asemakaava"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="kuvaustyyli_has_many_asemakaava" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#84585b"
+	 src-table="koodistot.kuvaustyyli"
+	 dst-table="asemakaavat.asemakaava"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="vaihetieto_has_many_asemakaava" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#94cd55"
+	 src-table="koodistot.vaihetieto"
+	 dst-table="asemakaavat.asemakaava"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="kaavatyyppi_has_many_asemakaava" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#b05bbe"
+	 src-table="koodistot.kaavatyyppi"
+	 dst-table="asemakaavat.asemakaava"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="many_numeerinen_merkinta_has_many_kaavaelementti" type="relnn" layer="0"
+	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
+	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
+	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
+	 pk-col-pattern="id"
+	 custom-color="#46cefc"
+	 src-table="koodistot.numeerinen_merkinta"
+	 dst-table="asemakaavat.kaavaelementti"
+	 src-required="false" dst-required="false"
+	 table-name="many_numeerinen_merkinta_has_many_kaavaelementti"/>
+
+<relationship name="kaavaelementti_tyyppi_has_many_kaavaelementti" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#c1d4e9"
+	 src-table="koodistot.kaavaelementti_tyyppi"
 	 dst-table="asemakaavat.kaavaelementti"
 	 src-required="false" dst-required="false"/>
+
+<relationship name="many_numeerinen_merkinta_has_many_osa_alue" type="relnn" layer="0"
+	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
+	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
+	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
+	 pk-col-pattern="id"
+	 custom-color="#d58969"
+	 src-table="koodistot.numeerinen_merkinta"
+	 dst-table="asemakaavat.osa_alue"
+	 src-required="false" dst-required="false"
+	 table-name="many_numeerinen_merkinta_has_many_osa_alue"/>
+
+<relationship name="osa_alue_tyyppi_has_many_osa_alue" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#decc0e"
+	 src-table="koodistot.osa_alue_tyyppi"
+	 dst-table="asemakaavat.osa_alue"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="maankayttoluokka_has_many_maankayttoalue" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#946ee1"
+	 src-table="koodistot.maankayttoluokka"
+	 dst-table="asemakaavat.maankayttoalue"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="kieli_has_many_dokumentti" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#41eead"
+	 src-table="koodistot.kieli"
+	 dst-table="kaavan_lisatiedot.dokumentti"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="dokumenttityyppi_has_many_dokumentti" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#b254f4"
+	 src-table="koodistot.dokumenttityyppi"
+	 dst-table="kaavan_lisatiedot.dokumentti"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="hilucs_has_many_maankayttoluokka" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#9d778e"
+	 src-table="koodistot.hilucs"
+	 dst-table="koodistot.maankayttoluokka"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="many_dokumentti_has_many_asemakaava" type="relnn" layer="0"
+	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
+	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
+	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
+	 pk-col-pattern="id"
+	 custom-color="#e58353"
+	 src-table="kaavan_lisatiedot.dokumentti"
+	 dst-table="asemakaavat.asemakaava"
+	 src-required="false" dst-required="false"
+	 table-name="many_dokumentti_has_many_asemakaava"/>
+
+<relationship name="dokumentti_has_many_asemakaava" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#29169a"
+	 src-table="kaavan_lisatiedot.dokumentti"
+	 dst-table="asemakaavat.asemakaava"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="many_numeerinen_merkinta_has_many_maankayttoalue" type="relnn" layer="0"
+	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
+	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
+	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
+	 pk-col-pattern="id"
+	 custom-color="#6f7ac6"
+	 src-table="koodistot.numeerinen_merkinta"
+	 dst-table="asemakaavat.maankayttoalue"
+	 src-required="false" dst-required="false"
+	 table-name="many_numeerinen_merkinta_has_many_maankayttoalue"/>
 
 </dbmodel>
