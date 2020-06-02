@@ -35,6 +35,7 @@ Sisältää koodilistoja, jotka voidaan liittää geometriaa sisältäviin kohte
 - *osa_alue_tyyppi*
 - *kaava_elementtityyppi*
 - *HSRCL*
+- *numeerinen_merkintä*: aputaulu, jolla voi kirjata numeerista tietoa (esim. rakennusala, tehokkuusluku). Jokaiselle numeeriselle tietotyypille voi antaa jonkin arvon. 
 
 ### Asemakaavat-skeeman taulut
 
@@ -44,7 +45,6 @@ Sisältävät asemakaavan paikkatietokohteet, eli geometriaa sisältävät taulu
 - *maankayttoalue:* kaavan ulkorajan sisälle jäävät maankäyttökohteet (kaavayksiköt) (esim. AP, V, LP jne), jotka ovat aina polygoneja (alueita). Nämä polygonit täyttävät koko kaava-alueen.
 - *osa-alue:* voivat olla vain polygoneja ja ne ovat usein maankäyttöalueiden päällä "leijuvia" kohteita (esim. Rakennusala, jolle saa sijoittaa talousrakennuksen tai Pysäköimispaikka).
 - *kaavaelementti:* voivat olla pisteitä, viivoja ja alueita (esim. Suojeltava puu, Harjasuunta, Ajoneuvoliittymän likimääräinen sijainti).
-- *numeerinen_merkintä*: aputaulu, jolla voi kirjata numeerista tietoa (esim. rakennusala, tehokkuusluku). Jokaiselle numeeriselle tietotyypille voi antaa jonkin arvon. 
 
 ### Kaavan lisätiedot -skeeman taulut
 
