@@ -23,7 +23,45 @@
               <se:SvgParameter name="stroke-dasharray">18 7 2 7 2 7 2 7</se:SvgParameter>
             </se:Stroke>
           </se:LineSymbolizer>
-		</se:Rule>		
+		</se:Rule>	
+
+	 <se:Rule>
+			  <se:Name>MRL_ak_83</se:Name>
+			  <!-- <Title> MRL:n oppaan asemakaavamerkinta nro 83</Title> -->
+			  <ogc:Filter>
+				<ogc:PropertyIsEqualTo>
+					<ogc:PropertyName>ak_merk</ogc:PropertyName>
+					<ogc:Literal>83</ogc:Literal>
+				</ogc:PropertyIsEqualTo>
+			  </ogc:Filter>	
+		 <se:LineSymbolizer>
+					<se:Stroke>
+					  <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+					  <se:SvgParameter name="stroke-width">4</se:SvgParameter>
+					  <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
+					  <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
+					  <se:SvgParameter name="stroke-dasharray">14 7</se:SvgParameter>
+					</se:Stroke>
+					</se:LineSymbolizer>
+				<se:LineSymbolizer>
+				 <se:Stroke>
+				   <se:GraphicStroke>
+					 <se:Graphic>
+					   <se:Mark>
+						 <se:WellKnownName>shape://vertline</se:WellKnownName>
+						 <se:Stroke>
+						   <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+						   <se:SvgParameter name="stroke-width">4</se:SvgParameter>
+						   
+						 </se:Stroke>
+						  
+					   </se:Mark>
+					   <se:Size>20</se:Size>
+					 </se:Graphic>
+				   </se:GraphicStroke>
+				 </se:Stroke>
+			   </se:LineSymbolizer>	
+		</se:Rule>
 		
 		<se:Rule>
           <se:Name>MRL_ak_84</se:Name>
@@ -180,23 +218,20 @@
                 <se:Graphic>
                   <se:Mark>
                     <se:WellKnownName>circle</se:WellKnownName>
-                    <se:Fill>
-                      <se:SvgParameter name="fill"></se:SvgParameter>
-                      <se:SvgParameter name="fill-opacity">0.0</se:SvgParameter>
-                    </se:Fill>
+                   
                     <se:Stroke>
                       <se:SvgParameter name="stroke">#000000</se:SvgParameter>
-                      <se:SvgParameter name="stroke-width">0.10000000000000001</se:SvgParameter>
+                      <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+                      
                     </se:Stroke>
                   </se:Mark>
-                  <se:Size>3</se:Size>
+                  <se:Size>8</se:Size>
                 </se:Graphic>
-                <se:Gap>
-                  <ogc:Literal>7</ogc:Literal>
-                </se:Gap>
+             
               </se:GraphicStroke>
+               <se:SvgParameter name="stroke-dasharray">16</se:SvgParameter>
             </se:Stroke>
-          </se:LineSymbolizer>			
+          </se:LineSymbolizer>		
 		</se:Rule>	
 		
 		<se:Rule>
@@ -214,65 +249,26 @@
                 <se:Graphic>
                   <se:Mark>
                     <se:WellKnownName>circle</se:WellKnownName>
-                    <se:Fill>
-                      <se:SvgParameter name="fill"></se:SvgParameter>
-                      <se:SvgParameter name="fill-opacity">0.0</se:SvgParameter>
-                    </se:Fill>
+                   
                     <se:Stroke>
                       <se:SvgParameter name="stroke">#000000</se:SvgParameter>
-                      <se:SvgParameter name="stroke-width">0.20000000000000001</se:SvgParameter>
+                      <se:SvgParameter name="stroke-width">0.1</se:SvgParameter>
+                      
                     </se:Stroke>
                   </se:Mark>
-                  <se:Size>4</se:Size>
+                  <se:Size>10</se:Size>
                 </se:Graphic>
-                <se:Gap>
-                  <ogc:Literal>7</ogc:Literal>
-                </se:Gap>
+             
               </se:GraphicStroke>
+               <se:SvgParameter name="stroke-dasharray">16</se:SvgParameter>
             </se:Stroke>
-          </se:LineSymbolizer>
+          </se:LineSymbolizer>		
 			
 			
 		</se:Rule>	
 		
-		<se:Rule>
-          <se:Name>MRL_ak_82</se:Name>
-		  <!-- <Title> MRL:n oppaan asemakaavamerkinta nro 82</Title> -->
-		  <ogc:Filter>
-			<ogc:PropertyIsEqualTo>
-				<ogc:PropertyName>ak_merk</ogc:PropertyName>
-				<ogc:Literal>82</ogc:Literal>
-			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
-			
-			
-		</se:Rule>	
 		
-		<se:Rule>
-          <se:Name>MRL_ak_82</se:Name>
-		  <!-- <Title> MRL:n oppaan asemakaavamerkinta nro 82</Title> -->
-		  <ogc:Filter>
-			<ogc:PropertyIsEqualTo>
-				<ogc:PropertyName>ak_merk</ogc:PropertyName>
-				<ogc:Literal>82</ogc:Literal>
-			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
-			
-			
-		</se:Rule>	
 		
-		<se:Rule>
-          <se:Name>MRL_ak_82</se:Name>
-		  <!-- <Title> MRL:n oppaan asemakaavamerkinta nro 82</Title> -->
-		  <ogc:Filter>
-			<ogc:PropertyIsEqualTo>
-				<ogc:PropertyName>ak_merk</ogc:PropertyName>
-				<ogc:Literal>82</ogc:Literal>
-			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
-			
-			
-		</se:Rule>	
 		
 		
 		
