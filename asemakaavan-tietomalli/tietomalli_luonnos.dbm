@@ -3,8 +3,8 @@
 CAUTION: Do not modify this file unless you know what you are doing.
          Unexpected results may occur if the code is changed deliberately.
 -->
-<dbmodel pgmodeler-ver="0.9.3-alpha" last-position="0,0" last-zoom="0.75" max-obj-count="34"
-	 default-schema="public" default-owner="postgres">
+<dbmodel pgmodeler-ver="0.9.3-alpha" last-position="0,0" last-zoom="0.75" max-obj-count="33"
+	 default-schema="public">
 <database name="qaavakanta" is-template="false" allow-conns="true">
 </database>
 
@@ -20,22 +20,18 @@ CAUTION: Do not modify this file unless you know what you are doing.
 </extension>
 
 <schema name="asemakaavat" layer="0" rect-visible="true" fill-color="#aaff00">
-	<role name="postgres"/>
 </schema>
 
 <schema name="koodistot" layer="0" rect-visible="true" fill-color="#aaffff">
-	<role name="postgres"/>
 </schema>
 
 <schema name="kaavan_lisatiedot" layer="0" rect-visible="true" fill-color="#ffaaff">
-	<role name="postgres"/>
 </schema>
 
-<table name="asemakaava" layer="0" collapse-mode="2" max-obj-count="19" z-value="0">
+<table name="asemakaava" layer="0" collapse-mode="2" max-obj-count="21" z-value="0">
 	<schema name="asemakaavat"/>
-	<role name="postgres"/>
-	<comment><![CDATA[kaavoituksen lopputuloksena syntyvä maankäyttösuunnitelma]]></comment>
-	<position x="2069.65" y="159.223"/>
+	<comment><![CDATA[Kaavoituksen lopputuloksena syntyvä maankäyttösuunnitelma]]></comment>
+	<position x="1629.65" y="128.223"/>
 	<column name="gid">
 		<type name="serial" length="0"/>
 	</column>
@@ -46,6 +42,15 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="geometry" length="0" spatial-type="MULTIPOLYGON" variation="1" srid="3877"/>
 	</column>
 	<column name="nimi">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="kaavatunnus">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="laatija">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="vahvistaja">
 		<type name="varchar" length="0"/>
 	</column>
 	<column name="pinta_ala">
@@ -68,31 +73,28 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 
 	<customidxs object-type="column">
-		<object name="gid_dokumentti" index="15"/>
-		<object name="gid_kaavatyyppi" index="5"/>
-		<object name="gid_kieli" index="4"/>
-		<object name="gid_kuvaustyyli" index="13"/>
-		<object name="gid_prosessin_vaihe" index="8"/>
-		<object name="gid_taustakartta" index="14"/>
-		<object name="gid_vaihetieto" index="7"/>
+		<object name="gid_dokumentti" index="17"/>
+		<object name="gid_kaavatyyppi" index="8"/>
+		<object name="gid_kieli" index="7"/>
+		<object name="gid_kuvaustyyli" index="15"/>
+		<object name="gid_taustakartta" index="16"/>
+		<object name="gid_vaihetieto" index="10"/>
 	</customidxs>
 
 	<customidxs object-type="constraint">
-		<object name="dokumentti_fk" index="7"/>
-		<object name="kaavatyyppi_fk" index="6"/>
+		<object name="dokumentti_fk" index="6"/>
+		<object name="kaavatyyppi_fk" index="5"/>
 		<object name="kieli_fk" index="3"/>
 		<object name="kuvaustyyli_fk" index="2"/>
-		<object name="prosessin_vaihe_fk" index="4"/>
 		<object name="taustakartta_fk" index="1"/>
-		<object name="vaihetieto_fk" index="5"/>
+		<object name="vaihetieto_fk" index="4"/>
 	</customidxs>
 </table>
 
 <table name="kaavaelementti" layer="0" collapse-mode="2" max-obj-count="10" z-value="0">
 	<schema name="asemakaavat"/>
-	<role name="postgres"/>
 	<comment><![CDATA[yhden tai useamman käyttötarkoitusalueen osa. Kaavaelementti tarkentaa käyttötarkoitusalueen maankäyttöä. Esim. melurajoitteet yms. ]]></comment>
-	<position x="1830.3" y="2395.69"/>
+	<position x="1709.84" y="2290.69"/>
 	<column name="gid">
 		<type name="serial" length="0"/>
 	</column>
@@ -131,11 +133,10 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="maankayttoalue" layer="0" collapse-mode="2" max-obj-count="10" z-value="0">
 	<schema name="asemakaavat"/>
-	<role name="postgres"/>
 	<comment><![CDATA[asemakaavan mukainen tiettyyn käyttöön varattu alue
 
 Käyttötarkoitusalueiden pinta-ala täyttää asemakaava-alueen täysin. Käyttötarkoitusalue voi jakaantua yhteen tai useampaan kaavayksikköön. Käyttötarkoitusalueet voivat olla kortteleita, yleisiä alueita tai niiden osia tai muita yhtenäisiä alueita]]></comment>
-	<position x="1735.33" y="1320.76"/>
+	<position x="1703.33" y="1267.76"/>
 	<column name="gid">
 		<type name="serial" length="0"/>
 	</column>
@@ -174,9 +175,8 @@ Käyttötarkoitusalueiden pinta-ala täyttää asemakaava-alueen täysin. Käytt
 
 <table name="osa_alue" layer="0" collapse-mode="2" max-obj-count="9" z-value="0">
 	<schema name="asemakaavat"/>
-	<role name="postgres"/>
 	<comment><![CDATA[Asemakaavan pienin tiettyyn käyttötarkoitukseen varattu yksikkö ]]></comment>
-	<position x="2533.02" y="1831.67"/>
+	<position x="2353.02" y="1826.67"/>
 	<column name="gid">
 		<type name="serial" length="0"/>
 	</column>
@@ -210,9 +210,8 @@ Käyttötarkoitusalueiden pinta-ala täyttää asemakaava-alueen täysin. Käytt
 	</customidxs>
 </table>
 
-<table name="kaavamaarays" layer="0" collapse-mode="2" max-obj-count="8" z-value="0">
+<table name="kaavamaarays" layer="0" collapse-mode="2" max-obj-count="9" z-value="0">
 	<schema name="koodistot"/>
-	<role name="postgres"/>
 	<comment><![CDATA[kaavaan sisältyvä sanallinen määräys, joka on juridisesti sitova kaavan toimeenpanossa
 huomautus.
 
@@ -221,12 +220,15 @@ tarkoituksiin.
 
 Asemakaavamääräyksiä voidaan antaa asemakaavaa laadittaessa. Asemakaavamääräykset
 voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoittamista.]]></comment>
-	<position x="841.983" y="1359.24"/>
+	<position x="610.072" y="1322.24"/>
 	<column name="uuid" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
 	<column name="luontipvm" default-value="now()">
 		<type name="timestamp" length="0"/>
+	</column>
+	<column name="otsikko">
+		<type name="varchar" length="0"/>
 	</column>
 	<column name="maaraysteksti">
 		<type name="varchar" length="0"/>
@@ -236,10 +238,10 @@ voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoitta
 	</constraint>
 
 	<customidxs object-type="column">
-		<object name="uuid_asemakaava" index="3"/>
-		<object name="uuid_kaavaelementti" index="4"/>
-		<object name="uuid_maankayttoalue" index="6"/>
-		<object name="uuid_osa_alue" index="5"/>
+		<object name="uuid_asemakaava" index="4"/>
+		<object name="uuid_kaavaelementti" index="5"/>
+		<object name="uuid_maankayttoalue" index="7"/>
+		<object name="uuid_osa_alue" index="6"/>
 	</customidxs>
 
 	<customidxs object-type="constraint">
@@ -252,9 +254,8 @@ voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoitta
 
 <table name="kuvaustyyli" layer="0" collapse-mode="2" max-obj-count="3" z-value="0">
 	<schema name="koodistot"/>
-	<role name="postgres"/>
 	<comment><![CDATA[kaavaan sisältyvä graafinen merkki, merkintä tai merkkien yhdistelmä, joka on oikeudellisesti sitova kaavan toimeenpanossa]]></comment>
-	<position x="231.911" y="978.524"/>
+	<position x="-5.68434e-14" y="941.524"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -271,8 +272,7 @@ voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoitta
 
 <table name="taustakartta" layer="0" collapse-mode="2" max-obj-count="4" z-value="0">
 	<schema name="kaavan_lisatiedot"/>
-	<role name="postgres"/>
-	<position x="3213.23" y="577.745"/>
+	<position x="2856.23" y="658.75"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -345,8 +345,7 @@ voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoitta
 
 <table name="maankayttoluokka" layer="0" collapse-mode="2" max-obj-count="7" z-value="0">
 	<schema name="koodistot"/>
-	<role name="postgres"/>
-	<position x="927.556" y="1008.09"/>
+	<position x="695.645" y="971.09"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -450,16 +449,28 @@ Vesialue•W•Vesialue]]>
 	</initial-data>
 </table>
 
-<table name="dokumentti" layer="0" collapse-mode="2" max-obj-count="3" z-value="0">
+<table name="dokumentti" layer="0" collapse-mode="2" max-obj-count="4" z-value="0">
 	<schema name="kaavan_lisatiedot"/>
-	<role name="postgres"/>
-	<position x="3213.43" y="149.528"/>
+	<position x="2856.43" y="230.53"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
+	</column>
+	<column name="uri">
+		<type name="varchar" length="0"/>
 	</column>
 	<constraint name="dokumentti_pk" type="pk-constr" table="kaavan_lisatiedot.dokumentti">
 		<columns names="gid" ref-type="src-columns"/>
 	</constraint>
+
+	<customidxs object-type="column">
+		<object name="gid_dokumenttityyppi" index="2"/>
+		<object name="gid_kieli" index="1"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="dokumenttityyppi_fk" index="2"/>
+		<object name="kieli_fk" index="1"/>
+	</customidxs>
 </table>
 
 <relationship name="taustakartta_has_many_asemakaava" type="rel1n" layer="0"
@@ -473,8 +484,7 @@ Vesialue•W•Vesialue]]>
 
 <table name="kaavatyyppi" layer="0" collapse-mode="2" max-obj-count="2" z-value="0">
 	<schema name="koodistot"/>
-	<role name="postgres"/>
-	<position x="457.301" y="786.381"/>
+	<position x="552.533" y="610.81"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -494,39 +504,9 @@ Vesialue•W•Vesialue]]>
 	</initial-data>
 </table>
 
-<table name="prosessin_vaihe" layer="0" collapse-mode="2" max-obj-count="3" z-value="0">
-	<schema name="koodistot"/>
-	<role name="postgres"/>
-	<position x="1003.62" y="400.989"/>
-	<column name="gid" not-null="true">
-		<type name="serial" length="0"/>
-	</column>
-	<column name="nimi">
-		<type name="varchar" length="0"/>
-	</column>
-	<column name="kuvaus">
-		<type name="varchar" length="0"/>
-	</column>
-	<constraint name="prosessin_vaihe_pk" type="pk-constr" table="koodistot.prosessin_vaihe">
-		<columns names="gid" ref-type="src-columns"/>
-	</constraint>
-	<initial-data>
-<![CDATA[gid•nimi•kuvaus⸣
-1•ohjelmoitu kaavamuutos•Kaavatarve tiedossa, voi olla hyvin suurpiirteinen aluerajaus (kaava).⸣
-2•muutoksen alla•Uusi kaava vireillä, vanha (rakennuskiellossa oleva) alue merkitään uuden hankealueen osalta.⸣
-3•vireillä•Uusi kaava tai muutos vireille.⸣
-4•kaavaehdotus•Nähtäville asetettu kaavaehdotus.⸣
-5•valtuuston hyväksymä•Valtuuston hyväksymä kaava.⸣
-6•lainvoimaisen kaavan alue•Lainvoiman saanut kaava-alue (muutoksenhaun jälkeen).⸣
-7•väistynyt kaava•Väistynyt hankealue historiatietona.⸣
-8•keskeytetty kaava•Keskeytetyn kaavan hankealue.]]>
-	</initial-data>
-</table>
-
 <table name="kaavaelementti_tyyppi" layer="0" collapse-mode="2" max-obj-count="4" z-value="0">
 	<schema name="koodistot"/>
-	<role name="postgres"/>
-	<position x="905.079" y="2450.1"/>
+	<position x="685.168" y="2383.1"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -564,8 +544,7 @@ Vesialue•W•Vesialue]]>
 
 <table name="kieli" layer="0" collapse-mode="2" max-obj-count="2" z-value="0">
 	<schema name="koodistot"/>
-	<role name="postgres"/>
-	<position x="1111.91" y="167.102"/>
+	<position x="879.999" y="130.102"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -585,8 +564,7 @@ Vesialue•W•Vesialue]]>
 
 <table name="hilucs" layer="0" collapse-mode="2" max-obj-count="4" z-value="0">
 	<schema name="koodistot"/>
-	<role name="postgres"/>
-	<position x="283.772" y="1485.01"/>
+	<position x="51.861" y="1448.01"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -707,8 +685,7 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 
 <table name="osa_alue_tyyppi" layer="0" collapse-mode="2" max-obj-count="6" z-value="0">
 	<schema name="koodistot"/>
-	<role name="postgres"/>
-	<position x="862.582" y="1709.72"/>
+	<position x="630.671" y="1672.72"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -775,8 +752,7 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 
 <table name="hsrcl" layer="0" collapse-mode="2" max-obj-count="2" z-value="0">
 	<schema name="koodistot"/>
-	<role name="postgres"/>
-	<position x="313.329" y="2188.89"/>
+	<position x="81.418" y="2151.89"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -826,8 +802,7 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 
 <table name="dokumenttityyppi" layer="0" collapse-mode="2" max-obj-count="3" z-value="0">
 	<schema name="koodistot"/>
-	<role name="postgres"/>
-	<position x="658.243" y="274.342"/>
+	<position x="426.332" y="237.342"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -860,9 +835,8 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 
 <table name="vaihetieto" layer="0" collapse-mode="2" max-obj-count="3" z-value="0">
 	<schema name="koodistot"/>
-	<role name="postgres"/>
 	<comment><![CDATA[Kaavoituksen vaihetieto, jota käytetään kaavoituksen etenemisen yhteydessä.]]></comment>
-	<position x="696.952" y="573.793"/>
+	<position x="731.609" y="400.793"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -877,13 +851,14 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 	</constraint>
 	<initial-data>
 <![CDATA[gid•nimi•kuvaus⸣
-1•aloitusvaihe•Kaavoitustarve tunnistettu.⸣
-2•valmisteluvaihe•Kaava vireillä.⸣
-3•ehdotusvaihe•Kaavaan kerätään mielipiteitä, kaava nähtävillä.⸣
-4•hyväksymisvaihe•Kaavan valtuustokäsittely.⸣
-5•voimaantulo•Kaavan valitusaika umpeutunut tai valitukset käsitelty.⸣
-6•kumoaminen•Kaava päätetty kumota.⸣
-7•raukeaminen•Kaava rauennut tai keskeytetty.]]>
+1•valmisteluvaihe•⸣
+2•luonnosvaihe•⸣
+3•ehdotusvaihe•⸣
+4•hyväksymisvaihe•⸣
+5•hyväksytty•⸣
+6•lainvoimainen•⸣
+7•keskeytetty•⸣
+8•kumottu•]]>
 	</initial-data>
 </table>
 
@@ -911,8 +886,7 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 
 <table name="numeerinen_merkinta" layer="0" collapse-mode="2" max-obj-count="3" z-value="0">
 	<schema name="koodistot"/>
-	<role name="postgres"/>
-	<position x="852.412" y="2035.58"/>
+	<position x="620.501" y="1998.58"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -926,7 +900,7 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 		<columns names="gid" ref-type="src-columns"/>
 	</constraint>
 	<initial-data>
-<![CDATA[gid•nimi⸣
+<![CDATA[gid•tyyppi⸣
 1•Rakennusoikeus kerrosalaneliömetreinä.⸣
 2•Rakennusoikeus murtolukuna.⸣
 3•Tehokkuusluku.⸣
@@ -956,15 +930,6 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 	 src-fk-pattern="{st}_fk"
 	 custom-color="#48a0f4"
 	 src-table="koodistot.kieli"
-	 dst-table="asemakaavat.asemakaava"
-	 src-required="false" dst-required="false"/>
-
-<relationship name="prosessin_vaihe_has_many_asemakaava" type="rel1n" layer="0"
-	 src-col-pattern="{sc}_{st}"
-	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
-	 src-fk-pattern="{st}_fk"
-	 custom-color="#704d6b"
-	 src-table="koodistot.prosessin_vaihe"
 	 dst-table="asemakaavat.asemakaava"
 	 src-required="false" dst-required="false"/>
 

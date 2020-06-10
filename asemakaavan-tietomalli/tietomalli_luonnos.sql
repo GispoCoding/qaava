@@ -17,21 +17,15 @@
 -- DROP SCHEMA IF EXISTS asemakaavat CASCADE;
 CREATE SCHEMA asemakaavat;
 -- ddl-end --
-ALTER SCHEMA asemakaavat OWNER TO postgres;
--- ddl-end --
 
 -- object: koodistot | type: SCHEMA --
 -- DROP SCHEMA IF EXISTS koodistot CASCADE;
 CREATE SCHEMA koodistot;
 -- ddl-end --
-ALTER SCHEMA koodistot OWNER TO postgres;
--- ddl-end --
 
 -- object: kaavan_lisatiedot | type: SCHEMA --
 -- DROP SCHEMA IF EXISTS kaavan_lisatiedot CASCADE;
 CREATE SCHEMA kaavan_lisatiedot;
--- ddl-end --
-ALTER SCHEMA kaavan_lisatiedot OWNER TO postgres;
 -- ddl-end --
 
 SET search_path TO pg_catalog,public,asemakaavat,koodistot,kaavan_lisatiedot;
@@ -56,11 +50,13 @@ CREATE TABLE asemakaavat.asemakaava (
 	uuid uuid NOT NULL DEFAULT uuid_generate_v4(),
 	geom geometry(MULTIPOLYGONZ, 3877),
 	nimi varchar,
+	kaavatunnus varchar,
+	laatija varchar,
+	vahvistaja varchar,
 	gid_kieli integer,
 	gid_kaavatyyppi integer,
 	pinta_ala real,
 	gid_vaihetieto integer,
-	gid_prosessin_vaihe integer,
 	luomispvm timestamp DEFAULT now(),
 	poistamispvm timestamp,
 	voimaantulopvm date,
@@ -72,9 +68,7 @@ CREATE TABLE asemakaavat.asemakaava (
 
 );
 -- ddl-end --
-COMMENT ON TABLE asemakaavat.asemakaava IS 'kaavoituksen lopputuloksena syntyvä maankäyttösuunnitelma';
--- ddl-end --
-ALTER TABLE asemakaavat.asemakaava OWNER TO postgres;
+COMMENT ON TABLE asemakaavat.asemakaava IS 'Kaavoituksen lopputuloksena syntyvä maankäyttösuunnitelma';
 -- ddl-end --
 
 -- object: asemakaavat.kaavaelementti | type: TABLE --
@@ -94,8 +88,6 @@ CREATE TABLE asemakaavat.kaavaelementti (
 );
 -- ddl-end --
 COMMENT ON TABLE asemakaavat.kaavaelementti IS 'yhden tai useamman käyttötarkoitusalueen osa. Kaavaelementti tarkentaa käyttötarkoitusalueen maankäyttöä. Esim. melurajoitteet yms.';
--- ddl-end --
-ALTER TABLE asemakaavat.kaavaelementti OWNER TO postgres;
 -- ddl-end --
 
 -- object: asemakaavat.maankayttoalue | type: TABLE --
@@ -118,8 +110,6 @@ COMMENT ON TABLE asemakaavat.maankayttoalue IS 'asemakaavan mukainen tiettyyn k�
 
 Käyttötarkoitusalueiden pinta-ala täyttää asemakaava-alueen täysin. Käyttötarkoitusalue voi jakaantua yhteen tai useampaan kaavayksikköön. Käyttötarkoitusalueet voivat olla kortteleita, yleisiä alueita tai niiden osia tai muita yhtenäisiä alueita';
 -- ddl-end --
-ALTER TABLE asemakaavat.maankayttoalue OWNER TO postgres;
--- ddl-end --
 
 -- object: asemakaavat.osa_alue | type: TABLE --
 -- DROP TABLE IF EXISTS asemakaavat.osa_alue CASCADE;
@@ -138,14 +128,13 @@ CREATE TABLE asemakaavat.osa_alue (
 -- ddl-end --
 COMMENT ON TABLE asemakaavat.osa_alue IS 'Asemakaavan pienin tiettyyn käyttötarkoitukseen varattu yksikkö';
 -- ddl-end --
-ALTER TABLE asemakaavat.osa_alue OWNER TO postgres;
--- ddl-end --
 
 -- object: koodistot.kaavamaarays | type: TABLE --
 -- DROP TABLE IF EXISTS koodistot.kaavamaarays CASCADE;
 CREATE TABLE koodistot.kaavamaarays (
 	uuid uuid NOT NULL,
 	luontipvm timestamp DEFAULT now(),
+	otsikko varchar,
 	maaraysteksti varchar,
 	uuid_asemakaava uuid,
 	uuid_kaavaelementti uuid,
@@ -164,8 +153,6 @@ tarkoituksiin.
 Asemakaavamääräyksiä voidaan antaa asemakaavaa laadittaessa. Asemakaavamääräykset
 voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoittamista.';
 -- ddl-end --
-ALTER TABLE koodistot.kaavamaarays OWNER TO postgres;
--- ddl-end --
 
 -- object: koodistot.kuvaustyyli | type: TABLE --
 -- DROP TABLE IF EXISTS koodistot.kuvaustyyli CASCADE;
@@ -179,8 +166,6 @@ CREATE TABLE koodistot.kuvaustyyli (
 -- ddl-end --
 COMMENT ON TABLE koodistot.kuvaustyyli IS 'kaavaan sisältyvä graafinen merkki, merkintä tai merkkien yhdistelmä, joka on oikeudellisesti sitova kaavan toimeenpanossa';
 -- ddl-end --
-ALTER TABLE koodistot.kuvaustyyli OWNER TO postgres;
--- ddl-end --
 
 -- object: kaavan_lisatiedot.taustakartta | type: TABLE --
 -- DROP TABLE IF EXISTS kaavan_lisatiedot.taustakartta CASCADE;
@@ -192,8 +177,6 @@ CREATE TABLE kaavan_lisatiedot.taustakartta (
 	CONSTRAINT taustakartta_pk PRIMARY KEY (gid)
 
 );
--- ddl-end --
-ALTER TABLE kaavan_lisatiedot.taustakartta OWNER TO postgres;
 -- ddl-end --
 
 -- object: asemakaava_fk | type: CONSTRAINT --
@@ -243,8 +226,6 @@ CREATE TABLE koodistot.maankayttoluokka (
 	CONSTRAINT maankayttoluokat_pk PRIMARY KEY (gid)
 
 );
--- ddl-end --
-ALTER TABLE koodistot.maankayttoluokka OWNER TO postgres;
 -- ddl-end --
 
 INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Asuinalue', E'A', E'Asuinalue');
@@ -398,11 +379,10 @@ CREATE TABLE kaavan_lisatiedot.dokumentti (
 	gid serial NOT NULL,
 	gid_kieli integer,
 	gid_dokumenttityyppi integer,
+	uri varchar,
 	CONSTRAINT dokumentti_pk PRIMARY KEY (gid)
 
 );
--- ddl-end --
-ALTER TABLE kaavan_lisatiedot.dokumentti OWNER TO postgres;
 -- ddl-end --
 
 -- object: taustakartta_fk | type: CONSTRAINT --
@@ -421,8 +401,6 @@ CREATE TABLE koodistot.kaavatyyppi (
 
 );
 -- ddl-end --
-ALTER TABLE koodistot.kaavatyyppi OWNER TO postgres;
--- ddl-end --
 
 INSERT INTO koodistot.kaavatyyppi (gid, nimi) VALUES (E'1', E'Asemakaava');
 -- ddl-end --
@@ -435,36 +413,6 @@ INSERT INTO koodistot.kaavatyyppi (gid, nimi) VALUES (E'4', E'Maanalainen asemak
 INSERT INTO koodistot.kaavatyyppi (gid, nimi) VALUES (E'5', E'Vaiheranta-asemakaava');
 -- ddl-end --
 
--- object: koodistot.prosessin_vaihe | type: TABLE --
--- DROP TABLE IF EXISTS koodistot.prosessin_vaihe CASCADE;
-CREATE TABLE koodistot.prosessin_vaihe (
-	gid serial NOT NULL,
-	nimi varchar,
-	kuvaus varchar,
-	CONSTRAINT prosessin_vaihe_pk PRIMARY KEY (gid)
-
-);
--- ddl-end --
-ALTER TABLE koodistot.prosessin_vaihe OWNER TO postgres;
--- ddl-end --
-
-INSERT INTO koodistot.prosessin_vaihe (gid, nimi, kuvaus) VALUES (E'1', E'ohjelmoitu kaavamuutos', E'Kaavatarve tiedossa, voi olla hyvin suurpiirteinen aluerajaus (kaava).');
--- ddl-end --
-INSERT INTO koodistot.prosessin_vaihe (gid, nimi, kuvaus) VALUES (E'2', E'muutoksen alla', E'Uusi kaava vireillä, vanha (rakennuskiellossa oleva) alue merkitään uuden hankealueen osalta.');
--- ddl-end --
-INSERT INTO koodistot.prosessin_vaihe (gid, nimi, kuvaus) VALUES (E'3', E'vireillä', E'Uusi kaava tai muutos vireille.');
--- ddl-end --
-INSERT INTO koodistot.prosessin_vaihe (gid, nimi, kuvaus) VALUES (E'4', E'kaavaehdotus', E'Nähtäville asetettu kaavaehdotus.');
--- ddl-end --
-INSERT INTO koodistot.prosessin_vaihe (gid, nimi, kuvaus) VALUES (E'5', E'valtuuston hyväksymä', E'Valtuuston hyväksymä kaava.');
--- ddl-end --
-INSERT INTO koodistot.prosessin_vaihe (gid, nimi, kuvaus) VALUES (E'6', E'lainvoimaisen kaavan alue', E'Lainvoiman saanut kaava-alue (muutoksenhaun jälkeen).');
--- ddl-end --
-INSERT INTO koodistot.prosessin_vaihe (gid, nimi, kuvaus) VALUES (E'7', E'väistynyt kaava', E'Väistynyt hankealue historiatietona.');
--- ddl-end --
-INSERT INTO koodistot.prosessin_vaihe (gid, nimi, kuvaus) VALUES (E'8', E'keskeytetty kaava', E'Keskeytetyn kaavan hankealue.');
--- ddl-end --
-
 -- object: koodistot.kaavaelementti_tyyppi | type: TABLE --
 -- DROP TABLE IF EXISTS koodistot.kaavaelementti_tyyppi CASCADE;
 CREATE TABLE koodistot.kaavaelementti_tyyppi (
@@ -475,8 +423,6 @@ CREATE TABLE koodistot.kaavaelementti_tyyppi (
 	CONSTRAINT kaavaelementti_tyyppi_pk PRIMARY KEY (gid)
 
 );
--- ddl-end --
-ALTER TABLE koodistot.kaavaelementti_tyyppi OWNER TO postgres;
 -- ddl-end --
 
 INSERT INTO koodistot.kaavaelementti_tyyppi (gid, nimi) VALUES (E'1', E'Melusuojaustarve');
@@ -509,8 +455,6 @@ CREATE TABLE koodistot.kieli (
 
 );
 -- ddl-end --
-ALTER TABLE koodistot.kieli OWNER TO postgres;
--- ddl-end --
 
 INSERT INTO koodistot.kieli (gid, kieli) VALUES (E'1', E'Suomi');
 -- ddl-end --
@@ -529,8 +473,6 @@ CREATE TABLE koodistot.hilucs (
 	CONSTRAINT hilucs_pk PRIMARY KEY (gid)
 
 );
--- ddl-end --
-ALTER TABLE koodistot.hilucs OWNER TO postgres;
 -- ddl-end --
 
 
@@ -644,8 +586,6 @@ CREATE TABLE koodistot.osa_alue_tyyppi (
 
 );
 -- ddl-end --
-ALTER TABLE koodistot.osa_alue_tyyppi OWNER TO postgres;
--- ddl-end --
 
 INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'1', E'Tekstimääräys.');
 -- ddl-end --
@@ -729,8 +669,6 @@ CREATE TABLE koodistot.hsrcl (
 
 );
 -- ddl-end --
-ALTER TABLE koodistot.hsrcl OWNER TO postgres;
--- ddl-end --
 
 -- object: hsrcl_fk | type: CONSTRAINT --
 -- ALTER TABLE koodistot.kaavaelementti_tyyppi DROP CONSTRAINT IF EXISTS hsrcl_fk CASCADE;
@@ -785,8 +723,6 @@ CREATE TABLE koodistot.dokumenttityyppi (
 
 );
 -- ddl-end --
-ALTER TABLE koodistot.dokumenttityyppi OWNER TO postgres;
--- ddl-end --
 
 INSERT INTO koodistot.dokumenttityyppi (gid, nimi, kuvaus) VALUES (E'1', E'Liiteaineisto', E'Kaikki kaavaa tarkentavat tai selventävät dokumentit. Kaavan laatimisen aikana syntyvä aineisto pl. kaavaselostus.');
 -- ddl-end --
@@ -816,22 +752,22 @@ CREATE TABLE koodistot.vaihetieto (
 -- ddl-end --
 COMMENT ON TABLE koodistot.vaihetieto IS 'Kaavoituksen vaihetieto, jota käytetään kaavoituksen etenemisen yhteydessä.';
 -- ddl-end --
-ALTER TABLE koodistot.vaihetieto OWNER TO postgres;
--- ddl-end --
 
-INSERT INTO koodistot.vaihetieto (gid, nimi, kuvaus) VALUES (E'1', E'aloitusvaihe', E'Kaavoitustarve tunnistettu.');
+INSERT INTO koodistot.vaihetieto (gid, nimi, kuvaus) VALUES (E'1', E'valmisteluvaihe', DEFAULT);
 -- ddl-end --
-INSERT INTO koodistot.vaihetieto (gid, nimi, kuvaus) VALUES (E'2', E'valmisteluvaihe', E'Kaava vireillä.');
+INSERT INTO koodistot.vaihetieto (gid, nimi, kuvaus) VALUES (E'2', E'luonnosvaihe', DEFAULT);
 -- ddl-end --
-INSERT INTO koodistot.vaihetieto (gid, nimi, kuvaus) VALUES (E'3', E'ehdotusvaihe', E'Kaavaan kerätään mielipiteitä, kaava nähtävillä.');
+INSERT INTO koodistot.vaihetieto (gid, nimi, kuvaus) VALUES (E'3', E'ehdotusvaihe', DEFAULT);
 -- ddl-end --
-INSERT INTO koodistot.vaihetieto (gid, nimi, kuvaus) VALUES (E'4', E'hyväksymisvaihe', E'Kaavan valtuustokäsittely.');
+INSERT INTO koodistot.vaihetieto (gid, nimi, kuvaus) VALUES (E'4', E'hyväksymisvaihe', DEFAULT);
 -- ddl-end --
-INSERT INTO koodistot.vaihetieto (gid, nimi, kuvaus) VALUES (E'5', E'voimaantulo', E'Kaavan valitusaika umpeutunut tai valitukset käsitelty.');
+INSERT INTO koodistot.vaihetieto (gid, nimi, kuvaus) VALUES (E'5', E'hyväksytty', DEFAULT);
 -- ddl-end --
-INSERT INTO koodistot.vaihetieto (gid, nimi, kuvaus) VALUES (E'6', E'kumoaminen', E'Kaava päätetty kumota.');
+INSERT INTO koodistot.vaihetieto (gid, nimi, kuvaus) VALUES (E'6', E'lainvoimainen', DEFAULT);
 -- ddl-end --
-INSERT INTO koodistot.vaihetieto (gid, nimi, kuvaus) VALUES (E'7', E'raukeaminen', E'Kaava rauennut tai keskeytetty.');
+INSERT INTO koodistot.vaihetieto (gid, nimi, kuvaus) VALUES (E'7', E'keskeytetty', DEFAULT);
+-- ddl-end --
+INSERT INTO koodistot.vaihetieto (gid, nimi, kuvaus) VALUES (E'8', E'kumottu', DEFAULT);
 -- ddl-end --
 
 -- object: asemakaava_fk | type: CONSTRAINT --
@@ -858,61 +794,52 @@ CREATE TABLE koodistot.numeerinen_merkinta (
 
 );
 -- ddl-end --
-ALTER TABLE koodistot.numeerinen_merkinta OWNER TO postgres;
--- ddl-end --
 
-INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'1');
+INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'1', E'Rakennusoikeus kerrosalaneliömetreinä.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'2');
+INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'2', E'Rakennusoikeus murtolukuna.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'3');
+INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'3', E'Tehokkuusluku.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'4');
+INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'4', E'Kerrosluku.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'5');
+INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'5', E'Kattokaltevuus.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'6');
+INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'6', E'Sallittu asuinhuoneistojen osuus rakennusalasta.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'7');
+INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'7', E'Sallittu myymälätilojen osuus rakennusalasta.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'8');
+INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'8', E'Osuus, jonka rakennuksen suurimman kerroksen alasta saa kellarikerroksessa käyttää kerrosalaan luettavaksi tilaksi.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'9');
+INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'9', E'Osuus, jonka rakennuksen suurimman kerroksen alasta saa käyttää ullakon tasolla kerrosalaan luettavaksi tilaksi.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'10');
+INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'10', E'Luku osoittaa neliömetreinä, kuinka suuren osan rakennuksen alimmasta kerroksesta (I) saa kerrosalaneliömetreinä ilmoitetun kerrosalan lisäksi käyttää asukkaiden yhteistiloihin.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'11');
+INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'11', E'Velvoitettu päiväkotitilojen osuus alimman kerroksen rakennusalasta.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'12');
+INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'12', E'Maanpinnan likimääräinen korkeusasema.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'13');
+INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'13', E'Rakennuksen vesikaton ylimmän kohdan korkeusasema.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'14');
+INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'14', E'Rakennuksen julkisivupinnan ja vesikaton leikkauskohdan ylin korkeusasema.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'15');
+INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'15', E'Rakennuksen julkisivun enimmäiskorkeus metreinä.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'16');
+INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'16', E'Rakennuksen, rakenteiden ja laitteiden ylin korkeusasema.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'17');
+INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'17', E'Kerrosalaneliömetrimäärä, jota kohti on rakennettava yksi autopaikka.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'18');
+INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'18', E'Autopaikkojen lukumäärä asuntoa kohti.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'19');
+INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'19', E'Desibeliraja.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid) VALUES (E'20');
+INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'20', E'Muu lisärakennusoikeus kerrosalaneliömetreinä.');
 -- ddl-end --
 
 -- object: kieli_fk | type: CONSTRAINT --
 -- ALTER TABLE asemakaavat.asemakaava DROP CONSTRAINT IF EXISTS kieli_fk CASCADE;
 ALTER TABLE asemakaavat.asemakaava ADD CONSTRAINT kieli_fk FOREIGN KEY (gid_kieli)
 REFERENCES koodistot.kieli (gid) MATCH FULL
-ON DELETE SET NULL ON UPDATE CASCADE;
--- ddl-end --
-
--- object: prosessin_vaihe_fk | type: CONSTRAINT --
--- ALTER TABLE asemakaavat.asemakaava DROP CONSTRAINT IF EXISTS prosessin_vaihe_fk CASCADE;
-ALTER TABLE asemakaavat.asemakaava ADD CONSTRAINT prosessin_vaihe_fk FOREIGN KEY (gid_prosessin_vaihe)
-REFERENCES koodistot.prosessin_vaihe (gid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
 
