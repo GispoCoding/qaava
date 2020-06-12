@@ -3,7 +3,7 @@
 CAUTION: Do not modify this file unless you know what you are doing.
          Unexpected results may occur if the code is changed deliberately.
 -->
-<dbmodel pgmodeler-ver="0.9.3-alpha" last-position="0,0" last-zoom="0.75" max-obj-count="33"
+<dbmodel pgmodeler-ver="0.9.3-alpha" last-position="0,0" last-zoom="0.75" max-obj-count="34"
 	 default-schema="public">
 <database name="qaavakanta" is-template="false" allow-conns="true">
 </database>
@@ -31,7 +31,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="asemakaava" layer="0" collapse-mode="2" max-obj-count="21" z-value="0">
 	<schema name="asemakaavat"/>
 	<comment><![CDATA[Kaavoituksen lopputuloksena syntyvä maankäyttösuunnitelma]]></comment>
-	<position x="1629.65" y="128.223"/>
+	<position x="1556.01" y="180.041"/>
 	<column name="gid">
 		<type name="serial" length="0"/>
 	</column>
@@ -94,7 +94,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="kaavaelementti" layer="0" collapse-mode="2" max-obj-count="10" z-value="0">
 	<schema name="asemakaavat"/>
 	<comment><![CDATA[yhden tai useamman käyttötarkoitusalueen osa. Kaavaelementti tarkentaa käyttötarkoitusalueen maankäyttöä. Esim. melurajoitteet yms. ]]></comment>
-	<position x="1709.84" y="2290.69"/>
+	<position x="1532.26" y="1992.51"/>
 	<column name="gid">
 		<type name="serial" length="0"/>
 	</column>
@@ -136,7 +136,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<comment><![CDATA[asemakaavan mukainen tiettyyn käyttöön varattu alue
 
 Käyttötarkoitusalueiden pinta-ala täyttää asemakaava-alueen täysin. Käyttötarkoitusalue voi jakaantua yhteen tai useampaan kaavayksikköön. Käyttötarkoitusalueet voivat olla kortteleita, yleisiä alueita tai niiden osia tai muita yhtenäisiä alueita]]></comment>
-	<position x="1703.33" y="1267.76"/>
+	<position x="1541.81" y="921.093"/>
 	<column name="gid">
 		<type name="serial" length="0"/>
 	</column>
@@ -176,7 +176,7 @@ Käyttötarkoitusalueiden pinta-ala täyttää asemakaava-alueen täysin. Käytt
 <table name="osa_alue" layer="0" collapse-mode="2" max-obj-count="9" z-value="0">
 	<schema name="asemakaavat"/>
 	<comment><![CDATA[Asemakaavan pienin tiettyyn käyttötarkoitukseen varattu yksikkö ]]></comment>
-	<position x="2353.02" y="1826.67"/>
+	<position x="1537.87" y="1478.19"/>
 	<column name="gid">
 		<type name="serial" length="0"/>
 	</column>
@@ -220,7 +220,7 @@ tarkoituksiin.
 
 Asemakaavamääräyksiä voidaan antaa asemakaavaa laadittaessa. Asemakaavamääräykset
 voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoittamista.]]></comment>
-	<position x="610.072" y="1322.24"/>
+	<position x="897.345" y="1329.15"/>
 	<column name="uuid" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
@@ -255,7 +255,7 @@ voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoitta
 <table name="kuvaustyyli" layer="0" collapse-mode="2" max-obj-count="3" z-value="0">
 	<schema name="koodistot"/>
 	<comment><![CDATA[kaavaan sisältyvä graafinen merkki, merkintä tai merkkien yhdistelmä, joka on oikeudellisesti sitova kaavan toimeenpanossa]]></comment>
-	<position x="-5.68434e-14" y="941.524"/>
+	<position x="289.091" y="975.706"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -272,7 +272,7 @@ voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoitta
 
 <table name="taustakartta" layer="0" collapse-mode="2" max-obj-count="4" z-value="0">
 	<schema name="kaavan_lisatiedot"/>
-	<position x="2856.23" y="658.75"/>
+	<position x="2239.56" y="980.871"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -345,7 +345,7 @@ voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoitta
 
 <table name="maankayttoluokka" layer="0" collapse-mode="2" max-obj-count="7" z-value="0">
 	<schema name="koodistot"/>
-	<position x="695.645" y="971.09"/>
+	<position x="930.19" y="1005.27"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -451,7 +451,7 @@ Vesialue•W•Vesialue]]>
 
 <table name="dokumentti" layer="0" collapse-mode="2" max-obj-count="4" z-value="0">
 	<schema name="kaavan_lisatiedot"/>
-	<position x="2856.43" y="230.53"/>
+	<position x="2227.04" y="645.378"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -484,7 +484,7 @@ Vesialue•W•Vesialue]]>
 
 <table name="kaavatyyppi" layer="0" collapse-mode="2" max-obj-count="2" z-value="0">
 	<schema name="koodistot"/>
-	<position x="552.533" y="610.81"/>
+	<position x="841.624" y="644.992"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -506,7 +506,7 @@ Vesialue•W•Vesialue]]>
 
 <table name="kaavaelementti_tyyppi" layer="0" collapse-mode="2" max-obj-count="4" z-value="0">
 	<schema name="koodistot"/>
-	<position x="685.168" y="2383.1"/>
+	<position x="910.623" y="2328.19"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -544,7 +544,7 @@ Vesialue•W•Vesialue]]>
 
 <table name="kieli" layer="0" collapse-mode="2" max-obj-count="2" z-value="0">
 	<schema name="koodistot"/>
-	<position x="879.999" y="130.102"/>
+	<position x="1074.54" y="160.647"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -564,7 +564,7 @@ Vesialue•W•Vesialue]]>
 
 <table name="hilucs" layer="0" collapse-mode="2" max-obj-count="4" z-value="0">
 	<schema name="koodistot"/>
-	<position x="51.861" y="1448.01"/>
+	<position x="340.952" y="1482.19"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -685,7 +685,7 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 
 <table name="osa_alue_tyyppi" layer="0" collapse-mode="2" max-obj-count="6" z-value="0">
 	<schema name="koodistot"/>
-	<position x="630.671" y="1672.72"/>
+	<position x="919.762" y="1706.9"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -746,13 +746,14 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 33•Alueen osa, jolla sijaitsee luonnonsuojelulain mukainen luonnonsuojelualue tai -kohde.⸣
 34•Suojeltava rakennus.⸣
 35•Rakennussuojelulain nojalla suojeltu rakennus.⸣
-36•Maan päällistä johtoa varten varattu alueen osa.]]>
+36•Maan päällistä johtoa varten varattu alueen osa.⸣
+37•Rakennusala.]]>
 	</initial-data>
 </table>
 
 <table name="hsrcl" layer="0" collapse-mode="2" max-obj-count="2" z-value="0">
 	<schema name="koodistot"/>
-	<position x="81.418" y="2151.89"/>
+	<position x="370.509" y="2186.07"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -802,7 +803,7 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 
 <table name="dokumenttityyppi" layer="0" collapse-mode="2" max-obj-count="3" z-value="0">
 	<schema name="koodistot"/>
-	<position x="426.332" y="237.342"/>
+	<position x="715.423" y="271.524"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -836,7 +837,7 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 <table name="vaihetieto" layer="0" collapse-mode="2" max-obj-count="3" z-value="0">
 	<schema name="koodistot"/>
 	<comment><![CDATA[Kaavoituksen vaihetieto, jota käytetään kaavoituksen etenemisen yhteydessä.]]></comment>
-	<position x="731.609" y="400.793"/>
+	<position x="1020.7" y="434.975"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -884,19 +885,16 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 	</label>
 </relationship>
 
-<table name="numeerinen_merkinta" layer="0" collapse-mode="2" max-obj-count="3" z-value="0">
+<table name="numeerinen_merkintatyyppi" layer="0" collapse-mode="2" max-obj-count="2" z-value="0">
 	<schema name="koodistot"/>
-	<position x="620.501" y="1998.58"/>
+	<position x="906.515" y="1990.52"/>
 	<column name="gid" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
 	<column name="tyyppi">
 		<type name="varchar" length="0"/>
 	</column>
-	<column name="arvo">
-		<type name="varchar" length="0"/>
-	</column>
-	<constraint name="numeerinen_merkinta_pk" type="pk-constr" table="koodistot.numeerinen_merkinta">
+	<constraint name="numeerinen_merkinta_pk" type="pk-constr" table="koodistot.numeerinen_merkintatyyppi">
 		<columns names="gid" ref-type="src-columns"/>
 	</constraint>
 	<initial-data>
@@ -920,7 +918,9 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 17•Kerrosalaneliömetrimäärä, jota kohti on rakennettava yksi autopaikka.⸣
 18•Autopaikkojen lukumäärä asuntoa kohti.⸣
 19•Desibeliraja.⸣
-20•Muu lisärakennusoikeus kerrosalaneliömetreinä.]]>
+20•Muu lisärakennusoikeus kerrosalaneliömetreinä.⸣
+21•Tonttinumero⸣
+22•Korttelinumero]]>
 	</initial-data>
 </table>
 
@@ -960,17 +960,6 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 	 dst-table="asemakaavat.asemakaava"
 	 src-required="false" dst-required="false"/>
 
-<relationship name="many_numeerinen_merkinta_has_many_kaavaelementti" type="relnn" layer="0"
-	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
-	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
-	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
-	 pk-col-pattern="id"
-	 custom-color="#46cefc"
-	 src-table="koodistot.numeerinen_merkinta"
-	 dst-table="asemakaavat.kaavaelementti"
-	 src-required="false" dst-required="false"
-	 table-name="many_numeerinen_merkinta_has_many_kaavaelementti"/>
-
 <relationship name="kaavaelementti_tyyppi_has_many_kaavaelementti" type="rel1n" layer="0"
 	 src-col-pattern="{sc}_{st}"
 	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
@@ -979,17 +968,6 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 	 src-table="koodistot.kaavaelementti_tyyppi"
 	 dst-table="asemakaavat.kaavaelementti"
 	 src-required="false" dst-required="false"/>
-
-<relationship name="many_numeerinen_merkinta_has_many_osa_alue" type="relnn" layer="0"
-	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
-	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
-	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
-	 pk-col-pattern="id"
-	 custom-color="#d58969"
-	 src-table="koodistot.numeerinen_merkinta"
-	 dst-table="asemakaavat.osa_alue"
-	 src-required="false" dst-required="false"
-	 table-name="many_numeerinen_merkinta_has_many_osa_alue"/>
 
 <relationship name="osa_alue_tyyppi_has_many_osa_alue" type="rel1n" layer="0"
 	 src-col-pattern="{sc}_{st}"
@@ -1056,15 +1034,68 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 	 dst-table="asemakaavat.asemakaava"
 	 src-required="false" dst-required="false"/>
 
-<relationship name="many_numeerinen_merkinta_has_many_maankayttoalue" type="relnn" layer="0"
+<table name="numeerinen_lisatieto" layer="0" collapse-mode="1" max-obj-count="3" z-value="0">
+	<schema name="kaavan_lisatiedot"/>
+	<position x="2219.7" y="1673.03"/>
+	<column name="gid" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="arvo">
+		<type name="varchar" length="0"/>
+	</column>
+	<constraint name="numeerinen_lisatieto_pk" type="pk-constr" table="kaavan_lisatiedot.numeerinen_lisatieto">
+		<columns names="gid" ref-type="src-columns"/>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="gid_numeerinen_merkintatyyppi" index="2"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="numeerinen_merkintatyyppi_fk" index="1"/>
+	</customidxs>
+</table>
+
+<relationship name="numeerinen_merkintatyyppi_has_many_numeerinen_lisatieto" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#f5ea06"
+	 src-table="koodistot.numeerinen_merkintatyyppi"
+	 dst-table="kaavan_lisatiedot.numeerinen_lisatieto"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="many_maankayttoalue_has_many_numeerinen_lisatieto" type="relnn" layer="0"
 	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
 	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
 	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
 	 pk-col-pattern="id"
-	 custom-color="#6f7ac6"
-	 src-table="koodistot.numeerinen_merkinta"
-	 dst-table="asemakaavat.maankayttoalue"
+	 custom-color="#33a5b3"
+	 src-table="asemakaavat.maankayttoalue"
+	 dst-table="kaavan_lisatiedot.numeerinen_lisatieto"
 	 src-required="false" dst-required="false"
-	 table-name="many_numeerinen_merkinta_has_many_maankayttoalue"/>
+	 table-name="many_maankayttoalue_has_many_numeerinen_lisatieto"/>
+
+<relationship name="many_osa_alue_has_many_numeerinen_lisatieto" type="relnn" layer="0"
+	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
+	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
+	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
+	 pk-col-pattern="id"
+	 custom-color="#efe337"
+	 src-table="asemakaavat.osa_alue"
+	 dst-table="kaavan_lisatiedot.numeerinen_lisatieto"
+	 src-required="false" dst-required="false"
+	 table-name="many_osa_alue_has_many_numeerinen_lisatieto"/>
+
+<relationship name="many_kaavaelementti_has_many_numeerinen_lisatieto" type="relnn" layer="0"
+	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
+	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
+	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
+	 pk-col-pattern="id"
+	 custom-color="#f1d14b"
+	 src-table="asemakaavat.kaavaelementti"
+	 dst-table="kaavan_lisatiedot.numeerinen_lisatieto"
+	 src-required="false" dst-required="false"
+	 table-name="many_kaavaelementti_has_many_numeerinen_lisatieto"/>
 
 </dbmodel>

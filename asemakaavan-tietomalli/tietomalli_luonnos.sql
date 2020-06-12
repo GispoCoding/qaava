@@ -1,6 +1,6 @@
 -- Database generated with pgModeler (PostgreSQL Database Modeler).
 -- pgModeler  version: 0.9.3-alpha
--- PostgreSQL version: 12.0
+-- PostgreSQL version: 11.0
 -- Project Site: pgmodeler.io
 -- Model Author: ---
 
@@ -659,6 +659,8 @@ INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'35', E'Rakennussuoje
 -- ddl-end --
 INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'36', E'Maan päällistä johtoa varten varattu alueen osa.');
 -- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'37', E'Rakennusala.');
+-- ddl-end --
 
 -- object: koodistot.hsrcl | type: TABLE --
 -- DROP TABLE IF EXISTS koodistot.hsrcl CASCADE;
@@ -784,56 +786,59 @@ REFERENCES asemakaavat.asemakaava (uuid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
 
--- object: koodistot.numeerinen_merkinta | type: TABLE --
--- DROP TABLE IF EXISTS koodistot.numeerinen_merkinta CASCADE;
-CREATE TABLE koodistot.numeerinen_merkinta (
+-- object: koodistot.numeerinen_merkintatyyppi | type: TABLE --
+-- DROP TABLE IF EXISTS koodistot.numeerinen_merkintatyyppi CASCADE;
+CREATE TABLE koodistot.numeerinen_merkintatyyppi (
 	gid serial NOT NULL,
 	tyyppi varchar,
-	arvo varchar,
 	CONSTRAINT numeerinen_merkinta_pk PRIMARY KEY (gid)
 
 );
 -- ddl-end --
 
-INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'1', E'Rakennusoikeus kerrosalaneliömetreinä.');
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'1', E'Rakennusoikeus kerrosalaneliömetreinä.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'2', E'Rakennusoikeus murtolukuna.');
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'2', E'Rakennusoikeus murtolukuna.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'3', E'Tehokkuusluku.');
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'3', E'Tehokkuusluku.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'4', E'Kerrosluku.');
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'4', E'Kerrosluku.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'5', E'Kattokaltevuus.');
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'5', E'Kattokaltevuus.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'6', E'Sallittu asuinhuoneistojen osuus rakennusalasta.');
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'6', E'Sallittu asuinhuoneistojen osuus rakennusalasta.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'7', E'Sallittu myymälätilojen osuus rakennusalasta.');
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'7', E'Sallittu myymälätilojen osuus rakennusalasta.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'8', E'Osuus, jonka rakennuksen suurimman kerroksen alasta saa kellarikerroksessa käyttää kerrosalaan luettavaksi tilaksi.');
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'8', E'Osuus, jonka rakennuksen suurimman kerroksen alasta saa kellarikerroksessa käyttää kerrosalaan luettavaksi tilaksi.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'9', E'Osuus, jonka rakennuksen suurimman kerroksen alasta saa käyttää ullakon tasolla kerrosalaan luettavaksi tilaksi.');
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'9', E'Osuus, jonka rakennuksen suurimman kerroksen alasta saa käyttää ullakon tasolla kerrosalaan luettavaksi tilaksi.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'10', E'Luku osoittaa neliömetreinä, kuinka suuren osan rakennuksen alimmasta kerroksesta (I) saa kerrosalaneliömetreinä ilmoitetun kerrosalan lisäksi käyttää asukkaiden yhteistiloihin.');
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'10', E'Luku osoittaa neliömetreinä, kuinka suuren osan rakennuksen alimmasta kerroksesta (I) saa kerrosalaneliömetreinä ilmoitetun kerrosalan lisäksi käyttää asukkaiden yhteistiloihin.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'11', E'Velvoitettu päiväkotitilojen osuus alimman kerroksen rakennusalasta.');
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'11', E'Velvoitettu päiväkotitilojen osuus alimman kerroksen rakennusalasta.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'12', E'Maanpinnan likimääräinen korkeusasema.');
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'12', E'Maanpinnan likimääräinen korkeusasema.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'13', E'Rakennuksen vesikaton ylimmän kohdan korkeusasema.');
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'13', E'Rakennuksen vesikaton ylimmän kohdan korkeusasema.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'14', E'Rakennuksen julkisivupinnan ja vesikaton leikkauskohdan ylin korkeusasema.');
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'14', E'Rakennuksen julkisivupinnan ja vesikaton leikkauskohdan ylin korkeusasema.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'15', E'Rakennuksen julkisivun enimmäiskorkeus metreinä.');
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'15', E'Rakennuksen julkisivun enimmäiskorkeus metreinä.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'16', E'Rakennuksen, rakenteiden ja laitteiden ylin korkeusasema.');
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'16', E'Rakennuksen, rakenteiden ja laitteiden ylin korkeusasema.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'17', E'Kerrosalaneliömetrimäärä, jota kohti on rakennettava yksi autopaikka.');
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'17', E'Kerrosalaneliömetrimäärä, jota kohti on rakennettava yksi autopaikka.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'18', E'Autopaikkojen lukumäärä asuntoa kohti.');
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'18', E'Autopaikkojen lukumäärä asuntoa kohti.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'19', E'Desibeliraja.');
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'19', E'Desibeliraja.');
 -- ddl-end --
-INSERT INTO koodistot.numeerinen_merkinta (gid, tyyppi) VALUES (E'20', E'Muu lisärakennusoikeus kerrosalaneliömetreinä.');
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'20', E'Muu lisärakennusoikeus kerrosalaneliömetreinä.');
+-- ddl-end --
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'21', E'Tonttinumero');
+-- ddl-end --
+INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'22', E'Korttelinumero');
 -- ddl-end --
 
 -- object: kieli_fk | type: CONSTRAINT --
@@ -864,59 +869,11 @@ REFERENCES koodistot.kaavatyyppi (gid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
 
--- object: koodistot.many_numeerinen_merkinta_has_many_kaavaelementti | type: TABLE --
--- DROP TABLE IF EXISTS koodistot.many_numeerinen_merkinta_has_many_kaavaelementti CASCADE;
-CREATE TABLE koodistot.many_numeerinen_merkinta_has_many_kaavaelementti (
-	gid_numeerinen_merkinta integer NOT NULL,
-	uuid_kaavaelementti uuid NOT NULL,
-	CONSTRAINT many_numeerinen_merkinta_has_many_kaavaelementti_pk PRIMARY KEY (gid_numeerinen_merkinta,uuid_kaavaelementti)
-
-);
--- ddl-end --
-
--- object: numeerinen_merkinta_fk | type: CONSTRAINT --
--- ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_kaavaelementti DROP CONSTRAINT IF EXISTS numeerinen_merkinta_fk CASCADE;
-ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_kaavaelementti ADD CONSTRAINT numeerinen_merkinta_fk FOREIGN KEY (gid_numeerinen_merkinta)
-REFERENCES koodistot.numeerinen_merkinta (gid) MATCH FULL
-ON DELETE RESTRICT ON UPDATE CASCADE;
--- ddl-end --
-
--- object: kaavaelementti_fk | type: CONSTRAINT --
--- ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_kaavaelementti DROP CONSTRAINT IF EXISTS kaavaelementti_fk CASCADE;
-ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_kaavaelementti ADD CONSTRAINT kaavaelementti_fk FOREIGN KEY (uuid_kaavaelementti)
-REFERENCES asemakaavat.kaavaelementti (uuid) MATCH FULL
-ON DELETE RESTRICT ON UPDATE CASCADE;
--- ddl-end --
-
 -- object: kaavaelementti_tyyppi_fk | type: CONSTRAINT --
 -- ALTER TABLE asemakaavat.kaavaelementti DROP CONSTRAINT IF EXISTS kaavaelementti_tyyppi_fk CASCADE;
 ALTER TABLE asemakaavat.kaavaelementti ADD CONSTRAINT kaavaelementti_tyyppi_fk FOREIGN KEY (gid_kaavaelementti_tyyppi)
 REFERENCES koodistot.kaavaelementti_tyyppi (gid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
--- ddl-end --
-
--- object: koodistot.many_numeerinen_merkinta_has_many_osa_alue | type: TABLE --
--- DROP TABLE IF EXISTS koodistot.many_numeerinen_merkinta_has_many_osa_alue CASCADE;
-CREATE TABLE koodistot.many_numeerinen_merkinta_has_many_osa_alue (
-	gid_numeerinen_merkinta integer NOT NULL,
-	uuid_osa_alue uuid NOT NULL,
-	CONSTRAINT many_numeerinen_merkinta_has_many_osa_alue_pk PRIMARY KEY (gid_numeerinen_merkinta,uuid_osa_alue)
-
-);
--- ddl-end --
-
--- object: numeerinen_merkinta_fk | type: CONSTRAINT --
--- ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_osa_alue DROP CONSTRAINT IF EXISTS numeerinen_merkinta_fk CASCADE;
-ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_osa_alue ADD CONSTRAINT numeerinen_merkinta_fk FOREIGN KEY (gid_numeerinen_merkinta)
-REFERENCES koodistot.numeerinen_merkinta (gid) MATCH FULL
-ON DELETE RESTRICT ON UPDATE CASCADE;
--- ddl-end --
-
--- object: osa_alue_fk | type: CONSTRAINT --
--- ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_osa_alue DROP CONSTRAINT IF EXISTS osa_alue_fk CASCADE;
-ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_osa_alue ADD CONSTRAINT osa_alue_fk FOREIGN KEY (uuid_osa_alue)
-REFERENCES asemakaavat.osa_alue (uuid) MATCH FULL
-ON DELETE RESTRICT ON UPDATE CASCADE;
 -- ddl-end --
 
 -- object: osa_alue_tyyppi_fk | type: CONSTRAINT --
@@ -985,27 +942,93 @@ REFERENCES kaavan_lisatiedot.dokumentti (gid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
 
--- object: koodistot.many_numeerinen_merkinta_has_many_maankayttoalue | type: TABLE --
--- DROP TABLE IF EXISTS koodistot.many_numeerinen_merkinta_has_many_maankayttoalue CASCADE;
-CREATE TABLE koodistot.many_numeerinen_merkinta_has_many_maankayttoalue (
-	gid_numeerinen_merkinta integer NOT NULL,
-	uuid_maankayttoalue uuid NOT NULL,
-	CONSTRAINT many_numeerinen_merkinta_has_many_maankayttoalue_pk PRIMARY KEY (gid_numeerinen_merkinta,uuid_maankayttoalue)
+-- object: kaavan_lisatiedot.numeerinen_lisatieto | type: TABLE --
+-- DROP TABLE IF EXISTS kaavan_lisatiedot.numeerinen_lisatieto CASCADE;
+CREATE TABLE kaavan_lisatiedot.numeerinen_lisatieto (
+	gid serial NOT NULL,
+	arvo varchar,
+	gid_numeerinen_merkintatyyppi integer,
+	CONSTRAINT numeerinen_lisatieto_pk PRIMARY KEY (gid)
 
 );
 -- ddl-end --
 
--- object: numeerinen_merkinta_fk | type: CONSTRAINT --
--- ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_maankayttoalue DROP CONSTRAINT IF EXISTS numeerinen_merkinta_fk CASCADE;
-ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_maankayttoalue ADD CONSTRAINT numeerinen_merkinta_fk FOREIGN KEY (gid_numeerinen_merkinta)
-REFERENCES koodistot.numeerinen_merkinta (gid) MATCH FULL
-ON DELETE RESTRICT ON UPDATE CASCADE;
+-- object: numeerinen_merkintatyyppi_fk | type: CONSTRAINT --
+-- ALTER TABLE kaavan_lisatiedot.numeerinen_lisatieto DROP CONSTRAINT IF EXISTS numeerinen_merkintatyyppi_fk CASCADE;
+ALTER TABLE kaavan_lisatiedot.numeerinen_lisatieto ADD CONSTRAINT numeerinen_merkintatyyppi_fk FOREIGN KEY (gid_numeerinen_merkintatyyppi)
+REFERENCES koodistot.numeerinen_merkintatyyppi (gid) MATCH FULL
+ON DELETE SET NULL ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: asemakaavat.many_maankayttoalue_has_many_numeerinen_lisatieto | type: TABLE --
+-- DROP TABLE IF EXISTS asemakaavat.many_maankayttoalue_has_many_numeerinen_lisatieto CASCADE;
+CREATE TABLE asemakaavat.many_maankayttoalue_has_many_numeerinen_lisatieto (
+	uuid_maankayttoalue uuid NOT NULL,
+	gid_numeerinen_lisatieto integer NOT NULL,
+	CONSTRAINT many_maankayttoalue_has_many_numeerinen_lisatieto_pk PRIMARY KEY (uuid_maankayttoalue,gid_numeerinen_lisatieto)
+
+);
 -- ddl-end --
 
 -- object: maankayttoalue_fk | type: CONSTRAINT --
--- ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_maankayttoalue DROP CONSTRAINT IF EXISTS maankayttoalue_fk CASCADE;
-ALTER TABLE koodistot.many_numeerinen_merkinta_has_many_maankayttoalue ADD CONSTRAINT maankayttoalue_fk FOREIGN KEY (uuid_maankayttoalue)
+-- ALTER TABLE asemakaavat.many_maankayttoalue_has_many_numeerinen_lisatieto DROP CONSTRAINT IF EXISTS maankayttoalue_fk CASCADE;
+ALTER TABLE asemakaavat.many_maankayttoalue_has_many_numeerinen_lisatieto ADD CONSTRAINT maankayttoalue_fk FOREIGN KEY (uuid_maankayttoalue)
 REFERENCES asemakaavat.maankayttoalue (uuid) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: numeerinen_lisatieto_fk | type: CONSTRAINT --
+-- ALTER TABLE asemakaavat.many_maankayttoalue_has_many_numeerinen_lisatieto DROP CONSTRAINT IF EXISTS numeerinen_lisatieto_fk CASCADE;
+ALTER TABLE asemakaavat.many_maankayttoalue_has_many_numeerinen_lisatieto ADD CONSTRAINT numeerinen_lisatieto_fk FOREIGN KEY (gid_numeerinen_lisatieto)
+REFERENCES kaavan_lisatiedot.numeerinen_lisatieto (gid) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: asemakaavat.many_osa_alue_has_many_numeerinen_lisatieto | type: TABLE --
+-- DROP TABLE IF EXISTS asemakaavat.many_osa_alue_has_many_numeerinen_lisatieto CASCADE;
+CREATE TABLE asemakaavat.many_osa_alue_has_many_numeerinen_lisatieto (
+	uuid_osa_alue uuid NOT NULL,
+	gid_numeerinen_lisatieto integer NOT NULL,
+	CONSTRAINT many_osa_alue_has_many_numeerinen_lisatieto_pk PRIMARY KEY (uuid_osa_alue,gid_numeerinen_lisatieto)
+
+);
+-- ddl-end --
+
+-- object: osa_alue_fk | type: CONSTRAINT --
+-- ALTER TABLE asemakaavat.many_osa_alue_has_many_numeerinen_lisatieto DROP CONSTRAINT IF EXISTS osa_alue_fk CASCADE;
+ALTER TABLE asemakaavat.many_osa_alue_has_many_numeerinen_lisatieto ADD CONSTRAINT osa_alue_fk FOREIGN KEY (uuid_osa_alue)
+REFERENCES asemakaavat.osa_alue (uuid) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: numeerinen_lisatieto_fk | type: CONSTRAINT --
+-- ALTER TABLE asemakaavat.many_osa_alue_has_many_numeerinen_lisatieto DROP CONSTRAINT IF EXISTS numeerinen_lisatieto_fk CASCADE;
+ALTER TABLE asemakaavat.many_osa_alue_has_many_numeerinen_lisatieto ADD CONSTRAINT numeerinen_lisatieto_fk FOREIGN KEY (gid_numeerinen_lisatieto)
+REFERENCES kaavan_lisatiedot.numeerinen_lisatieto (gid) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: asemakaavat.many_kaavaelementti_has_many_numeerinen_lisatieto | type: TABLE --
+-- DROP TABLE IF EXISTS asemakaavat.many_kaavaelementti_has_many_numeerinen_lisatieto CASCADE;
+CREATE TABLE asemakaavat.many_kaavaelementti_has_many_numeerinen_lisatieto (
+	uuid_kaavaelementti uuid NOT NULL,
+	gid_numeerinen_lisatieto integer NOT NULL,
+	CONSTRAINT many_kaavaelementti_has_many_numeerinen_lisatieto_pk PRIMARY KEY (uuid_kaavaelementti,gid_numeerinen_lisatieto)
+
+);
+-- ddl-end --
+
+-- object: kaavaelementti_fk | type: CONSTRAINT --
+-- ALTER TABLE asemakaavat.many_kaavaelementti_has_many_numeerinen_lisatieto DROP CONSTRAINT IF EXISTS kaavaelementti_fk CASCADE;
+ALTER TABLE asemakaavat.many_kaavaelementti_has_many_numeerinen_lisatieto ADD CONSTRAINT kaavaelementti_fk FOREIGN KEY (uuid_kaavaelementti)
+REFERENCES asemakaavat.kaavaelementti (uuid) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: numeerinen_lisatieto_fk | type: CONSTRAINT --
+-- ALTER TABLE asemakaavat.many_kaavaelementti_has_many_numeerinen_lisatieto DROP CONSTRAINT IF EXISTS numeerinen_lisatieto_fk CASCADE;
+ALTER TABLE asemakaavat.many_kaavaelementti_has_many_numeerinen_lisatieto ADD CONSTRAINT numeerinen_lisatieto_fk FOREIGN KEY (gid_numeerinen_lisatieto)
+REFERENCES kaavan_lisatiedot.numeerinen_lisatieto (gid) MATCH FULL
 ON DELETE RESTRICT ON UPDATE CASCADE;
 -- ddl-end --
 
