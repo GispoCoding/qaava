@@ -1008,6 +1008,266 @@
            </se:TextSymbolizer>
         </se:Rule>
 		
+		<se:Rule> 
+		  <se:Name>MRL_ak_152</se:Name>
+		  <!-- <Title>MRL:n oppaan asemakaavamerkinta nro 152</Title> -->
+		 <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>ak_merk</ogc:PropertyName>
+				<ogc:Literal>152</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter>		
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
+               <se:SvgParameter name="stroke-dasharray">15 5 3 5 </se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>               
+		  <se:LineSymbolizer>
+			<se:Stroke>
+			<se:GraphicStroke>
+             <se:Graphic>
+               <se:Mark>
+                 <se:WellKnownName>circle</se:WellKnownName>
+                 <se:Stroke>
+                   <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                   <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+				 </se:Stroke>
+               </se:Mark>
+               <se:Size>7.5</se:Size>
+             </se:Graphic>
+           </se:GraphicStroke>
+           <se:SvgParameter name="stroke-dasharray">15 5 3 5</se:SvgParameter>
+           <se:SvgParameter name="stroke-dashoffset">15</se:SvgParameter>
+           </se:Stroke>
+			<se:PerpendicularOffset>5</se:PerpendicularOffset>
+		  </se:LineSymbolizer>
+          <se:TextSymbolizer>
+          <se:Label>
+          	su
+          </se:Label>
+            <se:Font>
+              <se:SvgParameter name="font-family">Arial</se:SvgParameter>
+              <se:SvgParameter name="font-size">15</se:SvgParameter>
+              <se:SvgParameter name="font-style">normal</se:SvgParameter>
+              <se:SvgParameter name="font-weight">normal</se:SvgParameter>
+            </se:Font>
+           </se:TextSymbolizer>
+        </se:Rule>
+		
+		<se:Rule> 
+		  <se:Name>MRL_ak_153</se:Name>
+		  <!-- <Title>MRL:n oppaan asemakaavamerkinta nro 153</Title> -->
+		 <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>ak_merk</ogc:PropertyName>
+				<ogc:Literal>153</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter>		
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
+               <se:SvgParameter name="stroke-dasharray">15 5 3 5 </se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>               
+		  <se:LineSymbolizer>
+			<se:Stroke>
+			<se:GraphicStroke>
+             <se:Graphic>
+               <se:Mark>
+                 <se:WellKnownName>circle</se:WellKnownName>
+                 <se:Stroke>
+                   <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                   <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+				 </se:Stroke>
+               </se:Mark>
+               <se:Size>7.5</se:Size>
+             </se:Graphic>
+           </se:GraphicStroke>
+           <se:SvgParameter name="stroke-dasharray">15 5 3 5</se:SvgParameter>
+           <se:SvgParameter name="stroke-dashoffset">15</se:SvgParameter>
+           </se:Stroke>
+			<se:PerpendicularOffset>5</se:PerpendicularOffset>
+		  </se:LineSymbolizer>
+          <se:TextSymbolizer>
+          <se:Label>
+          	nä
+          </se:Label>
+            <se:Font>
+              <se:SvgParameter name="font-family">Arial</se:SvgParameter>
+              <se:SvgParameter name="font-size">15</se:SvgParameter>
+              <se:SvgParameter name="font-style">normal</se:SvgParameter>
+              <se:SvgParameter name="font-weight">normal</se:SvgParameter>
+            </se:Font>
+           </se:TextSymbolizer>
+        </se:Rule>
+	
+		
+		<se:Rule>
+          <se:Name>MRL_ak_154</se:Name>
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>ak_merk</ogc:PropertyName>
+				<ogc:Literal>154</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter>
+		  <se:LineSymbolizer  uom="http://www.opengeospatial.org/se/units/metre">
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">0.1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
+              <se:SvgParameter name="stroke-dasharray">1.5 0.5 0.3 0.5</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>  
+			<se:PointSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+				<se:Graphic>
+					<se:ExternalGraphic>
+						<se:OnlineResource xlink:type="simple" xlink:href="https://raw.githubusercontent.com/GispoCoding/qaava/master/asemakaavan-kuvaustekniikka/kaavasymbolien-svg-kuvat/154.svg"/>
+						<se:Format>image/svg+xml</se:Format>
+				</se:ExternalGraphic>
+				  <se:Size>
+					<ogc:Literal>5</ogc:Literal>
+				  </se:Size>
+			    </se:Graphic>
+		   </se:PointSymbolizer>
+        </se:Rule>
+		
+		 <se:Rule> 
+		  <se:Name>MRL_ak_155</se:Name>
+		  <!-- <Title>MRL:n oppaan asemakaavamerkinta nro 155</Title> -->
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>ak_merk</ogc:PropertyName>
+				<ogc:Literal>155</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter>		
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>               
+		  <se:TextSymbolizer>
+          <se:Label>
+          	e
+          </se:Label>
+            <se:Font>
+              <se:SvgParameter name="font-family">Arial</se:SvgParameter>
+              <se:SvgParameter name="font-size">15</se:SvgParameter>
+              <se:SvgParameter name="font-style">normal</se:SvgParameter>
+              <se:SvgParameter name="font-weight">normal</se:SvgParameter>
+            </se:Font>
+           </se:TextSymbolizer>
+        </se:Rule>
+		
+		 <se:Rule> 
+		  <se:Name>MRL_ak_156</se:Name>
+		  <!-- <Title>MRL:n oppaan asemakaavamerkinta nro 156</Title> -->
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>ak_merk</ogc:PropertyName>
+				<ogc:Literal>156</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter>		
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>               
+		  <se:TextSymbolizer>
+          <se:Label>
+          	e
+          </se:Label>
+            <se:Font>
+              <se:SvgParameter name="font-family">Arial</se:SvgParameter>
+              <se:SvgParameter name="font-size">15</se:SvgParameter>
+              <se:SvgParameter name="font-style">normal</se:SvgParameter>
+              <se:SvgParameter name="font-weight">normal</se:SvgParameter>
+            </se:Font>
+           </se:TextSymbolizer>
+        </se:Rule>
+		
+		 <se:Rule> 
+		  <se:Name>MRL_ak_157</se:Name>
+		  <!-- <Title>MRL:n oppaan asemakaavamerkinta nro 157</Title> -->
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>ak_merk</ogc:PropertyName>
+				<ogc:Literal>157</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter>		
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>               
+		  <se:TextSymbolizer>
+          <se:Label>
+          	e
+          </se:Label>
+            <se:Font>
+              <se:SvgParameter name="font-family">Arial</se:SvgParameter>
+              <se:SvgParameter name="font-size">15</se:SvgParameter>
+              <se:SvgParameter name="font-style">normal</se:SvgParameter>
+              <se:SvgParameter name="font-weight">normal</se:SvgParameter>
+            </se:Font>
+           </se:TextSymbolizer>
+        </se:Rule>
+		
+		 <se:Rule> 
+		  <se:Name>MRL_ak_158</se:Name>
+		  <!-- <Title>MRL:n oppaan asemakaavamerkinta nro 158</Title> -->
+			<ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>ak_merk</ogc:PropertyName>
+				<ogc:Literal>158</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+			</ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
+               <se:SvgParameter name="stroke-dasharray">15 5 3 5 </se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>               
+		  <se:LineSymbolizer>
+			<se:Stroke>
+			<se:GraphicStroke>
+             <se:Graphic>
+               <se:Mark>
+                 <se:WellKnownName>circle</se:WellKnownName>
+                 <se:Stroke>
+                   <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                   <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+				 </se:Stroke>
+               </se:Mark>
+               <se:Size>7.5</se:Size>
+             </se:Graphic>
+           </se:GraphicStroke>
+           <se:SvgParameter name="stroke-dasharray">15 5 3 5</se:SvgParameter>
+           <se:SvgParameter name="stroke-dashoffset">15</se:SvgParameter>
+           </se:Stroke>
+			<se:PerpendicularOffset>-5</se:PerpendicularOffset>
+		  </se:LineSymbolizer>
+        </se:Rule>
+		
 		<se:Rule>
           <se:Name>MRL_ak_166</se:Name>
 		  <ogc:Filter>
