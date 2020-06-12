@@ -1063,6 +1063,22 @@
               <se:SvgParameter name="font-weight">bold</se:SvgParameter>
             </se:Font>
            </se:TextSymbolizer>
+		   <se:LineSymbolizer>
+			<se:Stroke>
+			   <se:GraphicStroke>
+				<se:Graphic>
+				<se:ExternalGraphic>
+					<se:OnlineResource xlink:type="simple" xlink:href="https://raw.githubusercontent.com/GispoCoding/qaava/master/asemakaavan-kuvaustekniikka/kaavasymbolien-svg-kuvat/32-38.svg"/>
+					<se:Format>image/svg+xml</se:Format>
+				</se:ExternalGraphic>
+				  <se:Size>
+					<ogc:Literal>20</ogc:Literal>
+				  </se:Size>
+				</se:Graphic>
+				</se:GraphicStroke>
+			</se:Stroke>
+			<se:PerpendicularOffset>-12</se:PerpendicularOffset>
+		   </se:LineSymbolizer>
         </se:Rule>
 		
 		<se:Rule>
@@ -1095,6 +1111,22 @@
               <se:SvgParameter name="font-weight">bold</se:SvgParameter>
             </se:Font>
            </se:TextSymbolizer>
+		   <se:LineSymbolizer>
+			<se:Stroke>
+			   <se:GraphicStroke>
+				<se:Graphic>
+				<se:ExternalGraphic>
+					<se:OnlineResource xlink:type="simple" xlink:href="https://raw.githubusercontent.com/GispoCoding/qaava/master/asemakaavan-kuvaustekniikka/kaavasymbolien-svg-kuvat/32-38.svg"/>
+					<se:Format>image/svg+xml</se:Format>
+				</se:ExternalGraphic>
+				  <se:Size>
+					<ogc:Literal>20</ogc:Literal>
+				  </se:Size>
+				</se:Graphic>
+				</se:GraphicStroke>
+			</se:Stroke>
+			<se:PerpendicularOffset>-12</se:PerpendicularOffset>
+		   </se:LineSymbolizer>
         </se:Rule>
 		
 		<se:Rule>
@@ -1127,6 +1159,22 @@
               <se:SvgParameter name="font-weight">bold</se:SvgParameter>
             </se:Font>
            </se:TextSymbolizer>
+		   <se:LineSymbolizer>
+			<se:Stroke>
+			   <se:GraphicStroke>
+				<se:Graphic>
+				<se:ExternalGraphic>
+					<se:OnlineResource xlink:type="simple" xlink:href="https://raw.githubusercontent.com/GispoCoding/qaava/master/asemakaavan-kuvaustekniikka/kaavasymbolien-svg-kuvat/32-38.svg"/>
+					<se:Format>image/svg+xml</se:Format>
+				</se:ExternalGraphic>
+				  <se:Size>
+					<ogc:Literal>20</ogc:Literal>
+				  </se:Size>
+				</se:Graphic>
+				</se:GraphicStroke>
+			</se:Stroke>
+			<se:PerpendicularOffset>-12</se:PerpendicularOffset>
+		   </se:LineSymbolizer>
         </se:Rule>
 		
 		<se:Rule>
@@ -1159,6 +1207,22 @@
               <se:SvgParameter name="font-weight">bold</se:SvgParameter>
             </se:Font>
            </se:TextSymbolizer>
+		   <se:LineSymbolizer>
+			<se:Stroke>
+			   <se:GraphicStroke>
+				<se:Graphic>
+				<se:ExternalGraphic>
+					<se:OnlineResource xlink:type="simple" xlink:href="https://raw.githubusercontent.com/GispoCoding/qaava/master/asemakaavan-kuvaustekniikka/kaavasymbolien-svg-kuvat/32-38.svg"/>
+					<se:Format>image/svg+xml</se:Format>
+				</se:ExternalGraphic>
+				  <se:Size>
+					<ogc:Literal>20</ogc:Literal>
+				  </se:Size>
+				</se:Graphic>
+				</se:GraphicStroke>
+			</se:Stroke>
+			<se:PerpendicularOffset>-12</se:PerpendicularOffset>
+		   </se:LineSymbolizer>
         </se:Rule>
 		
 		<se:Rule>
@@ -1191,6 +1255,22 @@
               <se:SvgParameter name="font-weight">bold</se:SvgParameter>
             </se:Font>
            </se:TextSymbolizer>
+		   <se:LineSymbolizer>
+			<se:Stroke>
+			   <se:GraphicStroke>
+				<se:Graphic>
+				<se:ExternalGraphic>
+					<se:OnlineResource xlink:type="simple" xlink:href="https://raw.githubusercontent.com/GispoCoding/qaava/master/asemakaavan-kuvaustekniikka/kaavasymbolien-svg-kuvat/32-38.svg"/>
+					<se:Format>image/svg+xml</se:Format>
+				</se:ExternalGraphic>
+				  <se:Size>
+					<ogc:Literal>20</ogc:Literal>
+				  </se:Size>
+				</se:Graphic>
+				</se:GraphicStroke>
+			</se:Stroke>
+			<se:PerpendicularOffset>-12</se:PerpendicularOffset>
+		   </se:LineSymbolizer>
         </se:Rule>
 		
 		<se:Rule>
@@ -1223,6 +1303,22 @@
               <se:SvgParameter name="font-weight">bold</se:SvgParameter>
             </se:Font>
            </se:TextSymbolizer>
+		   <se:LineSymbolizer>
+			<se:Stroke>
+			   <se:GraphicStroke>
+				<se:Graphic>
+				<se:ExternalGraphic>
+					<se:OnlineResource xlink:type="simple" xlink:href="https://raw.githubusercontent.com/GispoCoding/qaava/master/asemakaavan-kuvaustekniikka/kaavasymbolien-svg-kuvat/32-38.svg"/>
+					<se:Format>image/svg+xml</se:Format>
+				</se:ExternalGraphic>
+				  <se:Size>
+					<ogc:Literal>20</ogc:Literal>
+				  </se:Size>
+				</se:Graphic>
+				</se:GraphicStroke>
+			</se:Stroke>
+			<se:PerpendicularOffset>-12</se:PerpendicularOffset>
+		   </se:LineSymbolizer>
         </se:Rule>
 		
 		<se:Rule>
@@ -1255,6 +1351,22 @@
               <se:SvgParameter name="font-weight">bold</se:SvgParameter>
             </se:Font>
            </se:TextSymbolizer>
+		   <se:LineSymbolizer>
+			<se:Stroke>
+			   <se:GraphicStroke>
+				<se:Graphic>
+				<se:ExternalGraphic>
+					<se:OnlineResource xlink:type="simple" xlink:href="https://raw.githubusercontent.com/GispoCoding/qaava/master/asemakaavan-kuvaustekniikka/kaavasymbolien-svg-kuvat/32-38.svg"/>
+					<se:Format>image/svg+xml</se:Format>
+				</se:ExternalGraphic>
+				  <se:Size>
+					<ogc:Literal>20</ogc:Literal>
+				  </se:Size>
+				</se:Graphic>
+				</se:GraphicStroke>
+			</se:Stroke>
+			<se:PerpendicularOffset>-12</se:PerpendicularOffset>
+		   </se:LineSymbolizer>
         </se:Rule>
 		
 		<se:Rule>
