@@ -1,0 +1,23 @@
+<svg id="_155_156_ja_157" data-name="155, 156 ja 157" xmlns="http://www.w3.org/2000/svg" width="4000" height="2000" viewBox="0 0 4000 2000">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #000;
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        stroke-width: 40px;
+        stroke-dasharray: 1880 80 80 80;
+      }
+
+      .cls-2 {
+        stroke-width: 41.667px;
+      }
+    </style>
+  </defs>
+  <path id="_155" data-name="155" class="cls-1" d="M0,400H4000"/>
+  <path id="_155-2" data-name="155" class="cls-1" d="M0,1600H4000"/>
+  <path id="_155-3" data-name="155" class="cls-2" d="M1400,0V2000M2600,0V2000"/>
+</svg>

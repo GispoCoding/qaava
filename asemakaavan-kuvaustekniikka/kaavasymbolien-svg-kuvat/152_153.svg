@@ -1,0 +1,27 @@
+<svg id="_152_ja_153" data-name="152 ja 153" xmlns="http://www.w3.org/2000/svg" width="4000" height="2000" viewBox="0 0 4000 2000">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke: #000;
+        fill-rule: evenodd;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 40px;
+      }
+
+      .cls-1 {
+        stroke-dasharray: 760 80 80 80;
+      }
+
+      .cls-3 {
+        stroke-width: 20px;
+      }
+    </style>
+  </defs>
+  <path id="Muoto_4" data-name="Muoto 4" class="cls-1" d="M0,1968H4000"/>
+  <path id="Muoto_17" data-name="Muoto 17" class="cls-2" d="M0,400H4000"/>
+  <path id="Soikio_4" data-name="Soikio 4" class="cls-3" d="M580,40A180,180,0,1,1,400,220,180,180,0,0,1,580,40Zm360,0A180,180,0,1,1,760,220,180,180,0,0,1,940,40Z"/>
+  <path id="Soikio_4-2" data-name="Soikio 4" class="cls-3" d="M3060,40a180,180,0,1,1-180,180A180,180,0,0,1,3060,40Zm360,0a180,180,0,1,1-180,180A180,180,0,0,1,3420,40Z"/>
+</svg>

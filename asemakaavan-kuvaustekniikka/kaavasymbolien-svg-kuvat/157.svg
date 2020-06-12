@@ -1,0 +1,29 @@
+<svg id="_155_156_ja_157" data-name="155, 156 ja 157" xmlns="http://www.w3.org/2000/svg" width="4000" height="2000" viewBox="0 0 4000 2000">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke: #000;
+        fill-rule: evenodd;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 40px;
+      }
+
+      .cls-2 {
+        stroke-dasharray: 880 80 80 80;
+      }
+
+      .cls-3 {
+        stroke-width: 20px;
+      }
+    </style>
+  </defs>
+  <path id="_157" data-name="157" class="cls-1" d="M0,400H4000"/>
+  <path id="_157-2" data-name="157" class="cls-1" d="M0,1600H4000"/>
+  <path id="_157-3" data-name="157" class="cls-2" d="M1400,0V2000"/>
+  <path id="_157-4" data-name="157" class="cls-2" d="M2600,0V2000"/>
+  <path id="_156" data-name="156" class="cls-3" d="M200,400V1600M400,400V1600M600,400V1600M800,400V1600M1000,400V1600M1200,400V1600M200,400V1600M400,400V1600M600,400V1600M800,400V1600M1000,400V1600M1200,400V1600M0,400V1600"/>
+  <path id="_156-2" data-name="156" class="cls-3" d="M2800,400V1600M3000,400V1600M3200,400V1600M3400,400V1600M3600,400V1600M3800,400V1600M2800,400V1600M3000,400V1600M3200,400V1600M3400,400V1600M3600,400V1600M3800,400V1600M4000,400V1600"/>
+</svg>
