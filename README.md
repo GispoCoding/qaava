@@ -11,6 +11,7 @@ Toteutus tehdään avoimesti yhteistyössä eri toimijoiden kanssa. Mukana ovat 
 - [Kuntaliitto](https://www.kuntaliitto.fi/) (asemakaavan visualisointikirjasto, [lue tiedote](https://www.kuntaliitto.fi/ajankohtaista/2020/avoin-tyylikirjasto-helpottaa-asemakaavojen-digitalisointia))
 - [Seinäjoki](https://www.seinajoki.fi/) (yleiskaavan tietomallityö ja työkalu QGISiin kaavan alustusta varten PostGIS-kantaan)
 - [Joensuu](https://www.joensuu.fi/) (yleiskaavan tietomallityö ja työkalu QGISiin kaavan alustusta varten PostGIS-kantaan)
+- [Espoo](https://www.espoo.fi/fi-FI) (Kaavoittajan QGIS-työkalut)
 - [Gispo Oy](https://www.gispo.fi/) (tekninen toteutus)
 
 Kaikki halukkaat voivat tulla mukaan QAAVA-yhteiskehitykseen! Voit osallistua työhön esimerkiksi rahoittamalla työtä, osallistumalla määrittelyyn tai auttamalla työkalujen toteutuksessa.
