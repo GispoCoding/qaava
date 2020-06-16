@@ -12,7 +12,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>113</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -31,7 +32,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>114</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -61,7 +63,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>115</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -91,7 +94,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>116</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -121,7 +125,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>117</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -151,7 +156,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>118</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -181,7 +187,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>119</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -211,7 +218,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>120</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -241,7 +249,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>121</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -271,7 +280,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>122</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -301,9 +311,9 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>123</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
-          
-		  <se:LineSymbolizer>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
+          <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
@@ -312,9 +322,8 @@
               <se:SvgParameter name="stroke-dasharray">15 5 3 5</se:SvgParameter>
             </se:Stroke>
           </se:LineSymbolizer>     
-		  
-	    <se:LineSymbolizer>
-         <se:Stroke>
+		  <se:LineSymbolizer>
+		  <se:Stroke>
            <se:GraphicStroke>
              <se:Graphic>
                <se:Mark>
@@ -345,6 +354,38 @@
             </se:Font>
            </se:TextSymbolizer>
            </se:Rule>
+		   
+		   <se:Rule>
+          <se:Name>MRL_ak_124</se:Name>
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>ak_merk</ogc:PropertyName>
+				<ogc:Literal>124</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
+		      <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
+               <se:SvgParameter name="stroke-dasharray">15 5 3 5 </se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>       	  
+			<se:PointSymbolizer>
+              <se:Graphic>
+               <se:Mark>
+				<se:WellKnownName>wkt://MULTILINESTRING((0 0, 1 0), (1 0, 0.75 0.25), (1 0 , 0.75 -0.25))</se:WellKnownName>
+                 <se:Stroke>
+                   <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                   <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+                 </se:Stroke>
+               </se:Mark>
+               <se:Size>20</se:Size>
+             </se:Graphic>
+			</se:PointSymbolizer>  
+        </se:Rule>
 		
 		<se:Rule>
           <se:Name>MRL_ak_125</se:Name>
@@ -353,7 +394,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>125</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -377,13 +419,46 @@
         </se:Rule>
 		
 		<se:Rule>
+          <se:Name>MRL_ak_127</se:Name>
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>ak_merk</ogc:PropertyName>
+				<ogc:Literal>127</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
+		  <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
+               <se:SvgParameter name="stroke-dasharray">15 5 3 5 </se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>  
+       	  <se:PointSymbolizer>
+              <se:Graphic>
+               <se:Mark>
+                 <se:WellKnownName>cross2</se:WellKnownName>
+                 <se:Stroke>
+                   <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                   <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+                 </se:Stroke>
+               </se:Mark>
+               <se:Size>16</se:Size>
+             </se:Graphic>
+		  </se:PointSymbolizer>    
+        </se:Rule>
+		
+		<se:Rule>
           <se:Name>MRL_ak_128</se:Name>
 		  <ogc:Filter>
 			<ogc:PropertyIsEqualTo>
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>128</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -413,7 +488,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>133</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -443,8 +519,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>134</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-			</ogc:Filter>
-		
+			</ogc:Filter> 
+			<se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -477,7 +553,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>136</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -495,7 +572,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>137</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
            <se:PolygonSymbolizer>
             <se:Fill>
               <se:GraphicFill>
@@ -528,7 +606,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>138</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:GraphicFill>
@@ -564,7 +643,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>140</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:GraphicFill>
@@ -611,7 +691,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>141</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:GraphicFill>
@@ -659,7 +740,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>142</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:GraphicFill>
@@ -705,7 +787,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>143</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:GraphicFill>
@@ -752,7 +835,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>144</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -782,7 +866,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>145</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:GraphicFill>
@@ -810,8 +895,7 @@
             </se:Stroke>
           </se:PolygonSymbolizer>
         </se:Rule>
-		
-		
+				
 		<se:Rule>
           <se:Name>MRL_ak_146</se:Name>
 		  <ogc:Filter>
@@ -819,14 +903,14 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>146</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
               <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
-              
             </se:Stroke>
           </se:LineSymbolizer>
 		   <se:TextSymbolizer>
@@ -849,7 +933,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>147</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -879,7 +964,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>148</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -909,7 +995,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>149</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -939,7 +1026,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>150</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  
 		    <se:PolygonSymbolizer>
             <se:Fill>
@@ -985,7 +1073,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>151</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1016,7 +1105,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>152</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>		
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
           <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1066,7 +1156,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>153</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>		
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
           <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1116,7 +1207,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>154</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:LineSymbolizer  uom="http://www.opengeospatial.org/se/units/metre">
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1147,7 +1239,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>155</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>		
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
           <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1177,7 +1270,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>156</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>		
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
           <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1207,7 +1301,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>157</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>		
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
           <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1237,7 +1332,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>158</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-			</ogc:Filter>
+			</ogc:Filter> 
+			<se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
           <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1268,6 +1364,146 @@
 		  </se:LineSymbolizer>
         </se:Rule>
 		
+		 <se:Rule> 
+		  <se:Name>MRL_ak_161</se:Name>
+		  <!-- <Title>MRL:n oppaan asemakaavamerkinta nro 161</Title> -->
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>ak_merk</ogc:PropertyName>
+				<ogc:Literal>161</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
+             </se:Stroke>
+              <se:PerpendicularOffset>-23.75</se:PerpendicularOffset>
+          </se:LineSymbolizer>   
+          <se:LineSymbolizer>
+			<se:Stroke>
+			<se:GraphicStroke>
+             <se:Graphic>
+               <se:Mark>
+                 <se:WellKnownName>circle</se:WellKnownName>
+                 <se:Stroke>
+                   <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                   <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+				 </se:Stroke>
+               </se:Mark>
+               <se:Size>7.5</se:Size>
+             </se:Graphic>
+           </se:GraphicStroke>
+           <se:SvgParameter name="stroke-dasharray">15 5 3 5</se:SvgParameter>
+           <se:SvgParameter name="stroke-dashoffset">15</se:SvgParameter>
+           </se:Stroke>
+			<se:PerpendicularOffset>-20</se:PerpendicularOffset>
+		  </se:LineSymbolizer>
+         <se:LineSymbolizer>
+            <se:Stroke>
+              <se:GraphicStroke>
+                <se:Graphic>
+                  <se:ExternalGraphic>
+                    <se:OnlineResource xlink:type="simple" xlink:href="https://raw.githubusercontent.com/GispoCoding/qaava/master/asemakaavan-kuvaustekniikka/kaavasymbolien-svg-kuvat/160.svg"/>
+						<se:Format>image/svg+xml</se:Format>
+                  </se:ExternalGraphic> 
+                  <se:Size>
+					<ogc:Literal>40</ogc:Literal>
+				  </se:Size>
+                </se:Graphic>
+              </se:GraphicStroke>
+            </se:Stroke>
+          <se:PerpendicularOffset>8</se:PerpendicularOffset>
+          </se:LineSymbolizer>        
+          <se:TextSymbolizer>
+			  <se:Label>
+               -00 dBA          
+				<!-- <ogc:PropertyName>
+                  ominaisuustieto_161
+                </ogc:PropertyName> -->
+              </se:Label>
+				  <se:Font>
+				  <se:SvgParameter name="font-family">Arial</se:SvgParameter>
+				  <se:SvgParameter name="font-size">9</se:SvgParameter>
+				  <se:SvgParameter name="font-style">normal</se:SvgParameter>
+				  <se:SvgParameter name="font-weight">normal</se:SvgParameter>
+				</se:Font>
+			</se:TextSymbolizer>
+        </se:Rule>
+		
+		<se:Rule> 
+		  <se:Name>MRL_ak_162</se:Name>
+		  <!-- <Title>MRL:n oppaan asemakaavamerkinta nro 162</Title> -->
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>ak_merk</ogc:PropertyName>
+				<ogc:Literal>162</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
+             </se:Stroke>
+              <se:PerpendicularOffset>-23.75</se:PerpendicularOffset>
+          </se:LineSymbolizer>   
+          <se:LineSymbolizer>
+			<se:Stroke>
+			<se:GraphicStroke>
+             <se:Graphic>
+               <se:Mark>
+                 <se:WellKnownName>circle</se:WellKnownName>
+                 <se:Stroke>
+                   <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                   <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+				 </se:Stroke>
+               </se:Mark>
+               <se:Size>7.5</se:Size>
+             </se:Graphic>
+           </se:GraphicStroke>
+           <se:SvgParameter name="stroke-dasharray">15 5 3 5</se:SvgParameter>
+           <se:SvgParameter name="stroke-dashoffset">15</se:SvgParameter>
+           </se:Stroke>
+			<se:PerpendicularOffset>-20</se:PerpendicularOffset>
+		  </se:LineSymbolizer>
+         <se:LineSymbolizer>
+            <se:Stroke>
+              <se:GraphicStroke>
+                <se:Graphic>
+                  <se:ExternalGraphic>
+                    <se:OnlineResource xlink:type="simple" xlink:href="https://raw.githubusercontent.com/GispoCoding/qaava/master/asemakaavan-kuvaustekniikka/kaavasymbolien-svg-kuvat/160.svg"/>
+						<se:Format>image/svg+xml</se:Format>
+                  </se:ExternalGraphic> 
+                  <se:Size>
+					<ogc:Literal>40</ogc:Literal>
+				  </se:Size>
+                </se:Graphic>
+              </se:GraphicStroke>
+            </se:Stroke>
+          <se:PerpendicularOffset>8</se:PerpendicularOffset>
+          </se:LineSymbolizer>        
+          <se:TextSymbolizer>
+			  <se:Label>
+               max 00 dBA          
+				<!-- <ogc:PropertyName>
+                  ominaisuustieto_162
+                </ogc:PropertyName> -->
+              </se:Label>
+				  <se:Font>
+				  <se:SvgParameter name="font-family">Arial</se:SvgParameter>
+				  <se:SvgParameter name="font-size">9</se:SvgParameter>
+				  <se:SvgParameter name="font-style">normal</se:SvgParameter>
+				  <se:SvgParameter name="font-weight">normal</se:SvgParameter>
+				</se:Font>
+			</se:TextSymbolizer>
+        </se:Rule>
+		
 		<se:Rule>
           <se:Name>MRL_ak_166</se:Name>
 		  <ogc:Filter>
@@ -1275,7 +1511,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>166</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1305,7 +1542,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>167</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1335,7 +1573,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>168</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1365,7 +1604,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>169</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1395,7 +1635,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>170</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1425,7 +1666,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>171</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1455,7 +1697,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>172</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		 <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1485,7 +1728,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>174</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>		
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
 		<se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1523,7 +1767,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>175</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>		
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
 		<se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1561,7 +1806,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>176</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>		
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
 		<se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1599,7 +1845,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>177</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>		
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
 		<se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1637,7 +1884,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>178</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>		
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
 		<se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1675,8 +1923,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>179</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
-		  
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 		   <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1705,12 +1953,10 @@
            <se:SvgParameter name="stroke-dasharray">4 6</se:SvgParameter>
          </se:Stroke>
 		</se:LineSymbolizer>
-			  
-           <se:TextSymbolizer>
+		  <se:TextSymbolizer>
           <se:Label>
           	un
           </se:Label>
-         
             <se:Font>
               <se:SvgParameter name="font-family">Arial</se:SvgParameter>
               <se:SvgParameter name="font-size">15</se:SvgParameter>
@@ -1734,9 +1980,9 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>180</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
-		  
-		   <se:LineSymbolizer>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
+		  <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
@@ -1793,7 +2039,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>181</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>		
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
 		<se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1831,7 +2078,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>182</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>		
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
 		<se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1869,7 +2117,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>183</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>		
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
 		<se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1907,7 +2156,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>185</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>			
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>			
 			<se:LineSymbolizer>
 				<se:Stroke>
 				  <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1924,13 +2174,10 @@
               <se:SvgParameter name="stroke-width">0.1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
               <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
-             
             </se:Stroke>
-               
           </se:LineSymbolizer>
-       		<se:PolygonSymbolizer>
-           
-         <se:Fill>
+       	<se:PolygonSymbolizer>
+        <se:Fill>
            <se:GraphicFill>
              <se:Graphic>
                <se:Mark>
@@ -1944,7 +2191,7 @@
              </se:Graphic>
            </se:GraphicFill>
          </se:Fill>
-               <se:PerpendicularOffset>-15</se:PerpendicularOffset>
+         <se:PerpendicularOffset>-15</se:PerpendicularOffset>
        </se:PolygonSymbolizer>
            <se:TextSymbolizer>
           <se:Label>
@@ -1973,7 +2220,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>186</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>			
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>			
 			<se:LineSymbolizer>
 				<se:Stroke>
 				  <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1990,12 +2238,9 @@
               <se:SvgParameter name="stroke-width">0.1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
               <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
-             
             </se:Stroke>
-               
           </se:LineSymbolizer>
        		<se:PolygonSymbolizer>
-           
          <se:Fill>
            <se:GraphicFill>
              <se:Graphic>
@@ -2039,9 +2284,9 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>187</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>			
-          	
-		<se:LineSymbolizer>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>			
+          <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1.5</se:SvgParameter>
@@ -2057,7 +2302,6 @@
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
               <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
-             
             </se:Stroke>
                
           </se:LineSymbolizer>
@@ -2088,7 +2332,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>188</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
        <!-- ulkoraja -->
 			<se:LineSymbolizer>
 				<se:Stroke>
@@ -2167,9 +2412,9 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>189</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>			
-          	
-		<se:LineSymbolizer>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>			
+        <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1.5</se:SvgParameter>
@@ -2185,9 +2430,7 @@
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
               <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
-             
             </se:Stroke>
-               
           </se:LineSymbolizer>
        	  <se:TextSymbolizer>
           <se:Label>
@@ -2208,7 +2451,6 @@
              </se:LabelPlacement>
 		  </se:TextSymbolizer>
         </se:Rule>
-		
 		
 	  </se:FeatureTypeStyle>
     </UserStyle>
