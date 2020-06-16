@@ -13,7 +13,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>91</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:TextSymbolizer>
 			  <se:Label>
 				12
@@ -38,7 +39,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>92</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:TextSymbolizer>
 			  <se:Label>
 				KAUP
@@ -63,7 +65,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>93</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		   <se:TextSymbolizer>
 			  <se:Label>
 				123
@@ -89,7 +92,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>94</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 		  <se:TextSymbolizer>
 			  <se:Label>
 				23
@@ -115,7 +119,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>95</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 			 <se:TextSymbolizer>
 			  <se:Label>
 				KATU
@@ -140,7 +145,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>96</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 			 <se:TextSymbolizer>
 			  <se:Label>
 				1234
@@ -165,7 +171,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>97</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 			 <se:TextSymbolizer>
 			  <se:Label>
 			  <!-- <ogc:PropertyName>
@@ -191,7 +198,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>98</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 				 <se:TextSymbolizer>
 			  <se:Label>
 			  <!-- <ogc:PropertyName>
@@ -216,7 +224,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>99</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 				 <se:TextSymbolizer>
 			  <se:Label>
 			  <!-- <ogc:PropertyName>
@@ -241,7 +250,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>100</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 		  	 <se:TextSymbolizer>
 			  <se:Label>
 				IV
@@ -266,7 +276,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>101</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 		 <se:TextSymbolizer>
 			  <se:Label>
 				1/2 k IV
@@ -291,7 +302,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>102</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 			 <se:TextSymbolizer>
 			  <se:Label>
 				IV u 1/2
@@ -316,7 +328,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>103</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 			 <se:TextSymbolizer>
 			  <se:Label>
 				+ yht 200 I
@@ -341,7 +354,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>104</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 			 <se:PointSymbolizer>
             <se:Graphic>
               <se:Mark>
@@ -392,7 +406,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>105</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 			 <se:TextSymbolizer>
 			  <se:Label>
 				e = 0.12
@@ -417,7 +432,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>106</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 			<se:TextSymbolizer>
 			  <se:Label>
 				a = 0.00
@@ -442,7 +458,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>107</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 			 <se:TextSymbolizer>
 			  <se:Label>
 				+ 12.3
@@ -468,7 +485,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>108</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 		  <se:PointSymbolizer>
             <se:Graphic>
               <se:Mark>
@@ -521,7 +539,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>109</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 		   <se:PointSymbolizer>
             <se:Graphic>
               <se:Mark>
@@ -586,7 +605,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>110</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 		   <se:PointSymbolizer>
             <se:Graphic>
               <se:Mark>
@@ -651,7 +671,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>111</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 		  <se:PointSymbolizer>
             <se:Graphic>
               <se:Mark>
@@ -724,7 +745,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>112</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 			<se:TextSymbolizer>
 			  <se:Label>
 				123
@@ -750,7 +772,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>163</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 			<se:TextSymbolizer>
 			  <se:Label>
 				1 ap/00 m^2
@@ -775,7 +798,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>164</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 			<se:TextSymbolizer>
 			  <se:Label>
 				1 ap/as
@@ -800,7 +824,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>165</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 			<se:TextSymbolizer>
 			  <se:Label>
 				(1, 2, 3)
@@ -825,7 +850,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>173</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 			  <se:PointSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
             <se:Graphic>
               <se:Mark>
@@ -875,7 +901,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>184</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>	
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>	
 		  <se:PointSymbolizer>
             <se:Graphic>
               <se:Mark>
