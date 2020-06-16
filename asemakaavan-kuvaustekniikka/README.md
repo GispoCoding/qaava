@@ -37,7 +37,10 @@ HUOM! Oletuksena on, että GeoServerille tuotujen tasojen ominaisuustiedoista l�
 - viivamaiset kohteet (82-90, 126, 129-132, 135, 139, 159-160)
 - pistemäiset kohteet (91-112, 163-165, 173, 184)
 
-2. Kirjaudu GeoServerille. Oletuksena on, että visualisoitavat aineistot on jo sinne lisätty. 
+2. Kirjaudu GeoServerille. Oletuksena on, että visualisoitavat aineistot on jo sinne lisätty. Avaa päävalikon alta **Data**-valikosta kohta **Styles**. Lisää uusi tyyli painamalla **Add New Style**
+
+<img src="geoserver_new_style_screenshot.png" width="500"/>
+
 
 ## Ohjeet datan määrittämien visualisointien käyttöön
 
