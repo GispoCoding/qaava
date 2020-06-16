@@ -13,7 +13,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>1</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#e2c096</se:SvgParameter>
@@ -46,7 +47,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>2</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#b98444</se:SvgParameter>
@@ -80,7 +82,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>3</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#e2c096</se:SvgParameter>
@@ -113,7 +116,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>4</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#e2c096</se:SvgParameter>
@@ -146,7 +150,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>5</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#e2c096</se:SvgParameter>
@@ -179,7 +184,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>6</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#b98444</se:SvgParameter>
@@ -212,7 +218,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>7</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#e2c096</se:SvgParameter>
@@ -245,7 +252,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>8</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#e2c096</se:SvgParameter>
@@ -278,7 +286,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>9</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#faab53</se:SvgParameter>
@@ -312,7 +321,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>10</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#faab53</se:SvgParameter>
@@ -345,7 +355,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>11</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#faab53</se:SvgParameter>
@@ -378,7 +389,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>12</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ddd4e9</se:SvgParameter>
@@ -411,7 +423,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>13</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ddd4e9</se:SvgParameter>
@@ -444,7 +457,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>14</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ddd4e9</se:SvgParameter>
@@ -477,7 +491,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>15</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ddd4e9</se:SvgParameter>
@@ -510,7 +525,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>16</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ddd4e9</se:SvgParameter>
@@ -543,7 +559,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>17</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ddd4e9</se:SvgParameter>
@@ -576,7 +593,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>18</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ddd4e9</se:SvgParameter>
@@ -609,7 +627,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>19</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ddd4e9</se:SvgParameter>
@@ -642,7 +661,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>20</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ddd4e9</se:SvgParameter>
@@ -675,7 +695,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>21</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#d63648</se:SvgParameter>
@@ -709,6 +730,7 @@
 				<ogc:Literal>22</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
 		  </ogc:Filter>
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#faab53</se:SvgParameter>
@@ -741,7 +763,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>23</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#faab53</se:SvgParameter>
@@ -774,7 +797,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>24</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#faab53</se:SvgParameter>
@@ -807,7 +831,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>25</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#faab53</se:SvgParameter>
@@ -840,7 +865,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>26</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#faab53</se:SvgParameter>
@@ -873,7 +899,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>27</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#c1c3c5</se:SvgParameter>
@@ -907,7 +934,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>28</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#c1c3c5</se:SvgParameter>
@@ -941,7 +969,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>29</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#c1c3c5</se:SvgParameter>
@@ -975,7 +1004,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>30</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#c1c3c5</se:SvgParameter>
@@ -1009,7 +1039,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>31</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#c1c3c5</se:SvgParameter>
@@ -1041,7 +1072,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>32</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#58ad41</se:SvgParameter>
@@ -1089,7 +1121,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>33</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#58ad41</se:SvgParameter>
@@ -1137,7 +1170,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>34</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#58ad41</se:SvgParameter>
@@ -1185,7 +1219,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>35</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#58ad41</se:SvgParameter>
@@ -1233,7 +1268,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>36</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#58ad41</se:SvgParameter>
@@ -1281,7 +1317,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>37</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#58ad41</se:SvgParameter>
@@ -1329,7 +1366,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>38</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#58ad41</se:SvgParameter>
@@ -1377,7 +1415,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>39</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ffcf45</se:SvgParameter>
@@ -1410,7 +1449,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>40</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ffcf45</se:SvgParameter>
@@ -1443,7 +1483,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>41</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ffcf45</se:SvgParameter>
@@ -1476,7 +1517,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>42</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ffcf45</se:SvgParameter>
@@ -1509,7 +1551,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>43</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ffcf45</se:SvgParameter>
@@ -1542,7 +1585,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>44</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ffcf45</se:SvgParameter>
@@ -1576,7 +1620,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>45</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>		
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
            <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#ff0000</se:SvgParameter>
@@ -1642,7 +1687,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>46</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>		
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
            <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#ff0000</se:SvgParameter>
@@ -1708,7 +1754,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>47</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>		
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
            <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#ff0000</se:SvgParameter>
@@ -1774,7 +1821,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>48</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>		
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
            <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#ff0000</se:SvgParameter>
@@ -1840,7 +1888,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>49</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>		
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
            <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#ff0000</se:SvgParameter>
@@ -1906,7 +1955,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>50</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>		
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
            <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#ff0000</se:SvgParameter>
@@ -1916,7 +1966,6 @@
             </se:Stroke>
              <se:PerpendicularOffset>-3</se:PerpendicularOffset>
           </se:LineSymbolizer>
-          
 		  <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -1925,9 +1974,8 @@
               <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
             </se:Stroke>
           </se:LineSymbolizer>               
-		  
-	    <se:LineSymbolizer>
-         <se:Stroke>
+		  <se:LineSymbolizer>
+		  <se:Stroke>
            <se:GraphicStroke>
              <se:Graphic>
                <se:Mark>
@@ -1939,16 +1987,13 @@
                    <se:SvgParameter name="stroke">#000000</se:SvgParameter>
                    <se:SvgParameter name="stroke-width">1</se:SvgParameter>
                  </se:Stroke>
-                  
                </se:Mark>
                <se:Size>7.5</se:Size>
-               
              </se:Graphic>
            </se:GraphicStroke>
            <se:SvgParameter name="stroke-dasharray">15 5 3 5</se:SvgParameter>
            <se:SvgParameter name="stroke-dashoffset">5</se:SvgParameter>
-           
-         </se:Stroke>
+          </se:Stroke>
 		 <se:PerpendicularOffset>-5</se:PerpendicularOffset>
        </se:LineSymbolizer>
           <se:TextSymbolizer>
@@ -1972,7 +2017,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>51</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>		
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
            <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#ff0000</se:SvgParameter>
@@ -1982,8 +2028,7 @@
             </se:Stroke>
              <se:PerpendicularOffset>-3</se:PerpendicularOffset>
           </se:LineSymbolizer>
-          
-		  <se:LineSymbolizer>
+          <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
               <se:SvgParameter name="stroke-width">2</se:SvgParameter>
@@ -1991,9 +2036,8 @@
               <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
             </se:Stroke>
           </se:LineSymbolizer>               
-		  
-	    <se:LineSymbolizer>
-         <se:Stroke>
+		  <se:LineSymbolizer>
+          <se:Stroke>
            <se:GraphicStroke>
              <se:Graphic>
                <se:Mark>
@@ -2013,10 +2057,9 @@
            </se:GraphicStroke>
            <se:SvgParameter name="stroke-dasharray">15 5 3 5</se:SvgParameter>
            <se:SvgParameter name="stroke-dashoffset">5</se:SvgParameter>
-           
-         </se:Stroke>
-		 <se:PerpendicularOffset>-5</se:PerpendicularOffset>
-       </se:LineSymbolizer>
+           </se:Stroke>
+		   <se:PerpendicularOffset>-5</se:PerpendicularOffset>
+          </se:LineSymbolizer>
           <se:TextSymbolizer>
           <se:Label>
           	LV
@@ -2038,7 +2081,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>52</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>		
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>		
            <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#ff0000</se:SvgParameter>
@@ -2048,8 +2092,7 @@
             </se:Stroke>
              <se:PerpendicularOffset>-3</se:PerpendicularOffset>
           </se:LineSymbolizer>
-          
-		  <se:LineSymbolizer>
+          <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
               <se:SvgParameter name="stroke-width">2</se:SvgParameter>
@@ -2057,9 +2100,8 @@
               <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
             </se:Stroke>
           </se:LineSymbolizer>               
-		  
-	    <se:LineSymbolizer>
-         <se:Stroke>
+		  <se:LineSymbolizer>
+          <se:Stroke>
            <se:GraphicStroke>
              <se:Graphic>
                <se:Mark>
@@ -2071,18 +2113,15 @@
                    <se:SvgParameter name="stroke">#000000</se:SvgParameter>
                    <se:SvgParameter name="stroke-width">1</se:SvgParameter>
                  </se:Stroke>
-                  
                </se:Mark>
                <se:Size>7.5</se:Size>
-               
              </se:Graphic>
            </se:GraphicStroke>
            <se:SvgParameter name="stroke-dasharray">15 5 3 5</se:SvgParameter>
            <se:SvgParameter name="stroke-dashoffset">5</se:SvgParameter>
-           
-         </se:Stroke>
+          </se:Stroke>
 		 <se:PerpendicularOffset>-5</se:PerpendicularOffset>
-       </se:LineSymbolizer>
+		</se:LineSymbolizer>
           <se:TextSymbolizer>
           <se:Label>
           	LP
@@ -2095,8 +2134,7 @@
             </se:Font>
            </se:TextSymbolizer>
         </se:Rule>
-		  
-		
+			
 		<se:Rule>
           <se:Name>MRL_ak_53</se:Name>
 		  <!-- <Title>MRL:n oppaan asemakaavamerkinta nro 53</Title> -->
@@ -2105,7 +2143,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>53</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#f9c6d1</se:SvgParameter>
@@ -2127,7 +2166,6 @@
               <se:SvgParameter name="font-weight">bold</se:SvgParameter>
             </se:Font>
            </se:TextSymbolizer>
-          
         </se:Rule>
 		
          <se:Rule>
@@ -2138,7 +2176,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>54</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#f9c6d1</se:SvgParameter>
@@ -2160,7 +2199,6 @@
               <se:SvgParameter name="font-weight">bold</se:SvgParameter>
             </se:Font>
            </se:TextSymbolizer>
-          
         </se:Rule>
 		
 		<se:Rule>
@@ -2171,7 +2209,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>55</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#f9c6d1</se:SvgParameter>
@@ -2193,7 +2232,6 @@
               <se:SvgParameter name="font-weight">bold</se:SvgParameter>
             </se:Font>
            </se:TextSymbolizer>
-          
         </se:Rule>
 		
 		<se:Rule>
@@ -2204,7 +2242,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>56</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#f9c6d1</se:SvgParameter>
@@ -2226,7 +2265,6 @@
               <se:SvgParameter name="font-weight">bold</se:SvgParameter>
             </se:Font>
            </se:TextSymbolizer>
-          
         </se:Rule>
 		
 		<se:Rule>
@@ -2237,7 +2275,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>57</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#f9c6d1</se:SvgParameter>
@@ -2259,7 +2298,6 @@
               <se:SvgParameter name="font-weight">bold</se:SvgParameter>
             </se:Font>
            </se:TextSymbolizer>
-          
         </se:Rule>
 		
 		<se:Rule>
@@ -2270,9 +2308,9 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>58</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
-         
-		  <se:PolygonSymbolizer>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
+          <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#e6adcf</se:SvgParameter>
             </se:Fill>
@@ -2295,18 +2333,15 @@
                    <se:SvgParameter name="stroke">#000000</se:SvgParameter>
                    <se:SvgParameter name="stroke-width">1</se:SvgParameter>
                  </se:Stroke>
-                  
                </se:Mark>
                <se:Size>12</se:Size>
-               
              </se:Graphic>
            </se:GraphicStroke>
            <se:SvgParameter name="stroke-dasharray">15  15 </se:SvgParameter>
            <se:SvgParameter name="stroke-dashoffset">15</se:SvgParameter>
-           
          </se:Stroke>
 		 <se:PerpendicularOffset>-5</se:PerpendicularOffset>
-       </se:LineSymbolizer>
+		</se:LineSymbolizer>
           <se:TextSymbolizer>
           <se:Label>
           	E
@@ -2318,7 +2353,6 @@
               <se:SvgParameter name="font-weight">bold</se:SvgParameter>
             </se:Font>
            </se:TextSymbolizer>
-          
         </se:Rule>
       
 		<se:Rule>
@@ -2329,9 +2363,9 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>59</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
-         
-		  <se:PolygonSymbolizer>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
+          <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#e6adcf</se:SvgParameter>
             </se:Fill>
@@ -2357,15 +2391,13 @@
                   
                </se:Mark>
                <se:Size>12</se:Size>
-               
              </se:Graphic>
            </se:GraphicStroke>
            <se:SvgParameter name="stroke-dasharray">15  15 </se:SvgParameter>
            <se:SvgParameter name="stroke-dashoffset">15</se:SvgParameter>
-           
          </se:Stroke>
 		 <se:PerpendicularOffset>-5</se:PerpendicularOffset>
-       </se:LineSymbolizer>
+		</se:LineSymbolizer>
           <se:TextSymbolizer>
           <se:Label>
           	ET
@@ -2387,9 +2419,9 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>60</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
-         
-		  <se:PolygonSymbolizer>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
+          <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#e6adcf</se:SvgParameter>
             </se:Fill>
@@ -2412,18 +2444,15 @@
                    <se:SvgParameter name="stroke">#000000</se:SvgParameter>
                    <se:SvgParameter name="stroke-width">1</se:SvgParameter>
                  </se:Stroke>
-                  
                </se:Mark>
                <se:Size>12</se:Size>
-               
              </se:Graphic>
            </se:GraphicStroke>
            <se:SvgParameter name="stroke-dasharray">15  15 </se:SvgParameter>
            <se:SvgParameter name="stroke-dashoffset">15</se:SvgParameter>
-           
-         </se:Stroke>
-		 <se:PerpendicularOffset>-5</se:PerpendicularOffset>
-       </se:LineSymbolizer>
+           </se:Stroke>
+		   <se:PerpendicularOffset>-5</se:PerpendicularOffset>
+		</se:LineSymbolizer>
           <se:TextSymbolizer>
           <se:Label>
           	EN
@@ -2445,7 +2474,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>61</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
          
 		  <se:PolygonSymbolizer>
             <se:Fill>
@@ -2503,7 +2533,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>62</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
          
 		  <se:PolygonSymbolizer>
             <se:Fill>
@@ -2561,7 +2592,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>63</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
          
 		  <se:PolygonSymbolizer>
             <se:Fill>
@@ -2619,7 +2651,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>64</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
          
 		  <se:PolygonSymbolizer>
             <se:Fill>
@@ -2677,7 +2710,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>65</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
          
 		  <se:PolygonSymbolizer>
             <se:Fill>
@@ -2735,7 +2769,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>66</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
          
 		  <se:PolygonSymbolizer>
             <se:Fill>
@@ -2793,7 +2828,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>67</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
          
 		  <se:PolygonSymbolizer>
             <se:Fill>
@@ -2851,7 +2887,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>68</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
          
 		  <se:PolygonSymbolizer>
             <se:Fill>
@@ -2909,7 +2946,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>69</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#b6e2e3</se:SvgParameter>
@@ -2942,7 +2980,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>70</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#b6e2e3</se:SvgParameter>
@@ -2975,7 +3014,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>71</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#b6e2e3</se:SvgParameter>
@@ -3008,7 +3048,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>72</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#b6e2e3</se:SvgParameter>
@@ -3041,7 +3082,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>73</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ffffff</se:SvgParameter>
@@ -3075,7 +3117,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>74</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#dbdb55</se:SvgParameter>
@@ -3108,7 +3151,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>75</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#eced98</se:SvgParameter>
@@ -3141,7 +3185,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>76</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#c3bc03</se:SvgParameter>
@@ -3174,7 +3219,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>77</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#c3bc03</se:SvgParameter>
@@ -3207,7 +3253,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>78</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#fff353</se:SvgParameter>
@@ -3240,7 +3287,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>79</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#bcdeb2</se:SvgParameter>
@@ -3274,7 +3322,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>80</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#bcdeb2</se:SvgParameter>
@@ -3307,7 +3356,8 @@
 				<ogc:PropertyName>ak_merk</ogc:PropertyName>
 				<ogc:Literal>81</ogc:Literal>
 			</ogc:PropertyIsEqualTo>
-		  </ogc:Filter>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>2500</se:MaxScaleDenominator>
 		  <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">##b3d7f1</se:SvgParameter>
@@ -3329,24 +3379,8 @@
               <se:SvgParameter name="font-weight">bold</se:SvgParameter>
             </se:Font>
            </se:TextSymbolizer>
-          
         </se:Rule>
-		
 				
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
       </se:FeatureTypeStyle>
     </UserStyle>
   </NamedLayer>
