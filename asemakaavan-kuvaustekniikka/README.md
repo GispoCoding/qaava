@@ -3,8 +3,8 @@
 Asemakaavan kuvaustekniikka tuotetaan yhteistyössä QAAVA-kehitysprojektiin osallistuneiden toimijoiden kanssa. 
 Sen on rahoittanut [Kuntaliitto](https://www.kuntaliitto.fi/ajankohtaista/2020/avoin-tyylikirjasto-helpottaa-asemakaavojen-digitalisointia?fbclid=IwAR3d_moQRJR0IxAxzJXxjlo4YtGfzT4ju87H8DTurRdNXtqo7FvnMIFkCUA). Kuvaustekniikka pohjautuu MRL:n asemakaavan visualisointioppaaseen (Ympäristönministeriö, 2003). Kuvaustekniikka tuotetaan QML- ja SLD-muodossa, jotta sitä voidaan käyttää sekä QGISissä että esimerkiksi GeoServerissä. Asemakaavan kuvaustekniikka valmistuu toukokuussa 2020.
 
-- [XML-muodossa QGISin kuvaustyyli](asemakaavan_kuvaustekniikka.xml) (28.5.2020 versio 1.1)
-- [SLD-kuvaustekniikka](SLD) (16.6.2020 versio 0.1)
+- [XML-muodossa QGISin kuvaustyyli](asemakaavan_kuvaustekniikka.xml) (29.5.2020 versio 1.1)
+- [SLD-kuvaustekniikka](SLD) (4.6.2020 versio 0.1)
 
 - [QML eri tasoille](QML) - tehty testiaineistolle XML:n avulla (1.6.2020)
 - [Testiaineisto GeoPackage-muodossa](asemakaava_testiaineisto.gpkg)
@@ -26,9 +26,18 @@ HUOM! Kuvaustekniikka on tehty uusimmalla QGIS-versiolla (3.10 tai uudempi). Van
 
 ## Ohjeet SLD-kuvaustekniikan käyttöönottoon GeoServer-ohjelmistossa
 
-Asemakaavan kuvaustekniikassa on käytetty standardimuotoista SLD-kuvaustekniikkaa, joten sen pitäisi toimia kaikilla kyseistä standardia tukevilla ohjelmistoilla. Kuvaustyylejä on testattu GeoServerillä, ja ohessa on ohjeet tyylien käyttämiseen siinä.
+Asemakaavan kuvaustekniikassa on käytetty standardimuotoista SLD-kuvaustekniikkaa, joten sen pitäisi toimia kaikilla kyseistä standardia tukevilla ohjelmistoilla. Kuvaustyylejä on testattu GeoServerillä, ja ohessa on ohjeet tyylien käyttämiseen kyseisellä ohjelmistolla.
 
-1. Lataa asemakaavan kuvaustekniikan sisältävät SLD-tiedostot tietokoneellesi. Tyylitiedostot on jaettu neljään eri tiedostoon kaavakohteen tyypin mukaisesti: kaavayksiköt, osa-alueet, viivamaiset kohteet sekä pistemäiset kohteet. 
+HUOM! Oletuksena on, että GeoServerille tuotujen tasojen ominaisuustiedoista löytyy sarake **ak_merk**, joka määrittää kaavakohteen tyypin  MRL:n oppaan numeroinnin mukaisesti, ja jonka perusteella kohteiden tyylit määräytyvät. Käytännössä myös osaan kaavakohteista liittyy datasta määräytyviä arvoja (esim. tontin numero, meluvallin desibeliarvo jne.). Yhteinäisten attribuutti-nimitysten puuttuessa, nämä merkinnät on toteutettu oppaan merkintöjä jäljittelevinä esimerkkimerkintöinä, joskin ohjeet datasta määräytyvien arvojen käyttöön löytyvät alla olevasta luvusta.     
+
+1. Lataa asemakaavan kuvaustekniikan sisältävät SLD-tiedostot tietokoneellesi. Tyylitiedostot on jaettu neljään eri tiedostoon kaavakohteen tyypin mukaisesti: 
+
+- kaavayksiköt (MRL:n oppaan merkinnät 1-81), 
+- osa-alueet (merkinnät 113-125, 127-128, 133-134, 136-138, 140-158, 161-162, 166-172, 174-183, 185-189) 
+- viivamaiset kohteet (82-90, 126, 129-132, 135, 139, 159-160)
+- pistemäiset kohteet (91-112, 163-165, 173, 184)
+
+2. Kirjaudu GeoServerille. Oletuksena on, että visualisoitavat aineistot on jo sinne lisätty. 
 
 ## Ohjeet datan määrittämien visualisointien käyttöön
 
