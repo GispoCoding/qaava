@@ -24,6 +24,12 @@ HUOM! Kuvaustekniikka on tehty uusimmalla QGIS-versiolla (3.10 tai uudempi). Van
 
 <img src="QGIS_tyylien_lisaaminen.png" width="500"/>
 
+## Ohjeet SLD-kuvaustekniikan käyttöönottoon GeoServer-ohjelmistossa
+
+Asemakaavan kuvaustekniikassa on käytetty standardimuotoista SLD-kuvaustekniikkaa, joten sen pitäisi toimia kaikilla kyseistä standardia tukevilla ohjelmistoilla. Kuvaustyylejä on testattu GeoServerillä, ja ohessa on ohjeet tyylien käyttämiseen siinä.
+
+1. Lataa asemakaavan kuvaustekniikan sisältävät SLD-tiedostot tietokoneellesi. Tyylitiedostot on jaettu neljään eri tiedostoon kaavakohteen tyypin mukaisesti: kaavayksiköt, osa-alueet, viivamaiset kohteet sekä pistemäiset kohteet. 
+
 ## Ohjeet datan määrittämien visualisointien käyttöön
 
 Osa tyyleistä vaatii dataa taakseen, kuten esimerkiksi "korttelin numero" tai "rakennuksen julkisivun korkeus". Tähän kirjaamme ohjeet miten oman aineiston tietojen avulla voi määrittää visualisoinnin arvoja. Ohjeet tulossa.
