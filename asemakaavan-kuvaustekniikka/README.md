@@ -1,10 +1,10 @@
 # Asemakaavan kuvaustekniikka
 
 Asemakaavan kuvaustekniikka tuotetaan yhteistyössä QAAVA-kehitysprojektiin osallistuneiden toimijoiden kanssa. 
-Sen on rahoittanut [Kuntaliitto](https://www.kuntaliitto.fi/ajankohtaista/2020/avoin-tyylikirjasto-helpottaa-asemakaavojen-digitalisointia?fbclid=IwAR3d_moQRJR0IxAxzJXxjlo4YtGfzT4ju87H8DTurRdNXtqo7FvnMIFkCUA). Kuvaustekniikka pohjautuu MRL:n asemakaavan visualisointioppaaseen (Ympäristönministeriö, 2003). Kuvaustekniikka tuotetaan QML- ja SLD-muodossa, jotta sitä voidaan käyttää sekä QGISissä että esimerkiksi GeoServerissä. Asemakaavan kuvaustekniikka valmistuu toukokuussa 2020.
+Sen on rahoittanut [Kuntaliitto](https://www.kuntaliitto.fi/ajankohtaista/2020/avoin-tyylikirjasto-helpottaa-asemakaavojen-digitalisointia?fbclid=IwAR3d_moQRJR0IxAxzJXxjlo4YtGfzT4ju87H8DTurRdNXtqo7FvnMIFkCUA). Kuvaustekniikka pohjautuu MRL:n asemakaavan visualisointioppaaseen (Ympäristönministeriö, 2003). Kuvaustekniikka tuotetaan QML- ja SLD-muodossa, jotta sitä voidaan käyttää sekä QGISissä että esimerkiksi GeoServerissä. Asemakaavan kuvaustekniikka QGISille valmistui toukokuussa 2020 ja SLD kesäkuussaa 2020.
 
 - [XML-muodossa QGISin kuvaustyyli](asemakaavan_kuvaustekniikka.xml) (29.5.2020 versio 1.1)
-- [SLD-kuvaustekniikka](SLD) (4.6.2020 versio 0.1)
+- [SLD-kuvaustekniikka](SLD) (16.6.2020 versio 0.1)
 
 - [QML eri tasoille](QML) - tehty testiaineistolle XML:n avulla (1.6.2020)
 - [Testiaineisto GeoPackage-muodossa](asemakaava_testiaineisto.gpkg)
