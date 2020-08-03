@@ -1,0 +1,25 @@
+<svg id="_89" data-name="89" xmlns="http://www.w3.org/2000/svg" width="2550" height="1200" viewBox="0 0 2550 1200">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="Muoto_1" data-name="Muoto 1" class="cls-1" d="M0,950v250H2550V950H0Z"/>
+  <rect id="Muoto_12" data-name="Muoto 12" class="cls-2" x="400" y="750" width="2150" height="200"/>
+  <rect id="Muoto_2" data-name="Muoto 2" x="400" y="800" width="2150" height="100"/>
+  <path id="Muoto_3" data-name="Muoto 3" class="cls-1" d="M400,750H2550V350H500L400,700"/>
+  <path id="Muoto_4" data-name="Muoto 4" class="cls-1" d="M800,183.733L1200,0l400,183.733L1200,350Z"/>
+  <path id="Muoto_5" data-name="Muoto 5" class="cls-3" d="M954,184L1200,76q110.505,54,221,108-110.505,48-221,96Z"/>
+  <path id="Muoto_6" data-name="Muoto 6" class="cls-3" d="M484,700l66-250H750V700H484Z"/>
+  <path id="Muoto_7" data-name="Muoto 7" class="cls-3" d="M800,450V700h400V450H800Z"/>
+  <path id="Muoto_8" data-name="Muoto 8" class="cls-3" d="M1250,450V700h350V450H1250Z"/>
+  <path id="Muoto_9" data-name="Muoto 9" class="cls-3" d="M1650,450V700h350V450H1650Z"/>
+  <path id="Muoto_10" data-name="Muoto 10" class="cls-3" d="M2050,450V700h350V450H2050Z"/>
+  <path id="Muoto_11" data-name="Muoto 11" class="cls-3" d="M2450,450V700h100V450H2450Z"/>
+</svg>
