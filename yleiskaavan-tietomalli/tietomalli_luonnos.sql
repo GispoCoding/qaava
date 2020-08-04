@@ -342,6 +342,20 @@ INSERT INTO koodistot.kaavatyyppi (gid, nimi) VALUES (E'3', E'vaiheyleiskaava');
 -- ddl-end --
 INSERT INTO koodistot.kaavatyyppi (gid, nimi) VALUES (E'4', E'strateginen yleiskaava');
 -- ddl-end --
+INSERT INTO koodistot.kaavatyyppi (gid, nimi) VALUES (E'5', E'maaseutuosayleiskaava');
+-- ddl-end --
+INSERT INTO koodistot.kaavatyyppi (gid, nimi) VALUES (E'6', E'taajamayleiskaava');
+-- ddl-end --
+INSERT INTO koodistot.kaavatyyppi (gid, nimi) VALUES (E'7', E'kyläkaava');
+-- ddl-end --
+INSERT INTO koodistot.kaavatyyppi (gid, nimi) VALUES (E'8', E'harjuosayleiskaava');
+-- ddl-end --
+INSERT INTO koodistot.kaavatyyppi (gid, nimi) VALUES (E'9', E'rantaosayleiskaava');
+-- ddl-end --
+INSERT INTO koodistot.kaavatyyppi (gid, nimi) VALUES (E'10', E'viherkaava');
+-- ddl-end --
+INSERT INTO koodistot.kaavatyyppi (gid, nimi) VALUES (E'11', E'kuntien yhteinen yleiskaava');
+-- ddl-end --
 
 -- object: koodistot.kaavaelementti_tyyppi | type: TABLE --
 -- DROP TABLE IF EXISTS koodistot.kaavaelementti_tyyppi CASCADE;
@@ -1001,6 +1015,28 @@ ON DELETE RESTRICT ON UPDATE CASCADE;
 ALTER TABLE yleiskaava.many_yleiskaava_has_many_teema ADD CONSTRAINT teema_fk FOREIGN KEY (gid_teema)
 REFERENCES koodistot.teema (gid) MATCH FULL
 ON DELETE RESTRICT ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: koodistot.tietomalli_metatiedot | type: TABLE --
+-- DROP TABLE IF EXISTS koodistot.tietomalli_metatiedot CASCADE;
+CREATE TABLE koodistot.tietomalli_metatiedot (
+	gid serial NOT NULL,
+	nimi varchar NOT NULL,
+	versio varchar NOT NULL,
+	CONSTRAINT tietomalli_metatiedot_pk PRIMARY KEY (gid)
+
+);
+-- ddl-end --
+COMMENT ON TABLE koodistot.tietomalli_metatiedot IS E'Tietomallin tiedot';
+-- ddl-end --
+COMMENT ON COLUMN koodistot.tietomalli_metatiedot.nimi IS E'Tietomallin nimi';
+-- ddl-end --
+COMMENT ON COLUMN koodistot.tietomalli_metatiedot.versio IS E'Tietomallin versio';
+-- ddl-end --
+-- ALTER TABLE koodistot.tietomalli_metatiedot OWNER TO postgres;
+-- ddl-end --
+
+INSERT INTO koodistot.tietomalli_metatiedot (gid, nimi, versio) VALUES (E'1', E'yleiskaava', E'0.1.0');
 -- ddl-end --
 
 

@@ -3,7 +3,7 @@
 CAUTION: Do not modify this file unless you know what you are doing.
          Unexpected results may occur if the code is changed deliberately.
 -->
-<dbmodel pgmodeler-ver="0.9.2" last-position="113,687" last-zoom="0.75" max-obj-count="32"
+<dbmodel pgmodeler-ver="0.9.2" last-position="0,0" last-zoom="0.75" max-obj-count="32"
 	 default-owner="postgres">
 <database name="qaavakanta" is-template="false" allow-conns="true">
 </database>
@@ -418,7 +418,14 @@ Vesialue•W•Vesialue]]>
 1•yleiskaava⸣
 2•osayleiskaava⸣
 3•vaiheyleiskaava⸣
-4•strateginen yleiskaava]]>
+4•strateginen yleiskaava⸣
+5•maaseutuosayleiskaava⸣
+6•taajamayleiskaava⸣
+7•kyläkaava⸣
+8•harjuosayleiskaava⸣
+9•rantaosayleiskaava⸣
+10•viherkaava⸣
+11•kuntien yhteinen yleiskaava]]>
 	</initial-data>
 </table>
 
@@ -1057,5 +1064,30 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 		<position x="-5.29441" y="-1.43437"/>
 	</label>
 </relationship>
+
+<table name="tietomalli_metatiedot" layer="0" collapse-mode="2" max-obj-count="3">
+	<schema name="koodistot"/>
+	<role name="postgres"/>
+	<comment><![CDATA[Tietomallin tiedot]]></comment>
+	<position x="440" y="340"/>
+	<column name="gid" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="nimi" not-null="true">
+		<type name="varchar" length="0"/>
+		<comment><![CDATA[Tietomallin nimi]]></comment>
+	</column>
+	<column name="versio" not-null="true">
+		<type name="varchar" length="0"/>
+		<comment><![CDATA[Tietomallin versio]]></comment>
+	</column>
+	<constraint name="tietomalli_metatiedot_pk" type="pk-constr" table="koodistot.tietomalli_metatiedot">
+		<columns names="gid" ref-type="src-columns"/>
+	</constraint>
+	<initial-data>
+<![CDATA[gid•nimi•versio⸣
+1•yleiskaava•0.1.0]]>
+	</initial-data>
+</table>
 
 </dbmodel>
