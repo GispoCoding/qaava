@@ -955,4 +955,52 @@ REFERENCES koodistot.geometria_tyyppi (gid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
 
+-- object: yleiskaava.many_maankayttoalue_has_many_teema | type: TABLE --
+-- DROP TABLE IF EXISTS yleiskaava.many_maankayttoalue_has_many_teema CASCADE;
+CREATE TABLE yleiskaava.many_maankayttoalue_has_many_teema (
+	uuid_maankayttoalue uuid NOT NULL,
+	gid_teema integer NOT NULL,
+	CONSTRAINT many_maankayttoalue_has_many_teema_pk PRIMARY KEY (uuid_maankayttoalue,gid_teema)
+
+);
+-- ddl-end --
+
+-- object: maankayttoalue_fk | type: CONSTRAINT --
+-- ALTER TABLE yleiskaava.many_maankayttoalue_has_many_teema DROP CONSTRAINT IF EXISTS maankayttoalue_fk CASCADE;
+ALTER TABLE yleiskaava.many_maankayttoalue_has_many_teema ADD CONSTRAINT maankayttoalue_fk FOREIGN KEY (uuid_maankayttoalue)
+REFERENCES yleiskaava.maankayttoalue (uuid) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: teema_fk | type: CONSTRAINT --
+-- ALTER TABLE yleiskaava.many_maankayttoalue_has_many_teema DROP CONSTRAINT IF EXISTS teema_fk CASCADE;
+ALTER TABLE yleiskaava.many_maankayttoalue_has_many_teema ADD CONSTRAINT teema_fk FOREIGN KEY (gid_teema)
+REFERENCES koodistot.teema (gid) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: yleiskaava.many_yleiskaava_has_many_teema | type: TABLE --
+-- DROP TABLE IF EXISTS yleiskaava.many_yleiskaava_has_many_teema CASCADE;
+CREATE TABLE yleiskaava.many_yleiskaava_has_many_teema (
+	uuid_yleiskaava uuid NOT NULL,
+	gid_teema integer NOT NULL,
+	CONSTRAINT many_yleiskaava_has_many_teema_pk PRIMARY KEY (uuid_yleiskaava,gid_teema)
+
+);
+-- ddl-end --
+
+-- object: yleiskaava_fk | type: CONSTRAINT --
+-- ALTER TABLE yleiskaava.many_yleiskaava_has_many_teema DROP CONSTRAINT IF EXISTS yleiskaava_fk CASCADE;
+ALTER TABLE yleiskaava.many_yleiskaava_has_many_teema ADD CONSTRAINT yleiskaava_fk FOREIGN KEY (uuid_yleiskaava)
+REFERENCES yleiskaava.yleiskaava (uuid) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: teema_fk | type: CONSTRAINT --
+-- ALTER TABLE yleiskaava.many_yleiskaava_has_many_teema DROP CONSTRAINT IF EXISTS teema_fk CASCADE;
+ALTER TABLE yleiskaava.many_yleiskaava_has_many_teema ADD CONSTRAINT teema_fk FOREIGN KEY (gid_teema)
+REFERENCES koodistot.teema (gid) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE;
+-- ddl-end --
+
 

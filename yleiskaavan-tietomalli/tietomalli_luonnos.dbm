@@ -3,7 +3,7 @@
 CAUTION: Do not modify this file unless you know what you are doing.
          Unexpected results may occur if the code is changed deliberately.
 -->
-<dbmodel pgmodeler-ver="0.9.2" last-position="66,1261" last-zoom="1.2" max-obj-count="30"
+<dbmodel pgmodeler-ver="0.9.2" last-position="113,687" last-zoom="0.75" max-obj-count="32"
 	 default-owner="postgres">
 <database name="qaavakanta" is-template="false" allow-conns="true">
 </database>
@@ -1029,6 +1029,32 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 	 src-required="false" dst-required="false">
 	<label ref-type="name-label">
 		<position x="-0.77543" y="-8.16673"/>
+	</label>
+</relationship>
+
+<relationship name="many_maankayttoalue_has_many_teema" type="relnn" layer="0"
+	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
+	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
+	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
+	 pk-col-pattern="id"
+	 custom-color="#07ba1a"
+	 src-table="yleiskaava.maankayttoalue"
+	 dst-table="koodistot.teema"
+	 src-required="false" dst-required="false"
+	 table-name="many_maankayttoalue_has_many_teema"/>
+
+<relationship name="many_yleiskaava_has_many_teema" type="relnn" layer="0"
+	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
+	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
+	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
+	 pk-col-pattern="id"
+	 custom-color="#afdf2b"
+	 src-table="yleiskaava.yleiskaava"
+	 dst-table="koodistot.teema"
+	 src-required="false" dst-required="false"
+	 table-name="many_yleiskaava_has_many_teema">
+	<label ref-type="name-label">
+		<position x="-5.29441" y="-1.43437"/>
 	</label>
 </relationship>
 
