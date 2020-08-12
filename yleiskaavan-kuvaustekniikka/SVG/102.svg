@@ -1,0 +1,13 @@
+<svg id="_102" data-name="102" xmlns="http://www.w3.org/2000/svg" width="1500" height="520" viewBox="0 0 1500 520">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Muoto_30" data-name="Muoto 30" class="cls-1" d="M0,140H260V380H0V140Zm1220,0V380h280V140H1220Z"/>
+  <path id="Muoto_31" data-name="Muoto 31" class="cls-1" d="M220,380v60h40V380H220Zm0-240V80h40v60H220ZM1220,80h40v60h-40V80Zm0,300h40v60h-40V380Z"/>
+  <path id="Muoto_32" data-name="Muoto 32" class="cls-1" d="M220,440h40l-40,80H180Zm0-360h40L220,0H180Zm1000,0,40-80h40l-40,80h-40Zm0,360h40l40,80h-40Z"/>
+  <path id="Muoto_33" data-name="Muoto 33" class="cls-1" d="M260,140H440v40H260V140Zm0,200H440v40H260V340ZM560,140H740v40H560V140Zm300,0h200v40H860V140Zm340,0h20v40h-20V140Zm0,200h20v40h-20V340Zm-140,0v40H860V340h200Zm-320,0v40H560V340H740Z"/>
+</svg>
