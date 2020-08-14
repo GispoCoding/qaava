@@ -26,15 +26,15 @@ Tavoitteena on tuottaa QGISin ja PostGISin avulla kaavoittajan työkaluja, joill
 
 ### Toteutetaan hankkeessa
 
-- Kansallisesta kaavan tietomallista avoin referenssitoteutus [asema](asemakaavan-tietomalli)- ja yleiskaavoille (fyysinen tietomalli PostGIS-ympäristössä), huomioidaan mm. että kaavakohteilla globaalisti uniikki id ja versionhallinta ja kohteiden elinkaari (muutostietojen tallennus)
-- QGIS-työkalu PostGIS-tietokannan alustukseen kaavoituksen käyttöön
+- Kansallisesta kaavan tietomallista avoin referenssitoteutus [asema](asemakaavan-tietomalli)- ja [yleiskaavoille](yleiskaavan-tietomalli) (fyysinen tietomalli PostGIS-ympäristössä), huomioidaan mm. että kaavakohteilla globaalisti uniikki id ja versionhallinta ja kohteiden elinkaari (muutostietojen tallennus)
+- [QGIS-työkalu PostGIS-tietokannan alustukseen kaavoituksen käyttöön](qaava_alustus_ohjeet.md)
 - QGIS-työkalut kaavoituksen käyttöön (kaavan perustietojen syöttö, kaavakohteen lisäys, kaavakohteen muuttaminen, kaavamääräyksen linkitys, kaavatietojen tuominen muista lähteistä, tietojen suodatus, kuten kaavamääräysluettelo suoraan taulukkomuotoon halutuilla hakukriteereillä)
 - [Yleinen asemakaavan kuvaustyyli (SLD/QML) avoimesti jaossa](/asemakaavan-kuvaustekniikka)
+- [Yleinen yleiskaavan kuvaustyyli (SLD/QML) avoimesti jaossa](/yleiskaavan-kuvaustekniikka)
 - Ohjeistukset
 
 ### Toteutetaan hankkeessa, jos rahoitus löytyy (jos haluat rahoittaa näitä osioita tai kontribuoida näiden toteutukseen, ota yhteyttä sanna@gispo.fi!)
 - QGIS-profiili kaavoittajalle (valmiit tulostepohjat ja selitteet, soveltuvat kaavoittajan työkalut, yleisesti käytössä olevat kansalliset rajapinnat linkitettynä työtilaan)
-- Yleinen yleiskaavan kuvaustyyli (SLD/QML) avoimesti jaossa
 - CAD-tyyppisiä työkalujen kehitys ja paketointi kaavoituskäyttöön
 - Yhteys kuntien muihin rekisterijärjestelmiin
 
