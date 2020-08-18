@@ -1,0 +1,22 @@
+<svg id="_154" data-name="154" xmlns="http://www.w3.org/2000/svg" width="3000" height="1000" viewBox="0 0 3000 1000">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #000;
+      }
+
+      .cls-1 {
+        stroke-width: 40px;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        stroke-width: 20px;
+      }
+    </style>
+  </defs>
+  <path id="Muoto_1" data-name="Muoto 1" class="cls-1" d="M0,500H1000"/>
+  <path id="Muoto_2" data-name="Muoto 2" class="cls-1" d="M2000,500H3000"/>
+  <circle id="Soikio_1" data-name="Soikio 1" class="cls-2" cx="1500" cy="500" r="500"/>
+</svg>
