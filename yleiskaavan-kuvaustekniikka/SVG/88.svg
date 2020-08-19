@@ -6,20 +6,20 @@
       }
     </style>
   </defs>
-  <rect id="Suorakulmio_10" data-name="Suorakulmio 10" class="cls-1" width="2501" height="401"/>
-  <rect id="Suorakulmio_1" data-name="Suorakulmio 1" y="400" width="2501" height="251"/>
-  <rect id="Suorakulmio_2" data-name="Suorakulmio 2" x="350" width="2151" height="351"/>
-  <rect id="Suorakulmio_3" data-name="Suorakulmio 3" width="301" height="351"/>
-  <rect id="Suorakulmio_4" data-name="Suorakulmio 4" class="cls-1" x="50" y="50" width="201" height="251"/>
-  <rect id="Suorakulmio_5" data-name="Suorakulmio 5" class="cls-1" x="400" y="50" width="351" height="251"/>
-  <rect id="Suorakulmio_6" data-name="Suorakulmio 6" class="cls-1" x="800" y="50" width="351" height="251"/>
-  <rect id="Suorakulmio_7" data-name="Suorakulmio 7" class="cls-1" x="1200" y="50" width="351" height="251"/>
-  <rect id="Suorakulmio_8" data-name="Suorakulmio 8" class="cls-1" x="1600" y="50" width="401" height="251"/>
-  <rect id="Suorakulmio_9" data-name="Suorakulmio 9" class="cls-1" x="2050" y="50" width="401" height="251"/>
-  <circle id="Soikio_1" data-name="Soikio 1" class="cls-1" cx="426.5" cy="675.5" r="175.5"/>
-  <circle id="Soikio_1-2" data-name="Soikio 1" class="cls-1" cx="1876.5" cy="675.5" r="175.5"/>
+  <rect id="Suorakulmio_10" data-name="Suorakulmio 10" class="cls-1" width="2501" height="401" fill="param(fill) #fff" stroke="param(outline) #000" stroke-width="param(outline-width) 1"/>
+  <rect id="Suorakulmio_1" data-name="Suorakulmio 1" y="400" width="2501" height="251" />
+  <rect id="Suorakulmio_2" data-name="Suorakulmio 2" x="350" width="2151" height="351" />
+  <rect id="Suorakulmio_3" data-name="Suorakulmio 3" width="301" height="351" />
+  <rect id="Suorakulmio_4" data-name="Suorakulmio 4" class="cls-1" x="50" y="50" width="201" height="251" fill="param(fill) #fff" stroke="param(outline) #000" stroke-width="param(outline-width) 1"/>
+  <rect id="Suorakulmio_5" data-name="Suorakulmio 5" class="cls-1" x="400" y="50" width="351" height="251" fill="param(fill) #fff" stroke="param(outline) #000" stroke-width="param(outline-width) 1" />
+  <rect id="Suorakulmio_6" data-name="Suorakulmio 6" class="cls-1" x="800" y="50" width="351" height="251" fill="param(fill) #fff" stroke="param(outline) #000" stroke-width="param(outline-width) 1"/>
+  <rect id="Suorakulmio_7" data-name="Suorakulmio 7" class="cls-1" x="1200" y="50" width="351" height="251" fill="param(fill) #fff" stroke="param(outline) #000" stroke-width="param(outline-width) 1"/>
+  <rect id="Suorakulmio_8" data-name="Suorakulmio 8" class="cls-1" x="1600" y="50" width="401" height="251" fill="param(fill) #fff" stroke="param(outline) #000" stroke-width="param(outline-width) 1"/>
+  <rect id="Suorakulmio_9" data-name="Suorakulmio 9" class="cls-1" x="2050" y="50" width="401" height="251" fill="param(fill) #fff" stroke="param(outline) #000" stroke-width="param(outline-width) 1"/>
+  <circle id="Soikio_1" data-name="Soikio 1" class="cls-1" cx="426.5" cy="675.5" r="175.5" fill="param(fill) #fff" stroke="param(outline) #000" stroke-width="param(outline-width) 1" />
+  <circle id="Soikio_1-2" data-name="Soikio 1" class="cls-1" cx="1876.5" cy="675.5" r="175.5" fill="param(fill) #fff" stroke="param(outline) #000" stroke-width="param(outline-width) 1"/>
   <circle id="Soikio_2" data-name="Soikio 2" cx="426.5" cy="675.5" r="145.5"/>
   <circle id="Soikio_2-2" data-name="Soikio 2" cx="1876.5" cy="675.5" r="145.5"/>
-  <circle id="Soikio_1-3" data-name="Soikio 1" class="cls-1" cx="426.5" cy="675.5" r="95.5"/>
-  <circle id="Soikio_1-4" data-name="Soikio 1" class="cls-1" cx="1876.5" cy="675.5" r="95.5"/>
+  <circle id="Soikio_1-3" data-name="Soikio 1" class="cls-1" cx="426.5" cy="675.5" r="95.5" fill="param(fill) #fff" stroke="param(outline) #000" stroke-width="param(outline-width) 1"/>
+  <circle id="Soikio_1-4" data-name="Soikio 1" class="cls-1" cx="1876.5" cy="675.5" r="95.5" fill="param(fill) #fff" stroke="param(outline) #000" stroke-width="param(outline-width) 1"/>
 </svg>
