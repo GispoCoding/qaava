@@ -7,7 +7,7 @@ ja -määräykset-oppaaseen (Ympäristönministeriö, 2003). Kuvaustekniikka tuo
 - XML-muodossa QGISin kuvaustyyli (versio 1.0, 13.8.2020) 
 - SLD-kuvaustekniikka - Tulossa 
 
-<img src="kuva.png" width="500"/>
+<img src="yleiskaava.png" width="500"/>
 
 ## Ohjeet kuvaustekniikan käyttöönottoon QGISillä
 
