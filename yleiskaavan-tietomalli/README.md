@@ -3,15 +3,16 @@
 Yleiskaavan tietomalli on tuotettu yhteistyössä QAAVA-kehitysprojektiin osallistuneiden toimijoiden kanssa. Työ alkaa kesäkuussa 2020. Tietomallia on kehitetty yhdessä Espoon, Joensuun ja Seinäjoen sekä Gispo Oy:n kanssa. Kaikki kommentit otetaan ilolla vastaan!
 
 Kehitysversiot:
-- Yleiskaavan tietomalli - versio 1.0, dbm] TBD
-- Yleiskaavan tietomalli - versio 1.0, sql] TBD
+- [Yleiskaavan tietomalli - versio 0.1, dbm](tietomalli_luonnos.dbm)
+- [Yleiskaavan tietomalli - versio 0.1, sql](tietomalli_luonnos.sql)
 
 ## Tietomallin sisältö
 
 Asemakaavan tietomalliin verrattuna yleiskaavan tietomalli on hieman erilainen. Eroavaisuuksia löytyy seuraavista osioista:
-- koodilistat (mm. numeeriset arvot, maankäyttötyypit ja muut kohdetyypit, yleiskaavatyypit)
+- koodilistat (mm. numeeriset arvot, maankäyttötyypit ja muut kohdetyypit (MRL:n 2003 oppaan perusteella, yleiskaavatyypit)
 - Kohteilla ja kaavalla voi olla teema, esim. "liikenne" tai "viherkaava". Jokainen kohde voi liittyä useampaan teemaan.
-- Geometriakohteet voidaan jakaa yleiskaavan ulkorajaan, maankäyttöalueisiin, osa-alueisiin, viivoihin ja pisteisiin
+- Geometriakohteet voidaan jakaa yleiskaavan ulkorajaan, maankäyttöalueisiin sekä kaavaelementteihin, jotka koostuvat osa-alueista, viivoista ja pisteistä
+- Kaavelementin kaavaelementtimerkinnät sisältää geometria-aputaulun, jonka avulla esim. pistemäiset kaavamerkintäkohteet voi erotella muista
 
 Emme ole vielä havainneet rakenteellisia tarpeita eritellä strategista tai "grid"-kaavaa "normaalista" yleiskaavasta. Jos selkeitä tarpeita ilmenee, otetaan tämä huomioon tietomalissa. Lähdetietojen ja numeeristen arvojen perusteella esimerkiksi kiinteistö- tai väestötiedot voidaan liittää kaavakohteeseen. 
 

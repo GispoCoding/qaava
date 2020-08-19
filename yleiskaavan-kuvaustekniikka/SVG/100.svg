@@ -1,0 +1,17 @@
+<svg id="_100" data-name="100" xmlns="http://www.w3.org/2000/svg" width="3200" height="1950" viewBox="0 0 3200 1950">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="Muoto_21" data-name="Muoto 21" class="cls-1" d="M0,1050H1150V700h100V1850H1150V1400H0V1050Z"/>
+  <path id="Muoto_22" data-name="Muoto 22" class="cls-1" d="M1400,0V1950c141.47-2.5,277.6-35.95,400-100,168.51-88.17,340.77-238.79,400-450,32.08-114.38,31.57-236.45,0-350-56.64-203.7-208.57-363.295-400-450V0H1400Z"/>
+  <path id="Muoto_23" data-name="Muoto 23" class="cls-1" d="M3200,1050v350H2200V1050H3200Z"/>
+  <path id="Muoto_24" data-name="Muoto 24" class="cls-2" d="M1500,600c107.63,12.362,209.29,46.038,300,100,160.27,95.343,257.72,217.437,300,350a578.485,578.485,0,0,1,0,350c-42.28,132.56-139.73,254.66-300,350-90.71,53.96-192.37,87.64-300,100V600Z"/>
+</svg>

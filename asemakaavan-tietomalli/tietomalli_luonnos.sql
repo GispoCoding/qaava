@@ -1,5 +1,5 @@
 -- Database generated with pgModeler (PostgreSQL Database Modeler).
--- pgModeler  version: 0.9.3-alpha
+-- pgModeler  version: 0.9.2
 -- PostgreSQL version: 11.0
 -- Project Site: pgmodeler.io
 -- Model Author: ---
@@ -53,22 +53,22 @@ CREATE TABLE asemakaavat.asemakaava (
 	kaavatunnus varchar,
 	laatija varchar,
 	vahvistaja varchar,
-	gid_kieli integer,
-	gid_kaavatyyppi integer,
 	pinta_ala real,
-	gid_vaihetieto integer,
 	luomispvm timestamp DEFAULT now(),
 	poistamispvm timestamp,
 	voimaantulopvm date,
 	kumoamispvm date,
-	gid_kuvaustyyli integer,
 	gid_taustakartta integer,
+	gid_kieli integer,
+	gid_kuvaustyyli integer,
+	gid_vaihetieto integer,
+	gid_kaavatyyppi integer,
 	gid_dokumentti integer,
 	CONSTRAINT ak_uuid_pk PRIMARY KEY (uuid)
 
 );
 -- ddl-end --
-COMMENT ON TABLE asemakaavat.asemakaava IS 'Kaavoituksen lopputuloksena syntyvä maankäyttösuunnitelma';
+COMMENT ON TABLE asemakaavat.asemakaava IS E'Kaavoituksen lopputuloksena syntyvä maankäyttösuunnitelma';
 -- ddl-end --
 
 -- object: asemakaavat.kaavaelementti | type: TABLE --
@@ -87,7 +87,7 @@ CREATE TABLE asemakaavat.kaavaelementti (
 
 );
 -- ddl-end --
-COMMENT ON TABLE asemakaavat.kaavaelementti IS 'yhden tai useamman käyttötarkoitusalueen osa. Kaavaelementti tarkentaa käyttötarkoitusalueen maankäyttöä. Esim. melurajoitteet yms.';
+COMMENT ON TABLE asemakaavat.kaavaelementti IS E'yhden tai useamman käyttötarkoitusalueen osa. Kaavaelementti tarkentaa käyttötarkoitusalueen maankäyttöä. Esim. melurajoitteet yms.';
 -- ddl-end --
 
 -- object: asemakaavat.maankayttoalue | type: TABLE --
@@ -100,15 +100,13 @@ CREATE TABLE asemakaavat.maankayttoalue (
 	pinta_ala real,
 	luontipvm timestamp DEFAULT now(),
 	periytynytkohde boolean,
-	gid_maankayttoluokka integer,
 	uuid_asemakaava uuid,
+	gid_maankayttoluokka integer,
 	CONSTRAINT kayttotarkoitusalue_pk PRIMARY KEY (uuid)
 
 );
 -- ddl-end --
-COMMENT ON TABLE asemakaavat.maankayttoalue IS 'asemakaavan mukainen tiettyyn käyttöön varattu alue
-
-Käyttötarkoitusalueiden pinta-ala täyttää asemakaava-alueen täysin. Käyttötarkoitusalue voi jakaantua yhteen tai useampaan kaavayksikköön. Käyttötarkoitusalueet voivat olla kortteleita, yleisiä alueita tai niiden osia tai muita yhtenäisiä alueita';
+COMMENT ON TABLE asemakaavat.maankayttoalue IS E'asemakaavan mukainen tiettyyn käyttöön varattu alue\n\nKäyttötarkoitusalueiden pinta-ala täyttää asemakaava-alueen täysin. Käyttötarkoitusalue voi jakaantua yhteen tai useampaan kaavayksikköön. Käyttötarkoitusalueet voivat olla kortteleita, yleisiä alueita tai niiden osia tai muita yhtenäisiä alueita';
 -- ddl-end --
 
 -- object: asemakaavat.osa_alue | type: TABLE --
@@ -126,7 +124,7 @@ CREATE TABLE asemakaavat.osa_alue (
 
 );
 -- ddl-end --
-COMMENT ON TABLE asemakaavat.osa_alue IS 'Asemakaavan pienin tiettyyn käyttötarkoitukseen varattu yksikkö';
+COMMENT ON TABLE asemakaavat.osa_alue IS E'Asemakaavan pienin tiettyyn käyttötarkoitukseen varattu yksikkö';
 -- ddl-end --
 
 -- object: koodistot.kaavamaarays | type: TABLE --
@@ -137,21 +135,14 @@ CREATE TABLE koodistot.kaavamaarays (
 	otsikko varchar,
 	maaraysteksti varchar,
 	uuid_asemakaava uuid,
+	uuid_maankayttoalue uuid,
 	uuid_kaavaelementti uuid,
 	uuid_osa_alue uuid,
-	uuid_maankayttoalue uuid,
 	CONSTRAINT kaavakohtainen_maarays_pk PRIMARY KEY (uuid)
 
 );
 -- ddl-end --
-COMMENT ON TABLE koodistot.kaavamaarays IS 'kaavaan sisältyvä sanallinen määräys, joka on juridisesti sitova kaavan toimeenpanossa
-huomautus.
-
-Kaavamääräyksellä ja kaavamerkinnöillä yksilöidään maa-alueiden rakentaminen ja käyttö eri
-tarkoituksiin.
-
-Asemakaavamääräyksiä voidaan antaa asemakaavaa laadittaessa. Asemakaavamääräykset
-voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoittamista.';
+COMMENT ON TABLE koodistot.kaavamaarays IS E'kaavaan sisältyvä sanallinen määräys, joka on juridisesti sitova kaavan toimeenpanossa\nhuomautus.\n\nKaavamääräyksellä ja kaavamerkinnöillä yksilöidään maa-alueiden rakentaminen ja käyttö eri\ntarkoituksiin.\n\nAsemakaavamääräyksiä voidaan antaa asemakaavaa laadittaessa. Asemakaavamääräykset\nvoivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoittamista.';
 -- ddl-end --
 
 -- object: koodistot.kuvaustyyli | type: TABLE --
@@ -164,7 +155,7 @@ CREATE TABLE koodistot.kuvaustyyli (
 
 );
 -- ddl-end --
-COMMENT ON TABLE koodistot.kuvaustyyli IS 'kaavaan sisältyvä graafinen merkki, merkintä tai merkkien yhdistelmä, joka on oikeudellisesti sitova kaavan toimeenpanossa';
+COMMENT ON TABLE koodistot.kuvaustyyli IS E'kaavaan sisältyvä graafinen merkki, merkintä tai merkkien yhdistelmä, joka on oikeudellisesti sitova kaavan toimeenpanossa';
 -- ddl-end --
 
 -- object: kaavan_lisatiedot.taustakartta | type: TABLE --
@@ -377,9 +368,9 @@ INSERT INTO koodistot.maankayttoluokka (paaluokka, koodi, nimike) VALUES (E'Vesi
 -- DROP TABLE IF EXISTS kaavan_lisatiedot.dokumentti CASCADE;
 CREATE TABLE kaavan_lisatiedot.dokumentti (
 	gid serial NOT NULL,
+	uri varchar,
 	gid_kieli integer,
 	gid_dokumenttityyppi integer,
-	uri varchar,
 	CONSTRAINT dokumentti_pk PRIMARY KEY (gid)
 
 );
@@ -418,8 +409,8 @@ INSERT INTO koodistot.kaavatyyppi (gid, nimi) VALUES (E'5', E'Vaiheranta-asemaka
 CREATE TABLE koodistot.kaavaelementti_tyyppi (
 	gid serial NOT NULL,
 	nimi varchar,
-	gid_kuvaustyyli integer,
 	gid_hsrcl integer,
+	gid_kuvaustyyli integer,
 	CONSTRAINT kaavaelementti_tyyppi_pk PRIMARY KEY (gid)
 
 );
@@ -752,7 +743,7 @@ CREATE TABLE koodistot.vaihetieto (
 
 );
 -- ddl-end --
-COMMENT ON TABLE koodistot.vaihetieto IS 'Kaavoituksen vaihetieto, jota käytetään kaavoituksen etenemisen yhteydessä.';
+COMMENT ON TABLE koodistot.vaihetieto IS E'Kaavoituksen vaihetieto, jota käytetään kaavoituksen etenemisen yhteydessä.';
 -- ddl-end --
 
 INSERT INTO koodistot.vaihetieto (gid, nimi, kuvaus) VALUES (E'1', E'valmisteluvaihe', DEFAULT);
@@ -1030,6 +1021,28 @@ ON DELETE RESTRICT ON UPDATE CASCADE;
 ALTER TABLE asemakaavat.many_kaavaelementti_has_many_numeerinen_lisatieto ADD CONSTRAINT numeerinen_lisatieto_fk FOREIGN KEY (gid_numeerinen_lisatieto)
 REFERENCES kaavan_lisatiedot.numeerinen_lisatieto (gid) MATCH FULL
 ON DELETE RESTRICT ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: koodistot.tietomalli_metatiedot | type: TABLE --
+-- DROP TABLE IF EXISTS koodistot.tietomalli_metatiedot CASCADE;
+CREATE TABLE koodistot.tietomalli_metatiedot (
+	gid serial NOT NULL,
+	nimi varchar NOT NULL,
+	versio varchar NOT NULL,
+	CONSTRAINT tietomalli_metatiedot_pk PRIMARY KEY (gid)
+
+);
+-- ddl-end --
+COMMENT ON TABLE koodistot.tietomalli_metatiedot IS E'Tietomallin tiedot';
+-- ddl-end --
+COMMENT ON COLUMN koodistot.tietomalli_metatiedot.nimi IS E'Tietomallin nimi';
+-- ddl-end --
+COMMENT ON COLUMN koodistot.tietomalli_metatiedot.versio IS E'Tietomallin versio';
+-- ddl-end --
+-- ALTER TABLE koodistot.tietomalli_metatiedot OWNER TO postgres;
+-- ddl-end --
+
+INSERT INTO koodistot.tietomalli_metatiedot (gid, nimi, versio) VALUES (E'1', E'asemakaava', E'0.1.0');
 -- ddl-end --
 
 
