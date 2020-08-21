@@ -4,7 +4,7 @@ Yleiskaavan kuvaustekniikka tuotetaan yhteistyössä QAAVA-kehitysprojektiin osa
 Sen on rahoittanut [Kuntaliitto](https://www.kuntaliitto.fi/ajankohtaista/2020/avoin-tyylikirjasto-helpottaa-asemakaavojen-digitalisointia?fbclid=IwAR3d_moQRJR0IxAxzJXxjlo4YtGfzT4ju87H8DTurRdNXtqo7FvnMIFkCUA). Kuvaustekniikka pohjautuu MRL:n Yleiskaavakaavamerkinnät
 ja -määräykset-oppaaseen (Ympäristönministeriö, 2003). Kuvaustekniikka tuotetaan QML- ja SLD-muodossa, jotta sitä voidaan käyttää sekä QGISissä että esimerkiksi GeoServerissä. Yleiskaavan kuvaustekniikka valmistuu elokuussa 2020.
 
-- [XML-muodossa QGISin kuvaustyyli (versio 1.0, 13.8.2020)](yleiskaavan_kuvaustekniikka.xml)
+- [XML-muodossa QGISin kuvaustyyli (versio 1.1, 21.8.2020)](yleiskaavan_kuvaustekniikka.xml)
 - [SLD-kuvaustekniikka](SLD)
 
 <img src="yleiskaava.png" width="500"/>
@@ -15,11 +15,11 @@ HUOM! Kuvaustekniikka on tehty uusimmalla QGIS-versiolla (3.10 tai uudempi). Van
 
 1. Lataa yleiskaavan  kuvaustekniikan sisältävä XML-tiedosto tietokoneellesi ja avaa QGIS. Mene **Asetukset > Tyylien hallinta** niin saat auki **Tyylien hallinta -ikkunan**. Klikkaa ikkunan vasemmasta alakulmasta **Tuo/Vie > Import Item(s)** ja valitse tuotavaksi tiedostoksi lataamasi XML-tiedosto. Klikkaa **Valitse kaikki** ja sitten **Tuo** niin saat kuvaustekniikan QGISiin.
 
-<img src="QGIS_tyylien_tuonti.png" width="500"/>
+<img src="/asemakaavan-kuvaustekniikka/QGIS_tyylien_tuonti.png" width="500"/>
 
 2. Käytä omaa aineistoa ja luokittele aineistosi QGISin **Kuvaustekniikka-paneelissa** (saat sen näkyviin menemällä **Näytä > Paneelit > Kuvaustekniikka**). Määrittele haluamallesi kohteille sopivat tyylit. Muista, että kuvaustekniikka koostuu polygoneista, viivoista ja pisteistä. Pistemäiset tyylit **eivät** näy polygoneille ja toisinpäin.
 
-<img src="QGIS_tyylien_lisaaminen.png" width="500"/>
+<img src="/asemakaavan-kuvaustekniikka/QGIS_tyylien_lisaaminen.png" width="500"/>
 
 ## Ohjeet SLD-kuvaustekniikan käyttöönottoon GeoServer-ohjelmistossa
 
@@ -38,7 +38,7 @@ HUOM! Oletuksena on, että GeoServerille tuotujen tasojen ominaisuustiedoista l�
 
 3. Ladatun tyylin voi asettaa oletustyyliksi halutulle tasolle **Publishing**-välilehdeltä ja laittamalla kyseiselle tasolle ruksin **Default**-kohtaan. Tämän valinnan voi tehdä myös **Data**-valikosta kohdasta **Layers** ja valitsemalla sieltä halutun tason **Publishing**-välilehdeltä kohdasta **Default Style** ladattu tyyli.
 
-<img src="geoserver_new_style_screenshot.PNG" width="500"/>
+<img src="/asemakaavan-kuvaustekniikka/geoserver_new_style_screenshot.PNG" width="500"/>
 
 
 ### Datan määrittämät visualisoinnit SLD:ssä
