@@ -6,6 +6,401 @@
       <se:Name>Yleiskaava_viivat</se:Name>
       <se:FeatureTypeStyle>
 	  
+	  <se:Rule>
+         <se:Name>MRL_yk_1</se:Name>
+		  <!-- <Title>MRL:n oppaan yleiskaavamerkinta nro 1</Title> -->
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>yk_merk</ogc:PropertyName>
+				<ogc:Literal>1</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+           <se:LineSymbolizer>
+             <se:Stroke>
+               <se:SvgParameter name="stroke">#e2c096</se:SvgParameter>
+               <se:SvgParameter name="stroke-width">12</se:SvgParameter>
+             </se:Stroke>
+           </se:LineSymbolizer>
+           <se:PointSymbolizer>
+             <se:Geometry>
+               <ogc:Function name="endPoint">
+                  <ogc:PropertyName>the_geom</ogc:PropertyName>
+               </ogc:Function>
+             </se:Geometry>
+             <se:Graphic>
+                <se:Mark>
+                  <se:WellKnownName>shape://carrow</se:WellKnownName>
+                    <se:Fill>
+                      <se:SvgParameter name="fill">#e2c096</se:SvgParameter>
+                      <se:SvgParameter name="fill-opacity">1.0</se:SvgParameter>
+                    </se:Fill>
+                    <se:Stroke>
+                      <se:SvgParameter name="stroke">#e2c096</se:SvgParameter>
+                      <se:SvgParameter name="stroke-width">2</se:SvgParameter>
+                    </se:Stroke>
+                    </se:Mark>
+                    <se:Size>50</se:Size>
+                    <se:Rotation>
+                       <ogc:Function name="endAngle">
+                          <ogc:PropertyName>the_geom</ogc:PropertyName>
+                       </ogc:Function>
+                    </se:Rotation>
+             </se:Graphic>
+          </se:PointSymbolizer>
+      </se:Rule>
+	  
+	  <se:Rule>
+        <se:Name>MRL_yk_4</se:Name>
+		  <!-- <Title>MRL:n oppaan yleiskaavamerkinta nro 4</Title> -->
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>yk_merk</ogc:PropertyName>
+				<ogc:Literal>4</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+          <se:LineSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">40</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">butt</se:SvgParameter>
+              <se:SvgParameter name="stroke-dasharray">100 20 </se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+      </se:Rule>
+	  
+	  <se:Rule>
+          <se:Name>MRL_yk_5</se:Name>
+		  <!-- <Title>MRL:n oppaan yleiskaavamerkinta nro 5</Title> -->
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>yk_merk</ogc:PropertyName>
+				<ogc:Literal>5</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+                    <se:LineSymbolizer>
+                        <se:Stroke>
+                            <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                            <se:SvgParameter name="stroke-width">5</se:SvgParameter>
+                            <se:SvgParameter name="stroke-dasharray">10 3</se:SvgParameter>
+                        </se:Stroke>
+                    </se:LineSymbolizer>
+                   <se:PointSymbolizer>
+                        <se:Geometry>
+                            <ogc:Function name="startPoint">
+                                <ogc:PropertyName>the_geom</ogc:PropertyName>
+                            </ogc:Function>
+                        </se:Geometry>
+                        <se:Graphic>
+                            <se:Mark>
+                                <se:WellKnownName>shape://carrow</se:WellKnownName>
+                                <se:Fill>
+                                <se:SvgParameter name="fill">#000000</se:SvgParameter>
+                                <se:SvgParameter name="fill-opacity">1.0</se:SvgParameter>
+                                </se:Fill>
+                                <se:Stroke>
+                                    <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                                    <se:SvgParameter name="stroke-width">2</se:SvgParameter>
+                                </se:Stroke>
+                            </se:Mark>
+                            <se:Size>30</se:Size>
+                            <se:Rotation>
+                              <ogc:Add>
+                                <ogc:Function name="startAngle">
+                                    <ogc:PropertyName>the_geom</ogc:PropertyName>
+                                </ogc:Function>
+                                <ogc:Literal>180.0</ogc:Literal>
+                              </ogc:Add>
+                            </se:Rotation>
+                        </se:Graphic>
+                    </se:PointSymbolizer>
+                    <se:PointSymbolizer>
+                        <se:Geometry>
+                            <ogc:Function name="endPoint">
+                                <ogc:PropertyName>the_geom</ogc:PropertyName>
+                            </ogc:Function>
+                        </se:Geometry>
+                        <se:Graphic>
+                            <se:Mark>
+                                <se:WellKnownName>shape://carrow</se:WellKnownName>
+                                <se:Fill>
+                                <se:SvgParameter name="fill">#000000</se:SvgParameter>
+                                <se:SvgParameter name="fill-opacity">1.0</se:SvgParameter>
+                                </se:Fill>
+                                <se:Stroke>
+                                    <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                                    <se:SvgParameter name="stroke-width">2</se:SvgParameter>
+                                   
+                                </se:Stroke>
+                            </se:Mark>
+                            <se:Size>30</se:Size>
+                            <se:Rotation>
+                                <ogc:Function name="endAngle">
+                                    <ogc:PropertyName>the_geom</ogc:PropertyName>
+                                </ogc:Function>
+                            </se:Rotation>
+                        </se:Graphic>
+                    </se:PointSymbolizer>
+        </se:Rule>
+		
+		<se:Rule>
+          <se:Name>MRL_yk_6</se:Name>
+		  <!-- <Title>MRL:n oppaan yleiskaavamerkinta nro 6</Title> -->
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>yk_merk</ogc:PropertyName>
+				<ogc:Literal>6</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+                    <se:LineSymbolizer>
+                        <se:Stroke>
+                            <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                            <se:SvgParameter name="stroke-width">5</se:SvgParameter>
+                            <se:SvgParameter name="stroke-dasharray">10 3</se:SvgParameter>
+                        </se:Stroke>
+                    </se:LineSymbolizer>
+                    <se:PointSymbolizer>
+                        <se:Geometry>
+                            <ogc:Function name="startPoint">
+                                <ogc:PropertyName>the_geom</ogc:PropertyName>
+                            </ogc:Function>
+                        </se:Geometry>
+                        <se:Graphic>
+                            <se:Mark>
+                                <se:WellKnownName>shape://carrow</se:WellKnownName>
+                                <se:Fill>
+                                <se:SvgParameter name="fill">#000000</se:SvgParameter>
+                                <se:SvgParameter name="fill-opacity">1.0</se:SvgParameter>
+                                </se:Fill>
+                                <se:Stroke>
+                                    <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                                    <se:SvgParameter name="stroke-width">2</se:SvgParameter>
+                                </se:Stroke>
+                            </se:Mark>
+                            <se:Size>30</se:Size>
+                            <se:Rotation>
+                              <ogc:Add>
+                                <ogc:Function name="startAngle">
+                                    <ogc:PropertyName>the_geom</ogc:PropertyName>
+                                </ogc:Function>
+                                <ogc:Literal>180.0</ogc:Literal>
+                              </ogc:Add>
+                            </se:Rotation>
+                        </se:Graphic>
+                    </se:PointSymbolizer>
+                    <se:PointSymbolizer>
+                        <se:Geometry>
+                            <ogc:Function name="endPoint">
+                                <ogc:PropertyName>the_geom</ogc:PropertyName>
+                            </ogc:Function>
+                        </se:Geometry>
+                        <se:Graphic>
+                            <se:Mark>
+                                <se:WellKnownName>shape://carrow</se:WellKnownName>
+                                <se:Fill>
+                                <se:SvgParameter name="fill">#000000</se:SvgParameter>
+                                <se:SvgParameter name="fill-opacity">1.0</se:SvgParameter>
+                                </se:Fill>
+                                <se:Stroke>
+                                    <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                                    <se:SvgParameter name="stroke-width">2</se:SvgParameter>
+                                </se:Stroke>
+                            </se:Mark>
+                            <se:Size>30</se:Size>
+                            <se:Rotation>
+                                <ogc:Function name="endAngle">
+                                    <ogc:PropertyName>the_geom</ogc:PropertyName>
+                                </ogc:Function>
+                            </se:Rotation>
+                        </se:Graphic>
+                    </se:PointSymbolizer>
+                  <se:TextSymbolizer>
+         			<se:Label>jl</se:Label>
+                    <se:Font>
+						<se:SvgParameter name="font-family">Arial</se:SvgParameter>
+						<se:SvgParameter name="font-size">17</se:SvgParameter>
+						<se:SvgParameter name="font-style">normal</se:SvgParameter>
+						<se:SvgParameter name="font-weight">normal</se:SvgParameter>
+					</se:Font>
+        			 <se:LabelPlacement>
+           				<se:LinePlacement>
+							<se:PerpendicularOffset>
+								15
+							</se:PerpendicularOffset>
+						</se:LinePlacement>
+         			 </se:LabelPlacement>
+         			<se:Fill>
+           				<se:SvgParameter name="fill">#000000</se:SvgParameter>
+         			</se:Fill>
+       			  </se:TextSymbolizer>
+        </se:Rule>
+		
+		<se:Rule>
+          <se:Name>MRL_yk_7</se:Name>
+		  <!-- <Title>MRL:n oppaan yleiskaavamerkinta nro 7</Title> -->
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>yk_merk</ogc:PropertyName>
+				<ogc:Literal>7</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+                <se:LineSymbolizer>
+                  <se:Stroke>
+                    <se:GraphicStroke>
+					<se:Graphic>
+						<se:Mark>
+							<se:WellKnownName>circle</se:WellKnownName>
+							<se:Fill>
+							  <se:SvgParameter name="fill">#000000</se:SvgParameter>
+							</se:Fill>
+					<se:Stroke>
+						<se:SvgParameter name="stroke">#000000</se:SvgParameter>
+						<se:SvgParameter name="stroke-width">1</se:SvgParameter>
+					</se:Stroke>
+						</se:Mark>
+							<se:Size>5</se:Size>
+					</se:Graphic>
+					</se:GraphicStroke>
+						<se:SvgParameter name="stroke-dasharray">5 7</se:SvgParameter>
+                  </se:Stroke>
+                </se:LineSymbolizer>
+                <se:PointSymbolizer>
+                        <se:Geometry>
+                            <ogc:Function name="startPoint">
+                                <ogc:PropertyName>the_geom</ogc:PropertyName>
+                            </ogc:Function>
+                        </se:Geometry>
+                        <se:Graphic>
+                            <se:Mark>
+                                <se:WellKnownName>shape://carrow</se:WellKnownName>
+                                <se:Fill>
+                                <se:SvgParameter name="fill">#000000</se:SvgParameter>
+                                <se:SvgParameter name="fill-opacity">1.0</se:SvgParameter>
+                                </se:Fill>
+                                <se:Stroke>
+                                    <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                                    <se:SvgParameter name="stroke-width">2</se:SvgParameter>
+                                </se:Stroke>
+                            </se:Mark>
+                            <se:Size>20</se:Size>
+                            <se:Rotation>
+                              <ogc:Add>
+                                <ogc:Function name="startAngle">
+                                    <ogc:PropertyName>the_geom</ogc:PropertyName>
+                                </ogc:Function>
+                                <ogc:Literal>180.0</ogc:Literal>
+                              </ogc:Add>
+                            </se:Rotation>
+                        </se:Graphic>
+                </se:PointSymbolizer>
+                <se:PointSymbolizer>
+                        <se:Geometry>
+                            <ogc:Function name="endPoint">
+                                <ogc:PropertyName>the_geom</ogc:PropertyName>
+                            </ogc:Function>
+                        </se:Geometry>
+                        <se:Graphic>
+                            <se:Mark>
+                                <se:WellKnownName>shape://carrow</se:WellKnownName>
+                                <se:Fill>
+                                <se:SvgParameter name="fill">#000000</se:SvgParameter>
+                                <se:SvgParameter name="fill-opacity">1.0</se:SvgParameter>
+                                </se:Fill>
+                                <se:Stroke>
+                                    <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                                    <se:SvgParameter name="stroke-width">2</se:SvgParameter>
+                                </se:Stroke>
+                            </se:Mark>
+                            <se:Size>25</se:Size>
+                            <se:Rotation>
+                                <ogc:Function name="endAngle">
+                                    <ogc:PropertyName>the_geom</ogc:PropertyName>
+                                </ogc:Function>
+                            </se:Rotation>
+                        </se:Graphic>
+                </se:PointSymbolizer>
+        </se:Rule>
+	  
+	    <se:Rule>
+          <se:Name>MRL_yk_8</se:Name>
+		  <!-- <Title>MRL:n oppaan yleiskaavamerkinta nro 8</Title> -->
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>yk_merk</ogc:PropertyName>
+				<ogc:Literal>8</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+                    <se:LineSymbolizer>
+                        <se:Stroke>
+                            <se:SvgParameter name="stroke">#23923e</se:SvgParameter>
+                            <se:SvgParameter name="stroke-width">4</se:SvgParameter>
+                            <se:SvgParameter name="stroke-dasharray">10 3</se:SvgParameter>
+                        </se:Stroke>
+                    </se:LineSymbolizer>
+                   <se:PointSymbolizer>
+                        <se:Geometry>
+                            <ogc:Function name="startPoint">
+                                <ogc:PropertyName>the_geom</ogc:PropertyName>
+                            </ogc:Function>
+                        </se:Geometry>
+                        <se:Graphic>
+                            <se:Mark>
+                                <se:WellKnownName>shape://carrow</se:WellKnownName>
+                                <se:Fill>
+                                <se:SvgParameter name="fill">#23923e</se:SvgParameter>
+                                <se:SvgParameter name="fill-opacity">1.0</se:SvgParameter>
+                                </se:Fill>
+                                <se:Stroke>
+                                    <se:SvgParameter name="stroke">#23923e</se:SvgParameter>
+                                    <se:SvgParameter name="stroke-width">2</se:SvgParameter>
+                                </se:Stroke>
+                            </se:Mark>
+                            <se:Size>30</se:Size>
+                            <se:Rotation>
+                              <ogc:Add>
+                                <ogc:Function name="startAngle">
+                                    <ogc:PropertyName>the_geom</ogc:PropertyName>
+                                </ogc:Function>
+                                <ogc:Literal>180.0</ogc:Literal>
+                              </ogc:Add>
+                            </se:Rotation>
+                        </se:Graphic>
+                    </se:PointSymbolizer>
+                    <se:PointSymbolizer>
+                        <se:Geometry>
+                            <ogc:Function name="endPoint">
+                                <ogc:PropertyName>the_geom</ogc:PropertyName>
+                            </ogc:Function>
+                        </se:Geometry>
+                        <se:Graphic>
+                            <se:Mark>
+                                <se:WellKnownName>shape://carrow</se:WellKnownName>
+                                <se:Fill>
+                                <se:SvgParameter name="fill">#23923e</se:SvgParameter>
+                                <se:SvgParameter name="fill-opacity">1.0</se:SvgParameter>
+                                </se:Fill>
+                                <se:Stroke>
+                                    <se:SvgParameter name="stroke">#23923e</se:SvgParameter>
+                                    <se:SvgParameter name="stroke-width">2</se:SvgParameter>
+                                   
+                                </se:Stroke>
+                            </se:Mark>
+                            <se:Size>30</se:Size>
+                            <se:Rotation>
+                                <ogc:Function name="endAngle">
+                                    <ogc:PropertyName>the_geom</ogc:PropertyName>
+                                </ogc:Function>
+                            </se:Rotation>
+                        </se:Graphic>
+                    </se:PointSymbolizer>
+      </se:Rule>
+		
 	  <se:Rule> 
 		  <se:Name>MRL_yk_9</se:Name>
 		  <!-- <Title>MRL:n oppaan yleiskaavamerkinta nro 9</Title> -->
@@ -293,8 +688,121 @@
              </se:LabelPlacement>
 		</se:TextSymbolizer>
         </se:Rule>
-        
-        
+		
+		<se:Rule> 
+		  <se:Name>MRL_yk_98</se:Name>
+		  <!-- <Title>MRL:n oppaan yleiskaavamerkinta nro 98</Title> -->
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>yk_merk</ogc:PropertyName>
+				<ogc:Literal>98</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+			<se:PointSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+                <se:Graphic>
+                  <se:ExternalGraphic>
+                    <se:OnlineResource xlink:type="simple" xlink:href="https://raw.githubusercontent.com/GispoCoding/qaava/master/yleiskaavan-kuvaustekniikka/SVG/98.svg"/>
+						<se:Format>image/svg+xml</se:Format>
+                  </se:ExternalGraphic> 
+                  <se:Size>
+					<ogc:Literal>50</ogc:Literal>
+				  </se:Size>
+                </se:Graphic>
+            </se:PointSymbolizer>        
+      </se:Rule> 
+		
+		<se:Rule> 
+		  <se:Name>MRL_yk_99</se:Name>
+		  <!-- <Title>MRL:n oppaan yleiskaavamerkinta nro 99</Title> -->
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>yk_merk</ogc:PropertyName>
+				<ogc:Literal>99</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+			<se:PointSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+                <se:Graphic>
+                  <se:ExternalGraphic>
+                    <se:OnlineResource xlink:type="simple" xlink:href="https://raw.githubusercontent.com/GispoCoding/qaava/master/yleiskaavan-kuvaustekniikka/SVG/99.svg"/>
+						<se:Format>image/svg+xml</se:Format>
+                  </se:ExternalGraphic> 
+                  <se:Size>
+					<ogc:Literal>50</ogc:Literal>
+				  </se:Size>
+                </se:Graphic>
+            </se:PointSymbolizer>        
+      </se:Rule> 
+		
+		<se:Rule> 
+		  <se:Name>MRL_yk_100</se:Name>
+		  <!-- <Title>MRL:n oppaan yleiskaavamerkinta nro 100</Title> -->
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>yk_merk</ogc:PropertyName>
+				<ogc:Literal>100</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+			<se:PointSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+                <se:Graphic>
+                  <se:ExternalGraphic>
+                    <se:OnlineResource xlink:type="simple" xlink:href="https://raw.githubusercontent.com/GispoCoding/qaava/master/yleiskaavan-kuvaustekniikka/SVG/100.svg"/>
+						<se:Format>image/svg+xml</se:Format>
+                  </se:ExternalGraphic> 
+                  <se:Size>
+					<ogc:Literal>50</ogc:Literal>
+				  </se:Size>
+                </se:Graphic>
+            </se:PointSymbolizer>        
+      </se:Rule> 
+		
+	  <se:Rule> 
+		  <se:Name>MRL_yk_101</se:Name>
+		  <!-- <Title>MRL:n oppaan yleiskaavamerkinta nro 101</Title> -->
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>yk_merk</ogc:PropertyName>
+				<ogc:Literal>101</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+			<se:PointSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+                <se:Graphic>
+                  <se:ExternalGraphic>
+                    <se:OnlineResource xlink:type="simple" xlink:href="https://raw.githubusercontent.com/GispoCoding/qaava/master/yleiskaavan-kuvaustekniikka/SVG/101.svg"/>
+						<se:Format>image/svg+xml</se:Format>
+                  </se:ExternalGraphic> 
+                  <se:Size>
+					<ogc:Literal>50</ogc:Literal>
+				  </se:Size>
+                </se:Graphic>
+            </se:PointSymbolizer>        
+      </se:Rule> 
+	  
+	   <se:Rule> 
+		  <se:Name>MRL_yk_102</se:Name>
+		  <!-- <Title>MRL:n oppaan yleiskaavamerkinta nro 102</Title> -->
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>yk_merk</ogc:PropertyName>
+				<ogc:Literal>102</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+			<se:PointSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+                <se:Graphic>
+                  <se:ExternalGraphic>
+                    <se:OnlineResource xlink:type="simple" xlink:href="https://raw.githubusercontent.com/GispoCoding/qaava/master/yleiskaavan-kuvaustekniikka/SVG/102.svg"/>
+						<se:Format>image/svg+xml</se:Format>
+                  </se:ExternalGraphic> 
+                  <se:Size>
+					<ogc:Literal>50</ogc:Literal>
+				  </se:Size>
+                </se:Graphic>
+            </se:PointSymbolizer>        
+      </se:Rule> 
 		
 	  <se:Rule>
 	      <se:Name>MRL_yk_103</se:Name>
@@ -363,6 +871,125 @@
          </se:Stroke>
        </se:LineSymbolizer>
 	  </se:Rule>
+	  
+	   <se:Rule>
+		 <se:Name>MRL_Yk_105</se:Name>
+		 <!-- <Title> MRL:n oppaan yleiskaavamerkinta nro 105</Title> -->
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>yk_merk</ogc:PropertyName>
+				<ogc:Literal>105</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>	
+		<se:LineSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+           <se:Stroke>
+              <se:GraphicStroke>
+                <se:Graphic>
+                  <se:Mark>
+                    <se:WellKnownName>circle</se:WellKnownName>
+                    <se:Stroke>
+                      <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                      <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
+                    </se:Stroke>
+                  </se:Mark>
+                  <se:Size>4</se:Size>
+                </se:Graphic>
+               </se:GraphicStroke>
+               <se:SvgParameter name="stroke-dasharray">4 7</se:SvgParameter>
+              <se:SvgParameter name="stroke-dashoffset">0</se:SvgParameter>
+          </se:Stroke>
+         </se:LineSymbolizer>					
+		</se:Rule>
+		
+	  <se:Rule>
+		 <se:Name>MRL_Yk_106</se:Name>
+		  <!--<Title> MRL:n oppaan yleiskaavamerkinta nro 106</Title> -->
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>yk_merk</ogc:PropertyName>
+				<ogc:Literal>106</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>	
+		<se:LineSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+           <se:Stroke>
+              <se:GraphicStroke>
+                <se:Graphic>
+                  <se:Mark>
+                    <se:WellKnownName>circle</se:WellKnownName>
+                    <se:Fill>
+                      <se:SvgParameter name="fill">#000000</se:SvgParameter>
+                    </se:Fill>
+                    <se:Stroke>
+                      <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                      <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
+                    </se:Stroke>
+                  </se:Mark>
+                  <se:Size>4</se:Size>
+                </se:Graphic>
+               </se:GraphicStroke>
+               <se:SvgParameter name="stroke-dasharray">4 7</se:SvgParameter>
+              <se:SvgParameter name="stroke-dashoffset">0</se:SvgParameter>
+          </se:Stroke>
+         </se:LineSymbolizer>					
+		</se:Rule>
+	  
+	   <se:Rule>
+          <se:Name>MRL_yk_107</se:Name>
+		  <!-- <Title> MRL:n oppaan yleiskaavamerkinta nro 107</Title> -->
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>yk_merk</ogc:PropertyName>
+				<ogc:Literal>107</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+          <se:LineSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+              <se:SvgParameter name="stroke-dasharray">4 6</se:SvgParameter>
+            </se:Stroke>
+            <se:PerpendicularOffset>-5</se:PerpendicularOffset>
+          </se:LineSymbolizer>
+          <se:LineSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+              <se:SvgParameter name="stroke-dasharray">4 6</se:SvgParameter>
+            </se:Stroke>
+            <se:PerpendicularOffset>5</se:PerpendicularOffset>
+          </se:LineSymbolizer>
+          <se:LineSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+            <se:Stroke>
+              <se:GraphicStroke>
+                <se:Graphic>
+                  <se:Mark>
+                    <se:WellKnownName>line</se:WellKnownName>
+                    <se:Fill>
+                      <se:SvgParameter name="fill">#ff0000</se:SvgParameter>
+                    </se:Fill>
+                    <se:Stroke>
+                      <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                      <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+                      <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+            		  <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+                    </se:Stroke>
+                  </se:Mark>
+                  <se:Size>10</se:Size>
+                </se:Graphic>
+                <!--<se:Gap>
+                  <ogc:Literal>15</ogc:Literal>
+                </se:Gap>-->
+              </se:GraphicStroke>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
 	  
 	  <se:Rule>
 	  <se:Name>MRL_yk_108</se:Name>
@@ -439,6 +1066,33 @@
          </se:Stroke>
        </se:LineSymbolizer>
      </se:Rule>
+	 
+	 <se:Rule>
+          <se:Name>MRL_yk_110</se:Name>
+		  <!-- <Title> MRL:n oppaan yleiskaavamerkinta nro 110</Title> -->
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>yk_merk</ogc:PropertyName>
+				<ogc:Literal>110</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+		  <se:LineSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+			<se:Stroke>
+			  <se:GraphicStroke>
+						<se:Graphic>
+							<se:ExternalGraphic>
+								<se:OnlineResource xlink:type="simple" xlink:href="https://raw.githubusercontent.com/GispoCoding/qaava/master/yleiskaavan-kuvaustekniikka/SVG/110.svg"/>
+								<se:Format>image/svg+xml</se:Format>
+						</se:ExternalGraphic>
+						  <se:Size>
+							<ogc:Literal>150</ogc:Literal>
+						  </se:Size>
+						</se:Graphic>
+			  </se:GraphicStroke>
+			</se:Stroke>
+		   </se:LineSymbolizer>
+	  </se:Rule>	
 	  
 	  <se:Rule>
           <se:Name>MRL_yk_120</se:Name>
