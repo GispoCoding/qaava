@@ -4,8 +4,7 @@
     <se:Name>Yleiskaava_osa_alueet</se:Name>
     <UserStyle>
       <se:Name>Yleiskaava_osa_alueet</se:Name>
-      <se:FeatureTypeStyle>
-	  	
+      <se:FeatureTypeStyle>	  	
 		
 		<se:Rule>
           <se:Name>MRL_yk_2</se:Name>
@@ -26,6 +25,41 @@
             </se:Stroke>
           </se:LineSymbolizer>
         </se:Rule>
+		
+		 <se:Rule>
+	      <se:Name>MRL_yk_3</se:Name>
+		  <!-- <Title> MRL:n oppaan yleiskaavamerkinta nro 3</Title> -->
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>yk_merk</ogc:PropertyName>
+				<ogc:Literal>3</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+       <se:LineSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+         <se:Stroke>
+           <se:GraphicStroke>
+             <se:Graphic>
+               <se:Mark>
+                 <se:WellKnownName>shape://carrow</se:WellKnownName>
+                  <se:Fill>
+                    <se:SvgParameter name="fill">#000000</se:SvgParameter>
+                    <se:SvgParameter name="fill-opacity">1.0</se:SvgParameter>
+                  </se:Fill>
+                <se:Stroke>
+                   <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                   <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+                </se:Stroke>
+               </se:Mark>
+               <se:Size>35</se:Size>
+               <se:Rotation>
+                  <ogc:Literal>90.0</ogc:Literal>
+               </se:Rotation>
+             </se:Graphic>
+           </se:GraphicStroke>
+         </se:Stroke>
+       </se:LineSymbolizer>
+	  </se:Rule>
 		
 		<se:Rule>
           <se:Name>MRL_yk_12</se:Name>
@@ -559,6 +593,141 @@
 		</se:Rule>
 		
 		<se:Rule>
+          <se:Name>MRL_yk_21</se:Name>
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>yk_merk</ogc:PropertyName>
+				<ogc:Literal>21</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>	
+			<se:LineSymbolizer>
+           <se:Stroke>
+             <se:GraphicStroke>
+                 <se:Graphic>
+                  <se:ExternalGraphic>
+                    <se:OnlineResource xlink:type="simple" xlink:href="https://raw.githubusercontent.com/GispoCoding/qaava/master/yleiskaavan-kuvaustekniikka/SVG/9.svg"/>
+						<se:Format>image/svg+xml</se:Format>
+                  </se:ExternalGraphic> 
+                  <se:Size>
+					<ogc:Literal>30</ogc:Literal>
+				  </se:Size>
+                </se:Graphic>
+             </se:GraphicStroke>             
+           </se:Stroke>
+                <se:PerpendicularOffset>-9</se:PerpendicularOffset>
+          </se:LineSymbolizer>   
+			  <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#c4c4c4</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
+            </se:Stroke>
+                  <se:PerpendicularOffset>-15</se:PerpendicularOffset>
+          </se:LineSymbolizer>
+     	<se:PolygonSymbolizer>
+         <se:Fill>
+           <se:GraphicFill>
+             <se:Graphic>
+               <se:Mark>
+                 <se:WellKnownName>shape://dot</se:WellKnownName>
+                 <se:Stroke>
+                   <se:SvgParameter name="stroke">#c4c4c4</se:SvgParameter>
+                   <se:SvgParameter name="stroke-width">3</se:SvgParameter>
+                 </se:Stroke>
+               </se:Mark>
+               <se:Size>9</se:Size>
+             </se:Graphic>
+           </se:GraphicFill>
+         </se:Fill>
+            <se:PerpendicularOffset>15</se:PerpendicularOffset>
+       </se:PolygonSymbolizer>
+           <se:TextSymbolizer>
+          <se:Label>
+          	me
+          </se:Label>
+              <se:Font>
+              <se:SvgParameter name="font-family">Arial</se:SvgParameter>
+              <se:SvgParameter name="font-size">15</se:SvgParameter>
+              <se:SvgParameter name="font-style">normal</se:SvgParameter>
+              <se:SvgParameter name="font-weight">normal</se:SvgParameter>
+            </se:Font>
+              <se:LabelPlacement>
+				<se:LinePlacement>
+					<se:PerpendicularOffset>
+						15
+					</se:PerpendicularOffset>
+				</se:LinePlacement>
+             </se:LabelPlacement>
+		   </se:TextSymbolizer>
+		</se:Rule>
+		
+		<se:Rule>
+          <se:Name>MRL_yk_22</se:Name>
+		  <ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>yk_merk</ogc:PropertyName>
+				<ogc:Literal>22</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		  </ogc:Filter> 
+		  <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>	
+			<se:LineSymbolizer>
+				<se:Stroke>
+				  <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+				  <se:SvgParameter name="stroke-width">1.5</se:SvgParameter>
+				  <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
+				  <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
+				  <se:SvgParameter name="stroke-dasharray">22 7 5 7</se:SvgParameter>
+				</se:Stroke>
+			  <se:PerpendicularOffset>5</se:PerpendicularOffset>
+			  </se:LineSymbolizer>
+			  <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">0.1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+       		<se:PolygonSymbolizer>
+         <se:Fill>
+           <se:GraphicFill>
+             <se:Graphic>
+               <se:Mark>
+                 <se:WellKnownName>shape://times</se:WellKnownName>
+                 <se:Stroke>
+                   <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                   <se:SvgParameter name="stroke-width">0.1</se:SvgParameter>
+                 </se:Stroke>
+               </se:Mark>
+               <se:Size>16</se:Size>
+             </se:Graphic>
+           </se:GraphicFill>
+         </se:Fill>
+               <se:PerpendicularOffset>-15</se:PerpendicularOffset>
+       </se:PolygonSymbolizer>
+           <se:TextSymbolizer>
+          <se:Label>
+          	saa
+          </se:Label>
+              <se:Font>
+              <se:SvgParameter name="font-family">Arial</se:SvgParameter>
+              <se:SvgParameter name="font-size">15</se:SvgParameter>
+              <se:SvgParameter name="font-style">normal</se:SvgParameter>
+              <se:SvgParameter name="font-weight">normal</se:SvgParameter>
+            </se:Font>
+              <se:LabelPlacement>
+				<se:LinePlacement>
+					<se:PerpendicularOffset>
+						15
+					</se:PerpendicularOffset>
+				</se:LinePlacement>
+             </se:LabelPlacement>
+		   </se:TextSymbolizer>
+		</se:Rule>
+		
+		<se:Rule>
           <se:Name>MRL_yk_23</se:Name>
 		  <ogc:Filter>
 			<ogc:PropertyIsEqualTo>
@@ -960,11 +1129,6 @@
             </se:Stroke>
           </se:LineSymbolizer>
         </se:Rule>
-      
-			
-		
-		
-		
 		
 	  </se:FeatureTypeStyle>
     </UserStyle>
