@@ -286,7 +286,7 @@
          <se:PointSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
                  <se:Graphic>
                   <se:ExternalGraphic>
-                    <se:OnlineResource xlink:type="simple" xlink:href="https://raw.githubusercontent.com/GispoCoding/qaava/master/yleiskaavan-kuvaustekniikka/SVG/89.svg"/>
+                    <se:OnlineResource xlink:type="simple" xlink:href="https://raw.githubusercontent.com/GispoCoding/qaava/master/yleiskaavan-kuvaustekniikka/SVG/91.svg"/>
 						<se:Format>image/svg+xml</se:Format>
                   </se:ExternalGraphic> 
                   <se:Size>
