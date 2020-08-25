@@ -1900,7 +1900,7 @@
         </se:Rule>
 		
 		<se:Rule>
-          <se:Name>MRL_yk_73</se:Name>
+          <se:Name>MRL_yk_76</se:Name>
 		  <!-- <Title>MRL:n oppaan yleiskaavamerkinta nro 76</Title> -->
 		  <ogc:Filter>
 			<ogc:PropertyIsEqualTo>
