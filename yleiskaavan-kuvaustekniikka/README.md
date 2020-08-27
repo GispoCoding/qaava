@@ -6,6 +6,7 @@ ja -määräykset-oppaaseen (Ympäristönministeriö, 2003). Kuvaustekniikka tuo
 
 - [XML-muodossa QGISin kuvaustyyli (versio 1.1, 21.8.2020)](yleiskaavan_kuvaustekniikka.xml)
 - [SLD-kuvaustekniikka](SLD)
+- Testiaineisto tulossa
 
 <img src="yleiskaava.png" width="500"/>
 
