@@ -1,0 +1,19 @@
+id	kaavamerkinta	geometry	FID
+46	3 m kaava-alueen rajan ulkopuolella oleva viiva	2	1
+120	Alueelle on rakennettava melueste	2	2
+178	Katualueen rajan osa, jonka kohdalta ei saa järjestää ajoneuvoliittymää	2	3
+69	Kaupungin- tai kunnanosan raja	2	4
+24	Korttelin, korttelinosan ja alueen raja	2	5
+17	Merkintä osoittaa rakennuksen sivun, jolla tulee olla suora uloskäynti porrashuoneista	2	6
+60	Merkintä osoittaa rakennusalan sivun, jonka puoleisten rakennuksen ulkoseinien sekä ikkunoiden ja muiden rakenteiden ääneneristävyyden liikennemelua vastaan on oltava vähintään 00 dBA	2	7
+140	Merkintä osoittaa, rakennusalan sivun, jonka puoleiseen rakennuksen seinään ei saa sijoittaa ikkunoita	2	8
+40	Nuoli osoittaa rakennusalan sivun, johon rakennus on rakennettava kiinni	2	9
+18	Ohjeellinen alueen tai osa-alueen raja	2	10
+86	Ohjeellinen tontin/rakennuspaikan raja	2	11
+161	Osa-alueen raja	2	12
+188	Poikkiviiva osoittaa rajan sen puolen, johon merkintä kohdistuu	2	13
+87	Rakennuksen harjansuuntaa osoittava viiva	2	14
+74	Risti merkinnän päällä osoittaa merkinnän poistamista	2	15
+71	Sitovan tonttijaon mukaisen tontin raja ja numero	2	16
+19	Säilytettävä/istutettava puurivi	2	17
+150	Ulkoilureitti	2	18

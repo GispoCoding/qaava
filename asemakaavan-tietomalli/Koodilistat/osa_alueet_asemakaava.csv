@@ -1,0 +1,65 @@
+id	kaavamerkinta	geometry	FID
+126	Ajoneuvoliittymän likimääräinen sijainti	3	1
+108	Ajoyhteys	3	2
+61	Alue on varattu kunnan tarpeisiin	3	3
+164	Alue on varattu valtion tarpeisiin	3	4
+124	Alue, jolla ympäristö säilytetään	3	5
+169	Alue, jolle saa sijoittaa polttoaineen jakeluaseman	3	6
+167	Alueen osa, jolla sijaitsee luonnonsuojelulain mukainen luonnonsuojelualue tai -kohde	3	7
+89	Alueen osa, jolla sijaitsee muinaismuistolailla rauhoitettu kiinteä muinaisjäännös	3	8
+112	Alueen sisäiselle huoltoliikenteelle varattu alueen osa	3	9
+83	Alueen sisäiselle jalankululle varattu alueen osa	3	10
+82	Arvokas harjualue tai muu geologinen muodostuma	3	11
+184	Auton säilytyspaikan rakennusala	3	12
+8	Eritasoristeys	3	13
+138	Hidaskatu	3	14
+95	Istutettava alueen osa	3	15
+117	Jalankululle ja polkupyöräilylle varattu katu/tie	3	16
+173	Jalankululle ja polkupyöräilylle varattu katu/tie, jolla huoltoajo on sallittu	3	17
+59	Jalankululle ja polkupyöräilylle varattu katu/tie, jolla tontille/rakennuspaikalle ajo on sallittu	3	18
+20	Jalankululle varattu katu/tie	3	19
+32	Johtoa varten varattu alueen osa	3	20
+180	Joukkoliikenteelle varattu katu/tie	3	21
+9	Kadun tai liikennealueen alittava kevyen liikenteen yhteys	3	22
+14	Kadun tai liikennealueen ylittävä kevyen liikenteen yhteys	3	23
+162	Kansallinen kaupunkipuisto	3	24
+133	Katu	3	25
+48	Katuaukio/tori	3	26
+127	Kaupunki- tai kyläkuvallisesti tärkeä alue tai alueen osa	3	27
+62	Kehittämisalue	3	28
+128	Leikki- ja oleskelualueeksi varattu alueen osa	3	29
+73	Liikennetunneli	3	30
+98	Luonnon monimuotoisuuden kannalta erityisen tärkeä alue	3	31
+100	Maanalainen tila	3	32
+80	Maanalainen väestönsuojaksi tarkoitettu tila	3	33
+65	Maanalainen yleinen pysäköintilaitos	3	34
+134	Maanalaisiin tiloihin johtava ajoluiska	3	35
+55	Maisemallisesti arvokas alue	3	36
+171	Maisemallisesti arvokas peltoalue 2	3	37
+155	Merkintä osoittaa, että liikennealue on varustettava meluvallilla tai muulla melua estävällä rakenteella niin, että melutaso pienenee viereisellä korttelialueella/alueella 00 metrin korkeudella vähintään 00 dBA	3	38
+166	Merkintä osoittaa, että liikennealue on varustettava meluvallilla tai muulla melua estävällä rakenteella niin, että melutaso viereisellä korttelialueella/alueella saa olla korkeintaan 00 dBA	3	39
+154	Natura 2000 -verkostoon kuuluva tai ehdotettu alue	3	40
+78	Pihakatu	3	41
+12	Puhdistettava/kunnostettava maa-alue	3	42
+33	Pysäköimispaikka	3	43
+172	Rakennukseen jätettävä kulkuaukko	3	44
+23	Rakennusala	3	45
+145	Rakennusala, jolle saa sijoittaa lasten päiväkodin	3	46
+152	Rakennusala, jolle saa sijoittaa maatilan talouskeskuksen	3	47
+67	Rakennusala, jolle saa sijoittaa myymälän	3	48
+68	Rakennusala, jolle saa sijoittaa talousrakennuksen	3	49
+110	Rakennussuojelulain nojalla suojeltu rakennus	3	50
+5	Suojavyöhyke	3	51
+132	Suojeltava alueen osa	3	52
+129	Suojeltava rakennus	3	53
+101	Tuulivoimaloiden alue	3	55
+135	Tärkeä tai veden hankintaan soveltuva pohjavesialue	3	56
+75	Uloke	3	57
+149	UNESCO:n maailmanperintökohde	3	58
+116	Vaara-alue	3	59
+30	Valokatteinen tila	3	60
+76	Yhteiskäyttöalue	3	61
+45	Yleiseen tiehen kuuluva jalankulku- ja polkupyörätie	3	62
+147	Yleiselle jalankululle varattu alueen osa	3	63
+31	Yleisen tien näkemäalueeksi varattu alueen osa	3	64
+111	Yleisen tien suoja-alueeksi varattu alueen osa	3	65
