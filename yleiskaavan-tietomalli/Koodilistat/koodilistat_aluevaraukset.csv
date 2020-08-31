@@ -1,0 +1,57 @@
+﻿id;paaluokka;koodi;nimike
+1;Asuinalue;A;Asuntoalue
+2;Asuinalue;AK;Kerrostalovaltainen asuntoalue
+3;Asuinalue;AP;Pientalovaltainen asuntoalue
+4;Asuinalue;AT;Kyläalue
+5;Keskustatoiminnot;C;Keskustatoimintojen alue
+6;Liike- ja toimistorakennusten alue;KM;Kaupallisten palvelujen alue, jolle saa sijoittaa vähittäiskaupan suuryksikön
+7;Palvelutoiminnot;P;Palvelujen ja hallinnon alue
+8;Palvelutoiminnot;PL;Lähipalvelujen alue
+9;Palvelutoiminnot;PY;Julkisten palvelujen ja hallinnon alue
+10;Työpaikka-alue;TP;Työpaikka-alue
+11;Teollisuusalue;T;Teollisuus- ja varastoalue
+12;Teollisuusalue;TT;Ympäristövaikutuksiltaan merkittävien teollisuustoimintojen alue
+13;Teollisuusalue;TY;Teollisuusalue, jolla ympäristö asettaa toiminnan laadulle erityisiä vaatimuksia
+14;Teollisuusalue;TV;Varastoalue
+15;Teollisuusalue;T/kem;Teollisuus- ja varastoalue, jolla on/jolle saa sijoittaa merkittävän, vaarallisia kemikaaleja valmistavan tai varastoivan laitoksen 
+16;Virkistysalue;V;Virkistysalue
+17;Virkistysalue;VL;Lähivirkistysalue
+18;Virkistysalue;VU;Urheilu- ja virkistyspalvelujen alue
+19;Virkistysalue;VR;Retkeily- ja ulkoilualue
+20;Loma- ja matkailualue;R;Loma- ja matkailualue
+21;Loma- ja matkailualue;RA;Loma-asuntoalue
+22;Loma- ja matkailualue;RM;Matkailupalvelujen alue
+23;Loma- ja matkailualue;RL;Leirintäalue
+24;Loma- ja matkailualue;RV;Asuntovaunualue
+25;Loma- ja matkailualue;RP;Siirtolapuutarha-/palstaviljelyalue
+26;Liikenteen alue;L;Liikennealue
+27;Liikenteen alue;LT;Yleisen tien alue
+28;Liikenteen alue;KATU;Katualue
+29;Liikenteen alue;LHA;Henkilöliikenteen terminaalialue
+30;Liikenteen alue;LTA;Tavaraliikenteen terminaalialue
+31;Liikenteen alue;LH;Huoltoasema-alue
+32;Liikenteen alue;LR;Rautatieliikenteen alue
+33;Liikenteen alue;LL;Lentoliikenteen alue
+34;Liikenteen alue;LS;Satama-alue
+35;Erityisalue;E;Erityisalue
+36;Erityisalue;ET;Yhdyskuntateknisen huollon alue
+37;Erityisalue;EN;Energiahuollon alue
+38;Erityisalue;EJ;Jätteenkäsittelualue
+39;Erityisalue;EO;Maa-ainesten ottoalue
+40;Erityisalue;EK;Kaivosalue
+41;Erityisalue;EA;Ampumarata-alue
+42;Erityisalue;EP;Puolustusvoimien alue
+43;Erityisalue;EH;Hautausmaa-alue
+44;Erityisalue;EV;Suojaviheralue
+45;Suojelualue;S;Suojelualue
+46;Suojelualue;SL;Luonnonsuojelualue
+47;Suojelualue;SM;Muinaismuistoalue
+48;Suojelualue;SR;Rakennuslainsäädännön nojalla suojeltava alue
+49;Suojelualue;SRS;Rakennussuojelulain nojalla suojeltu alue
+50;Maa- ja metsätalousalue;M;Maa- ja metsätalousvaltainen alue
+51;Maa- ja metsätalousalue;MT;Maatalousalue
+52;Maa- ja metsätalousalue;ME;Kotieläintalouden suuryksikön alue
+53;Maa- ja metsätalousalue;MA;Maisemallisesti arvokas peltoalue
+54;Maa- ja metsätalousalue;MU;Maa- ja metsätalousvaltainen alue, jolla on erityistä ulkoilun ohjaamistarvetta
+55;Maa- ja metsätalousalue;MY;Maa- ja metsätalousvaltainen alue, jolla on erityisiä ympäristöarvoja
+56;Vesialue;W;Vesialue

@@ -1,0 +1,31 @@
+﻿gid;nimi;koodi
+1;Moottori- tai moottoriliikennetie;mo
+2;Kaksiajoratainen päätie/-katu;vt/kt/st/pk
+3;Valtatie/kantatie;vt/kt
+4;Seututie/pääkatu;st/pk
+5;Yhdystie/kokoojakatu;yt/kk
+6;Joukkoliikenteelle varattu tie tai katu;jl
+7;Liittymä;
+8;Eritasoliittymä;
+9;Suuntaisliittymä;
+10;Eritasoristeys ilman liittymää;
+11;Liikennetunneli;
+12;Päärata ja liikennepaikka;
+13;Yhdysrata/sivurata/kaupunkirata;
+14;Ulkoilureitti;
+15;Kevyen liikenteen reitti;
+16;Moottorikelkkailureitti;
+17;Laivaväylä;
+18;Veneväylä;
+19;Johto tai linja;
+20;Nykyiset tiet ja linjat;
+21;Merkittävästi parannettava tieosuus;
+22;Uudet tiet ja linjat;
+23;Poikkiviiva osoittaa rajan sen puolen johon merkintä kohdistuu;
+24;Yhdyskuntarakenteen laajenemissuunta;
+25;Ohjeellinen/vaihtoehtoinen tielinjaus;
+26;Tieliikenteen yhteystarve;
+27;Joukkoliikenteen kehittämiskäytävä/yhteystarve;
+28;Kevyen liikenteen yhteystarve;
+29;Viheryhteystarve;
+30;Meluntorjuntatarve;

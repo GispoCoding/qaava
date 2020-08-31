@@ -1,0 +1,30 @@
+﻿gid;nimi;koodi
+1;Maisemallisesti arvokas alue;ma
+2;Kaupunki- tai kyläkuvallisesti arvokas alue;sk
+3;Alue, jolla on säilytettäviä ympäristöarvoja;
+4;Arvokas harjualue tai muu geologinen muodostuma;ge
+5;Tärkeä tai vedenhankintaan soveltuva pohjavesialue;pv
+6;Natura 2000 -verkostoon kuuluva tai ehdotettu alue;nat
+7;Luonnon monimuotoisuuden kannalta erityisen tärkeä alue;luo
+8;UNESCO:n maailmanperintökohde;un
+9;Kansallinen kaupunkipuisto;kp
+10;Melualue;me
+11;Puhdistettava/kunnostettava maa-alue;saa
+12;Vaara-alue;va
+13;Suojavyöhyke;sv
+14;Kehittämisalue;ke
+15;Suunnittelutarvealue;st
+16;Alue, jolla ympäristö säilytetään;/s
+17;Tuulivoimaloiden alue;tv
+18;Maanalainen tila;
+19;Maanalainen tila, jota käytetään mmyös väestösuojana;mav
+20;Alue on varattu kunnan tarpeisiin;/k
+21;Alue on varattu valtion tarpeisiin;/v
+22;Nykyisellään säilyvät alueet;
+23;Pienin toimenpitein kehitettävät alueet;
+24;Uudet ja olennaisesti muuttuvat alueet;
+25;Yhdyskuntarakenteen mahdollinen laajenemisalue;
+26;Alueen tiivistämis-/eheyttämistarve;
+27;Alueen raja;
+28;Osa-alueen raja;
+29;Ohjeellinen alueen tai osa-alueen raja;
