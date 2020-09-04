@@ -1,0 +1,76 @@
+﻿gid;nimi;koodi;gid_geometria_tyyppi
+1;Maisemallisesti arvokas alue;ma;1
+2;Kaupunki- tai kyläkuvallisesti arvokas alue;sk;1
+3;Alue, jolla on säilytettäviä ympäristöarvoja;;1
+4;Arvokas harjualue tai muu geologinen muodostuma;ge;1
+5;Tärkeä tai vedenhankintaan soveltuva pohjavesialue;pv;1
+6;Natura 2000 -verkostoon kuuluva tai ehdotettu alue;nat;1
+7;Luonnon monimuotoisuuden kannalta erityisen tärkeä alue;luo;1
+8;UNESCO:n maailmanperintökohde;un;1
+9;Kansallinen kaupunkipuisto;kp;1
+10;Melualue;me;1
+11;Puhdistettava/kunnostettava maa-alue;saa;1
+12;Vaara-alue;va;1
+13;Suojavyöhyke;sv;1
+14;Kehittämisalue;ke;1
+15;Suunnittelutarvealue;st;1
+16;Alue, jolla ympäristö säilytetään;/s;1
+17;Tuulivoimaloiden alue;tv;1
+18;Maanalainen tila;;1
+19;Maanalainen tila, jota käytetään mmyös väestösuojana;mav;1
+20;Alue on varattu kunnan tarpeisiin;/k;1
+21;Alue on varattu valtion tarpeisiin;/v;1
+22;Nykyisellään säilyvät alueet;;1
+23;Pienin toimenpitein kehitettävät alueet;;1
+24;Uudet ja olennaisesti muuttuvat alueet;;1
+25;Yhdyskuntarakenteen mahdollinen laajenemisalue;;1
+26;Alueen tiivistämis-/eheyttämistarve;;1
+27;Alueen raja;;1
+28;Osa-alueen raja;;1
+29;Ohjeellinen alueen tai osa-alueen raja;;1
+30;Moottori- tai moottoriliikennetie;mo;2
+31;Kaksiajoratainen päätie/-katu;vt/kt/st/pk;2
+32;Valtatie/kantatie;vt/kt;2
+33;Seututie/pääkatu;st/pk;2
+34;Yhdystie/kokoojakatu;yt/kk;2
+35;Joukkoliikenteelle varattu tie tai katu;jl;2
+36;Liittymä;;2
+37;Eritasoliittymä;;2
+38;Suuntaisliittymä;;2
+39;Eritasoristeys ilman liittymää;;2
+40;Liikennetunneli;;2
+41;Päärata ja liikennepaikka;;2
+42;Yhdysrata/sivurata/kaupunkirata;;2
+43;Ulkoilureitti;;2
+44;Kevyen liikenteen reitti;;2
+45;Moottorikelkkailureitti;;2
+46;Laivaväylä;;2
+47;Veneväylä;;2
+48;Johto tai linja;;2
+49;Nykyiset tiet ja linjat;;2
+50;Merkittävästi parannettava tieosuus;;2
+51;Uudet tiet ja linjat;;2
+52;Poikkiviiva osoittaa rajan sen puolen johon merkintä kohdistuu;;2
+53;Yhdyskuntarakenteen laajenemissuunta;;2
+54;Ohjeellinen/vaihtoehtoinen tielinjaus;;2
+55;Tieliikenteen yhteystarve;;2
+56;Joukkoliikenteen kehittämiskäytävä/yhteystarve;;2
+57;Kevyen liikenteen yhteystarve;;2
+58;Viheryhteystarve;;2
+59;Meluntorjuntatarve;;2
+60;Keskustatoimintojen alakeskus;ca;3
+61;Lähipalvelujen alue;pl;3
+62;Suojelu-/muinaismuistokohde;;3
+63;Virkistys-/matkailukohde;;3
+64;Linja-autoasema/julkisen liikenteen vaihtopaikka/matkakeskus;;3
+65;Rautatieasema;;3
+66;Venesatama/venevalkama;;3
+67;Uimaranta;;3
+68;Kohde, nykyinen;;3
+69;Kohde, uusi;;3
+70;Alueeseen tai kohteeseen liittyvä kirjain- tai numerotunnus;;3
+71;Kunnan nimi;;3
+72;Kunnan osan nimi;;3
+73;Alakeskuksen/kyläkeskuksen nimi;;3
+74;Ympäristö- tai maisemavaurion korjaustarve;;3
+75;Terveyshaitan poistamistarve;;3

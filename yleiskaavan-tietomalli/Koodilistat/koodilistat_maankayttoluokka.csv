@@ -1,4 +1,4 @@
-﻿id;paaluokka;koodi;nimike
+﻿gid;paaluokka;koodi;nimike
 1;Asuinalue;A;Asuntoalue
 2;Asuinalue;AK;Kerrostalovaltainen asuntoalue
 3;Asuinalue;AP;Pientalovaltainen asuntoalue
@@ -13,7 +13,7 @@
 12;Teollisuusalue;TT;Ympäristövaikutuksiltaan merkittävien teollisuustoimintojen alue
 13;Teollisuusalue;TY;Teollisuusalue, jolla ympäristö asettaa toiminnan laadulle erityisiä vaatimuksia
 14;Teollisuusalue;TV;Varastoalue
-15;Teollisuusalue;T/kem;Teollisuus- ja varastoalue, jolla on/jolle saa sijoittaa merkittävän, vaarallisia kemikaaleja valmistavan tai varastoivan laitoksen 
+15;Teollisuusalue;T/kem;Teollisuus- ja varastoalue, jolla on/jolle saa sijoittaa merkittävän, vaarallisia kemikaaleja valmistavan tai varastoivan laitoksen
 16;Virkistysalue;V;Virkistysalue
 17;Virkistysalue;VL;Lähivirkistysalue
 18;Virkistysalue;VU;Urheilu- ja virkistyspalvelujen alue
