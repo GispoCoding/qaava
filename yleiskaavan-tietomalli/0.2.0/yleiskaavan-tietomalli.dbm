@@ -3,7 +3,7 @@
 CAUTION: Do not modify this file unless you know what you are doing.
          Unexpected results may occur if the code is changed deliberately.
 -->
-<dbmodel pgmodeler-ver="0.9.2" last-position="0,0" last-zoom="1" max-obj-count="34"
+<dbmodel pgmodeler-ver="0.9.2" last-position="740,91" last-zoom="1" max-obj-count="34"
 	 default-owner="postgres">
 <database name="qaavakanta" is-template="false" allow-conns="true">
 </database>
@@ -28,7 +28,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <schema name="kaavan_lisatiedot" layer="0" rect-visible="true" fill-color="#ffaaff">
 </schema>
 
-<table name="yleiskaava" layer="0" collapse-mode="2" max-obj-count="20">
+<table name="yleiskaava" layer="0" collapse-mode="2" max-obj-count="21">
 	<schema name="yleiskaava"/>
 	<comment><![CDATA[Kaavoituksen lopputuloksena syntyvä maankäyttösuunnitelma]]></comment>
 	<position x="1560" y="180"/>
@@ -48,6 +48,9 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="varchar" length="0"/>
 	</column>
 	<column name="laatija">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="viimeisin_muokkaaja">
 		<type name="varchar" length="0"/>
 	</column>
 	<column name="vahvistaja">
@@ -88,7 +91,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</customidxs>
 </table>
 
-<table name="kaavaelementti" layer="0" collapse-mode="2" max-obj-count="14">
+<table name="kaavaelementti" layer="0" collapse-mode="2" max-obj-count="15">
 	<schema name="yleiskaava"/>
 	<comment><![CDATA[Yhden tai useamman käyttötarkoitusalueen osa. Kaavaelementti tarkentaa käyttötarkoitusalueen maankäyttöä. Esim. melurajoitteet yms. ]]></comment>
 	<position x="1540" y="1520"/>
@@ -115,6 +118,9 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="real" length="0"/>
 		<comment><![CDATA[Viivamaisen kaavaelementin pituus]]></comment>
 	</column>
+	<column name="viimeisin_muokkaaja">
+		<type name="varchar" length="0"/>
+	</column>
 	<column name="luontipvm" default-value="now()">
 		<type name="timestamp" length="0"/>
 	</column>
@@ -126,9 +132,9 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 
 	<customidxs object-type="column">
-		<object name="gid_dokumentti" index="11"/>
-		<object name="gid_kaavaelementti_tyyppi" index="10"/>
-		<object name="uuid_yleiskaava" index="9"/>
+		<object name="gid_dokumentti" index="12"/>
+		<object name="gid_kaavaelementti_tyyppi" index="11"/>
+		<object name="uuid_yleiskaava" index="10"/>
 	</customidxs>
 
 	<customidxs object-type="constraint">
@@ -138,7 +144,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</customidxs>
 </table>
 
-<table name="maankayttoalue" layer="0" collapse-mode="2" max-obj-count="12">
+<table name="maankayttoalue" layer="0" collapse-mode="2" max-obj-count="13">
 	<schema name="yleiskaava"/>
 	<comment><![CDATA[Yleiskaavan mukainen tiettyyn käyttöön varattu alue
 
@@ -159,6 +165,9 @@ Käyttötarkoitusalueiden pinta-ala täyttää yleiskaava-alueen täysin. Käytt
 	<column name="pinta_ala">
 		<type name="real" length="0"/>
 	</column>
+	<column name="viimeisin_muokkaaja">
+		<type name="varchar" length="0"/>
+	</column>
 	<column name="luontipvm" default-value="now()">
 		<type name="timestamp" length="0"/>
 	</column>
@@ -170,9 +179,9 @@ Käyttötarkoitusalueiden pinta-ala täyttää yleiskaava-alueen täysin. Käytt
 	</constraint>
 
 	<customidxs object-type="column">
-		<object name="gid_dokumentti" index="9"/>
-		<object name="gid_maankayttoluokka" index="7"/>
-		<object name="uuid_yleiskaava" index="8"/>
+		<object name="gid_dokumentti" index="10"/>
+		<object name="gid_maankayttoluokka" index="8"/>
+		<object name="uuid_yleiskaava" index="9"/>
 	</customidxs>
 
 	<customidxs object-type="constraint">
