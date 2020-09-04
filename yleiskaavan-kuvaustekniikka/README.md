@@ -52,6 +52,12 @@ Kuten edellä on mainittu, osa kaavamerkinnöistä vaatii syötteen/inputin kaav
 
 - Etsi kyseisen merkinnän Label-tag ja editoi merkkien \<se:Label> ja \</se:Label> välissä olevaa koodia. Poista oletusarvo (123 tai vastaava) ja poista myös PropertyName-tagin ympärillä olevat kommenttimerkit, eli \<!-- ja \-->. Kirjoita merkkien \<ogc:PropertyName> ja \</ocg:PropertyName> väliin ominaisuustieto-tekstin tilalle se tason ominaisuustietosarakkeen nimi, josta arvon pitäisi määräytyä. Tallenna muutokset.
 
+## Huomioita QGISin kuvaustyylien käytöstä (päivittyy)
+
+Tähän kerätään kuvaustyylien käytön kannalta olennaisia huomioita ja vinkkejä, ja osiota pyritään päivittämään tarvittaessa.
+
+- Erilaisia liittymiä kuvaavissa viiva-geometrioissa symbolit on rakennettu siten, että ne piirtyvät kyseisen viiva-kohteen keskikohtaan. Tällöin on varmistettava että kyseisen viivageometriatason kuvaustyylien asetuksista on otettu oletusvalinta "Leikkaa kohteet karttaikkunan aluerajauksen mukaan" pois päältä. Muussa tapauksessa risteyksen tai liittymän paikka siirtyy karttaa liikuteltaessa tai zoomattaessa eri kohtaan sen mukaan, mikä osa viivasta on karttaikkunalla näkyvissä (karttaikkunalla näkyvän osan keskikohtaan). Merkinnät, joita tämä koskee ovat MRL:n oppaan numeroiden 99-101 mukaiset merkinnät eli liittymä, eritasoliittymä, suuntaisliittymä sekä  eritasoristeys ilman liittymää. Oletusasetuksen poistaminen käy esimerkiksi seuraavasti: klikataan hiiren oikealla näppäimellä Tasot-valikosta kyseisen tason kohdalta ja valitaan "Tason ominaisuudet" ja aukeavan ikkunan vasemmasta laidasta "Kuvaustekniikka". Kyseinen asetus löytyy nyt ikkunan oikeasta alalaidasta, "Lisäasetukset"-pudotusvalikosta. 
+
 
 ## Taustatietona hyödynnetty
 - [MRL:n opas yleiskaavoitukseen, YM - Opas 11 Yleiskaavakaavamerkinnät ja -määräykset 2003](https://www.ym.fi/fi-FI/Maankaytto_ja_rakentaminen/Lainsaadanto_ja_ohjeet/Maankaytto_ja_rakennuslaki_2000_sarja/Opas_11_Yleiskaavamerkinnat_ja_maaraykse(4466))
