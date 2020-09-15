@@ -102,6 +102,7 @@ CREATE TABLE asemakaavat.maankayttoalue (
 	periytynytkohde boolean,
 	uuid_asemakaava uuid,
 	gid_maankayttoluokka integer,
+	gid_dokumentti integer,
 	CONSTRAINT kayttotarkoitusalue_pk PRIMARY KEY (uuid)
 
 );
@@ -120,6 +121,7 @@ CREATE TABLE asemakaavat.osa_alue (
 	periytynytkohde boolean,
 	uuid_asemakaava uuid,
 	gid_osa_alue_tyyppi integer,
+	gid_dokumentti integer,
 	CONSTRAINT kaavayksikko_pk PRIMARY KEY (uuid)
 
 );
@@ -754,79 +756,133 @@ CREATE TABLE koodistot.osa_alue_tyyppi (
 );
 -- ddl-end --
 
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'1', E'Tekstimääräys.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'1', E'Ajoneuvoliittymän likimääräinen sijainti', DEFAULT, DEFAULT);
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'2', E'Auton säilytyspaikan rakennusala.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'2', E'Ajoyhteys', DEFAULT, E'ajo');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'3', E'Pysäköimispaikka.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'3', E'Alue on varattu kunnan tarpeisiin', DEFAULT, E'/k');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'4', E'Istutettava alueen osa.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'4', E'Alue on varattu valtion tarpeisiin', DEFAULT, E'/v');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'5', E'Rakennukseen jätettävä kulkuaukko.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'5', E'Alue, jolla ympäristö säilytetään', DEFAULT, E'/s');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'6', E'Maanalaisiin tiloihin johtava ajoluiska.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'6', E'Alue, jolle saa sijoittaa polttoaineen jakeluaseman', DEFAULT, E'pj');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'7', E'Maanalainen tila.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'7', E'Alueen osa, jolla sijaitsee luonnonsuojelulain mukainen luonnonsuojelualue tai -kohde', DEFAULT, E'sl');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'8', E'Maanalainen väestönsuojaksi tarkoitettu tila.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'8', E'Alueen osa, jolla sijaitsee muinaismuistolailla rauhoitettu kiinteä muinaisjäännös', DEFAULT, E'sm');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'9', E'Maanalainen yleinen pysäköintilaitos.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'9', E'Alueen sisäiselle huoltoliikenteelle varattu alueen osa', DEFAULT, E'h');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'10', E'Liikennetunneli.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'10', E'Alueen sisäiselle jalankululle varattu alueen osa', DEFAULT, E'jk');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'11', E'Rakennusala, jolle saa sijoittaa lasten päiväkodin.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'11', E'Arvokas harjualue tai muu geologinen muodostuma', DEFAULT, E'geo');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'12', E'Rakennusala, jolle saa sijoittaa myymälän.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'12', E'Auton säilytyspaikan rakennusala', DEFAULT, E'a');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'13', E'Rakennusala, jolle saa sijoittaa maatilan talouskeskuksen.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'13', E'Eritasoristeys', DEFAULT, E'e');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'14', E'Rakennusala, jolle saa sijoittaa talousrakennuksen.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'14', E'Hidaskatu', DEFAULT, E'hk');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'15', E'Alue, jolle saa sijoittaa polttoaineen jakeluaseman.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'15', E'Istutettava alueen osa', DEFAULT, DEFAULT);
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'16', E'Uloke.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'16', E'Jalankululle ja polkupyöräilylle varattu katu/tie', DEFAULT, E'pp');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'17', E'Valokatteinen tila.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'17', E'Jalankululle ja polkupyöräilylle varattu katu/tie, jolla huoltoajo on sallittu', DEFAULT, E'pp/h');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'18', E'Leikki- ja oleskelualueeksi varattu alueen osa.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'18', E'Jalankululle ja polkupyöräilylle varattu katu/tie, jolla tontille/rakennuspaikalle ajo on sallittu', DEFAULT, E'pp/t');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'19', E'Jalankululle ja polkupyöräilylle varattu alueen osa.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'19', E'Jalankululle varattu katu/tie', DEFAULT, DEFAULT);
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'20', E'Jalankululle ja polkupyöräilylle varattu alueen osa, jolla huoltoajo on sallittu.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'20', E'Johtoa varten varattu alueen osa', DEFAULT, DEFAULT);
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'21', E'Jalankululle ja polkupyöräilylle varattu alueen osa, jolla tontille/rakennuspaikalle ajo on sallittu.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'21', E'Joukkoliikenteelle varattu katu/tie', DEFAULT, E'jl');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'22', E'Yleiseen tiehen kuuluva jalankulku- ja polkupyörätie.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'22', E'Kadun tai liikennealueen alittava kevyen liikenteen yhteys', DEFAULT, E'a');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'23', E'Joukkoliikenteelle varattu katu/tie.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'23', E'Kadun tai liikennealueen ylittävä kevyen liikenteen yhteys', DEFAULT, E'y');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'24', E'Ajoyhteys.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'24', E'Kansallinen kaupunkipuisto', DEFAULT, E'kp');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'25', E'Alueen sisäiselle huoltoliikenteelle varattu alueen osa.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'25', E'Katu', DEFAULT, DEFAULT);
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'26', E'Yleisen tien suoja-alueeksi varattu alueen osa.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'26', E'Katuaukio/tori', DEFAULT, DEFAULT);
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'27', E'Yleisen tien näkemäalueeksi varattu alueen osa.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'27', E'Kaupunki- tai kyläkuvallisesti tärkeä alue tai alueen osa', DEFAULT, E'sk');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'28', E'Maanalaista johtoa varten varattu alueen osa.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'28', E'Kehittämisalue', DEFAULT, E'ke');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'29', E'Alue on varattu kunnan tarpeisiin.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'29', E'Leikki- ja oleskelualueeksi varattu alueen osa', DEFAULT, E'le');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'30', E'Alue on varattu valtion tarpeisiin.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'30', E'Liikennetunneli', DEFAULT, DEFAULT);
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'31', E'Yhteiskäyttöalue.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'31', E'Luonnon monimuotoisuuden kannalta erityisen tärkeä alue', DEFAULT, E'luo');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'32', E'Suojeltava alueen osa.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'32', E'Maanalainen tila', DEFAULT, E'ma');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'33', E'Alueen osa, jolla sijaitsee luonnonsuojelulain mukainen luonnonsuojelualue tai -kohde.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'33', E'Maanalainen väestönsuojaksi tarkoitettu tila', DEFAULT, E'mav');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'34', E'Suojeltava rakennus.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'34', E'Maanalainen yleinen pysäköintilaitos', DEFAULT, E'Ma-LPY');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'35', E'Rakennussuojelulain nojalla suojeltu rakennus.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'35', E'Maanalaisiin tiloihin johtava ajoluiska', DEFAULT, DEFAULT);
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'36', E'Maan päällistä johtoa varten varattu alueen osa.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'36', E'Maisemallisesti arvokas alue', DEFAULT, E'ma');
 -- ddl-end --
-INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi) VALUES (E'37', E'Rakennusala.');
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'37', E'Maisemallisesti arvokas peltoalue', DEFAULT, E'mp');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'38', E'Merkintä osoittaa, että liikennealue on varustettava meluvallilla tai muulla melua estävällä rakenteella niin, että melutaso pienenee viereisellä korttelialueella/alueella 00 metrin korkeudella vähintään 00 dBA', DEFAULT, DEFAULT);
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'39', E'Merkintä osoittaa, että liikennealue on varustettava meluvallilla tai muulla melua estävällä rakenteella niin, että melutaso viereisellä korttelialueella/alueella saa olla korkeintaan 00 dBA', DEFAULT, DEFAULT);
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'40', E'Natura 2000 -verkostoon kuuluva tai ehdotettu alue', DEFAULT, E'nat');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'41', E'Pihakatu', DEFAULT, DEFAULT);
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'42', E'Puhdistettava/kunnostettava maa-alue', DEFAULT, E'saa');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'43', E'Pysäköimispaikka', DEFAULT, E'pj');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'44', E'Rakennukseen jätettävä kulkuaukko', DEFAULT, DEFAULT);
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'45', E'Rakennusala', DEFAULT, DEFAULT);
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'46', E'Rakennusala, jolle saa sijoittaa lasten päiväkodin', DEFAULT, E'pk');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'47', E'Rakennusala, jolle saa sijoittaa maatilan talouskeskuksen', DEFAULT, E't');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'48', E'Rakennusala, jolle saa sijoittaa myymälän', DEFAULT, E'm');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'49', E'Rakennusala, jolle saa sijoittaa talousrakennuksen', DEFAULT, E'am');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'50', E'Rakennussuojelulain nojalla suojeltu rakennus', DEFAULT, E'srs');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'51', E'Suojavyöhyke', DEFAULT, E'sv');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'52', E'Suojeltava alueen osa', DEFAULT, E'sl');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'53', E'Suojeltava rakennus', DEFAULT, E'sr');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'55', E'Tuulivoimaloiden alue', DEFAULT, E'tv');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'56', E'Tärkeä tai veden hankintaan soveltuva pohjavesialue', DEFAULT, E'pv');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'57', E'Uloke', DEFAULT, E'u');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'58', E'UNESCO:n maailmanperintökohde', DEFAULT, E'un');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'59', E'Vaara-alue', DEFAULT, E'va');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'60', E'Valokatteinen tila', DEFAULT, E'v');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'61', E'Yhteiskäyttöalue', DEFAULT, E'/yk');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'62', E'Yleiseen tiehen kuuluva jalankulku- ja polkupyörätie', DEFAULT, E'LT-pp');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'63', E'Yleiselle jalankululle varattu alueen osa', DEFAULT, DEFAULT);
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'64', E'Yleisen tien näkemäalueeksi varattu alueen osa', DEFAULT, E'nä');
+-- ddl-end --
+INSERT INTO koodistot.osa_alue_tyyppi (gid, nimi, gid_hsrcl, koodi) VALUES (E'65', E'Yleisen tien suoja-alueeksi varattu alueen osa', DEFAULT, E'su');
 -- ddl-end --
 
 -- object: koodistot.hsrcl | type: TABLE --
@@ -1279,6 +1335,20 @@ ON DELETE RESTRICT ON UPDATE CASCADE;
 -- object: dokumentti_fk | type: CONSTRAINT --
 -- ALTER TABLE asemakaavat.kaavaelementti DROP CONSTRAINT IF EXISTS dokumentti_fk CASCADE;
 ALTER TABLE asemakaavat.kaavaelementti ADD CONSTRAINT dokumentti_fk FOREIGN KEY (gid_dokumentti)
+REFERENCES kaavan_lisatiedot.dokumentti (gid) MATCH FULL
+ON DELETE SET NULL ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: dokumentti_fk | type: CONSTRAINT --
+-- ALTER TABLE asemakaavat.maankayttoalue DROP CONSTRAINT IF EXISTS dokumentti_fk CASCADE;
+ALTER TABLE asemakaavat.maankayttoalue ADD CONSTRAINT dokumentti_fk FOREIGN KEY (gid_dokumentti)
+REFERENCES kaavan_lisatiedot.dokumentti (gid) MATCH FULL
+ON DELETE SET NULL ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: dokumentti_fk | type: CONSTRAINT --
+-- ALTER TABLE asemakaavat.osa_alue DROP CONSTRAINT IF EXISTS dokumentti_fk CASCADE;
+ALTER TABLE asemakaavat.osa_alue ADD CONSTRAINT dokumentti_fk FOREIGN KEY (gid_dokumentti)
 REFERENCES kaavan_lisatiedot.dokumentti (gid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --

@@ -3,7 +3,7 @@
 CAUTION: Do not modify this file unless you know what you are doing.
          Unexpected results may occur if the code is changed deliberately.
 -->
-<dbmodel pgmodeler-ver="0.9.2" last-position="0,1600" last-zoom="1" max-obj-count="32"
+<dbmodel pgmodeler-ver="0.9.2" last-position="6,1140" last-zoom="1" max-obj-count="34"
 	 default-owner="postgres">
 <database name="qaavakanta" is-template="false" allow-conns="true">
 </database>
@@ -103,7 +103,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 </table>
 
-<table name="maankayttoalue" layer="0" collapse-mode="2" max-obj-count="10">
+<table name="maankayttoalue" layer="0" collapse-mode="2" max-obj-count="12">
 	<schema name="asemakaavat"/>
 	<comment><![CDATA[asemakaavan mukainen tiettyyn käyttöön varattu alue
 
@@ -143,7 +143,7 @@ Käyttötarkoitusalueiden pinta-ala täyttää asemakaava-alueen täysin. Käytt
 	</customidxs>
 </table>
 
-<table name="osa_alue" layer="0" collapse-mode="2" max-obj-count="9">
+<table name="osa_alue" layer="0" collapse-mode="2" max-obj-count="10">
 	<schema name="asemakaavat"/>
 	<comment><![CDATA[Asemakaavan pienin tiettyyn käyttötarkoitukseen varattu yksikkö ]]></comment>
 	<position x="1540" y="1480"/>
@@ -692,44 +692,71 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 		<columns names="gid" ref-type="src-columns"/>
 	</constraint>
 	<initial-data>
-<![CDATA[gid•nimi⸣
-1•Tekstimääräys.⸣
-2•Auton säilytyspaikan rakennusala.⸣
-3•Pysäköimispaikka.⸣
-4•Istutettava alueen osa.⸣
-5•Rakennukseen jätettävä kulkuaukko.⸣
-6•Maanalaisiin tiloihin johtava ajoluiska.⸣
-7•Maanalainen tila.⸣
-8•Maanalainen väestönsuojaksi tarkoitettu tila.⸣
-9•Maanalainen yleinen pysäköintilaitos.⸣
-10•Liikennetunneli.⸣
-11•Rakennusala, jolle saa sijoittaa lasten päiväkodin.⸣
-12•Rakennusala, jolle saa sijoittaa myymälän.⸣
-13•Rakennusala, jolle saa sijoittaa maatilan talouskeskuksen.⸣
-14•Rakennusala, jolle saa sijoittaa talousrakennuksen.⸣
-15•Alue, jolle saa sijoittaa polttoaineen jakeluaseman.⸣
-16•Uloke.⸣
-17•Valokatteinen tila.⸣
-18•Leikki- ja oleskelualueeksi varattu alueen osa.⸣
-19•Jalankululle ja polkupyöräilylle varattu alueen osa.⸣
-20•Jalankululle ja polkupyöräilylle varattu alueen osa, jolla huoltoajo on sallittu.⸣
-21•Jalankululle ja polkupyöräilylle varattu alueen osa, jolla tontille/rakennuspaikalle ajo on sallittu.⸣
-22•Yleiseen tiehen kuuluva jalankulku- ja polkupyörätie.⸣
-23•Joukkoliikenteelle varattu katu/tie.⸣
-24•Ajoyhteys.⸣
-25•Alueen sisäiselle huoltoliikenteelle varattu alueen osa.⸣
-26•Yleisen tien suoja-alueeksi varattu alueen osa.⸣
-27•Yleisen tien näkemäalueeksi varattu alueen osa.⸣
-28•Maanalaista johtoa varten varattu alueen osa.⸣
-29•Alue on varattu kunnan tarpeisiin.⸣
-30•Alue on varattu valtion tarpeisiin.⸣
-31•Yhteiskäyttöalue.⸣
-32•Suojeltava alueen osa.⸣
-33•Alueen osa, jolla sijaitsee luonnonsuojelulain mukainen luonnonsuojelualue tai -kohde.⸣
-34•Suojeltava rakennus.⸣
-35•Rakennussuojelulain nojalla suojeltu rakennus.⸣
-36•Maan päällistä johtoa varten varattu alueen osa.⸣
-37•Rakennusala.]]>
+<![CDATA[gid•nimi•gid_hsrcl•koodi⸣
+1•Ajoneuvoliittymän likimääräinen sijainti••⸣
+2•Ajoyhteys••ajo⸣
+3•Alue on varattu kunnan tarpeisiin••\/k⸣
+4•Alue on varattu valtion tarpeisiin••\/v⸣
+5•Alue, jolla ympäristö säilytetään••\/s⸣
+6•Alue, jolle saa sijoittaa polttoaineen jakeluaseman••pj⸣
+7•Alueen osa, jolla sijaitsee luonnonsuojelulain mukainen luonnonsuojelualue tai -kohde••sl⸣
+8•Alueen osa, jolla sijaitsee muinaismuistolailla rauhoitettu kiinteä muinaisjäännös••sm⸣
+9•Alueen sisäiselle huoltoliikenteelle varattu alueen osa••h⸣
+10•Alueen sisäiselle jalankululle varattu alueen osa••jk⸣
+11•Arvokas harjualue tai muu geologinen muodostuma••geo⸣
+12•Auton säilytyspaikan rakennusala••a⸣
+13•Eritasoristeys••e⸣
+14•Hidaskatu••hk⸣
+15•Istutettava alueen osa••⸣
+16•Jalankululle ja polkupyöräilylle varattu katu/tie••pp⸣
+17•Jalankululle ja polkupyöräilylle varattu katu/tie, jolla huoltoajo on sallittu••pp/h⸣
+18•Jalankululle ja polkupyöräilylle varattu katu/tie, jolla tontille/rakennuspaikalle ajo on sallittu••pp/t⸣
+19•Jalankululle varattu katu/tie••⸣
+20•Johtoa varten varattu alueen osa••⸣
+21•Joukkoliikenteelle varattu katu/tie••jl⸣
+22•Kadun tai liikennealueen alittava kevyen liikenteen yhteys••a⸣
+23•Kadun tai liikennealueen ylittävä kevyen liikenteen yhteys••y⸣
+24•Kansallinen kaupunkipuisto••kp⸣
+25•Katu••⸣
+26•Katuaukio/tori••⸣
+27•Kaupunki- tai kyläkuvallisesti tärkeä alue tai alueen osa••sk⸣
+28•Kehittämisalue••ke⸣
+29•Leikki- ja oleskelualueeksi varattu alueen osa••le⸣
+30•Liikennetunneli••⸣
+31•Luonnon monimuotoisuuden kannalta erityisen tärkeä alue••luo⸣
+32•Maanalainen tila••ma⸣
+33•Maanalainen väestönsuojaksi tarkoitettu tila••mav⸣
+34•Maanalainen yleinen pysäköintilaitos••Ma-LPY⸣
+35•Maanalaisiin tiloihin johtava ajoluiska••⸣
+36•Maisemallisesti arvokas alue••ma⸣
+37•Maisemallisesti arvokas peltoalue••mp⸣
+38•Merkintä osoittaa, että liikennealue on varustettava meluvallilla tai muulla melua estävällä rakenteella niin, että melutaso pienenee viereisellä korttelialueella/alueella 00 metrin korkeudella vähintään 00 dBA••⸣
+39•Merkintä osoittaa, että liikennealue on varustettava meluvallilla tai muulla melua estävällä rakenteella niin, että melutaso viereisellä korttelialueella/alueella saa olla korkeintaan 00 dBA••⸣
+40•Natura 2000 -verkostoon kuuluva tai ehdotettu alue••nat⸣
+41•Pihakatu••⸣
+42•Puhdistettava/kunnostettava maa-alue••saa⸣
+43•Pysäköimispaikka••pj⸣
+44•Rakennukseen jätettävä kulkuaukko••⸣
+45•Rakennusala••⸣
+46•Rakennusala, jolle saa sijoittaa lasten päiväkodin••pk⸣
+47•Rakennusala, jolle saa sijoittaa maatilan talouskeskuksen••t⸣
+48•Rakennusala, jolle saa sijoittaa myymälän••m⸣
+49•Rakennusala, jolle saa sijoittaa talousrakennuksen••am⸣
+50•Rakennussuojelulain nojalla suojeltu rakennus••srs⸣
+51•Suojavyöhyke••sv⸣
+52•Suojeltava alueen osa••sl⸣
+53•Suojeltava rakennus••sr⸣
+55•Tuulivoimaloiden alue••tv⸣
+56•Tärkeä tai veden hankintaan soveltuva pohjavesialue••pv⸣
+57•Uloke••u⸣
+58•UNESCO:n maailmanperintökohde••un⸣
+59•Vaara-alue••va⸣
+60•Valokatteinen tila••v⸣
+61•Yhteiskäyttöalue••\/yk⸣
+62•Yleiseen tiehen kuuluva jalankulku- ja polkupyörätie••LT-pp⸣
+63•Yleiselle jalankululle varattu alueen osa••⸣
+64•Yleisen tien näkemäalueeksi varattu alueen osa••nä⸣
+65•Yleisen tien suoja-alueeksi varattu alueen osa••su]]>
 	</initial-data>
 </table>
 
@@ -1144,5 +1171,23 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 		<position x="-55.7705" y="67.3656"/>
 	</label>
 </relationship>
+
+<relationship name="dokumentti_has_many_maankayttoalue" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#bce4b7"
+	 src-table="kaavan_lisatiedot.dokumentti"
+	 dst-table="asemakaavat.maankayttoalue"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="dokumentti_has_many_osa_alue" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#2d7c36"
+	 src-table="kaavan_lisatiedot.dokumentti"
+	 dst-table="asemakaavat.osa_alue"
+	 src-required="false" dst-required="false"/>
 
 </dbmodel>

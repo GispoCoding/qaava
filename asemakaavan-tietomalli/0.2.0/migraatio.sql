@@ -1,13 +1,13 @@
 -- Diff code generated with pgModeler (PostgreSQL Database Modeler)
 -- pgModeler version: 0.9.2
--- Diff date: 2020-09-15 10:44:59
+-- Diff date: 2020-09-15 19:57:00
 -- Source model: qaavakanta
 -- Database: ak010
 -- PostgreSQL version: 11.0
 
 -- [ Diff summary ]
 -- Dropped objects: 12
--- Created objects: 15
+-- Created objects: 19
 -- Changed objects: 8
 -- Truncated tables: 0
 
@@ -124,6 +124,18 @@ ALTER TABLE asemakaavat.kaavaelementti ADD COLUMN gid_dokumentti integer;
 -- ddl-end --
 
 
+-- object: gid_dokumentti | type: COLUMN --
+-- ALTER TABLE asemakaavat.maankayttoalue DROP COLUMN IF EXISTS gid_dokumentti CASCADE;
+ALTER TABLE asemakaavat.maankayttoalue ADD COLUMN gid_dokumentti integer;
+-- ddl-end --
+
+
+-- object: gid_dokumentti | type: COLUMN --
+-- ALTER TABLE asemakaavat.osa_alue DROP COLUMN IF EXISTS gid_dokumentti CASCADE;
+ALTER TABLE asemakaavat.osa_alue ADD COLUMN gid_dokumentti integer;
+-- ddl-end --
+
+
 
 
 -- [ Changed objects ] --
@@ -198,6 +210,20 @@ ON DELETE RESTRICT ON UPDATE CASCADE;
 -- object: dokumentti_fk | type: CONSTRAINT --
 -- ALTER TABLE asemakaavat.kaavaelementti DROP CONSTRAINT IF EXISTS dokumentti_fk CASCADE;
 ALTER TABLE asemakaavat.kaavaelementti ADD CONSTRAINT dokumentti_fk FOREIGN KEY (gid_dokumentti)
+REFERENCES kaavan_lisatiedot.dokumentti (gid) MATCH FULL
+ON DELETE SET NULL ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: dokumentti_fk | type: CONSTRAINT --
+-- ALTER TABLE asemakaavat.maankayttoalue DROP CONSTRAINT IF EXISTS dokumentti_fk CASCADE;
+ALTER TABLE asemakaavat.maankayttoalue ADD CONSTRAINT dokumentti_fk FOREIGN KEY (gid_dokumentti)
+REFERENCES kaavan_lisatiedot.dokumentti (gid) MATCH FULL
+ON DELETE SET NULL ON UPDATE CASCADE;
+-- ddl-end --
+
+-- object: dokumentti_fk | type: CONSTRAINT --
+-- ALTER TABLE asemakaavat.osa_alue DROP CONSTRAINT IF EXISTS dokumentti_fk CASCADE;
+ALTER TABLE asemakaavat.osa_alue ADD CONSTRAINT dokumentti_fk FOREIGN KEY (gid_dokumentti)
 REFERENCES kaavan_lisatiedot.dokumentti (gid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
