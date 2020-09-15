@@ -3,7 +3,7 @@
 CAUTION: Do not modify this file unless you know what you are doing.
          Unexpected results may occur if the code is changed deliberately.
 -->
-<dbmodel pgmodeler-ver="0.9.2" last-position="740,91" last-zoom="1" max-obj-count="34"
+<dbmodel pgmodeler-ver="0.9.2" last-position="0,647" last-zoom="1" max-obj-count="31"
 	 default-owner="postgres">
 <database name="qaavakanta" is-template="false" allow-conns="true">
 </database>
@@ -28,7 +28,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <schema name="kaavan_lisatiedot" layer="0" rect-visible="true" fill-color="#ffaaff">
 </schema>
 
-<table name="yleiskaava" layer="0" collapse-mode="2" max-obj-count="21">
+<table name="yleiskaava" layer="0" collapse-mode="2" max-obj-count="20">
 	<schema name="yleiskaava"/>
 	<comment><![CDATA[Kaavoituksen lopputuloksena syntyvä maankäyttösuunnitelma]]></comment>
 	<position x="1560" y="180"/>
@@ -73,21 +73,19 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 
 	<customidxs object-type="column">
-		<object name="gid_dokumentti" index="17"/>
-		<object name="gid_kaavatyyppi" index="16"/>
+		<object name="gid_dokumentti" index="16"/>
+		<object name="gid_kaavatyyppi" index="15"/>
 		<object name="gid_kieli" index="13"/>
-		<object name="gid_kuvaustyyli" index="14"/>
 		<object name="gid_taustakartta" index="12"/>
-		<object name="gid_vaihetieto" index="15"/>
+		<object name="gid_vaihetieto" index="14"/>
 	</customidxs>
 
 	<customidxs object-type="constraint">
-		<object name="dokumentti_fk" index="6"/>
-		<object name="kaavatyyppi_fk" index="5"/>
+		<object name="dokumentti_fk" index="5"/>
+		<object name="kaavatyyppi_fk" index="4"/>
 		<object name="kieli_fk" index="2"/>
-		<object name="kuvaustyyli_fk" index="3"/>
 		<object name="taustakartta_fk" index="1"/>
-		<object name="vaihetieto_fk" index="4"/>
+		<object name="vaihetieto_fk" index="3"/>
 	</customidxs>
 </table>
 
@@ -218,24 +216,6 @@ voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoitta
 	</constraint>
 </table>
 
-<table name="kuvaustyyli" layer="0" collapse-mode="2" max-obj-count="3">
-	<schema name="koodistot"/>
-	<comment><![CDATA[kaavaan sisältyvä graafinen merkki, merkintä tai merkkien yhdistelmä, joka on oikeudellisesti sitova kaavan toimeenpanossa]]></comment>
-	<position x="360" y="980"/>
-	<column name="gid" not-null="true">
-		<type name="serial" length="0"/>
-	</column>
-	<column name="teksti">
-		<type name="varchar" length="0"/>
-	</column>
-	<column name="symboli">
-		<type name="varchar" length="0"/>
-	</column>
-	<constraint name="kaavamerkinta_pk" type="pk-constr" table="koodistot.kuvaustyyli">
-		<columns names="gid" ref-type="src-columns"/>
-	</constraint>
-</table>
-
 <table name="taustakartta" layer="0" collapse-mode="2" max-obj-count="4">
 	<schema name="kaavan_lisatiedot"/>
 	<position x="2220" y="980"/>
@@ -269,7 +249,7 @@ voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoitta
 	</label>
 </relationship>
 
-<table name="maankayttoluokka" layer="0" collapse-mode="2" max-obj-count="7">
+<table name="maankayttoluokka" layer="0" collapse-mode="2" max-obj-count="6">
 	<schema name="koodistot"/>
 	<position x="940" y="900"/>
 	<column name="gid" not-null="true">
@@ -416,7 +396,7 @@ voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoitta
 	</initial-data>
 </table>
 
-<table name="kaavaelementti_tyyppi" layer="0" collapse-mode="2" max-obj-count="7">
+<table name="kaavaelementti_tyyppi" layer="0" collapse-mode="2" max-obj-count="6">
 	<schema name="koodistot"/>
 	<position x="940" y="1560"/>
 	<column name="gid" not-null="true">
@@ -433,14 +413,13 @@ voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoitta
 	</constraint>
 
 	<customidxs object-type="column">
+		<object name="gid_geometria_tyyppi" index="4"/>
 		<object name="gid_hsrcl" index="3"/>
-		<object name="gid_kuvaustyyli" index="4"/>
 	</customidxs>
 
 	<customidxs object-type="constraint">
+		<object name="geometria_tyyppi_fk" index="2"/>
 		<object name="hsrcl_fk" index="1"/>
-		<object name="kaavaelementti_tyyppi_uq" index="3"/>
-		<object name="kuvaustyyli_fk" index="2"/>
 	</customidxs>
 	<initial-data>
 <![CDATA[gid•nimi•koodi•gid_geometria_tyyppi⸣
@@ -686,24 +665,6 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 	 dst-table="koodistot.kaavaelementti_tyyppi"
 	 src-required="false" dst-required="false"/>
 
-<relationship name="maankayttoluokat_has_one_kuvaustyyli" type="rel11" layer="0"
-	 src-col-pattern="{sc}_{st}"
-	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
-	 src-fk-pattern="{st}_fk"
-	 custom-color="#e3f45f"
-	 src-table="koodistot.kuvaustyyli"
-	 dst-table="koodistot.maankayttoluokka"
-	 src-required="false" dst-required="false"/>
-
-<relationship name="kaavaelementti_tyyppi_has_one_kuvaustyyli" type="rel11" layer="0"
-	 src-col-pattern="{sc}_{st}"
-	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
-	 src-fk-pattern="{st}_fk"
-	 custom-color="#33edb9"
-	 src-table="koodistot.kuvaustyyli"
-	 dst-table="koodistot.kaavaelementti_tyyppi"
-	 src-required="false" dst-required="false"/>
-
 <table name="dokumenttityyppi" layer="0" collapse-mode="2" max-obj-count="3">
 	<schema name="koodistot"/>
 	<position x="940" y="300"/>
@@ -806,15 +767,6 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 		<position x="-7.86355" y="-0.993861"/>
 	</label>
 </relationship>
-
-<relationship name="kuvaustyyli_has_many_yleiskaava" type="rel1n" layer="0"
-	 src-col-pattern="{sc}_{st}"
-	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
-	 src-fk-pattern="{st}_fk"
-	 custom-color="#84585b"
-	 src-table="koodistot.kuvaustyyli"
-	 dst-table="yleiskaava.yleiskaava"
-	 src-required="false" dst-required="false"/>
 
 <relationship name="vaihetieto_has_many_yleiskaava" type="rel1n" layer="0"
 	 src-col-pattern="{sc}_{st}"

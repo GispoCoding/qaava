@@ -60,7 +60,6 @@ CREATE TABLE yleiskaava.yleiskaava (
 	kumoamispvm date,
 	gid_taustakartta integer,
 	gid_kieli integer,
-	gid_kuvaustyyli integer,
 	gid_vaihetieto integer,
 	gid_kaavatyyppi integer,
 	gid_dokumentti integer,
@@ -133,19 +132,6 @@ CREATE TABLE koodistot.kaavamaarays (
 COMMENT ON TABLE koodistot.kaavamaarays IS E'Kaavaan sisältyvä sanallinen määräys, joka on juridisesti sitova kaavan toimeenpanossa\nhuomautus.\n\nKaavamääräyksellä ja kaavamerkinnöillä yksilöidään maa-alueiden rakentaminen ja käyttö eri tarkoituksiin.\n\nKaavamääräyksiä voidaan antaa yleiskaavaa laadittaessa. Kaavamääräykset\nvoivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoittamista.';
 -- ddl-end --
 
--- object: koodistot.kuvaustyyli | type: TABLE --
--- DROP TABLE IF EXISTS koodistot.kuvaustyyli CASCADE;
-CREATE TABLE koodistot.kuvaustyyli (
-	gid serial NOT NULL,
-	teksti varchar,
-	symboli varchar,
-	CONSTRAINT kaavamerkinta_pk PRIMARY KEY (gid)
-
-);
--- ddl-end --
-COMMENT ON TABLE koodistot.kuvaustyyli IS E'kaavaan sisältyvä graafinen merkki, merkintä tai merkkien yhdistelmä, joka on oikeudellisesti sitova kaavan toimeenpanossa';
--- ddl-end --
-
 -- object: kaavan_lisatiedot.taustakartta | type: TABLE --
 -- DROP TABLE IF EXISTS kaavan_lisatiedot.taustakartta CASCADE;
 CREATE TABLE kaavan_lisatiedot.taustakartta (
@@ -172,7 +158,6 @@ CREATE TABLE koodistot.maankayttoluokka (
 	paaluokka varchar,
 	koodi varchar,
 	nimike varchar,
-	gid_kuvaustyyli integer,
 	gid_hilucs integer,
 	CONSTRAINT maankayttoluokat_pk PRIMARY KEY (gid)
 
@@ -352,7 +337,6 @@ CREATE TABLE koodistot.kaavaelementti_tyyppi (
 	nimi varchar,
 	koodi varchar,
 	gid_hsrcl integer,
-	gid_kuvaustyyli integer,
 	gid_geometria_tyyppi integer,
 	CONSTRAINT kaavaelementti_tyyppi_pk PRIMARY KEY (gid)
 
@@ -655,30 +639,6 @@ REFERENCES koodistot.hsrcl (gid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
 
--- object: kuvaustyyli_fk | type: CONSTRAINT --
--- ALTER TABLE koodistot.maankayttoluokka DROP CONSTRAINT IF EXISTS kuvaustyyli_fk CASCADE;
-ALTER TABLE koodistot.maankayttoluokka ADD CONSTRAINT kuvaustyyli_fk FOREIGN KEY (gid_kuvaustyyli)
-REFERENCES koodistot.kuvaustyyli (gid) MATCH FULL
-ON DELETE SET NULL ON UPDATE CASCADE;
--- ddl-end --
-
--- object: maankayttoluokka_uq | type: CONSTRAINT --
--- ALTER TABLE koodistot.maankayttoluokka DROP CONSTRAINT IF EXISTS maankayttoluokka_uq CASCADE;
-ALTER TABLE koodistot.maankayttoluokka ADD CONSTRAINT maankayttoluokka_uq UNIQUE (gid_kuvaustyyli);
--- ddl-end --
-
--- object: kuvaustyyli_fk | type: CONSTRAINT --
--- ALTER TABLE koodistot.kaavaelementti_tyyppi DROP CONSTRAINT IF EXISTS kuvaustyyli_fk CASCADE;
-ALTER TABLE koodistot.kaavaelementti_tyyppi ADD CONSTRAINT kuvaustyyli_fk FOREIGN KEY (gid_kuvaustyyli)
-REFERENCES koodistot.kuvaustyyli (gid) MATCH FULL
-ON DELETE SET NULL ON UPDATE CASCADE;
--- ddl-end --
-
--- object: kaavaelementti_tyyppi_uq | type: CONSTRAINT --
--- ALTER TABLE koodistot.kaavaelementti_tyyppi DROP CONSTRAINT IF EXISTS kaavaelementti_tyyppi_uq CASCADE;
-ALTER TABLE koodistot.kaavaelementti_tyyppi ADD CONSTRAINT kaavaelementti_tyyppi_uq UNIQUE (gid_kuvaustyyli);
--- ddl-end --
-
 -- object: koodistot.dokumenttityyppi | type: TABLE --
 -- DROP TABLE IF EXISTS koodistot.dokumenttityyppi CASCADE;
 CREATE TABLE koodistot.dokumenttityyppi (
@@ -759,13 +719,6 @@ INSERT INTO koodistot.numeerinen_merkintatyyppi (gid, tyyppi) VALUES (E'3', E'm�
 -- ALTER TABLE yleiskaava.yleiskaava DROP CONSTRAINT IF EXISTS kieli_fk CASCADE;
 ALTER TABLE yleiskaava.yleiskaava ADD CONSTRAINT kieli_fk FOREIGN KEY (gid_kieli)
 REFERENCES koodistot.kieli (gid) MATCH FULL
-ON DELETE SET NULL ON UPDATE CASCADE;
--- ddl-end --
-
--- object: kuvaustyyli_fk | type: CONSTRAINT --
--- ALTER TABLE yleiskaava.yleiskaava DROP CONSTRAINT IF EXISTS kuvaustyyli_fk CASCADE;
-ALTER TABLE yleiskaava.yleiskaava ADD CONSTRAINT kuvaustyyli_fk FOREIGN KEY (gid_kuvaustyyli)
-REFERENCES koodistot.kuvaustyyli (gid) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
 
