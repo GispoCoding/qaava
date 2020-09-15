@@ -1,0 +1,110 @@
+gid;nimi;gid_geometria_tyyppi
+1;Ajoneuvoliittymän likimääräinen sijainti;1
+2;Ajoyhteys;1
+3;Alue on varattu kunnan tarpeisiin;1
+4;Alue on varattu valtion tarpeisiin;1
+5;Alue, jolla ympäristö säilytetään;1
+6;Alue, jolle saa sijoittaa polttoaineen jakeluaseman;1
+7;Alueen osa, jolla sijaitsee luonnonsuojelulain mukainen luonnonsuojelualue tai -kohde;1
+8;Alueen osa, jolla sijaitsee muinaismuistolailla rauhoitettu kiinteä muinaisjäännös;1
+9;Alueen sisäiselle huoltoliikenteelle varattu alueen osa;1
+10;Alueen sisäiselle jalankululle varattu alueen osa;1
+11;Arvokas harjualue tai muu geologinen muodostuma;1
+12;Auton säilytyspaikan rakennusala;1
+13;Eritasoristeys;1
+14;Hidaskatu;1
+15;Istutettava alueen osa;1
+16;Jalankululle ja polkupyöräilylle varattu katu/tie;1
+17;Jalankululle ja polkupyöräilylle varattu katu/tie, jolla huoltoajo on sallittu;1
+18;Jalankululle ja polkupyöräilylle varattu katu/tie, jolla tontille/rakennuspaikalle ajo on sallittu;1
+19;Jalankululle varattu katu/tie;1
+20;Johtoa varten varattu alueen osa;1
+21;Joukkoliikenteelle varattu katu/tie;1
+22;Kadun tai liikennealueen alittava kevyen liikenteen yhteys;1
+23;Kadun tai liikennealueen ylittävä kevyen liikenteen yhteys;1
+24;Kansallinen kaupunkipuisto;1
+25;Katu;1
+26;Katuaukio/tori;1
+27;Kaupunki- tai kyläkuvallisesti tärkeä alue tai alueen osa;1
+28;Kehittämisalue;1
+29;Leikki- ja oleskelualueeksi varattu alueen osa;1
+30;Liikennetunneli;1
+31;Luonnon monimuotoisuuden kannalta erityisen tärkeä alue;1
+32;Maanalainen tila;1
+33;Maanalainen väestönsuojaksi tarkoitettu tila;1
+34;Maanalainen yleinen pysäköintilaitos;1
+35;Maanalaisiin tiloihin johtava ajoluiska;1
+36;Maisemallisesti arvokas alue;1
+37;Maisemallisesti arvokas peltoalue 2;1
+38;Merkintä osoittaa, että liikennealue on varustettava meluvallilla tai muulla melua estävällä rakenteella niin, että melutaso pienenee viereisellä korttelialueella/alueella 00 metrin korkeudella vähintään 00 dBA;1
+39;Merkintä osoittaa, että liikennealue on varustettava meluvallilla tai muulla melua estävällä rakenteella niin, että melutaso viereisellä korttelialueella/alueella saa olla korkeintaan 00 dBA;1
+40;Natura 2000 -verkostoon kuuluva tai ehdotettu alue;1
+41;Pihakatu;1
+42;Puhdistettava/kunnostettava maa-alue;1
+43;Pysäköimispaikka;1
+44;Rakennukseen jätettävä kulkuaukko;1
+45;Rakennusala;1
+46;Rakennusala, jolle saa sijoittaa lasten päiväkodin;1
+47;Rakennusala, jolle saa sijoittaa maatilan talouskeskuksen;1
+48;Rakennusala, jolle saa sijoittaa myymälän;1
+49;Rakennusala, jolle saa sijoittaa talousrakennuksen;1
+50;Rakennussuojelulain nojalla suojeltu rakennus;1
+51;Suojavyöhyke;1
+52;Suojeltava alueen osa;1
+53;Suojeltava rakennus;1
+55;Tuulivoimaloiden alue;1
+56;Tärkeä tai veden hankintaan soveltuva pohjavesialue;1
+57;Uloke;1
+58;UNESCO:n maailmanperintökohde;1
+59;Vaara-alue;1
+60;Valokatteinen tila;1
+61;Yhteiskäyttöalue;1
+62;Yleiseen tiehen kuuluva jalankulku- ja polkupyörätie;1
+63;Yleiselle jalankululle varattu alueen osa;1
+64;Yleisen tien näkemäalueeksi varattu alueen osa;1
+65;Yleisen tien suoja-alueeksi varattu alueen osa;1
+66;3 m kaava-alueen rajan ulkopuolella oleva viiva;2
+67;Alueelle on rakennettava melueste;2
+68;Katualueen rajan osa, jonka kohdalta ei saa järjestää ajoneuvoliittymää;2
+69;Kaupungin- tai kunnanosan raja;2
+70;Korttelin, korttelinosan ja alueen raja;2
+71;Merkintä osoittaa rakennuksen sivun, jolla tulee olla suora uloskäynti porrashuoneista;2
+72;Merkintä osoittaa rakennusalan sivun, jonka puoleisten rakennuksen ulkoseinien sekä ikkunoiden ja muiden rakenteiden ääneneristävyyden liikennemelua vastaan on oltava vähintään 00 dBA;2
+73;Merkintä osoittaa, rakennusalan sivun, jonka puoleiseen rakennuksen seinään ei saa sijoittaa ikkunoita;2
+74;Nuoli osoittaa rakennusalan sivun, johon rakennus on rakennettava kiinni;2
+75;Ohjeellinen alueen tai osa-alueen raja;2
+76;Ohjeellinen tontin/rakennuspaikan raja;2
+77;Osa-alueen raja;2
+78;Poikkiviiva osoittaa rajan sen puolen, johon merkintä kohdistuu;2
+79;Rakennuksen harjansuuntaa osoittava viiva;2
+80;Risti merkinnän päällä osoittaa merkinnän poistamista;2
+81;Sitovan tonttijaon mukaisen tontin raja ja numero;2
+82;Säilytettävä/istutettava puurivi;2
+83;Ulkoilureitti;2
+84;Alleviivattu luku osoittaa ehdottomasti käytettävän rakennusoikeuden, rakennuksen korkeuden, kattokaltevuuden tai muun määräyksen;3
+85;Alueeseen tai kohteeseen liittyvä kirjain- tai numerotunnus;3
+86;Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi;3
+87;Kattokaltevuus;3
+88;Kaupungin- tai kunnanosan nimi;3
+89;Kaupungin- tai kunnanosan numero;3
+90;Korttelin numero;3
+91;Luku osoittaa neliömetreinä, kuinka suuren osan rakennuksen alimmasta kerroksesta (I) saa kerrosalaneliömetreinä ilmoitetun kerrosalan lisäksi käyttää asukkaiden yhteistiloihin;3
+92;Luku osoittaa, kuinka suuren osan alueesta tai rakennusalasta saa käyttää rakentamiseen;3
+93;Luku osoittaa, kuinka suuri osa rakennuksen alimmasta kerroksesta (I) tulee käyttää päiväkodin tiloiksi;3
+94;Maanpinnan likimääräinen korkeusasema;3
+95;Merkintä osoittaa, kuinka monta autopaikkaa asuntoa kohti on rakennettava;3
+96;Merkintä osoittaa, kuinka monta kerrosalaneliömetriä kohti on rakennettava yksi autopaikka;3
+97;Merkintä osoittaa, kuinka monta prosenttia rakennusalalle sallitusta kerrosalasta saadaan käyttää asuinhuoneistoja varten;3
+98;Merkintä osoittaa, kuinka monta prosenttia rakennusalalle sallitusta kerrosalasta saadaan käyttää myymälätiloja varten;3
+99;Murtoluku roomalaisen numeron edessä osoittaa, kuinka suuren osan rakennuksen suurimman kerroksen alasta saa kellarikerroksessa käyttää kerrosalaan luettavaksi tilaksi;3
+100;Murtoluku roomalaisen numeron jäljessä osoittaa, kuinka suuren osan rakennuksen suurimman kerroksen alasta ullakon tasolla saa käyttää kerrosalaan laskettavaksi tilaksi;3
+101;Ohjeellisen tontin/rakennuspaikan numero;3
+102;Rakennuksen julkisivun enimmäiskorkeus metreinä;3
+103;Rakennuksen julkisivupinnan ja vesikaton leikkauskohdan ylin korkeusasema;3
+104;Rakennuksen vesikaton ylimmän kohdan korkeusasema;3
+105;Rakennuksen, rakenteiden ja laitteiden ylin korkeusasema;3
+106;Rakennusoikeus kerrosalaneliömetreinä;3
+107;Roomalainen numero osoittaa rakennusten, rakennuksen tai sen osan suurimman sallitun kerrosluvun;3
+108;Suluissa olevat numerot osoittavat korttelit, joiden autopaikkoja saa alueelle sijoittaa;3
+109;Suojeltava puu;3
+110;Tehokkuusluku eli kerrosalan suhde tontin/rakennuspaikan pinta-alaan;3
