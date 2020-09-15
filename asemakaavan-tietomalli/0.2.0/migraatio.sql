@@ -1,13 +1,13 @@
 -- Diff code generated with pgModeler (PostgreSQL Database Modeler)
 -- pgModeler version: 0.9.2
--- Diff date: 2020-09-15 19:57:00
+-- Diff date: 2020-09-15 20:08:54
 -- Source model: qaavakanta
 -- Database: ak010
 -- PostgreSQL version: 11.0
 
 -- [ Diff summary ]
 -- Dropped objects: 12
--- Created objects: 19
+-- Created objects: 23
 -- Changed objects: 8
 -- Truncated tables: 0
 
@@ -133,6 +133,30 @@ ALTER TABLE asemakaavat.maankayttoalue ADD COLUMN gid_dokumentti integer;
 -- object: gid_dokumentti | type: COLUMN --
 -- ALTER TABLE asemakaavat.osa_alue DROP COLUMN IF EXISTS gid_dokumentti CASCADE;
 ALTER TABLE asemakaavat.osa_alue ADD COLUMN gid_dokumentti integer;
+-- ddl-end --
+
+
+-- object: viimeisin_muokkaaja | type: COLUMN --
+-- ALTER TABLE asemakaavat.asemakaava DROP COLUMN IF EXISTS viimeisin_muokkaaja CASCADE;
+ALTER TABLE asemakaavat.asemakaava ADD COLUMN viimeisin_muokkaaja varchar;
+-- ddl-end --
+
+
+-- object: viimeisin_muokkaaja | type: COLUMN --
+-- ALTER TABLE asemakaavat.maankayttoalue DROP COLUMN IF EXISTS viimeisin_muokkaaja CASCADE;
+ALTER TABLE asemakaavat.maankayttoalue ADD COLUMN viimeisin_muokkaaja varchar;
+-- ddl-end --
+
+
+-- object: viimeisin_muokkaaja | type: COLUMN --
+-- ALTER TABLE asemakaavat.osa_alue DROP COLUMN IF EXISTS viimeisin_muokkaaja CASCADE;
+ALTER TABLE asemakaavat.osa_alue ADD COLUMN viimeisin_muokkaaja varchar;
+-- ddl-end --
+
+
+-- object: viimeisin_muokkaaja | type: COLUMN --
+-- ALTER TABLE asemakaavat.kaavaelementti DROP COLUMN IF EXISTS viimeisin_muokkaaja CASCADE;
+ALTER TABLE asemakaavat.kaavaelementti ADD COLUMN viimeisin_muokkaaja varchar;
 -- ddl-end --
 
 
