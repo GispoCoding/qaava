@@ -1,6 +1,6 @@
 -- Diff code generated with pgModeler (PostgreSQL Database Modeler)
 -- pgModeler version: 0.9.2
--- Diff date: 2020-09-15 20:08:54
+-- Diff date: 2020-09-17 11:45:17
 -- Source model: qaavakanta
 -- Database: ak010
 -- PostgreSQL version: 11.0
@@ -8,7 +8,7 @@
 -- [ Diff summary ]
 -- Dropped objects: 12
 -- Created objects: 23
--- Changed objects: 8
+-- Changed objects: 9
 -- Truncated tables: 0
 
 SET search_path=public,pg_catalog,asemakaavat,koodistot,kaavan_lisatiedot;
@@ -57,6 +57,30 @@ ALTER TABLE koodistot.osa_alue_tyyppi DROP COLUMN IF EXISTS gid_kuvaustyyli CASC
 
 
 -- [ Created objects ] --
+-- object: viimeisin_muokkaaja | type: COLUMN --
+-- ALTER TABLE asemakaavat.asemakaava DROP COLUMN IF EXISTS viimeisin_muokkaaja CASCADE;
+ALTER TABLE asemakaavat.asemakaava ADD COLUMN viimeisin_muokkaaja varchar;
+-- ddl-end --
+
+
+-- object: viimeisin_muokkaaja | type: COLUMN --
+-- ALTER TABLE asemakaavat.kaavaelementti DROP COLUMN IF EXISTS viimeisin_muokkaaja CASCADE;
+ALTER TABLE asemakaavat.kaavaelementti ADD COLUMN viimeisin_muokkaaja varchar;
+-- ddl-end --
+
+
+-- object: viimeisin_muokkaaja | type: COLUMN --
+-- ALTER TABLE asemakaavat.maankayttoalue DROP COLUMN IF EXISTS viimeisin_muokkaaja CASCADE;
+ALTER TABLE asemakaavat.maankayttoalue ADD COLUMN viimeisin_muokkaaja varchar;
+-- ddl-end --
+
+
+-- object: viimeisin_muokkaaja | type: COLUMN --
+-- ALTER TABLE asemakaavat.osa_alue DROP COLUMN IF EXISTS viimeisin_muokkaaja CASCADE;
+ALTER TABLE asemakaavat.osa_alue ADD COLUMN viimeisin_muokkaaja varchar;
+-- ddl-end --
+
+
 -- object: otsikko | type: COLUMN --
 -- ALTER TABLE kaavan_lisatiedot.dokumentti DROP COLUMN IF EXISTS otsikko CASCADE;
 ALTER TABLE kaavan_lisatiedot.dokumentti ADD COLUMN otsikko varchar;
@@ -136,30 +160,6 @@ ALTER TABLE asemakaavat.osa_alue ADD COLUMN gid_dokumentti integer;
 -- ddl-end --
 
 
--- object: viimeisin_muokkaaja | type: COLUMN --
--- ALTER TABLE asemakaavat.asemakaava DROP COLUMN IF EXISTS viimeisin_muokkaaja CASCADE;
-ALTER TABLE asemakaavat.asemakaava ADD COLUMN viimeisin_muokkaaja varchar;
--- ddl-end --
-
-
--- object: viimeisin_muokkaaja | type: COLUMN --
--- ALTER TABLE asemakaavat.maankayttoalue DROP COLUMN IF EXISTS viimeisin_muokkaaja CASCADE;
-ALTER TABLE asemakaavat.maankayttoalue ADD COLUMN viimeisin_muokkaaja varchar;
--- ddl-end --
-
-
--- object: viimeisin_muokkaaja | type: COLUMN --
--- ALTER TABLE asemakaavat.osa_alue DROP COLUMN IF EXISTS viimeisin_muokkaaja CASCADE;
-ALTER TABLE asemakaavat.osa_alue ADD COLUMN viimeisin_muokkaaja varchar;
--- ddl-end --
-
-
--- object: viimeisin_muokkaaja | type: COLUMN --
--- ALTER TABLE asemakaavat.kaavaelementti DROP COLUMN IF EXISTS viimeisin_muokkaaja CASCADE;
-ALTER TABLE asemakaavat.kaavaelementti ADD COLUMN viimeisin_muokkaaja varchar;
--- ddl-end --
-
-
 
 
 -- [ Changed objects ] --
@@ -178,6 +178,8 @@ ALTER TABLE asemakaavat.kaavaelementti ALTER COLUMN geom_point TYPE geometry(MUL
 ALTER TABLE asemakaavat.maankayttoalue ALTER COLUMN geom TYPE geometry(MULTIPOLYGONZ, 3877);
 -- ddl-end --
 ALTER TABLE asemakaavat.osa_alue ALTER COLUMN geom TYPE geometry(MULTIPOLYGONZ, 3877);
+-- ddl-end --
+ALTER TABLE koodistot.osa_alue_tyyppi ALTER COLUMN koodi TYPE varchar;
 -- ddl-end --
 
 

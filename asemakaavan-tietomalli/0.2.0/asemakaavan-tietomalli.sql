@@ -752,7 +752,7 @@ CREATE TABLE koodistot.hilucs (
 -- DROP TABLE IF EXISTS koodistot.osa_alue_tyyppi CASCADE;
 CREATE TABLE koodistot.osa_alue_tyyppi (
 	gid serial NOT NULL,
-	koodi smallint,
+	koodi varchar,
 	nimi varchar,
 	gid_hsrcl integer,
 	CONSTRAINT osa_alue_tyyppi_pk PRIMARY KEY (gid)

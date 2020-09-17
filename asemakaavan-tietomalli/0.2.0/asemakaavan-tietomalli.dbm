@@ -3,7 +3,7 @@
 CAUTION: Do not modify this file unless you know what you are doing.
          Unexpected results may occur if the code is changed deliberately.
 -->
-<dbmodel pgmodeler-ver="0.9.2" last-position="740,1600" last-zoom="1" max-obj-count="34"
+<dbmodel pgmodeler-ver="0.9.2" last-position="375,1595" last-zoom="1" max-obj-count="34"
 	 default-owner="postgres">
 <database name="qaavakanta" is-template="false" allow-conns="true">
 </database>
@@ -739,7 +739,7 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 		<type name="serial" length="0"/>
 	</column>
 	<column name="koodi">
-		<type name="smallint" length="0"/>
+		<type name="varchar" length="0"/>
 	</column>
 	<column name="nimi">
 		<type name="varchar" length="0"/>
@@ -747,6 +747,14 @@ http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö
 	<constraint name="osa_alue_tyyppi_pk" type="pk-constr" table="koodistot.osa_alue_tyyppi">
 		<columns names="gid" ref-type="src-columns"/>
 	</constraint>
+
+	<customidxs object-type="column">
+		<object name="gid_hsrcl" index="3"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="hsrcl_fk" index="1"/>
+	</customidxs>
 	<initial-data>
 <![CDATA[gid•nimi•gid_hsrcl•koodi⸣
 1•Ajoneuvoliittymän likimääräinen sijainti••⸣
