@@ -1,28 +1,2 @@
 id	kaavamerkinta	geometry	FID
-85	Alleviivattu luku osoittaa ehdottomasti käytettävän rakennusoikeuden, rakennuksen korkeuden, kattokaltevuuden tai muun määräyksen	1	1
-176	Alueeseen tai kohteeseen liittyvä kirjain- tai numerotunnus	1	2
-43	Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi	1	3
-125	Kattokaltevuus	1	4
-29	Kaupungin- tai kunnanosan nimi	1	5
-113	Kaupungin- tai kunnanosan numero	1	6
-2	Korttelin numero	1	7
-79	Luku osoittaa neliömetreinä, kuinka suuren osan rakennuksen alimmasta kerroksesta (I) saa kerrosalaneliömetreinä ilmoitetun kerrosalan lisäksi käyttää asukkaiden yhteistiloihin	1	8
-22	Luku osoittaa, kuinka suuren osan alueesta tai rakennusalasta saa käyttää rakentamiseen	1	9
-42	Luku osoittaa, kuinka suuri osa rakennuksen alimmasta kerroksesta (I) tulee käyttää päiväkodin tiloiksi	1	10
-109	Maanpinnan likimääräinen korkeusasema	1	11
-153	Merkintä osoittaa, kuinka monta autopaikkaa asuntoa kohti on rakennettava	1	12
-94	Merkintä osoittaa, kuinka monta kerrosalaneliömetriä kohti on rakennettava yksi autopaikka	1	13
-177	Merkintä osoittaa, kuinka monta prosenttia rakennusalalle sallitusta kerrosalasta saadaan käyttää asuinhuoneistoja varten	1	14
-93	Merkintä osoittaa, kuinka monta prosenttia rakennusalalle sallitusta kerrosalasta saadaan käyttää myymälätiloja varten	1	15
-41	Murtoluku roomalaisen numeron edessä osoittaa, kuinka suuren osan rakennuksen suurimman kerroksen alasta saa kellarikerroksessa käyttää kerrosalaan luettavaksi tilaksi 	1	16
-156	Murtoluku roomalaisen numeron jäljessä osoittaa, kuinka suuren osan rakennuksen suurimman kerroksen alasta ullakon tasolla saa käyttää kerrosalaan laskettavaksi tilaksi 	1	17
-106	Ohjeellisen tontin/rakennuspaikan numero	1	18
-66	Rakennuksen julkisivun enimmäiskorkeus metreinä	1	19
-137	Rakennuksen julkisivupinnan ja vesikaton leikkauskohdan ylin korkeusasema	1	20
-179	Rakennuksen vesikaton ylimmän kohdan korkeusasema	1	21
-81	Rakennuksen, rakenteiden ja laitteiden ylin korkeusasema	1	22
-146	Rakennusoikeus kerrosalaneliömetreinä	1	23
-121	Roomalainen numero osoittaa rakennusten, rakennuksen tai sen osan suurimman sallitun kerrosluvun	1	24
-123	Suluissa olevat numerot osoittavat korttelit, joiden autopaikkoja saa alueelle sijoittaa	1	25
 114	Suojeltava puu	1	26
-39	Tehokkuusluku eli kerrosalan suhde tontin/rakennuspaikan pinta-alaan	1	27
