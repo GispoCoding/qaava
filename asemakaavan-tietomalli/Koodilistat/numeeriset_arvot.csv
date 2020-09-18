@@ -1,0 +1,29 @@
+gid;tyyppi
+1;Luku osoittaa ehdottomasti käytettävän rakennusoikeuden, rakennuksen korkeuden, kattokaltevuuden tai muun määräyksen
+2;Alueeseen tai kohteeseen liittyvä kirjain- tai numerotunnus
+3;Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi
+4;Kattokaltevuus
+5;Kaupungin- tai kunnanosan nimi
+6;Kaupungin- tai kunnanosan numero
+7;Korttelin numero
+8;Luku osoittaa neliömetreinä, kuinka suuren osan rakennuksen alimmasta kerroksesta (I) saa kerrosalaneliömetreinä ilmoitetun kerrosalan lisäksi käyttää asukkaiden yhteistiloihin
+9;Luku osoittaa, kuinka suuren osan alueesta tai rakennusalasta saa käyttää rakentamiseen
+10;Luku osoittaa, kuinka suuri osa rakennuksen alimmasta kerroksesta (I) tulee käyttää päiväkodin tiloiksi
+11;Maanpinnan likimääräinen korkeusasema
+12;Kuinka monta autopaikkaa asuntoa kohti on rakennettava
+13;Kuinka monta kerrosalaneliömetriä kohti on rakennettava yksi autopaikka
+14;Kuinka monta prosenttia rakennusalalle sallitusta kerrosalasta saadaan käyttää asuinhuoneistoja varten
+15;Kuinka monta prosenttia rakennusalalle sallitusta kerrosalasta saadaan käyttää myymälätiloja varten
+16;Kuinka suuren osan rakennuksen suurimman kerroksen alasta saa kellarikerroksessa käyttää kerrosalaan luettavaksi tilaksi 
+17;Kuinka suuren osan rakennuksen suurimman kerroksen alasta ullakon tasolla saa käyttää kerrosalaan laskettavaksi tilaksi 
+18;Ohjeellisen tontin/rakennuspaikan numero
+19;Rakennuksen julkisivun enimmäiskorkeus metreinä
+20;Rakennuksen julkisivupinnan ja vesikaton leikkauskohdan ylin korkeusasema
+21;Rakennuksen vesikaton ylimmän kohdan korkeusasema
+22;Rakennuksen, rakenteiden ja laitteiden ylin korkeusasema
+23;Rakennusoikeus kerrosalaneliömetreinä
+24;Rakennuksen tai sen osan suurin sallittu kerrosluku
+25;Korttelinumerot, joiden autopaikkoja saa alueelle sijoittaa
+27;Tehokkuusluku eli kerrosalan suhde tontin/rakennuspaikan pinta-alaan
+29;Sitovan tonttijaon mukaisen tontin numero
+31;Desibelimäärä
