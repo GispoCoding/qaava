@@ -30,28 +30,30 @@ Jos et tiedä miten PostGIS-yhteyden saa käyttöön, ota yhteyttä info@gispo.f
 
 ## Vaihe 3. Alusta kaavan tietomalli
 
-2. Avaa Qaava-lisäosa valitsemalla Lisäosat -> Qaava -> Qaava
-3. Valitse vasemmalta paneeli "Database"
+1. Avaa Qaava-lisäosa valitsemalla Lisäosat -> Qaava -> Qaava
+2. Valitse vasemmalta paneeli "Database"
 
 ![Alusta tietomalli](/qaava_alustus.png)
 
-4. Valitse kohtaan "Available PostGIS databases" haluamasi tietokantayhteys. ÄLÄ LAITA SAMAAN TIETOKANTAAN MOLEMPIA KAAVAMALLEJA, sillä niissä saman nimisiä tauluja. 
-5. Valitse kohtaan "Data Model for the database" haluamasi malli (general=yleiskaava, detailed=asemakaava, käännökset ja tekstit tarkentuvat myöhemmin)
-6. Vahvista laatikko "I understand that this action..."
-7. Paina "Initialize". Huom! Tämä toiminta hävittää aina kaikki vanhat tiedot kannasta, jos siellä on jo tuotu kaavan tietomalli. 
-8. Alustuksen valmistumisen merkiksi QGISin yläosaan tulee viesti ja voit tarkistaa Selain-kohdasta, että tietokannasta löytyy halutut taulut
-9. Valitse QGIS-projekti (tietokantaan tallentuu samalla QGIS-projekti, joka näkyy nyt työkalun valikossa). Valinta avaa QGIS-projektin automaattisesti näkyviin. Se löytyy myös tietomallin public-skeemasta, jos olet sallinut QGIS-projektin tallennuksen tietokannan yhteyksien muodostamisen yhteydessä. 
+3. Valitse kohtaan "Available PostGIS databases" haluamasi tietokantayhteys. ÄLÄ LAITA SAMAAN TIETOKANTAAN MOLEMPIA KAAVAMALLEJA, sillä niissä saman nimisiä tauluja. 
+4. Valitse kohtaan "Data Model for the database" haluamasi malli (general=yleiskaava, detailed=asemakaava, käännökset ja tekstit tarkentuvat myöhemmin)
+5. Vahvista laatikko "I understand that this action..."
+6. Paina "Initialize". Huom! Tämä toiminta hävittää aina kaikki vanhat tiedot kannasta, jos siellä on jo tuotu kaavan tietomalli. 
+7. Alustuksen valmistumisen merkiksi QGISin yläosaan tulee viesti ja voit tarkistaa Selain-kohdasta, että tietokannasta löytyy halutut taulut
+8. Valitse QGIS-projekti (tietokantaan tallentuu samalla QGIS-projekti, joka näkyy nyt työkalun valikossa). Valinta avaa QGIS-projektin automaattisesti näkyviin. Se löytyy myös tietomallin public-skeemasta, jos olet sallinut QGIS-projektin tallennuksen tietokannan yhteyksien muodostamisen yhteydessä. 
 
 ![QGIS projekti](/qaava_tyotila.png)
 ![Projekti](/qaava_open_project.gif)
 
-10. Jatkossa tietokannan skeeman päivittäminen tapahtuu helposti painamalla "Promote"-nappia. Jos kaavan tietomallista on tullut uusi versio, havaitsee lisäosa sen automaattisesti rekisteröinnin yhteydessä ja antaa käyttäjän päivittää tietokanta migraatioskriptien avulla, jolloin data ei vaarannu.
+9. Jatkossa tietokannan skeeman päivittäminen tapahtuu helposti painamalla "Promote"-nappia. Jos kaavan tietomallista on tullut uusi versio, havaitsee lisäosa sen automaattisesti rekisteröinnin yhteydessä ja antaa käyttäjän päivittää tietokanta migraatioskriptien avulla, jolloin data ei vaarannu.
 
 ![Promote](/qaava_promote_db.gif)
 
 ## Vaihe 4. QGIS-projektin hyödyntäminen
 
-Työtilassa pitäisi nyt näkyä QGIS-projekti joko asema- tai yleiskaavalle. Voit alkaa lisäämään kohteita, tee ensin yleiskaava.
+Työtilassa pitäisi nyt näkyä QGIS-projekti joko asema- tai yleiskaavalle. Voit alkaa lisäämään kohteita, tee ensin kaavan ulkoraja.
+
+![Työtila](/qaava_tyotila2.png)
 
 Huom! Jotta tietojen yhteydet toisiin tauluihin toimivat, kannattaa ensin luoda geometriakohteet ja sitten lisätä esimerkiksi teemoja, kaavamääräyksiä tai muita lisätietoja. Kohde pitää olla ensi olemassa (sisältää rivin tietoa), ennenkuin siihen voi liittää muita kohteita.
 
