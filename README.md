@@ -2,7 +2,7 @@
 
 QGIS toolbox for land use planners in Finland. 
 
-Ota työkalu käyttöön seuraavammalla [näitä ohjeita](ohjeet_kaava_plugin_kaytto.md).
+Ota työkalu käyttöön seuraavammalla [näitä ohjeita](ohjeet_qaava_plugin_kaytto.md).
 
 Kaavoittajan työkalut QGIS-lisäosana ([oma repositorio](https://github.com/GispoCoding/qaava-qgis-plugin)).
 
