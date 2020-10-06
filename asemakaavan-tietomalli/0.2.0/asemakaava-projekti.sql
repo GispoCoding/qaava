@@ -20,8 +20,6 @@ ALTER TABLE IF EXISTS ONLY public.qgis_projects DROP CONSTRAINT qgis_projects_pk
 DROP TABLE IF EXISTS public.qgis_projects;
 SET default_tablespace = '';
 
-SET default_table_access_method = heap;
-
 --
 -- TOC entry 220 (class 1259 OID 33243)
 -- Name: qgis_projects; Type: TABLE; Schema: public; Owner: -
