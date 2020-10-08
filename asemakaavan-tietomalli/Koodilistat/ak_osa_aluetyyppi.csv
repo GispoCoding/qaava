@@ -1,0 +1,71 @@
+gid;nimi;gid_hsrcl;lyhenne
+1;Ajoneuvoliittymän likimääräinen sijainti;;
+2;Ajoyhteys;;ajo
+3;Alue on varattu kunnan tarpeisiin;;/k
+4;Alue on varattu valtion tarpeisiin;;/v
+5;Alue, jolla ympäristö säilytetään;;/s
+6;Alue, jolle saa sijoittaa polttoaineen jakeluaseman;;pj
+7;Alueen osa, jolla sijaitsee luonnonsuojelulain mukainen luonnonsuojelualue tai -kohde;;sl
+8;Alueen osa, jolla sijaitsee muinaismuistolailla rauhoitettu kiinteä muinaisjäännös;;sm
+9;Alueen sisäiselle huoltoliikenteelle varattu alueen osa;;h
+10;Alueen sisäiselle jalankululle varattu alueen osa;;jk
+11;Arvokas harjualue tai muu geologinen muodostuma;;geo
+12;Auton säilytyspaikan rakennusala;;a
+13;Eritasoristeys;;e
+14;Hidaskatu;;hk
+15;Istutettava alueen osa;;
+16;Jalankululle ja polkupyöräilylle varattu katu/tie;;pp
+17;Jalankululle ja polkupyöräilylle varattu katu/tie, jolla huoltoajo on sallittu;;pp/h
+18;Jalankululle ja polkupyöräilylle varattu katu/tie, jolla tontille/rakennuspaikalle ajo on sallittu;;pp/t
+19;Jalankululle varattu katu/tie;;
+20;Johtoa varten varattu alueen osa;;
+21;Joukkoliikenteelle varattu katu/tie;;jl
+22;Kadun tai liikennealueen alittava kevyen liikenteen yhteys;;a
+23;Kadun tai liikennealueen ylittävä kevyen liikenteen yhteys;;y
+24;Kansallinen kaupunkipuisto;;kp
+25;Katu;;
+26;Katuaukio/tori;;
+27;Kaupunki- tai kyläkuvallisesti tärkeä alue tai alueen osa;;sk
+28;Kehittämisalue;;ke
+29;Leikki- ja oleskelualueeksi varattu alueen osa;;le
+30;Liikennetunneli;;
+31;Luonnon monimuotoisuuden kannalta erityisen tärkeä alue;;luo
+32;Maanalainen tila;;ma
+33;Maanalainen väestönsuojaksi tarkoitettu tila;;mav
+34;Maanalainen yleinen pysäköintilaitos;;Ma-LPY
+35;Maanalaisiin tiloihin johtava ajoluiska;;
+36;Maisemallisesti arvokas alue;;ma
+37;Maisemallisesti arvokas peltoalue;;mp
+38;Merkintä osoittaa, että liikennealue on varustettava meluvallilla tai muulla melua estävällä rakenteella niin, että melutaso pienenee viereisellä korttelialueella/alueella 00 metrin korkeudella vähintään 00 dBA;;
+39;Merkintä osoittaa, että liikennealue on varustettava meluvallilla tai muulla melua estävällä rakenteella niin, että melutaso viereisellä korttelialueella/alueella saa olla korkeintaan 00 dBA;;
+40;Natura 2000 -verkostoon kuuluva tai ehdotettu alue;;nat
+41;Pihakatu;;
+42;Puhdistettava/kunnostettava maa-alue;;saa
+43;Pysäköimispaikka;;pj
+44;Rakennukseen jätettävä kulkuaukko;;
+45;Rakennusala;;
+46;Rakennusala, jolle saa sijoittaa lasten päiväkodin;;pk
+47;Rakennusala, jolle saa sijoittaa maatilan talouskeskuksen;;t
+48;Rakennusala, jolle saa sijoittaa myymälän;;m
+49;Rakennusala, jolle saa sijoittaa talousrakennuksen;;am
+50;Rakennussuojelulain nojalla suojeltu rakennus;;srs
+51;Suojavyöhyke;;sv
+52;Suojeltava alueen osa;;sl
+53;Suojeltava rakennus;;sr
+55;Tuulivoimaloiden alue;;tv
+56;Tärkeä tai veden hankintaan soveltuva pohjavesialue;;pv
+57;Uloke;;u
+58;UNESCO:n maailmanperintökohde;;un
+59;Vaara-alue;;va
+60;Valokatteinen tila;;v
+61;Yhteiskäyttöalue;;/yk
+62;Yleiseen tiehen kuuluva jalankulku- ja polkupyörätie;;LT-pp
+63;Yleiselle jalankululle varattu alueen osa;;
+64;Yleisen tien näkemäalueeksi varattu alueen osa;;nä
+65;Yleisen tien suoja-alueeksi varattu alueen osa;;su
+69;Kaupungin- tai kunnanosan raja;;
+70;Korttelin, korttelinosan ja alueen raja;;
+75;Ohjeellinen alueen tai osa-alueen raja;;
+76;Ohjeellinen tontin/rakennuspaikan raja;;
+77;Osa-alueen raja;;
+81;Sitovan tonttijaon mukaisen tontin raja;;
