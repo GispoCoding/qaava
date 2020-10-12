@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 12.2
--- Dumped by pg_dump version 12.4
+-- Dumped by pg_dump version 12.4 (Ubuntu 12.4-0ubuntu0.20.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -16,8 +16,8 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
-ALTER TABLE ONLY public.qgis_projects DROP CONSTRAINT qgis_projects_pkey;
-DROP TABLE public.qgis_projects;
+ALTER TABLE IF EXISTS ONLY public.qgis_projects DROP CONSTRAINT IF EXISTS qgis_projects_pkey;
+DROP TABLE IF EXISTS public.qgis_projects;
 SET default_tablespace = '';
 
 
