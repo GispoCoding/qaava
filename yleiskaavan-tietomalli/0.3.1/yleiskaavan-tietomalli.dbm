@@ -1,0 +1,1187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+         Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel pgmodeler-ver="0.9.3-beta1" use-changelog="false" last-position="296,94" last-zoom="1" max-obj-count="31"
+	 default-owner="postgres">
+<database name="qaava-yleiskaava" is-template="false" allow-conns="true">
+</database>
+
+<schema name="public" layer="0" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<extension name="postgis">
+	<schema name="public"/>
+</extension>
+
+<extension name="uuid-ossp">
+	<schema name="public"/>
+</extension>
+
+<schema name="yleiskaava" layer="0" rect-visible="true" fill-color="#aaff00">
+</schema>
+
+<schema name="koodistot" layer="0" rect-visible="true" fill-color="#aaffff">
+</schema>
+
+<schema name="kaavan_lisatiedot" layer="0" rect-visible="true" fill-color="#ffaaff">
+</schema>
+
+<table name="yleiskaava" layer="0" collapse-mode="2" max-obj-count="20" z-value="0">
+	<schema name="yleiskaava"/>
+	<comment><![CDATA[Kaavoituksen lopputuloksena syntyvä maankäyttösuunnitelma]]></comment>
+	<position x="1560" y="180"/>
+	<column name="gid">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="uuid" not-null="true" default-value="uuid_generate_v4()">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="geom">
+		<type name="geometry" length="0" spatial-type="MULTIPOLYGON" variation="1" srid="3877"/>
+	</column>
+	<column name="nimi">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="kaavatunnus">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="laatija">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="viimeisin_muokkaaja">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="vahvistaja">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="luomispvm" default-value="now()">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="poistamispvm">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="voimaantulopvm">
+		<type name="date" length="0"/>
+	</column>
+	<column name="kumoamispvm">
+		<type name="date" length="0"/>
+	</column>
+	<constraint name="ak_uuid_pk" type="pk-constr" table="yleiskaava.yleiskaava">
+		<columns names="uuid" ref-type="src-columns"/>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="gid_dokumentti" index="16"/>
+		<object name="gid_kaavatyyppi" index="15"/>
+		<object name="gid_kieli" index="13"/>
+		<object name="gid_taustakartta" index="12"/>
+		<object name="gid_vaihetieto" index="14"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="dokumentti_fk" index="5"/>
+		<object name="kaavatyyppi_fk" index="4"/>
+		<object name="kieli_fk" index="2"/>
+		<object name="taustakartta_fk" index="1"/>
+		<object name="vaihetieto_fk" index="3"/>
+	</customidxs>
+</table>
+
+<table name="kaavaelementti" layer="0" collapse-mode="2" max-obj-count="16" z-value="0">
+	<schema name="yleiskaava"/>
+	<comment><![CDATA[Yhden tai useamman käyttötarkoitusalueen osa. Kaavaelementti tarkentaa käyttötarkoitusalueen maankäyttöä. Esim. melurajoitteet yms. ]]></comment>
+	<position x="1540" y="1520"/>
+	<column name="gid">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="uuid" not-null="true" default-value="uuid_generate_v4()">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="geom_polygon">
+		<type name="geometry" length="0" spatial-type="MULTIPOLYGON" variation="1" srid="3877"/>
+	</column>
+	<column name="geom_line">
+		<type name="geometry" length="0" spatial-type="MULTILINESTRING" variation="1" srid="3877"/>
+	</column>
+	<column name="geom_point">
+		<type name="geometry" length="0" spatial-type="MULTIPOINT" variation="1" srid="3877"/>
+	</column>
+	<column name="nimi">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="pinta_ala">
+		<type name="real" length="0"/>
+		<comment><![CDATA[Aluemaisen kaavaelementin pinta-ala]]></comment>
+	</column>
+	<column name="pituus">
+		<type name="real" length="0"/>
+		<comment><![CDATA[Viivamaisen kaavaelementin pituus]]></comment>
+	</column>
+	<column name="viimeisin_muokkaaja">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="luontipvm" default-value="now()">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="periytynytkohde">
+		<type name="boolean" length="0"/>
+	</column>
+	<constraint name="kaavaelementti_pk" type="pk-constr" table="yleiskaava.kaavaelementti">
+		<columns names="uuid" ref-type="src-columns"/>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="gid_dokumentti" index="13"/>
+		<object name="gid_kaavaelementti_tyyppi" index="12"/>
+		<object name="uuid_yleiskaava" index="11"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="dokumentti_fk" index="3"/>
+		<object name="kaavaelementti_tyyppi_fk" index="2"/>
+		<object name="yleiskaava_fk" index="1"/>
+	</customidxs>
+</table>
+
+<table name="maankayttoalue" layer="0" collapse-mode="2" max-obj-count="13" z-value="0">
+	<schema name="yleiskaava"/>
+	<comment><![CDATA[Yleiskaavan mukainen tiettyyn käyttöön varattu alue
+
+Käyttötarkoitusalueiden pinta-ala täyttää yleiskaava-alueen täysin. Käyttötarkoitusalue voi jakaantua yhteen tai useampaan kaavayksikköön. Käyttötarkoitusalueet voivat olla kortteleita, yleisiä alueita tai niiden osia tai muita yhtenäisiä alueita]]></comment>
+	<position x="1540" y="920"/>
+	<column name="gid">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="uuid" not-null="true" default-value="uuid_generate_v4()">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="geom">
+		<type name="geometry" length="0" spatial-type="MULTIPOLYGON" variation="1" srid="3877"/>
+	</column>
+	<column name="nimi">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="pinta_ala">
+		<type name="real" length="0"/>
+	</column>
+	<column name="viimeisin_muokkaaja">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="luontipvm" default-value="now()">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="periytynytkohde">
+		<type name="boolean" length="0"/>
+	</column>
+	<constraint name="kayttotarkoitusalue_pk" type="pk-constr" table="yleiskaava.maankayttoalue">
+		<columns names="uuid" ref-type="src-columns"/>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="gid_dokumentti" index="10"/>
+		<object name="gid_maankayttoluokka" index="8"/>
+		<object name="uuid_yleiskaava" index="9"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="dokumentti_fk" index="3"/>
+		<object name="maankayttoluokka_fk" index="1"/>
+		<object name="yleiskaava_fk" index="2"/>
+	</customidxs>
+</table>
+
+<table name="kaavamaarays" layer="0" collapse-mode="2" max-obj-count="4" z-value="0">
+	<schema name="koodistot"/>
+	<comment><![CDATA[Kaavaan sisältyvä sanallinen määräys, joka on juridisesti sitova kaavan toimeenpanossa
+huomautus.
+
+Kaavamääräyksellä ja kaavamerkinnöillä yksilöidään maa-alueiden rakentaminen ja käyttö eri tarkoituksiin.
+
+Kaavamääräyksiä voidaan antaa yleiskaavaa laadittaessa. Kaavamääräykset
+voivat koskea myös haitallisten ympäristövaikutusten estämistä tai rajoittamista.]]></comment>
+	<position x="940" y="1260"/>
+	<column name="uuid" not-null="true">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="luontipvm" default-value="now()">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="otsikko">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="maaraysteksti">
+		<type name="varchar" length="0"/>
+	</column>
+	<constraint name="kaavakohtainen_maarays_pk" type="pk-constr" table="koodistot.kaavamaarays">
+		<columns names="uuid" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="taustakartta" layer="0" collapse-mode="2" max-obj-count="4" z-value="0">
+	<schema name="kaavan_lisatiedot"/>
+	<position x="2220" y="980"/>
+	<column name="gid" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="nimi">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="viittauspvm">
+		<type name="date" length="0"/>
+	</column>
+	<column name="uri">
+		<type name="varchar" length="0"/>
+	</column>
+	<constraint name="taustakartta_pk" type="pk-constr" table="kaavan_lisatiedot.taustakartta">
+		<columns names="gid" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<relationship name="yleiskaava_has_many_maankayttoalue" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#e15dd8"
+	 src-table="yleiskaava.yleiskaava"
+	 dst-table="yleiskaava.maankayttoalue"
+	 src-required="false" dst-required="false"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE">
+	<label ref-type="name-label">
+		<position x="118.586" y="8.56563"/>
+	</label>
+</relationship>
+
+<table name="maankayttoluokka" layer="0" collapse-mode="2" max-obj-count="6" z-value="0">
+	<schema name="koodistot"/>
+	<position x="940" y="900"/>
+	<column name="gid" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="paaluokka">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="koodi">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="nimike">
+		<type name="varchar" length="0"/>
+	</column>
+	<constraint name="maankayttoluokat_pk" type="pk-constr" table="koodistot.maankayttoluokka">
+		<columns names="gid" ref-type="src-columns"/>
+	</constraint>
+	<initial-data>
+<![CDATA[gid•paaluokka•koodi•nimike⸣
+1•Asuinalue•A•Asuntoalue⸣
+2•Asuinalue•AK•Kerrostalovaltainen asuntoalue⸣
+3•Asuinalue•AP•Pientalovaltainen asuntoalue⸣
+4•Asuinalue•AT•Kyläalue⸣
+5•Keskustatoiminnot•C•Keskustatoimintojen alue⸣
+6•Liike- ja toimistorakennusten alue•KM•Kaupallisten palvelujen alue, jolle saa sijoittaa vähittäiskaupan suuryksikön⸣
+7•Palvelutoiminnot•P•Palvelujen ja hallinnon alue⸣
+8•Palvelutoiminnot•PL•Lähipalvelujen alue⸣
+9•Palvelutoiminnot•PY•Julkisten palvelujen ja hallinnon alue⸣
+10•Työpaikka-alue•TP•Työpaikka-alue⸣
+11•Teollisuusalue•T•Teollisuus- ja varastoalue⸣
+12•Teollisuusalue•TT•Ympäristövaikutuksiltaan merkittävien teollisuustoimintojen alue⸣
+13•Teollisuusalue•TY•Teollisuusalue, jolla ympäristö asettaa toiminnan laadulle erityisiä vaatimuksia⸣
+14•Teollisuusalue•TV•Varastoalue⸣
+15•Teollisuusalue•T/kem•Teollisuus- ja varastoalue, jolla on/jolle saa sijoittaa merkittävän, vaarallisia kemikaaleja valmistavan tai varastoivan laitoksen⸣
+16•Virkistysalue•V•Virkistysalue⸣
+17•Virkistysalue•VL•Lähivirkistysalue⸣
+18•Virkistysalue•VU•Urheilu- ja virkistyspalvelujen alue⸣
+19•Virkistysalue•VR•Retkeily- ja ulkoilualue⸣
+20•Loma- ja matkailualue•R•Loma- ja matkailualue⸣
+21•Loma- ja matkailualue•RA•Loma-asuntoalue⸣
+22•Loma- ja matkailualue•RM•Matkailupalvelujen alue⸣
+23•Loma- ja matkailualue•RL•Leirintäalue⸣
+24•Loma- ja matkailualue•RV•Asuntovaunualue⸣
+25•Loma- ja matkailualue•RP•Siirtolapuutarha-/palstaviljelyalue⸣
+26•Liikenteen alue•L•Liikennealue⸣
+27•Liikenteen alue•LT•Yleisen tien alue⸣
+28•Liikenteen alue•KATU•Katualue⸣
+29•Liikenteen alue•LHA•Henkilöliikenteen terminaalialue⸣
+30•Liikenteen alue•LTA•Tavaraliikenteen terminaalialue⸣
+31•Liikenteen alue•LH•Huoltoasema-alue⸣
+32•Liikenteen alue•LR•Rautatieliikenteen alue⸣
+33•Liikenteen alue•LL•Lentoliikenteen alue⸣
+34•Liikenteen alue•LS•Satama-alue⸣
+35•Erityisalue•E•Erityisalue⸣
+36•Erityisalue•ET•Yhdyskuntateknisen huollon alue⸣
+37•Erityisalue•EN•Energiahuollon alue⸣
+38•Erityisalue•EJ•Jätteenkäsittelualue⸣
+39•Erityisalue•EO•Maa-ainesten ottoalue⸣
+40•Erityisalue•EK•Kaivosalue⸣
+41•Erityisalue•EA•Ampumarata-alue⸣
+42•Erityisalue•EP•Puolustusvoimien alue⸣
+43•Erityisalue•EH•Hautausmaa-alue⸣
+44•Erityisalue•EV•Suojaviheralue⸣
+45•Suojelualue•S•Suojelualue⸣
+46•Suojelualue•SL•Luonnonsuojelualue⸣
+47•Suojelualue•SM•Muinaismuistoalue⸣
+48•Suojelualue•SR•Rakennuslainsäädännön nojalla suojeltava alue⸣
+49•Suojelualue•SRS•Rakennussuojelulain nojalla suojeltu alue⸣
+50•Maa- ja metsätalousalue•M•Maa- ja metsätalousvaltainen alue⸣
+51•Maa- ja metsätalousalue•MT•Maatalousalue⸣
+52•Maa- ja metsätalousalue•ME•Kotieläintalouden suuryksikön alue⸣
+53•Maa- ja metsätalousalue•MA•Maisemallisesti arvokas peltoalue⸣
+54•Maa- ja metsätalousalue•MU•Maa- ja metsätalousvaltainen alue, jolla on erityistä ulkoilun ohjaamistarvetta⸣
+55•Maa- ja metsätalousalue•MY•Maa- ja metsätalousvaltainen alue, jolla on erityisiä ympäristöarvoja⸣
+56•Vesialue•W•Vesialue]]>
+	</initial-data>
+</table>
+
+<table name="dokumentti" layer="0" collapse-mode="2" max-obj-count="6" z-value="0">
+	<schema name="kaavan_lisatiedot"/>
+	<position x="2220" y="640"/>
+	<column name="gid" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="otsikko">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="uri">
+		<type name="varchar" length="0"/>
+	</column>
+	<constraint name="dokumentti_pk" type="pk-constr" table="kaavan_lisatiedot.dokumentti">
+		<columns names="gid" ref-type="src-columns"/>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="gid_dokumenttityyppi" index="4"/>
+		<object name="gid_kieli" index="3"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="dokumenttityyppi_fk" index="2"/>
+		<object name="kieli_fk" index="1"/>
+	</customidxs>
+</table>
+
+<relationship name="taustakartta_has_many_yleiskaava" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#a44363"
+	 src-table="kaavan_lisatiedot.taustakartta"
+	 dst-table="yleiskaava.yleiskaava"
+	 src-required="false" dst-required="false"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE">
+	<label ref-type="name-label">
+		<position x="-11.5987" y="-6.28297"/>
+	</label>
+</relationship>
+
+<table name="kaavatyyppi" layer="0" collapse-mode="2" max-obj-count="2" z-value="0">
+	<schema name="koodistot"/>
+	<position x="940" y="700"/>
+	<column name="gid" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="nimi">
+		<type name="varchar" length="0"/>
+	</column>
+	<constraint name="kaavatyyppi_pk" type="pk-constr" table="koodistot.kaavatyyppi">
+		<columns names="gid" ref-type="src-columns"/>
+	</constraint>
+	<initial-data>
+<![CDATA[gid•nimi⸣
+1•yleiskaava⸣
+2•osayleiskaava⸣
+3•vaiheyleiskaava⸣
+4•strateginen yleiskaava⸣
+5•maaseutuosayleiskaava⸣
+6•taajamayleiskaava⸣
+7•kyläkaava⸣
+8•harjuosayleiskaava⸣
+9•rantaosayleiskaava⸣
+10•viherkaava⸣
+11•kuntien yhteinen yleiskaava]]>
+	</initial-data>
+</table>
+
+<table name="kaavaelementti_tyyppi" layer="0" collapse-mode="2" max-obj-count="6" z-value="0">
+	<schema name="koodistot"/>
+	<position x="940" y="1560"/>
+	<column name="gid" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="nimi">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="koodi">
+		<type name="varchar" length="0"/>
+	</column>
+	<constraint name="kaavaelementti_tyyppi_pk" type="pk-constr" table="koodistot.kaavaelementti_tyyppi">
+		<columns names="gid" ref-type="src-columns"/>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="gid_geometria_tyyppi" index="4"/>
+		<object name="gid_hsrcl" index="3"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="geometria_tyyppi_fk" index="2"/>
+		<object name="hsrcl_fk" index="1"/>
+	</customidxs>
+	<initial-data>
+<![CDATA[gid•nimi•koodi•gid_geometria_tyyppi⸣
+1•Maisemallisesti arvokas alue•ma•1⸣
+2•Kaupunki- tai kyläkuvallisesti arvokas alue•sk•1⸣
+3•Alue, jolla on säilytettäviä ympäristöarvoja••1⸣
+4•Arvokas harjualue tai muu geologinen muodostuma•ge•1⸣
+5•Tärkeä tai vedenhankintaan soveltuva pohjavesialue•pv•1⸣
+6•Natura 2000 -verkostoon kuuluva tai ehdotettu alue•nat•1⸣
+7•Luonnon monimuotoisuuden kannalta erityisen tärkeä alue•luo•1⸣
+8•UNESCO:n maailmanperintökohde•un•1⸣
+9•Kansallinen kaupunkipuisto•kp•1⸣
+10•Melualue•me•1⸣
+11•Puhdistettava/kunnostettava maa-alue•saa•1⸣
+12•Vaara-alue•va•1⸣
+13•Suojavyöhyke•sv•1⸣
+14•Kehittämisalue•ke•1⸣
+15•Suunnittelutarvealue•st•1⸣
+16•Alue, jolla ympäristö säilytetään•\/s•1⸣
+17•Tuulivoimaloiden alue•tv•1⸣
+18•Maanalainen tila••1⸣
+19•Maanalainen tila, jota käytetään mmyös väestösuojana•mav•1⸣
+20•Alue on varattu kunnan tarpeisiin•\/k•1⸣
+21•Alue on varattu valtion tarpeisiin•\/v•1⸣
+22•Nykyisellään säilyvät alueet••1⸣
+23•Pienin toimenpitein kehitettävät alueet••1⸣
+24•Uudet ja olennaisesti muuttuvat alueet••1⸣
+25•Yhdyskuntarakenteen mahdollinen laajenemisalue••1⸣
+26•Alueen tiivistämis-/eheyttämistarve••1⸣
+27•Alueen raja••1⸣
+28•Osa-alueen raja••1⸣
+29•Ohjeellinen alueen tai osa-alueen raja••1⸣
+30•Moottori- tai moottoriliikennetie•mo•2⸣
+31•Kaksiajoratainen päätie/-katu•vt/kt/st/pk•2⸣
+32•Valtatie/kantatie•vt/kt•2⸣
+33•Seututie/pääkatu•st/pk•2⸣
+34•Yhdystie/kokoojakatu•yt/kk•2⸣
+35•Joukkoliikenteelle varattu tie tai katu•jl•2⸣
+36•Liittymä••2⸣
+37•Eritasoliittymä••2⸣
+38•Suuntaisliittymä••2⸣
+39•Eritasoristeys ilman liittymää••2⸣
+40•Liikennetunneli••2⸣
+41•Päärata ja liikennepaikka••2⸣
+42•Yhdysrata/sivurata/kaupunkirata••2⸣
+43•Ulkoilureitti••2⸣
+44•Kevyen liikenteen reitti••2⸣
+45•Moottorikelkkailureitti••2⸣
+46•Laivaväylä••2⸣
+47•Veneväylä••2⸣
+48•Johto tai linja••2⸣
+49•Nykyiset tiet ja linjat••2⸣
+50•Merkittävästi parannettava tieosuus••2⸣
+51•Uudet tiet ja linjat••2⸣
+52•Poikkiviiva osoittaa rajan sen puolen johon merkintä kohdistuu••2⸣
+53•Yhdyskuntarakenteen laajenemissuunta••2⸣
+54•Ohjeellinen/vaihtoehtoinen tielinjaus••2⸣
+55•Tieliikenteen yhteystarve••2⸣
+56•Joukkoliikenteen kehittämiskäytävä/yhteystarve••2⸣
+57•Kevyen liikenteen yhteystarve••2⸣
+58•Viheryhteystarve••2⸣
+59•Meluntorjuntatarve••2⸣
+60•Keskustatoimintojen alakeskus•ca•3⸣
+61•Lähipalvelujen alue•pl•3⸣
+62•Suojelu-/muinaismuistokohde••3⸣
+63•Virkistys-/matkailukohde••3⸣
+64•Linja-autoasema/julkisen liikenteen vaihtopaikka/matkakeskus••3⸣
+65•Rautatieasema••3⸣
+66•Venesatama/venevalkama••3⸣
+67•Uimaranta••3⸣
+68•Kohde, nykyinen••3⸣
+69•Kohde, uusi••3⸣
+70•Alueeseen tai kohteeseen liittyvä kirjain- tai numerotunnus••3⸣
+71•Kunnan nimi••3⸣
+72•Kunnan osan nimi••3⸣
+73•Alakeskuksen/kyläkeskuksen nimi••3⸣
+74•Ympäristö- tai maisemavaurion korjaustarve••3⸣
+75•Terveyshaitan poistamistarve••3]]>
+	</initial-data>
+</table>
+
+<table name="kieli" layer="0" collapse-mode="2" max-obj-count="2" z-value="0">
+	<schema name="koodistot"/>
+	<position x="940" y="160"/>
+	<column name="gid" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="kieli">
+		<type name="varchar" length="0"/>
+	</column>
+	<constraint name="kieli_pk" type="pk-constr" table="koodistot.kieli">
+		<columns names="gid" ref-type="src-columns"/>
+	</constraint>
+	<initial-data>
+<![CDATA[gid•kieli⸣
+1•Suomi⸣
+2•Ruotsi⸣
+3•Suomi ja ruotsi]]>
+	</initial-data>
+</table>
+
+<table name="hilucs" layer="0" collapse-mode="2" max-obj-count="4" z-value="0">
+	<schema name="koodistot"/>
+	<position x="360" y="1480"/>
+	<column name="gid" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="nimi">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="maaritelma">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="kuvaus">
+		<type name="varchar" length="0"/>
+	</column>
+	<constraint name="hilucs_pk" type="pk-constr" table="koodistot.hilucs">
+		<columns names="gid" ref-type="src-columns"/>
+	</constraint>
+	<initial-data>
+<![CDATA[Tunniste•Kieli•nimi•Määritelmä•kuvaus•Governance level ID•Governance level Label•Codelist ID•Codelist label•Reference Source•Reference Link•Status ID•Status label•Parent ID•Successor ID•Predecessor ID⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/1_PrimaryProduction•fi•alkutuotanto••Mukaan luetaan alueet, joilla tuotantoteollisuus kokoaa, paketoi, puhdistaa tai prosessoi alkutuotteita lähellä alkutuottajia, erityisesti jos raaka-aine ei sovellu myyntiin tai sitä on vaikea kuljettaa pitkiä välimatkoja.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/1_1_Agriculture•fi•maatalous••Sadon (kasvien, sienien jne.) ja rehun tuotanto elintarvikkeiksi (myyntiin tai kotitarpeisiin) tai teollisiin tarkoituksiin. Tähän sisältyvät biopolttoaineiksi tarkoitetut kasvit sekä sadon kasvatus sekä avoviljelynä että kasvihuoneissa. Myös vuoroviljelyssä käyttämättömänä olevat kesantomaat kuuluvat tähän luokkaan. Mukaan luetaan tuotteiden valmistelu ensimarkkinoille, maanrakennus (esim. viljelymaan pengertäminen, ojitus, riisipeltojen muokkaus jne.) sekä maiseman ylläpitäminen.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/1_PrimaryProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/1_1_1_CommercialAgriculturalProduction•fi•kaupallinen maataloustuotanto••Maatalouskäytössä oleva peltomaa, pysyvät viljelmät ja laidunmaat (sekä kylvetyt että luonnolliset laidunmaat) Tuotteita voidaan käyttää elintarvikkeina tai rehuna tai bioenergian tuotantoon.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/1_1_Agriculture••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/1_1_2_FarmingInfrastructure•fi•maatalouden infrastruktuuri••Maatilat, kotieläintalouden infrastruktuuri (eläinsuojat ja eläinten käsittelyyn liittyvä infrastruktuuri), lantavarastot sekä muu maatalouden infrastruktuuri (esim. kasvien käsittelyyn maatiloilla liittyvät rakennukset).•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/1_1_Agriculture••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/1_1_3_AgriculturalProductionForOwnConsumption•fi•kotitarvetuotanto••Kasvien tai eläinten tuotanto kotitarpeisiin (keittiöpuutarhat, yksityiset kotieläinsuojat jne.)•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/1_1_Agriculture••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/1_2_Forestry•fi•metsätalous••Raakapuun ja muiden metsäteollisuuden alkutuotteiden tuotanto. Puutavaran lisäksi metsätalouden toiminnot tuottavat tuotteita, jotka edellyttävät vain vähän prosessointia, kuten polttopuuta, puuhiiltä ja käsittelemättömänä käytettävää raakapuuta (esim. kaivospölkkyjä, kuitupuuta jne.).  Mukaan luetaan myös metsätaimitarhat, hakkuuseen liittyvät varastointi- ja kuljetusalueet sekä biopolttoaineiksi kasvatettavat puut ja puuvartiset kasvit. Näitä toimintoja voidaan harjoittaa luonnonmetsissä tai istutetuissa metsissä.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/1_PrimaryProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/1_2_1_ForestryBasedOnShortRotation•fi•lyhyeen kiertoaikaan perustuva metsätalous••Metsätalousalueet, joilla kiertoaika on enintään 50 vuotta, jonka jälkeen metsä uudistetaan luontaisesti taikka keinotekoisesti istuttamalla tai kylvämällä. Tähän luokkaan kuuluu myös lyhytkiertoviljely (kuitupuun ja biomassan tuotantoon käytettävät alueet).•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/1_2_Forestry••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/1_2_2_ForestryBasedOnIntermediateOrLongRotation•fi•keskipitkään tai pitkään kiertoaikaan perustuva metsätalous••Metsätalousalueet, joilla kiertoaika on yli 50 vuotta, jonka jälkeen metsä uudistetaan luontaisesti taikka keinotekoisesti istuttamalla tai kylvämällä.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/1_2_Forestry••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/1_2_3_ForestryBasedOnContinuousCover•fi•jatkuvaan kasvatukseen perustuva metsätalous••Metsätalousalueet, joilla metsän hoito ja uudistaminen perustuvat puiden jatkuvaan kasvatukseen.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/1_2_Forestry••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/1_3_MiningAndQuarrying•fi•kaivannaistoiminta••Kaivannaistoiminta, jossa otetaan talteen luontaisesti kiinteinä (kivihiili, malmit, sora, hiekka, suola), nesteinä (raakaöljy), kaasuina (maakaasu) tai biomassana (turve) esiintyviä mineraaleja ja materiaaleja. Talteenotto voidaan toteuttaa eri menetelmillä, kuten maanalaisena tai avokaivauksena tai  louhintana, porauksena jne.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/1_PrimaryProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/1_3_1_MiningOfEnergyProducingMaterials•fi•energiatuotantoon liittyvä kaivannaistoiminta••Kivihiilen, ruskohiilen, turpeen, raakaöljyn, uraanin ja toriumin louhinta ja talteenotto.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/1_3_MiningAndQuarrying••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/1_3_2_MiningOfMetalOres•fi•metallimalmien louhinta••Raudan ja muiden metallimalmien kuin rautamalmien louhinta (lukuun ottamatta uraania ja toriumia).•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/1_3_MiningAndQuarrying••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/1_3_3_OtherMiningAndQuarrying•fi•muu kaivannaistoiminta••Kiven, hiekan, saven, kemikaalien ja mineraalilannoitteiden louhinta, suolan tuotanto ja muu kaivannaistoiminta.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/1_3_MiningAndQuarrying••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/1_4_AquacultureAndFishing•fi•vesiviljely ja kalastus••Ammattikalastus ja vesiviljely.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/1_PrimaryProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/1_4_1_Aquaculture•fi•vesiviljely••Kalankasvattamot ja kalanviljelylaitokset.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/1_4_AquacultureAndFishing••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/1_4_2_ProfessionalFishing•fi•ammattikalastus••Ammattikalastukseen käytettävät vesistöt.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/1_4_AquacultureAndFishing••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/1_5_OtherPrimaryProduction•fi•muu alkutuotanto••Ammattimainen metsästys, metsän luonnontuotteiden (muiden kuin puun) kerääminen, vaeltavien eläimien kasvatus ja kaikki muu alkutuotanto, joka ei kuulu arvoihin 1_1_Agriculture, 1_2_Forestry, 1_3_MiningAndQuarrying, 1_4_AquacultureAndFishing tai mihinkään niiden täsmällisemmistä arvoista.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/1_PrimaryProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/1_5_1_Hunting•fi•metsästys••Ammattimetsästys. Alueet voivat olla aidattuja tai avoimia.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/1_5_OtherPrimaryProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/1_5_2_ManagementOfMigratoryAnimals•fi•vaeltavien eläinten hoito••Vaeltavien eläinten, kuten poro- ja hirvieläinten, ylläpito ja ruokinta.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/1_5_OtherPrimaryProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/1_5_3_PickingOfNaturalProducts•fi•kaupallinen luonnontuotteiden kerääminen••Muiden kuin metsäteollisuuden luonnontuotteiden (kuten villimarjojen, sammaleen, jäkälän jne.) kerääminen kaupallisiin tarkoituksiin.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/1_5_OtherPrimaryProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_SecondaryProduction•fi•jalostus••Teollisuustuotanto ja valmistaminen, jossa alkutuotannon tuotteista valmistetaan lopputuotteita ja välituotteita muun liiketoiminnan käyttöön. Tähän sisältyvät myös teollisuustuotantoon ja valmistamiseen välittömästi liittyvät varastointi- ja kuljetusalueet.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_1_RawIndustry•fi•perusteollisuus••Teollisuustoiminnot, jotka muuntavat primaarisektorin tuotannon valmistetuiksi perustuotteiksi.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_SecondaryProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_1_1_ManufacturingOfTextileProducts•fi•tekstiiliteollisuus••Tekstiilikuitujen ja ompelulangan esivalmistelu ja kehruu, tekstiilien kutominen, nahan parkitus ja viimeistely.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_1_RawIndustry••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_1_2_ManufacturingOfWoodAndWoodBasedProducts•fi•mekaaninen metsäteollisuus••Puun sahaus ja höyläys, viilun, vanerin, sälelevyn, kuitulevyn, rakennuspuusepäntuotteiden sekä korkki-, olki- ja punontatuotteiden valmistus.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_1_RawIndustry••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_1_3_ManufacturingOfPulpPaperAndPaperProducts•fi•kemiallinen metsäteollisuus••Puumassan (selluloosa, hierre, hioke), paperin, kartongin, paperipohjaisten saniteettituotteiden ja tapettipaperien valmistus.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_1_RawIndustry••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_1_4_ManufacturingOfCokeRefinedPetroleumProductsAndNuclearFuel•fi•koksin, öljytuotteiden ja ydinpolttoaineen valmistus••Koksin, öljytuotteiden ja ydinpolttoaineen valmistus.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_1_RawIndustry••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_1_5_ManufacturingOfChemicalsChemicalProductsManMadeFibers•fi•kemianteollisuus••Peruskemikaalien, agrokemikaalien, maalien, lääkkeiden, saippuan, puhdistusaineiden, liimojen sekä muiden kemiallisten tuotteiden ja tekokuitujen valmistus.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_1_RawIndustry••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_1_6_ManufacturingOfBasicMetalsAndFabricatedMetals•fi•metalliteollisuus••Raudan, teräksen, jalometallien ja ei-rautametallien valmistus, prosessointi ja valu. Tähän sisältyy myös metallituotteiden valmistus.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_1_RawIndustry••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_1_7_ManufacturingOfNonMetallicMineralProducts•fi•ei-metallisten mineraalituotteiden tuotanto••Lasin, tiilien, keraamisten tuotteiden, betonin, sementin, kalkin ja kipsin valmistus sekä kiven ja muiden ei-metallisten mineraalituotteiden leikkaus ja muotoilu.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_1_RawIndustry••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_1_8_ManufacturingOfRubberPlasticProducts•fi•kumi- ja muoviteollisuus••Renkaiden, letkujen, muovisten pakkausmateriaalien ja muiden kumi- ja muovituotteiden valmistus.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_1_RawIndustry••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_1_9_ManufacturingOfOtherRawMaterials•fi•muu perusteollisuus••Sellaisten perusmateriaalien valmistus, jotka eivät kuulu arvoon 2_1_RawIndustry tai mihinkään sen täsmällisemmistä arvoista.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_1_RawIndustry••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_2_HeavyEndProductIndustry•fi•raskas teollisuus••Toiminnot, joissa perustuotteita muunnetaan raskaan teollisuuden tuotteiksi.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_SecondaryProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_2_1_ManufacturingOfMachinery•fi•koneteollisuus••Tuotantolaitteiden, maatalous- ja metsätalouskoneiden ja muiden koneiden (lukuun ottamatta ilma-aluksia ja ajoneuvoja), aseiden, ammusten ja kodinkoneiden tuotanto.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_2_HeavyEndProductIndustry••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_2_2_ManufacturingOfVehiclesAndTransportEquipment•fi•ajoneuvo- ja kuljetusvälineteollisuus••Moottoriajoneuvojen, ilma-alusten, avaruusalusten, laivojen, veneiden, rautatie- ja raitioliikenteen kaluston, moottoripyörien, polkupyörien ja muiden kuljetusvälineiden tuotanto.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_2_HeavyEndProductIndustry••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_2_3_ManufacturingOfOtherHeavyEndProducts•fi•muu raskas teollisuus••Sellaisten muiden raskaan teollisuuden tuotteiden valmistus, jotka eivät kuulu mihinkään muuhun arvon 2_2_HeavyEndProductIndustry täsmällisemmistä arvoista.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_2_HeavyEndProductIndustry••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_3_LightEndProductIndustry•fi•kevyt teollisuus••Toiminnot, joissa perustuotteita muunnetaan kevyen teollisuuden tuotteiksi.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_SecondaryProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_3_1_ManufacturingOfFoodBeveragesAndTobaccoProducts•fi•elintarvike- ja tupakkateollisuus••Lihan, kalan, hedelmien ja vihannesten, öljyjen ja rasvojen tai niistä johdettujen tuotteiden, meijerituotteiden, mylly- ja tärkkelystuotteiden, rehuvalmisteiden ja muiden elintarviketuotteiden, juomien ja tupakkatuotteiden valmistus.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_3_LightEndProductIndustry••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_3_2_ManufacturingOfClothesAndLeather•fi•vaate- ja nahkateollisuus••Vaatteiden ja asusteiden valmistus, nahkavaatteiden valmistus, turkisten muokkaus ja värjäys, turkistuotteiden, laukkujen, kassien, satuloiden ja valjaiden sekä jalkineiden valmistus.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_3_LightEndProductIndustry••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_3_3_PublishingAndPrinting•fi•kustantaminen ja painaminen••Kirjojen, sanomalehtien ja aikakauslehtien kustantaminen ja painaminen sekä äänitteiden julkaiseminen ja toisintaminen.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_3_LightEndProductIndustry••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_3_4_ManufacturingOfElectricalAndOpticalEquipment•fi•sähköteknisten tuotteiden ja instrumenttien valmistus••Toimistolaitteiden, tietokoneiden, moottoreiden, generaattoreiden, sähkön jakelu- ja säätölaitteiden, johtojen ja kaapeleiden, akkujen, paristojen, lamppujen, radio- ja televisiovastaanotinten, puhelimien, elektroniventtiilien ja  putkien, lääketieteellisten ja optisten instrumenttien ja tarkkuuslaitteiden, rannekellojen ja muiden elektronisten ja optisten laitteiden valmistus.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_3_LightEndProductIndustry••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_3_5_ManufacturingOfOtherLightEndProducts•fi•muu kevyt teollisuus••Huonekalujen, korujen, musiikki-instrumenttien, urheiluvarusteiden, pelien, lelujen ja muiden sekalaisten tuotteiden valmistus.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_3_LightEndProductIndustry••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_4_EnergyProduction•fi•energiatuotanto••Energian tuotanto.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_SecondaryProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_4_1_NuclearBasedEnergyProduction•fi•ydinvoimaan perustuva energiatuotanto••Ydinvoimalaitokset.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_4_EnergyProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_4_2_FossilFuelBasedEnergyProduction•fi•fossiilisiin polttoaineisiin perustuva energiatuotanto••Fossiilisia polttoaineita (kivihiili, öljy, maakaasu, turve ja muut fossiiliset polttoaineet) käyttävä voimalaitokset.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_4_EnergyProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_4_3_BiomassBasedEnergyProduction•fi•biomassaan perustuva energiatuotanto••Biomassaan perustuvia polttoaineita (puuta ja muita puupohjaisia kiinteitä ja nestemäisiä polttoaineita, biokaasua ja muita biopolttoaineita) käyttävät polttolaitokset.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_4_EnergyProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_4_4_RenewableEnergyProduction•fi•uusiutuvaan energiaan perustuva energiatuotanto••Vesi-, aurinko- ja tuulienergian, (ilman, maan ja veden) lämpöenergian, vuorovesi-, aalto- yms. energian ja muun uusiutuvan energian (lukuun ottamatta biomassaenergiaa, joka kuuluu arvoon 2_4_3_BiomassBasedEnergyProduction).•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_4_EnergyProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/2_5_OtherIndustry•fi•muu teollisuus••Sellaisten muiden teollisuuden tuotteiden valmistus, jotka eivät kuulu mihinkään muuhun arvon 2_SecondaryProduction täsmällisemmistä arvoista.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/2_SecondaryProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_TertiaryProduction•fi•palvelut••Yksityinen ja julkinen sektori, joka tuottaa palveluita muille yrityksille ja kuluttajille. Tähän sisältyvät tukku- ja vähittäispalvelut, korjauspalvelut, hotelli- ja ravintolapalvelut, rahoituspalvelut, kiinteistökauppa, yrityspalvelut, vuokrauspalvelut, julkishallinto, maanpuolustus, järjestys- ja turvallisuuspalvelut, koulutus, terveys- ja sosiaalipalvelut sekä muut yhteiskunnalliset, sosiaaliset ja henkilökohtaiset palvelut.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_1_CommercialServices•fi•kauppa ja palveluliiketoiminta••Kaupan ja palveluliiketoiminnan harjoittaminen.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_TertiaryProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_1_1_WholesaleAndRetailTradeAndRepairOfVehiclesAndPersonalAndHouseholdGoods•fi•tukku- ja vähittäiskauppa••Moottoriajoneuvojen, polttoaineiden, maatalouden raaka-aineiden, elävien eläinten, malmien, metallien, kemikaalien, puutavaran, koneiden, laivojen, huonekalujen, kotitaloustavaroiden, tekstiilien, elintarvikkeiden, juomien, tupakkatuotteiden, lääkkeiden, käytettyjen tavaroiden ja muiden tuotteiden sekä jätteen ja romun tukku- ja vähittäismyynti. Tähän luokkaan sisältyy myös ajoneuvojen ja koti-irtaimiston korjaus.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_1_CommercialServices••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_1_2_RealEstateServices•fi•kiinteistökauppa-, vuokraus- ja hallintapalvelut••Kiinteistökauppa-, vuokraus- ja hallintapalvelujen tarjoaminen.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_1_CommercialServices••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_1_3_AccommodationAndFoodServices•fi•majoitus- ja ravitsemuspalvelut••Hotelli-, lomakylä-, leiriytymisalue-, ravintola-, baari- ja ruokalapalvelut.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_1_CommercialServices••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_1_4_OtherCommercialServices•fi•muut kaupalliset palvelut••Sellaiset muut kaupalliset palvelut, jotka eivät kuulu mihinkään muuhun arvon 3_1_CommercialServices täsmällisemmistä arvoista, kuten kauneudenhoito- ja hyvinvointipalvelut.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_1_CommercialServices••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_2_FinancialProfessionalAndInformationServices•fi•rahoitus- vakuutus- ja ICT-palvelut••Rahoitus-, vakuutus- tai ICT-palvelujen tarjoaminen.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_TertiaryProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_2_1_FinancialAndInsuranceServices•fi•rahoitus- ja vakuutuspalvelut••Pankki-, luotto-, vakuutus- ja muiden rahoituspalvelujen tarjoaminen.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_2_FinancialProfessionalAndInformationServices••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_2_2_ProfessionalTechnicalAndScientificServices•fi•tekniset ja tieteelliset palvelut••IT-konsultointi, tietojenkäsittely, tutkimus ja kehittäminen, lakipalvelut, kirjanpito, liikkeenjohto, arkkitehtuuri- ja insinööripalvelut, mainonta-, testaus-, selvitys-, konsultti- ja muut ammatilliset palvelut.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_2_FinancialProfessionalAndInformationServices••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_2_3_InformationAndCommunicationServices•fi•ICT-palvelut••Julkaisu-, äänitys-, elokuva-, TV-, radio-, posti-, televiestintä-, tietokone- ja tiedonkäsittelypalvelut.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_2_FinancialProfessionalAndInformationServices••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_2_4_AdministrativeAndSupportServices•fi•hallinto- ja tukipalvelut••Matkatoimisto-, vuokraus-, siivous- ja turvapalvelut sekä muut hallinto- ja tukipalvelut.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_2_FinancialProfessionalAndInformationServices••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_2_5_OtherFinancialProfessionalAndInformationServices•fi•muut rahoitus- vakuutus- ja ICT-palvelut••Sellaiset muut rahoitus-, vakuutus- ja ICT-palvelut, jotka eivät kuulu mihinkään muuhun arvon 3_2_FinancialProfessionalAndInformationServices täsmällisemmistä arvoista.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_2_FinancialProfessionalAndInformationServices••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_3_CommunityServices•fi•yhteiskunnalliset palvelut••Yhteiskunnalle tuotettavat palvelut•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_TertiaryProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_3_1_PublicAdministrationDefenceAndSocialSecurityServices•fi•julkishallinto, maanpuolustus, järjestys- ja turvallisuuspalvelut••Yleisten hallinto-, maanpuolustus-, tuomioistuin- ja palo- ja pelastuspalvelujen, järjestys- ja turvallisuuspalvelujen sekä välttämättömien sosiaaliturvapalvelujen tarjoaminen.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_3_CommunityServices••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_3_2_EducationalServices•fi•koulutuspalvelut••Alemman ja ylemmän perusasteen koulutuspalvelujen, korkeakoulu- ja aikuiskoulutuspalvelujen sekä muiden koulutuspalvelujen tarjoaminen.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_3_CommunityServices••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_3_3_HealthAndSocialServices•fi•terveys- ja sosiaalipalvelut••Ihmisten ja eläinten terveyspalvelujen sekä sosiaalipalvelujen tarjoaminen.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_3_CommunityServices••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_3_4_ReligiousServices•fi•uskonnolliset palvelut••Uskonnollisten palvelujen tarjoaminen.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_3_CommunityServices••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_3_5_OtherCommunityServices•fi•muut yhteiskunnalliset palvelut••Muut yhteiskunnalliset palvelut, esimerkiksi hautausmaat.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_3_CommunityServices••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_4_CulturalEntertainmentAndRecreationalServices•fi•kulttuuri-, viihde- ja virkistyspalvelut••Kulttuuri-, viihde- tai virkistyspalvelujen tarjoaminen.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_TertiaryProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_4_1_CulturalServices•fi•kulttuuripalvelut••Taide-, kirjasto- ja museopalvelut, eläintarhat, kasvitieteelliset puutarhat, historialliset kohteet ja muut kulttuuripalvelut.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_4_CulturalEntertainmentAndRecreationalServices••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_4_2_EntertainmentServices•fi•viihdepalvelut••Huvipuistot, teemapuistot, vedonlyönti- ja rahapelipalvelut ja muut viihdepalvelut.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_4_CulturalEntertainmentAndRecreationalServices••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_4_3_SportsInfrastructure•fi•urheilu- ja liikuntapaikat••Urheilu- ja liikuntapaikat, kuten stadionit, urheiluhallit, uima-altaat, kuntosalit, hiihtokeskukset, golfradat ja muut urheilu- ja liikuntapaikat.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_4_CulturalEntertainmentAndRecreationalServices••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_4_4_OpenAirRecreationalAreas•fi•ulkoilmavirkistysalueet••Ulkoilmavirkistysalueet, kuten kaupunkipuistot, leikkikentät, kansallispuistot ja virkistystarkoituksiin käytettävät luonnontilaiset alueet.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_4_CulturalEntertainmentAndRecreationalServices••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_4_5_OtherRecreationalServices•fi•muut virkistyspalvelut••Sellaiset muut virkistyspalvelut, jotka eivät kuulu mihinkään muuhun arvon 3_4_CulturalEntertainmentAndRecreationalServices täsmällisemmistä arvoista.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_4_CulturalEntertainmentAndRecreationalServices••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/3_5_OtherServices•fi•muut palvelut••Sellaisten muiden palvelujen tarjoaminen, jotka eivät kuulu mihinkään muuhun arvon 3_TertiaryProduction täsmällisemmistä arvoista.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/3_TertiaryProduction••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/4_TransportNetworksLogisticsAndUtilities•fi•tukitoiminnot••Yhteiskunnan perusinfrastruktuuri. Kaikki muut sektorit käyttävät perusinfrastruktuuria tavaroiden ja palvelujen tuottamiseen, ja ne ovat elintärkeitä myös asuinalueille. Niihin sisältyvät vesihuolto, jäteveden ja jätteen keräys, käsittely ja kierrätys, liikenne, energiaverkot, varastointi ja viestintä.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/4_1_TransportNetworks•fi•liikenneverkot••Liikenteen infrastruktuuri.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/4_TransportNetworksLogisticsAndUtilities••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/4_1_1_RoadTransport•fi•tieliikenne••Tieliikenteen käyttämät alueet, kuten tiet, pysäköintialueet ja huoltoasemat.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/4_1_TransportNetworks••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/4_1_2_RailwayTransport•fi•rautatieliikenne••Rautatieliikenteen käyttämät alueet, kuten radat, rautatieasemat, ratapihat jne.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/4_1_TransportNetworks••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/4_1_3_AirTransport•fi•lentoliikenne••Lentoliikenteen käyttämät alueet, kuten lentoasemat ja niihin liittyvät palvelut.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/4_1_TransportNetworks••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/4_1_4_WaterTransport•fi•vesiliikenne••Vesiliikenteen käyttämät alueet, kuten satamat, joet, telakat ja niihin liittyvät palvelut.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/4_1_TransportNetworks••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/4_1_5_OtherTransportNetwork•fi•muut liikenneverkot••Sellaisten muiden liikennepalvelujen käyttämät alueet, jotka eivät kuulu mihinkään muuhun arvon 4_1_TransportNetworks täsmällisemmistä arvoista.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/4_1_TransportNetworks••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/4_2_LogisticalAndStorageServices•fi•logistiikka- ja varastointipalvelut••Erillisten (yksittäisiin aloihin liittymättömien) logistiikka- ja varastointipalvelujen käyttämät alueet.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/4_TransportNetworksLogisticsAndUtilities••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/4_3_Utilities•fi•yhdyskuntatekninen huolto••Yhdyskuntatekniseen huoltoon liittyvä infrastruktuuri.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/4_TransportNetworksLogisticsAndUtilities••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/4_3_1_ElectricityGasAndThermalPowerDistributionServices•fi•energiahuolto••Sähkön, kaasun ja lämpöenergian jakeluun käytettävät alueet, mukaan lukien öljyn ja kaasun siirtoon käytettävät putkistot.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/4_3_Utilities••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/4_3_2_WaterAndSewageInfrastructure•fi•vesihuolto••Veden ottoon, puhdistamiseen, varastointiin ja jakeluun sekä jäteveden keräämiseen ja käsittelyyn käytettävät alueet  (ml. putkistot).•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/4_3_Utilities••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/4_3_3_WasteTreatment•fi•jätehuolto••Jätteen keräämiseen, käsittelyyn ja kierrätykseen käytettävät alueet.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/4_3_Utilities••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/4_3_4_OtherUtilities•fi•muu yhdyskuntatekninen huolto••Sellaiseen muuhun yhdyskuntatekniseen huoltoon käytettävät alueet, jotka eivät kuulu mihinkään muuhun arvon 4_3_Utilities täsmällisemmistä arvoista.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/4_3_Utilities••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/5_ResidentialUse•fi•asuinalueet••Ensisijaisesti ihmisten asumiseen käytettävät alueet. Asumisen muodot vaihtelevat merkittävästi asuinalueiden välillä ja sisällä. Näihin alueisiin kuuluvat omakoti-, rivi- ja kerrostalot sekä liikuteltavat asunnot kaupungeissa, taajamissa ja maaseutualueilla, jos ne eivät kytkeydy alkutuotantoon. Tähän sisältyvät asukasmäärältään sekä tiheät että harvat asuinalueet. Tähän luokkaan kuuluvat myös asuinalueet, joita käytetään yhdessä muiden soveltuvien käyttötarkoitusten kanssa (keskusta-alueet), sekä muut asuinalueet, kuten loma-asunnot.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/5_1_PermanentResidentialUse•fi•pientalo- ja kerrostaloalueet••Asuinalueet, joilla on ensisijaisesti vakinaisessa asuinkäytössä olevia puutarhojen ja/tai pihojen ympäröimiä omakotitaloja, yhden tai kahden perheen pientaloja, rivitaloja ja kerrostaloja.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/5_ResidentialUse••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/5_2_ResidentialUseWithOtherCompatibleUses•fi•taajamatoimintojen alue••Asuinalueet, joita käytetään yhdessä muiden soveltuvien käyttötarkoitusten kanssa (esim. erityyppiset palvelut, kevyt teollisuus jne.)•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/5_ResidentialUse••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/5_3_OtherResidentialUse•fi•vapaa-ajan ja muut asuinalueet••Alueet, joita käytetään ensisijaisesti tilapäiseen asumiseen (leirintäalueet ja vastaavat), loma-asumiseen (kesämökit) jne.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/5_ResidentialUse••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/6_OtherUses•fi•muu käyttö••Alueet, jotka eivät kuulu arvoihin 1_PrimaryProduction, 2_SecondaryProduction 3_TertiaryProduction 4_TransportNetworksLogisticsAndUtilities tai 5_ResidentialUse eivätkä mihinkään niiden täsmällisemmistä arvoista, taikka rakenteilla oleviin alueisiin.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/6_1_TransitionalAreas•fi•rakenteilla oleva alue••Rakenteilla olevat alueet. Tämä luokka on käytössä ainoastaan toteutuneessa maankäytössä, ei suunnitellussa maankäytössä.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/6_OtherUses••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/6_2_AbandonedAreas•fi•hylätty alue••Hylätyt maatalous-, asuin-, teollisuus-, liikenne- ja perusinfrastruktuurialueet. Alue kuuluu tähän luokkaan, jos se ei ole käytössä eikä sitä voida enää käyttää alkuperäiseen tarkoitukseensa ilman laajoja ennallistamis- tai kunnostamistöitä.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/6_OtherUses••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/6_3_NaturalAreasNotInOtherEconomicUse•fi•luonnontilainen alue, joka ei talouskäytössä••Luonnontilaiset alueet, jotka eivät ole muussa talouskäytössä.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/6_OtherUses••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/6_3_1_LandAreasNotInOtherEconomicUse•fi•maa-alue, joka ei talouskäytössä••Luonnontilaiset alueet, kuten metsämaa, pensaikot, nurmet, kosteikot ja avokesanto, jotka eivät ole missään muussa sosioekonomisessa käytössä.  Tähän kuuluvat alueet, joiden kaavoitustilanne on ”luonnontilainen alue”. Suojelualueet voivat kuulua tähän luokkaan tai muihin luokkiin, jos niitä käytetään myös muihin tarkoituksiin. Suojelualueisiin liitetään aina täydentävä kaavamerkintä / lisästatus ”suojelualue”.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/6_3_NaturalAreasNotInOtherEconomicUse••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/6_3_2_WaterAreasNotInOtherEconomicUse•fi•vesialue, joka ei talouskäytössä••Vesialueet, jotka eivät ole missään muussa sosioekonomisessa käytössä.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/6_3_NaturalAreasNotInOtherEconomicUse••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/6_4_AreasWhereAnyUseAllowed•fi•alue, jossa kaikenlainen suunniteltu käyttö sallittu••Alueet, joiden kaikenlainen käyttö sallitaan suunnitellussa maankäytössä.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/6_OtherUses••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/6_5_AreasWithoutAnySpecifiedPlannedUse•fi•alue, jolla ei suunniteltua käyttötarkoitusta••Alue, jolla ei ole käyttötarkoitusta suunnitellussa maankäytössä, esimerkiksi kaavan ulkopuolelle jäävät alueet.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/6_OtherUses••⸣
+http://inspire.ec.europa.eu/codelist/HILUCSValue/6_6_NotKnownUse•fi•käyttö ei tiedossa••Alueet, joiden maankäyttö ei ole tiedossa.•http://inspire.ec.europa.eu/registry/governance-level/eu-legal•Legal (EU)•http://inspire.ec.europa.eu/codelist/HILUCSValue•HILUCS•••http://inspire.ec.europa.eu/registry/status/valid•Voimassa oleva•http://inspire.ec.europa.eu/codelist/HILUCSValue/6_OtherUses••]]>
+	</initial-data>
+</table>
+
+<table name="hsrcl" layer="0" collapse-mode="2" max-obj-count="2" z-value="0">
+	<schema name="koodistot"/>
+	<position x="360" y="1700"/>
+	<column name="gid" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="teksti">
+		<type name="varchar" length="0"/>
+	</column>
+	<constraint name="hsrcl_pk" type="pk-constr" table="koodistot.hsrcl">
+		<columns names="gid" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<relationship name="hsrcl_has_many_kaavaelementti_tyyppi" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#ae23cf"
+	 src-table="koodistot.hsrcl"
+	 dst-table="koodistot.kaavaelementti_tyyppi"
+	 src-required="false" dst-required="false"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE"/>
+
+<table name="dokumenttityyppi" layer="0" collapse-mode="2" max-obj-count="3" z-value="0">
+	<schema name="koodistot"/>
+	<position x="940" y="300"/>
+	<column name="gid" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="nimi">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="kuvaus">
+		<type name="varchar" length="0"/>
+	</column>
+	<constraint name="dokumenttityyppi_pk" type="pk-constr" table="koodistot.dokumenttityyppi">
+		<columns names="gid" ref-type="src-columns"/>
+	</constraint>
+	<initial-data>
+<![CDATA[gid•nimi•kuvaus⸣
+1•Liiteaineisto•Kaikki kaavaa tarkentavat tai selventävät dokumentit. Kaavan laatimisen aikana syntyvä aineisto pl. kaavaselostus.⸣
+2•Kaavaselostus•Määrämuotoinen kaavan selostus.⸣
+3•Lisätieto•Kaavaan liittyvät lisätietodokumentit.⸣
+4•Päätös•Kaavan päätösasiakirjat.]]>
+	</initial-data>
+</table>
+
+<table name="vaihetieto" layer="0" collapse-mode="2" max-obj-count="3" z-value="0">
+	<schema name="koodistot"/>
+	<comment><![CDATA[Kaavoituksen vaihetieto, jota käytetään kaavoituksen etenemisen yhteydessä.]]></comment>
+	<position x="940" y="500"/>
+	<column name="gid" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="nimi">
+		<type name="varchar" length="0"/>
+	</column>
+	<column name="kuvaus">
+		<type name="varchar" length="0"/>
+	</column>
+	<constraint name="vaihetyyppi_pk" type="pk-constr" table="koodistot.vaihetieto">
+		<columns names="gid" ref-type="src-columns"/>
+	</constraint>
+	<initial-data>
+<![CDATA[gid•nimi•kuvaus⸣
+1•aloitusvaihe•⸣
+2•valmisteluvaihe•⸣
+3•luonnosvaihe•⸣
+4•ehdotusvaihe•⸣
+5•hyväksymisvaihe•⸣
+6•hyväksytty•⸣
+7•lainvoimainen•⸣
+8•keskeytetty•⸣
+9•kumottu•]]>
+	</initial-data>
+</table>
+
+<relationship name="yleiskaava_has_many_kaavaelementti" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#2c652d"
+	 src-table="yleiskaava.yleiskaava"
+	 dst-table="yleiskaava.kaavaelementti"
+	 src-required="false" dst-required="false"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE">
+	<label ref-type="dst-label">
+		<position x="0" y="0"/>
+	</label>
+	<label ref-type="name-label">
+		<position x="0.612006" y="8.60139"/>
+	</label>
+</relationship>
+
+<table name="numeerinen_merkintatyyppi" layer="0" collapse-mode="2" max-obj-count="2" z-value="0">
+	<schema name="koodistot"/>
+	<position x="940" y="2020"/>
+	<column name="gid" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="tyyppi">
+		<type name="varchar" length="0"/>
+	</column>
+	<constraint name="numeerinen_merkinta_pk" type="pk-constr" table="koodistot.numeerinen_merkintatyyppi">
+		<columns names="gid" ref-type="src-columns"/>
+	</constraint>
+	<initial-data>
+<![CDATA[gid•tyyppi⸣
+1•tehokkuusluku⸣
+2•kerrosala⸣
+3•määräaika⸣
+4•alueeseen tai kohteeseen liittyvä kirjain- tai numerotunnus]]>
+	</initial-data>
+</table>
+
+<relationship name="kieli_has_many_yleiskaava" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#48a0f4"
+	 src-table="koodistot.kieli"
+	 dst-table="yleiskaava.yleiskaava"
+	 src-required="false" dst-required="false"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE">
+	<label ref-type="name-label">
+		<position x="-7.86355" y="-0.993861"/>
+	</label>
+</relationship>
+
+<relationship name="vaihetieto_has_many_yleiskaava" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#94cd55"
+	 src-table="koodistot.vaihetieto"
+	 dst-table="yleiskaava.yleiskaava"
+	 src-required="false" dst-required="false"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE">
+	<label ref-type="name-label">
+		<position x="-7.53542" y="5.30314"/>
+	</label>
+</relationship>
+
+<relationship name="kaavatyyppi_has_many_yleiskaava" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#b05bbe"
+	 src-table="koodistot.kaavatyyppi"
+	 dst-table="yleiskaava.yleiskaava"
+	 src-required="false" dst-required="false"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE">
+	<label ref-type="name-label">
+		<position x="10.6989" y="-0.688371"/>
+	</label>
+</relationship>
+
+<relationship name="kaavaelementti_tyyppi_has_many_kaavaelementti" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#c1d4e9"
+	 src-table="koodistot.kaavaelementti_tyyppi"
+	 dst-table="yleiskaava.kaavaelementti"
+	 src-required="false" dst-required="false"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE"/>
+
+<relationship name="maankayttoluokka_has_many_maankayttoalue" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#946ee1"
+	 src-table="koodistot.maankayttoluokka"
+	 dst-table="yleiskaava.maankayttoalue"
+	 src-required="false" dst-required="false"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE">
+	<label ref-type="name-label">
+		<position x="-6.53546" y="-8.83111"/>
+	</label>
+</relationship>
+
+<relationship name="kieli_has_many_dokumentti" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#41eead"
+	 src-table="koodistot.kieli"
+	 dst-table="kaavan_lisatiedot.dokumentti"
+	 src-required="false" dst-required="false"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE"/>
+
+<relationship name="dokumenttityyppi_has_many_dokumentti" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#b254f4"
+	 src-table="koodistot.dokumenttityyppi"
+	 dst-table="kaavan_lisatiedot.dokumentti"
+	 src-required="false" dst-required="false"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE">
+	<label ref-type="name-label">
+		<position x="-8.3323" y="-9.11084"/>
+	</label>
+</relationship>
+
+<relationship name="hilucs_has_many_maankayttoluokka" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#9d778e"
+	 src-table="koodistot.hilucs"
+	 dst-table="koodistot.maankayttoluokka"
+	 src-required="false" dst-required="false"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE"/>
+
+<relationship name="many_dokumentti_has_many_yleiskaava" type="relnn" layer="0"
+	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
+	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
+	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
+	 pk-col-pattern="id"
+	 custom-color="#e58353"
+	 src-table="kaavan_lisatiedot.dokumentti"
+	 dst-table="yleiskaava.yleiskaava"
+	 src-required="false" dst-required="false"
+	 table-name="many_dokumentti_has_many_yleiskaava"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE">
+	<label ref-type="name-label">
+		<position x="3.0457" y="8.07277"/>
+	</label>
+</relationship>
+
+<relationship name="dokumentti_has_many_yleiskaava" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#29169a"
+	 src-table="kaavan_lisatiedot.dokumentti"
+	 dst-table="yleiskaava.yleiskaava"
+	 src-required="false" dst-required="false"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE">
+	<label ref-type="name-label">
+		<position x="-12.9543" y="-1.71424"/>
+	</label>
+</relationship>
+
+<table name="numeerinen_lisatieto" layer="0" collapse-mode="1" max-obj-count="3" z-value="0">
+	<schema name="kaavan_lisatiedot"/>
+	<position x="2220" y="1680"/>
+	<column name="gid" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="arvo">
+		<type name="varchar" length="0"/>
+	</column>
+	<constraint name="numeerinen_lisatieto_pk" type="pk-constr" table="kaavan_lisatiedot.numeerinen_lisatieto">
+		<columns names="gid" ref-type="src-columns"/>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="gid_numeerinen_merkintatyyppi" index="2"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="numeerinen_merkintatyyppi_fk" index="1"/>
+	</customidxs>
+</table>
+
+<relationship name="numeerinen_merkintatyyppi_has_many_numeerinen_lisatieto" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#f5ea06"
+	 src-table="koodistot.numeerinen_merkintatyyppi"
+	 dst-table="kaavan_lisatiedot.numeerinen_lisatieto"
+	 src-required="false" dst-required="false"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE"/>
+
+<relationship name="many_maankayttoalue_has_many_numeerinen_lisatieto" type="relnn" layer="0"
+	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
+	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
+	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
+	 pk-col-pattern="id"
+	 custom-color="#33a5b3"
+	 src-table="yleiskaava.maankayttoalue"
+	 dst-table="kaavan_lisatiedot.numeerinen_lisatieto"
+	 src-required="false" dst-required="false"
+	 table-name="many_maankayttoalue_has_many_numeerinen_lisatieto"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE">
+	<label ref-type="name-label">
+		<position x="-3.51" y="-9.80671"/>
+	</label>
+</relationship>
+
+<relationship name="many_kaavaelementti_has_many_numeerinen_lisatieto" type="relnn" layer="0"
+	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
+	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
+	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
+	 pk-col-pattern="id"
+	 custom-color="#f1d14b"
+	 src-table="yleiskaava.kaavaelementti"
+	 dst-table="kaavan_lisatiedot.numeerinen_lisatieto"
+	 src-required="false" dst-required="false"
+	 table-name="many_kaavaelementti_has_many_numeerinen_lisatieto"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE">
+	<label ref-type="name-label">
+		<position x="-0.778174" y="5.62811"/>
+	</label>
+</relationship>
+
+<table name="teema" layer="0" collapse-mode="2" max-obj-count="2" z-value="0">
+	<schema name="koodistot"/>
+	<role name="postgres"/>
+	<position x="940" y="1860"/>
+	<column name="gid" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="nimi">
+		<type name="varchar" length="0"/>
+	</column>
+	<constraint name="teema_pk" type="pk-constr" table="koodistot.teema">
+		<columns names="gid" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<relationship name="many_kaavaelementti_has_many_teema" type="relnn" layer="0"
+	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
+	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
+	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
+	 pk-col-pattern="id"
+	 custom-color="#04c11b"
+	 src-table="yleiskaava.kaavaelementti"
+	 dst-table="koodistot.teema"
+	 src-required="false" dst-required="false"
+	 table-name="many_kaavaelementti_has_many_teema"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE">
+	<label ref-type="name-label">
+		<position x="-0.376927" y="5.85611"/>
+	</label>
+</relationship>
+
+<table name="geometria_tyyppi" layer="0" collapse-mode="2" max-obj-count="2" z-value="0">
+	<schema name="koodistot"/>
+	<role name="postgres"/>
+	<position x="540" y="1860"/>
+	<column name="gid" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="nimi">
+		<type name="varchar" length="0"/>
+	</column>
+	<constraint name="geometriatyyppi_pk" type="pk-constr" table="koodistot.geometria_tyyppi">
+		<columns names="gid" ref-type="src-columns"/>
+	</constraint>
+	<initial-data>
+<![CDATA[gid•nimi⸣
+1•alue⸣
+2•viiva⸣
+3•piste]]>
+	</initial-data>
+</table>
+
+<relationship name="geometria_tyyppi_has_many_kaavaelementti_tyyppi" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#b4f68f"
+	 src-table="koodistot.geometria_tyyppi"
+	 dst-table="koodistot.kaavaelementti_tyyppi"
+	 src-required="false" dst-required="false"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE">
+	<label ref-type="name-label">
+		<position x="-0.77543" y="-8.16673"/>
+	</label>
+</relationship>
+
+<relationship name="many_maankayttoalue_has_many_teema" type="relnn" layer="0"
+	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
+	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
+	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
+	 pk-col-pattern="id"
+	 custom-color="#07ba1a"
+	 src-table="yleiskaava.maankayttoalue"
+	 dst-table="koodistot.teema"
+	 src-required="false" dst-required="false"
+	 table-name="many_maankayttoalue_has_many_teema"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE"/>
+
+<relationship name="many_yleiskaava_has_many_teema" type="relnn" layer="0"
+	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
+	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
+	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
+	 pk-col-pattern="id"
+	 custom-color="#afdf2b"
+	 src-table="yleiskaava.yleiskaava"
+	 dst-table="koodistot.teema"
+	 src-required="false" dst-required="false"
+	 table-name="many_yleiskaava_has_many_teema"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE">
+	<label ref-type="name-label">
+		<position x="-5.28664" y="-1.40671"/>
+	</label>
+</relationship>
+
+<table name="tietomalli_metatiedot" layer="0" collapse-mode="2" max-obj-count="3" z-value="0">
+	<schema name="koodistot"/>
+	<role name="postgres"/>
+	<comment><![CDATA[Tietomallin tiedot]]></comment>
+	<position x="440" y="340"/>
+	<column name="gid" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="nimi" not-null="true">
+		<type name="varchar" length="0"/>
+		<comment><![CDATA[Tietomallin nimi]]></comment>
+	</column>
+	<column name="versio" not-null="true">
+		<type name="varchar" length="0"/>
+		<comment><![CDATA[Tietomallin versio]]></comment>
+	</column>
+	<constraint name="tietomalli_metatiedot_pk" type="pk-constr" table="koodistot.tietomalli_metatiedot">
+		<columns names="gid" ref-type="src-columns"/>
+	</constraint>
+	<initial-data>
+<![CDATA[gid•nimi•versio⸣
+1•yleiskaava•0.3.0]]>
+	</initial-data>
+</table>
+
+<relationship name="dokumentti_has_many_maankayttoalue" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#88b8ef"
+	 src-table="kaavan_lisatiedot.dokumentti"
+	 dst-table="yleiskaava.maankayttoalue"
+	 src-required="false" dst-required="false"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE"/>
+
+<relationship name="dokumentti_has_many_kaavaelementti" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#20b34f"
+	 src-table="kaavan_lisatiedot.dokumentti"
+	 dst-table="yleiskaava.kaavaelementti"
+	 src-required="false" dst-required="false"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE"/>
+
+<relationship name="many_yleiskaava_has_many_kaavamaarays" type="relnn" layer="0"
+	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
+	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
+	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
+	 pk-col-pattern="id"
+	 custom-color="#1c5db3"
+	 src-table="yleiskaava.yleiskaava"
+	 dst-table="koodistot.kaavamaarays"
+	 src-required="false" dst-required="false"
+	 table-name="many_yleiskaava_has_many_kaavamaarays"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE"/>
+
+<relationship name="many_maankayttoalue_has_many_kaavamaarays" type="relnn" layer="0"
+	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
+	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
+	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
+	 pk-col-pattern="id"
+	 custom-color="#6c5af2"
+	 src-table="yleiskaava.maankayttoalue"
+	 dst-table="koodistot.kaavamaarays"
+	 src-required="false" dst-required="false"
+	 table-name="many_maankayttoalue_has_many_kaavamaarays"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE"/>
+
+<relationship name="many_kaavaelementti_has_many_kaavamaarays" type="relnn" layer="0"
+	 src-col-pattern="{sc}_{st}" dst-col-pattern="{sc}_{dt}"
+	 pk-pattern="{gt}_pk" uq-pattern="{gt}_uq"
+	 src-fk-pattern="{st}_fk" dst-fk-pattern="{dt}_fk"
+	 pk-col-pattern="id"
+	 custom-color="#071589"
+	 src-table="yleiskaava.kaavaelementti"
+	 dst-table="koodistot.kaavamaarays"
+	 src-required="false" dst-required="false"
+	 table-name="many_kaavaelementti_has_many_kaavamaarays"
+	 deferrable="true" defer-type="INITIALLY DEFERRED"
+	upd-action="CASCADE"
+	del-action="CASCADE"/>
+
+</dbmodel>
