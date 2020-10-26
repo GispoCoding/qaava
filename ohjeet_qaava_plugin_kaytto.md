@@ -56,7 +56,9 @@ Jos et tiedä miten PostGIS-yhteyden saa käyttöön, ota yhteyttä info@gispo.f
 
 ![Promote](/qaava_promote_db.gif)
 
-9. Valitse QGIS-projekti (tietokantaan tallentuu samalla QGIS-projekti, joka näkyy nyt työkalun valikossa). <img src="/qaava_tyotila.png" width="750">
+10. Valitse QGIS-projekti (tietokantaan tallentuu samalla QGIS-projekti, joka näkyy nyt työkalun valikossa). 
+
+<img src="/qaava_tyotila.png" width="750">
 
 Valinta avaa QGIS-projektin automaattisesti näkyviin. Työtilat löytyvät myös tietomallin public-skeemasta, jos olet sallinut QGIS-projektin tallennuksen tietokannan yhteyksien muodostamisen yhteydessä. Muuten QAAVA-lisäosan aloituspaneelista (kohta 1) pääset aina työtilaan takaisin. 
 
@@ -65,11 +67,33 @@ Valinta avaa QGIS-projektin automaattisesti näkyviin. Työtilat löytyvät myö
 
 ## Vaihe 4. QGIS-projektin hyödyntäminen
 
-Työtilassa pitäisi nyt näkyä QGIS-projekti joko asema- tai yleiskaavalle. Voit alkaa lisäämään kohteita, tee ensin kaavan ulkoraja.
+Työtilassa pitäisi nyt näkyä QGIS-projekti joko asema- tai yleiskaavalle.
+
+Huomaat, että työtilassa on paikkatietotasoja sekä liuta taulukoita, joissa ei ole geometriaa. 
+
+Suurin osa näistä tiedoista on koodilistoja (esim. kaavan tyyppi, prosessin vaihe, maankäyttöluokka). Koodilistat perustuvat kaavan tietomallityöhön, QAAVA-kehittämisryhmän kommentteihin sekä visualisointien osalta MRL:n oppaisiin. Esimerkiksi Maankäyttöluokka-taulu sisältää kaikki MRL:n visualisointiohjeistuksessa löydetyt aluevarausluokitukset (LHA, T, VL, MA). Emme ole estäneet omien tietojen syöttöä näihin listoihin. Jos listalta puuttuu olennaisia tietoja, taulukoita voi editoida ja lisätä omia koodilistoja. Huomaathan tällöin, että esimerkiksi visualisoitaessa maankäyttöluokkia, visualisoinnin arvo tulee maankäyttöluokka-taulun id:n perusteella. Lisäksi jos teet uuden koodin esimerkiksi maankäyttöluokka-tauluun, pitää se myös erikseen visualisoida maankäyttöalueiden luokituksessa. Mieluusti otamme myös vastaan kehitysehdotukset ja virheraportit. Tee silloin issue tänne GitHubiin ja kuvaile mitä haluaisit tehtävän. 
+
+<img src="/qaava_maankaytto.png" width="750">
+Koodilista asemakaavan maankäyttöluokille.
+
+<img src="/qaava_maankayttoalue.png" width="750">
+Vastaava lista käytössä asemakaavan maankäyttöalueen lomakkeella alasvetovalikossa. Kohteet visualisoidaan maankäyttöluokan id:n perusteella (gid_maankayttoluokka). 
+
+Lisäksi työtilassa on relaatiotauluja, jotka yhdistävät mm. numeerisen arvon, kaavamääräyksen, dokumentit ja yleiskaavan tapauksessa teeman spatiaalisiin kaavakohteisiin. 
+
+Älä poista mitään työtilasta, sillä kaikkia tauluja tarvitaan. Jos näin tapahtuu vahingossa, saat palautettua alkuperäisen QAAVA-työtilan QAAVA-lisäosalla.
+
+----------------------
+
+Voit alkaa lisäämään kohteita, tee ensin kaavan ulkoraja.
 
 <img src="/qaava_tyotila2.png" width="750">
 
-Huom! Jotta tietojen yhteydet toisiin tauluihin toimivat, kannattaa ensin luoda geometriakohteet ja sitten lisätä esimerkiksi teemoja, kaavamääräyksiä tai muita lisätietoja. Kohde pitää olla ensi olemassa (sisältää rivin tietoa), ennenkuin siihen voi liittää muita kohteita.
+Huom! Jotta tietojen yhteydet toisiin tauluihin toimivat, kannattaa ensin luoda geometriakohteet ja sitten lisätä esimerkiksi teemoja, kaavamääräyksiä tai muita lisätietoja. Kohde pitää olla ensi olemassa (sisältää rivin tietoa), ennenkuin siihen voi liittää muita kohteita. Tähän mahdollisesti kehitetään helpotusta QAAVAn jatkoprojekteissa.
+
+Kaikille kaavakohteille on luotu valmiit visualisoinnit. Esimerkiksi kaavan ulkoraja piirtyy automaattisesti MRL:n oppaan 2003 mukaisesti. 
+
+Muille kaavatasoille (maankäyttö, osa-alueet, pisteet, viivat), valmis visualisointi perustuu kaava
 
 ## Vaihe 5. Tietojen suodatus
 
