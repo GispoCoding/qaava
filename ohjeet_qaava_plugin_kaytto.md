@@ -78,9 +78,11 @@ Suurin osa näistä tiedoista on koodilistoja (esim. kaavan tyyppi, prosessin va
 Jos listalta puuttuu olennaisia tietoja, taulukoita voi editoida ja lisätä omia koodeja listoille. Huomaathan tällöin, että esimerkiksi visualisoitaessa maankäyttöluokkia, visualisoinnin arvo tulee maankäyttöluokka-taulun id:n perusteella. Lisäksi, jos teet uuden koodin esimerkiksi maankäyttöluokka-tauluun, pitää se myös erikseen visualisoida maankäyttöalueiden luokituksessa. Mieluusti otamme myös vastaan kehitysehdotukset ja virheraportit. Tee silloin issue tänne GitHubiin ja kuvaile mitä haluaisit tehtävän. 
 
 <img src="/qaava_maankaytto.png">
+
 *Koodilista asemakaavan maankäyttöluokille.*
 
 <img src="/qaava_maankayttoalue.png">
+
 *Vastaava lista on käytössä asemakaavan maankäyttöalueen lomakkeella alasvetovalikossa. Se on viritetty QGISin työtilassa attribuuttilomakkeen muokkauksen avulla siten, että lomake hakee tiedot suoraan koodilistalta. Lisäksi kohteet visualisoidaan maankäyttöluokan gid-sarakkeen perusteella (gid_maankayttoluokka).*
 
 
