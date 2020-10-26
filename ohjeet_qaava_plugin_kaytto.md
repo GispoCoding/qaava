@@ -73,56 +73,69 @@ Työtilassa pitäisi nyt näkyä QGIS-projekti joko asema- tai yleiskaavalle.
 
 Huomaat, että työtilassa on paikkatietotasoja sekä liuta taulukoita, joissa ei ole geometriaa. 
 
-Suurin osa näistä tiedoista on koodilistoja (esim. kaavan tyyppi, prosessin vaihe, maankäyttöluokka). Koodilistat perustuvat kaavan tietomallityöhön, QAAVA-kehittämisryhmän kommentteihin sekä visualisointien osalta MRL:n oppaisiin. Esimerkiksi Maankäyttöluokka-taulu sisältää kaikki MRL:n visualisointiohjeistuksessa löydetyt aluevarausluokitukset (LHA, T, VL, MA). Emme ole estäneet omien tietojen syöttöä näihin listoihin. Jos listalta puuttuu olennaisia tietoja, taulukoita voi editoida ja lisätä omia koodilistoja. Huomaathan tällöin, että esimerkiksi visualisoitaessa maankäyttöluokkia, visualisoinnin arvo tulee maankäyttöluokka-taulun id:n perusteella. Lisäksi jos teet uuden koodin esimerkiksi maankäyttöluokka-tauluun, pitää se myös erikseen visualisoida maankäyttöalueiden luokituksessa. Mieluusti otamme myös vastaan kehitysehdotukset ja virheraportit. Tee silloin issue tänne GitHubiin ja kuvaile mitä haluaisit tehtävän. 
+Suurin osa näistä tiedoista on koodilistoja (esim. kaavan tyyppi, prosessin vaihe, maankäyttöluokka). Koodilistat perustuvat kaavan tietomallityöhön, QAAVA-kehittämisryhmän kommentteihin sekä visualisointien osalta MRL:n oppaisiin. Esimerkiksi Maankäyttöluokka-taulu sisältää kaikki MRL:n visualisointiohjeistuksessa löydetyt aluevarausluokitukset (LHA, T, VL, MA). Emme ole estäneet omien tietojen syöttöä näihin listoihin. 
+
+Jos listalta puuttuu olennaisia tietoja, taulukoita voi editoida ja lisätä omia koodeja listoille. Huomaathan tällöin, että esimerkiksi visualisoitaessa maankäyttöluokkia, visualisoinnin arvo tulee maankäyttöluokka-taulun id:n perusteella. Lisäksi, jos teet uuden koodin esimerkiksi maankäyttöluokka-tauluun, pitää se myös erikseen visualisoida maankäyttöalueiden luokituksessa. Mieluusti otamme myös vastaan kehitysehdotukset ja virheraportit. Tee silloin issue tänne GitHubiin ja kuvaile mitä haluaisit tehtävän. 
 
 <img src="/qaava_maankaytto.png">
-Koodilista asemakaavan maankäyttöluokille.
+*Koodilista asemakaavan maankäyttöluokille.*
 
 <img src="/qaava_maankayttoalue.png">
-Vastaava lista on käytössä asemakaavan maankäyttöalueen lomakkeella alasvetovalikossa. Se on viritetty QGISin työtilassa attribuuttilomakkeen muokkauksen avulla siten, että lomake hakee tiedot suoraan koodilistalta. Lisäksi kohteet visualisoidaan maankäyttöluokan gid-sarakkeen perusteella (gid_maankayttoluokka). 
+*Vastaava lista on käytössä asemakaavan maankäyttöalueen lomakkeella alasvetovalikossa. Se on viritetty QGISin työtilassa attribuuttilomakkeen muokkauksen avulla siten, että lomake hakee tiedot suoraan koodilistalta. Lisäksi kohteet visualisoidaan maankäyttöluokan gid-sarakkeen perusteella (gid_maankayttoluokka).*
+
 
 Tutustu vastaavasti taulukkomuodossa vaihetieto-listaan tai dokumenttityyppi-listaan. HILUCS- ja HSRCL-taulut ovat tyhjiä, sillä odotamme ohjeistusta kansalliselta tasolta. Ne liittyvät INSPIRE-direktiivin Planned Land Use -skeeman yleiseurooppalaisiin maankäyttöarvoihin, jotka kansallisesti pitäisi määrittää (eli esim. "Teollisuus- ja varastoalue"	on HILUCS-luokituksessa luultavasti luokka "2 jalostus").
 
-Lisäksi työtilassa on relaatiotauluja, jotka yhdistävät mm. numeerisen arvon, kaavamääräyksen, dokumentit ja yleiskaavan tapauksessa teeman spatiaalisiin kaavakohteisiin. Kaavamääräys-, teema-, numeerinenarvo- sekä dokumentti-taulut ovat lähtökohtaisesti tyhjiä ja ne saavat sisältönsä vasta kun käyttäjä tuottaa tietoja kirjaamalla kaavakohteiden lomakkeen avulla. Näihin tauluihin voi kuitenkin tuoda jo etukäteen tietoja, esimerkiksi jos lista kaavan tuotannosta hyödynnettävistä dokumenteista on saatavilla. Listoja voi editoida myös jälkikäteen. Many-to-many-relaatiotaulut yhdistävät esimerkiksi dokumentin kaavakohteeseen. Käyttäjän ei tarvitse normaalisti välittää näistä aputauluista ollenkaan. 
+Lisäksi työtilassa on N:M -relaatioiden kanssa aputauluja, jotka yhdistävät mm. numeerisen arvon, kaavamääräyksen, dokumentit ja yleiskaavan tapauksessa teeman spatiaalisiin kaavakohteisiin. Kaavamääräys-, teema-, numeerinenarvo- sekä dokumentti-taulut ovat lähtökohtaisesti tyhjiä ja ne saavat sisältönsä vasta kun käyttäjä tuottaa tietoja kirjaamalla kaavakohteiden lomakkeen avulla. Näihin tauluihin voi kuitenkin tuoda jo etukäteen tietoja, esimerkiksi jos lista kaavan tuotannosta hyödynnettävistä dokumenteista on saatavilla. Listoja voi editoida myös jälkikäteen. Many-to-many-aputaulut yhdistävät esimerkiksi dokumentin kaavakohteeseen. Käyttäjän ei tarvitse normaalisti välittää näistä aputauluista ollenkaan. Virhetilanteissa niitä joutuu mahdollisesti editoimaan, pyydämme tällöin ilmoittamaan virheistä GitHubin issueiden kautta. 
 
 Jos tietomallin rakenne kiinnostaa enmmän, katso aina uusimman tietomalliversion kuvat [yleiskaavan osalta täältä](/yleiskaavan-tietomalli) ja [asemakaavan osalta täältä](/asemaskaavan-tietomalli) 
 
-Älä poista mitään työtilasta, sillä kaikkia tauluja tarvitaan. Jos näin tapahtuu vahingossa, saat palautettua alkuperäisen QAAVA-työtilan QAAVA-lisäosalla.
+**Älä poista mitään työtilasta**, sillä kaikkia tauluja tarvitaan. Jos näin tapahtuu vahingossa, saat palautettua alkuperäisen QAAVA-työtilan QAAVA-lisäosalla.
 
 ### Geometriaa sisältävät tasot eli kaavakohteet
 
-Voit alkaa lisäämään kohteita, tee ensin kaavan ulkoraja. Älä anna sille vielä mitään lisätietoja vaan luo se ensin ja klikkaa sitten kohde uudelleen auki (info-työkalulla tai attribuuttitaulusta). 
+Voit alkaa lisäämään kohteita, tee ensin kaavan ulkoraja. Älä anna sille vielä mitään erityisiä lisätietoja vaan luo se ensin. Huomaat, että se piirtyy valmiilla rajausvisualisoinnilla kartalle. Kaikille QAAVA-työtilan geometriatasoille on luotu valmiit visualisoinnit. Esimerkiksi kaavan ulkoraja piirtyy automaattisesti MRL:n oppaan 2003 mukaisesti. 
 
-Kaavan ulkorajaan voidaan liittää perustieetoja kaavasta, sen tyyppi, prosessin vaihe, luontipäivämäärä, mahdollinen hyväksymispäivämäärä, nimi, vastuuhenkilön tiedot ja siihen liittyvät dokumentit ja kaavamääräykset. Huom! Jotta tietojen yhteydet toisiin tauluihin toimivat, kannattaa ensin luoda geometriakohteet ja sitten lisätä esimerkiksi teemoja, kaavamääräyksiä tai muita lisätietoja. Kohde pitää olla ensi olemassa (sisältää rivin tietoa), ennenkuin siihen voi liittää muita kohteita. Tähän mahdollisesti kehitetään helpotusta QAAVAn jatkoprojekteissa.
+Klikkaa sitten kohde uudelleen auki (info-työkalulla tai attribuuttitaulusta). Jos näkymään avautuu tavallinen taulukkonäkymä, lomakkeelle pääset taulukon alaoikeasta kulmasta klikkaamalla lomakenappia. Info-työkalun asetuksista voi myös määrittää miten taulukko jatkossa avautuu. 
+
+Kaavan ulkorajaan voidaan liittää perustietoja kaavasta, sen tyyppi, prosessin vaihe, luontipäivämäärä, mahdollinen hyväksymispäivämäärä, nimi, vastuuhenkilön tiedot ja siihen liittyvät dokumentit ja kaavamääräykset. 
+
+Huom! Jotta tietojen yhteydet toisiin tauluihin toimivat, kannattaa aina ensin luoda geometriakohteet ja sitten lisätä esimerkiksi teemoja, kaavamääräyksiä tai muita lisätietoja. Kohde pitää siis olla ensi olemassa (sisältää rivin tietoa), ennenkuin siihen voi liittää muita tietoja N:M-ralaatioiden kautta. Tähän mahdollisesti kehitetään helpotusta QAAVAn jatkoprojekteissa.
 
 <img src="/qaava_tyotila2.png" width="750">
 
-
+### Automaattiset tiedot
 
 Osa tiedoista saadaan kaavakohteille automaattisesti, kuten kohteen käyttäjän tiedot (tulee käyttöjärjestelmästä) ja luomispäiväys (tulee käyttöjärjestelmästä). Lisäksi, jos kaavan ulkorajaus on luotu, kaikki sen sisään jäävät kaavakohteet saavat kyseisen ulkorajan tiedot. Periaatteessa on mahdollista luoda siis samassa työtilassa useita kaavoja (esim. eteläinen kaupunginosakaava ja pohjoinen kaupunginosakaava). Kannattaa kuitenkin kunnan sisäisissä prosesseissa miettiä tuleeko tästä mahdollisia ongelmia. 
 
-Kaikille kaavakohteille on luotu valmiit visualisoinnit. Esimerkiksi kaavan ulkoraja piirtyy automaattisesti MRL:n oppaan 2003 mukaisesti. 
+### Visualisointi
 
-Muille kaavatasoille (maankäyttö, osa-alueet, pisteet, viivat), valmis visualisointi perustuu kaavakohteiden luokituksiin, mm. maankayttoluokka-tauluuun. Jos haluat lisätä uusia luokkia listalle, pitää tieto löytyä siis myös maankayttoluokka-taulusta sekä tiedon pitää olla liitettynä johonkin kaavakohteeseen. Silloin myös kuvaustekniikkaan pitää muistaa lisätä tehty uusi luokittelu. 
+Yleiskaavan ulkorajauksen lisäksi valmiiksi visualisoituna ovat myös muut geometriataost: maankäyttö, osa-alueet, pisteet, viivat. Valmis visualisointi perustuu kaavakohteiden luokituksiin, esim. maankäyttöalueen osalta  maankayttoluokka-tauluuun. Jos haluat lisätä uusia luokkia listalle, pitää tieto löytyä siis myös maankayttoluokka-taulusta sekä tiedon pitää olla liitettynä johonkin kaavakohteeseen. Silloin myös kuvaustekniikkaan pitää muistaa lisätä tehty uusi luokittelu. 
 
 <img src="/visualisointi_maankayttoluokka.png" width="750">
 
 ## Vaihe 5. Tietojen suodatus
 
-Kun tietoja on tuotettu, niitä voi suodattaa eri tavoin SQL:n avulla. Mutta koska kaikille SQL ei ole ihan tuttu ja kaavan tietomallista muodostuu aika monimutkaisiakin yhteyksiä taulujen välillä, teimme työtä helpottamaan lisäosan yhteyteen suodatus-työkalun. Lisää haluttuja tasoja ja kenttiä ja niiden välisiä operaatiota ja muodosta omiin tarpeisiin kysely. 
+Kun tietoja on tuotettu, niitä voi suodattaa eri tavoin SQL:n avulla. Mutta koska kaikille SQL ei ole ihan tuttu ja kaavan tietomallista muodostuu aika monimutkaisiakin yhteyksiä taulujen välillä, teimme työtä helpottamaan lisäosan yhteyteen suodatus-työkalun. 
 
 Kysely ei tuota uutta taulua työtilaan vaan suodattaa olemassa olevia tauluja siten, että lopputuloksessa näkyvät vain suodatuksen tulokset. Esimerkkejä suodatuksista voi olla vaikkapa: "Näytä kaaavoittajan x tekemät muutokset päivänä y", jos halutaan näyttää vain tietyn henkilön tuottamat kohteet. Jos on tarve tarkistaa, että onko kaikilla kaavakohteilla kaavamääräys, voidaan tehdä suodatus joka toteuttaa lauseen "Näytä kaikki ne maankäyttöalueet joilla ei ole kaavamääräyksiä". 
 
 ![Projekti](/qaava_suodatus_1.gif)
 ![Projekti](/qaava_suodatus_2.gif)
 
-## Vaihe 6. Tietojen tuonti toisesta lähteestä
+## Vaihe 6. Kaavan tulostepohja ja kaavaseloste
 
-Työkalu kehityksen alla.
+QAAVA-työtilassa on valmiit pohjat kaavan pdf-version tekoa varten. Pohjia voi hyödyntää tarpeen mukaan tai tehdä omat. Tämän hetkinen tulostemalli poimii vain näkymässä olevat tiedot selosteeseen. Kaavaseloste luodaan kaavakohteiden avulla ja tällä hetkellä näyttää vain kaavamääräyksen otsikon.
+
+## Tiedossa olevia ongelmia ja jatkokehitykseen meneviä asioita
+
+Usean kohteen editointi siten, että esimerkiksi saman kaavamääräyksen voisi liittää valituille kohteille ei QGISissä nykyisellään vielä onnistu. Samaan haasteeseen liittyy kaavakohteen jakaminen kahtia, kaavamääräys ei periydy kohteen toiselle puolikkaalle. Tämä on tiedossa oleva haaste ja etsimme siihen rahoitusta.
+
+Kaavaselosteeseen kaavamääräysteksti. Johtuen oletettavasti QGISin selitteenmuodostajan rajoitteista, kaavamääräystekstiä ei ole vielä mukana kaavaselosteessa. Tämä on tiedossa oleva ongelma, johon toivomme kehitysapua. 
 
 ## Yleisiä ohjeita
 - Kun vaihdat tietokantayhteyttä tai suljet projektin, sammuta välillä QGIS jotta varmistut siitä, ettei tietoja menetetä
-- Jos muokkaat projektia, voit tallentaa sen tietokantaan QGISin avulla: Projekti -> Tallenna tiedostoon -> PostgreSQL ja valitsemalla seuraavat arvot:
+- Jos muokkaat QGIS-projektia, voit tallentaa sen tietokantaan QGISin avulla: Projekti -> Tallenna tiedostoon -> PostgreSQL ja valitsemalla seuraavat arvot:
   - Yhteys: käyttämäsi tietokantayhteyden nimi
   - Skeema: public
   - Projekti: voit tallentaa joko saman projektin päälle tai luoda uuden projektin. Uusi projekti on mahdollista ladata samalla tavalla myös lisäosan toimesta.
