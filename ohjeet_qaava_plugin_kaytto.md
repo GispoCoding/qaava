@@ -114,7 +114,7 @@ Osa tiedoista saadaan kaavakohteille automaattisesti, kuten kohteen käyttäjän
 
 Yleiskaavan ulkorajauksen lisäksi valmiiksi visualisoituna ovat myös muut geometriataost: maankäyttö, osa-alueet, pisteet, viivat. Valmis visualisointi perustuu kaavakohteiden luokituksiin, esim. maankäyttöalueen osalta  maankayttoluokka-tauluuun. Jos haluat lisätä uusia luokkia listalle, pitää tieto löytyä siis myös maankayttoluokka-taulusta sekä tiedon pitää olla liitettynä johonkin kaavakohteeseen. Silloin myös kuvaustekniikkaan pitää muistaa lisätä tehty uusi luokittelu. 
 
-<img src="/visualisointi_maankayttoluokka.png" width="750">
+<img src="/visualisointi_maankayttoalue.png" width="750">
 
 ## Vaihe 5. Tietojen suodatus
 
