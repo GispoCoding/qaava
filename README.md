@@ -11,7 +11,7 @@ QAAVA-lisäosan kehityksen([oma repositorio](https://github.com/GispoCoding/qaav
 ## Yhteistyössä
 
 Toteutus tehdään avoimesti yhteistyössä eri toimijoiden kanssa. Mukana ovat nyt:
-- [Paimion kaupunki](https://paim.io/) (asemakaavan tietomallityö)
+- [Paimion kaupunki](https://paim.io/) (asemakaavan tietomallityö + tulostepohjat)
 - [Kuntaliitto](https://www.kuntaliitto.fi/) (asemakaavan visualisointikirjasto, [lue tiedote](https://www.kuntaliitto.fi/ajankohtaista/2020/avoin-tyylikirjasto-helpottaa-asemakaavojen-digitalisointia))
 - [Seinäjoki](https://www.seinajoki.fi/) (yleiskaavan tietomallityö ja työkalu QGISiin kaavan alustusta varten PostGIS-kantaan)
 - [Joensuu](https://www.joensuu.fi/) (yleiskaavan tietomallityö ja työkalu QGISiin kaavan alustusta varten PostGIS-kantaan)
@@ -24,7 +24,7 @@ Kaikki halukkaat voivat tulla mukaan QAAVA-yhteiskehitykseen! Voit osallistua ty
 
 Tavoitteena on tuottaa QGISin ja PostGISin avulla kaavoittajan työkaluja, joilla voi tuottaa kansallisen kaavan tietomallin mukaista kaavaa. Kun peruspaletti on valmis, työkaluja voi käyttää uusien kaavojen tuotantoon tai vaikkapa vanhojen kaavojen digitointiin.
 - [Suunnitteludokumentti](https://docs.google.com/document/d/1J_FsiR9pY3MsO3VqV3DKb76bFLolV5VrMO6Lxa2_tlk/edit?usp=sharing) (voi kommentoida avoimesti)
-- [QAAVA-esitelmä (2020-08)](https://docs.google.com/presentation/d/1NgBFhvlTGxtXW1giWtwG0q-2zFSZHfSUCE-ZmgkKmOo/edit?usp=sharing)
+- [QAAVA-esitelmä (2020-11)](https://docs.google.com/presentation/d/1NgBFhvlTGxtXW1giWtwG0q-2zFSZHfSUCE-ZmgkKmOo/edit?usp=sharing)
 
 ## QAAVA-työkalu
 
@@ -55,7 +55,7 @@ Tavoitteena on tuottaa QGISin ja PostGISin avulla kaavoittajan työkaluja, joill
 - INSPIRE-rajapinnan tuotannon ohjeistus ja mahdollinen automatisointi (tarvitsee esim. GeoServerin väliin)
 - RYTJ-projektin kautta tulevien tarpeiden huomioiminen
 
-## Pilottiprojektin aikataulu ja työvaiheet (päivitetään tarvittaessa)
+## Pilottiprojektin aikataulu ja työvaiheet vuonna 2020
 
 - 1-5/2020: Määrittelytyö
 - 5-6/2020: Asemakaavan tietomallityö
@@ -64,8 +64,12 @@ Tavoitteena on tuottaa QGISin ja PostGISin avulla kaavoittajan työkaluja, joill
 - 8-10/2020: QGIS työtilat (asema- ja yleiskaava) + QAAVA-lisäsosa (sis. suodatuksen, alustuksen, tietokantayhteyksien muokkauksen, työtilan valinnan)
 - 11/2020:  QAAVA-projektin valmistuminen sekä ohjeistus ja koulutus mukana oleville toimijoille
 
+## Jatkokehitysprojektin aikataulu (päivittyy)
+
+- 1-5/2021: Uusi tietomalli käyttöön, korjataan havaitut puutteet, kehitetään tietojen tuontia helpottavia työkaluja
+
 ## Aiheeseen liittyviä linkkejä
-- [Ota-kantaa kyselyssä estietty käsitemalli 09/2020](https://miro.com/app/board/o9J_knLEl1w=/) 
+- [Ota-kantaa kyselyssä esitetty käsitemalli 09/2020](https://miro.com/app/board/o9J_knLEl1w=/) 
 - [Kaavan tietomalli, YM - Kuntapilotti 06/2019](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli)
 - [Kaavan käsitemallin luonnos, YM - TUMA 12/20219](https://tietomallit.suomi.fi/model/tuma/)
 
