@@ -8,6 +8,8 @@ Ota työkalu käyttöön seuraavammalla [näitä ohjeita](ohjeet_qaava_plugin_ka
 
 QAAVA-lisäosan kehityksen([oma repositorio](https://github.com/GispoCoding/qaava-qgis-plugin)).
 
+*Huom! QAAVA-työkalu hyödyntää vuoden 2019 kaavatietomallityötä. Uusin kaavan tietomalli löytyy osoitteesta https://kaavatietomalli.fi/ ja QAAVA-työkalu ei tue sen käyttöä vielä. Tavoitteena on päivittää QAAVA-työkalu vuonna 2022 tai tuottaa uusi työkalu QGISille kaavatietojen tuottamiseen. Gispo on tuottanut kaavatietomalli.fi-mukaisen PostGIS-toteutuksen syksyllä 2021 https://github.com/GispoCoding/rytj osana SYKE:n RYTJ-työtä.* 
+
 ## Yhteistyössä
 
 Toteutus tehdään avoimesti yhteistyössä eri toimijoiden kanssa. Mukana ovat nyt:
