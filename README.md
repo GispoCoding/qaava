@@ -68,9 +68,11 @@ Tavoitteena on tuottaa QGISin ja PostGISin avulla kaavoittajan työkaluja, joill
 
 ## Jatkokehitysprojektin aikataulu (päivittyy)
 
-- 1-5/2021: Uusi tietomalli käyttöön, korjataan havaitut puutteet, kehitetään tietojen tuontia helpottavia työkaluja
+- xx/2022?: Uusi tietomalli käyttöön, kehitetään tietojen tuontia helpottavia työkaluja
 
 ## Aiheeseen liittyviä linkkejä
+- https://kaavatietomalli.fi/
+- https://ym.fi/ryhti/rytj 
 - [Ota-kantaa kyselyssä esitetty käsitemalli 09/2020](https://miro.com/app/board/o9J_knLEl1w=/) 
 - [Kaavan tietomalli, YM - Kuntapilotti 06/2019](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli)
 - [Kaavan käsitemallin luonnos, YM - TUMA 12/20219](https://tietomallit.suomi.fi/model/tuma/)
