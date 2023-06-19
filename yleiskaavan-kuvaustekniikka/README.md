@@ -2,7 +2,7 @@
 
 Yleiskaavan kuvaustekniikka tuotetaan yhteistyössä QAAVA-kehitysprojektiin osallistuneiden toimijoiden kanssa. 
 Sen on rahoittanut [Kuntaliitto](https://www.kuntaliitto.fi/ajankohtaista/2020/avoin-tyylikirjasto-helpottaa-asemakaavojen-digitalisointia?fbclid=IwAR3d_moQRJR0IxAxzJXxjlo4YtGfzT4ju87H8DTurRdNXtqo7FvnMIFkCUA). Kuvaustekniikka pohjautuu MRL:n Yleiskaavakaavamerkinnät
-ja -määräykset-oppaaseen (Ympäristönministeriö, 2003). Kuvaustekniikka tuotetaan QML- ja SLD-muodossa, jotta sitä voidaan käyttää sekä QGISissä että esimerkiksi GeoServerissä. Yleiskaavan kuvaustekniikka valmistuu elokuussa 2020.
+ja -määräykset-oppaaseen (Ympäristönministeriö, 2003). Kuvaustekniikka tuotetaan QML- ja SLD-muodossa, jotta sitä voidaan käyttää sekä QGISissä että esimerkiksi GeoServerissä. Uusin yleiskaavan kuvaustekniikka valmistui vuonna 2023.
 
 - [XML-muodossa QGISin kuvaustyyli (versio 1.1, 21.8.2020)](yleiskaavan_kuvaustekniikka.xml)
 - [SLD-kuvaustekniikka](SLD)
@@ -12,15 +12,17 @@ ja -määräykset-oppaaseen (Ympäristönministeriö, 2003). Kuvaustekniikka tuo
 
 ## Ohjeet kuvaustekniikan käyttöönottoon QGISillä
 
-HUOM! Kuvaustekniikka on tehty uusimmalla QGIS-versiolla (3.10 tai uudempi). Vanhoilla versioilla tyyli ei toimi, sillä aiempiin versioihin nähden tyylien määrittelyyn tullut huomattavasti muutoksia QGISissä.
+HUOM! Kuvaustekniikka on tehty uusimmalla QGIS-versiolla (3.28). Vanhoilla versioilla tyyli ei toimi, sillä aiempiin versioihin nähden tyylien määrittelyyn tullut huomattavasti muutoksia QGISissä.
 
-1. Lataa yleiskaavan  kuvaustekniikan sisältävä XML-tiedosto tietokoneellesi ja avaa QGIS. Mene **Asetukset > Tyylien hallinta** niin saat auki **Tyylien hallinta -ikkunan**. Klikkaa ikkunan vasemmasta alakulmasta **Tuo/Vie > Import Item(s)** ja valitse tuotavaksi tiedostoksi lataamasi XML-tiedosto. Klikkaa **Valitse kaikki** ja sitten **Tuo** niin saat kuvaustekniikan QGISiin.
+1. Lataa yleiskaavan kuvaustekniikan sisältävä XML-tiedosto tietokoneellesi ja avaa QGIS. Mene **Asetukset > Tyylien hallinta** niin saat auki **Tyylien hallinta -ikkunan**. Klikkaa ikkunan vasemmasta alakulmasta **Tuo/Vie > Import Item(s)** ja valitse tuotavaksi tiedostoksi lataamasi XML-tiedosto. Klikkaa **Valitse kaikki** ja sitten **Tuo** niin saat kuvaustekniikan QGISiin.
 
-<img src="/asemakaavan-kuvaustekniikka/QGIS_tyylien_tuonti.png" width="500"/>
+![image](https://github.com/GispoCoding/qaava/assets/131961979/c4df9417-a8cf-4761-9850-7b6b8b14f588)
 
-2. Käytä omaa aineistoa ja luokittele aineistosi QGISin **Kuvaustekniikka-paneelissa** (saat sen näkyviin menemällä **Näytä > Paneelit > Kuvaustekniikka**). Määrittele haluamallesi kohteille sopivat tyylit. Muista, että kuvaustekniikka koostuu polygoneista, viivoista ja pisteistä. Pistemäiset tyylit **eivät** näy polygoneille ja toisinpäin.
 
-<img src="/asemakaavan-kuvaustekniikka/QGIS_tyylien_lisaaminen.png" width="500"/>
+2. Käytä omaa aineistoa ja luokittele aineistosi QGISin **Tason tyylit-paneelissa** (saat sen näkyviin menemällä **Näytä > Paneelit > Tason tyylit**). Määrittele haluamallesi kohteille sopivat tyylit. Muista, että kuvaustekniikka koostuu polygoneista, viivoista ja pisteistä. Pistemäiset tyylit **eivät** näy polygoneille ja toisinpäin.
+
+![image](https://github.com/GispoCoding/qaava/assets/131961979/55b2380d-3a5e-4662-b2df-a5c2471cb933)
+
 
 ## Ohjeet SLD-kuvaustekniikan käyttöönottoon GeoServer-ohjelmistossa
 
