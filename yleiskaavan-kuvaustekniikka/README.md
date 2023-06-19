@@ -16,12 +16,12 @@ HUOM! Kuvaustekniikka on tehty uusimmalla QGIS-versiolla (3.28). Vanhoilla versi
 
 1. Lataa yleiskaavan kuvaustekniikan sisältävä XML-tiedosto tietokoneellesi ja avaa QGIS. Mene **Asetukset > Tyylien hallinta** niin saat auki **Tyylien hallinta -ikkunan**. Klikkaa ikkunan vasemmasta alakulmasta **Tuo/Vie > Import Item(s)** ja valitse tuotavaksi tiedostoksi lataamasi XML-tiedosto. Klikkaa **Valitse kaikki** ja sitten **Tuo** niin saat kuvaustekniikan QGISiin.
 
-<img src="https://github.com/GispoCoding/qaava/assets/131961979/c4df9417-a8cf-4761-9850-7b6b8b14f588" width="500"/>
+<img src="https://github.com/GispoCoding/qaava/assets/131961979/c4df9417-a8cf-4761-9850-7b6b8b14f588" width="700"/>
 
 
 2. Käytä omaa aineistoa ja luokittele aineistosi QGISin **Tason tyylit-paneelissa** (saat sen näkyviin menemällä **Näytä > Paneelit > Tason tyylit**). Määrittele haluamallesi kohteille sopivat tyylit. Muista, että kuvaustekniikka koostuu polygoneista, viivoista ja pisteistä. Pistemäiset tyylit **eivät** näy polygoneille ja toisinpäin.
 
-![image](https://github.com/GispoCoding/qaava/assets/131961979/55b2380d-3a5e-4662-b2df-a5c2471cb933)
+<img src="https://github.com/GispoCoding/qaava/assets/131961979/55b2380d-3a5e-4662-b2df-a5c2471cb933" width="700"/>
 
 
 ## Ohjeet SLD-kuvaustekniikan käyttöönottoon GeoServer-ohjelmistossa
