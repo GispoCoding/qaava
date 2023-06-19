@@ -4,7 +4,7 @@ Yleiskaavan kuvaustekniikka tuotetaan yhteistyössä QAAVA-kehitysprojektiin osa
 Sen on rahoittanut [Kuntaliitto](https://www.kuntaliitto.fi/ajankohtaista/2020/avoin-tyylikirjasto-helpottaa-asemakaavojen-digitalisointia?fbclid=IwAR3d_moQRJR0IxAxzJXxjlo4YtGfzT4ju87H8DTurRdNXtqo7FvnMIFkCUA). Kuvaustekniikka pohjautuu MRL:n Yleiskaavakaavamerkinnät
 ja -määräykset-oppaaseen (Ympäristönministeriö, 2003). Kuvaustekniikka tuotetaan QML- ja SLD-muodossa, jotta sitä voidaan käyttää sekä QGISissä että esimerkiksi GeoServerissä. Uusin yleiskaavan kuvaustekniikka valmistui vuonna 2023.
 
-- [XML-muodossa QGISin kuvaustyyli (versio 1.1, 21.8.2020)](yleiskaavan_kuvaustekniikka.xml)
+- [XML-muodossa QGISin kuvaustyyli (versio 2.0, 19.6.2023)](yleiskaavan_kuvaustekniikka_3_28.xml)
 - [SLD-kuvaustekniikka](SLD)
 - Testiaineisto tulossa
 
